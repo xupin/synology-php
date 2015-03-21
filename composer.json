@@ -1,0 +1,17 @@
+{
+    "name": "qsomazzi/synology",
+    "description": "Handle Synology API",
+    "keywords": ["synology", "api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quentin SOMAZZI",
+            "homepage": "http://qsomazzi.fr/"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Synology\\": ""
+        }
+    }
+}
