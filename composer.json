@@ -3,6 +3,7 @@
     "description": "Handle Synology API",
     "keywords": ["synology", "api"],
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Quentin SOMAZZI",
@@ -11,7 +12,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Synology\\": ""
+            "Synology": "src/"
         }
     }
 }
