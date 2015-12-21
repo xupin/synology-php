@@ -1,6 +1,6 @@
 .buildpath
+.idea
 .project
 .settings/
-composer.phar
-
 /vendor/
+composer.phar
