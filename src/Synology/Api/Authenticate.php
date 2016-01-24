@@ -1,27 +1,36 @@
 <?php
 
-class Synology_Api_Authenticate extends Synology_Abstract
+namespace Synology\Api;
+
+use Synology\AbstractApi;
+use Synology\Api;
+use Synology\Exception;
+
+/**
+ * Class Authenticate
+ *
+ * @package Synology\Api
+ */
+class Authenticate extends AbstractApi
 {
-
     private $_authApi = null;
-
     private $_sessionName = null;
 
     /**
-     * Cosntructor
+     * Constructor
      * 
      * @param string $serviceName
      * @param string $namespace
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
+     * @param int    $version
      */
     public function __construct($serviceName, $namespace, $address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
         parent::__construct($serviceName, $namespace, $address, $port, $protocol, $version, $verifySSL);
         $this->_sessionName = $serviceName;
-        $this->_authApi = new Synology_Api($address, $port, $protocol, $version);
+        $this->_authApi     = new Api($address, $port, $protocol, $version);
     }
 
     /**
@@ -29,6 +38,8 @@ class Synology_Api_Authenticate extends Synology_Abstract
      *
      * @param string $login
      * @param string $password
+     *
+     * @return Api
      */
     public function connect($login, $password)
     {
@@ -36,38 +47,36 @@ class Synology_Api_Authenticate extends Synology_Abstract
     }
 
     /**
-     * Disconect to Synology
+     * Disconnect to Synology
      */
     public function disconnect()
     {
         return $this->_authApi->disconnect();
     }
-    
-    /*
-     * (non-PHPdoc) @see Synology_Abstract::_request()
+
+    /**
+     * {@inheritDoc}
      */
-    protected function _request($api, $path, $method, $params = array(), $version = null, $httpMethod = 'get')
+    protected function _request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
     {
         if ($this->_authApi->isConnected()) {
-            if (! is_array($params)) {
-                if (! empty($params)) {
-                    $params = array(
-                        $params
-                    );
+            if (!is_array($params)) {
+                if (!empty($params)) {
+                    $params = [$params];
                 } else {
-                    $params = array();
+                    $params = [];
                 }
             }
-            
+
             $params['_sid'] = $this->_authApi->getSessionId();
-            
+
             return parent::_request($api, $path, $method, $params, $version, $httpMethod);
         }
-        throw new Synology_Exception('Not Connected');
+        throw new Exception('Not Connected');
     }
-    
-    /*
-     * (non-PHPdoc) @see Synology_Abstract::activateDebug()
+
+    /**
+     * {@inheritDoc}
      */
     public function activateDebug()
     {

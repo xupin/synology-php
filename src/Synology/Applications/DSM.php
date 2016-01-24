@@ -1,20 +1,28 @@
 <?php
 
-class Synology_DSM_Api extends Synology_Api_Authenticate
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class DSM
+ *
+ * @package Synology\Applications
+ */
+class DSM extends Authenticate
 {
-
     const API_SERVICE_NAME = 'DSM';
-
     const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
-     * @param boolean $verifySSL
+     * @param int    $version
+     * @param bool   $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -36,8 +44,9 @@ class Synology_DSM_Api extends Synology_Api_Authenticate
      * Get a list of objects
      *
      * @param string $type (User|Share|Group|Application|Service|Package|Network|Volume|AutoBlock|LogViewer|Connection|iSCSI)
-     * @param int $limit
-     * @param int $offset
+     * @param int    $limit
+     * @param int    $offset
+     *
      * @return array
      */
     public function getObjects($type, $limit = 25, $offset = 0)
@@ -81,11 +90,9 @@ class Synology_DSM_Api extends Synology_Api_Authenticate
                 $path = 'dsm/iscsi.cgi';
                 break;
             default:
-                new Synology_Exception('Unknow "' . $type . '" object');
+                new Exception('Unknown "' . $type . '" object');
         }
-        return $this->_request($type, $path, 'list', array(
-            'limit' => $limit,
-            'offset' => $offset
-        ));
+
+        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
     }
 }

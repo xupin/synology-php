@@ -1,8 +1,18 @@
 <?php
 
-class Synology_Exception extends Exception
-{
+namespace Synology;
 
+/**
+ * Class Exception
+ *
+ * @package Synology
+ */
+class Exception extends \Exception
+{
+    /**
+     * @param null $message
+     * @param null $code
+     */
     public function __construct($message = null, $code = null)
     {
         if (empty($message)) {

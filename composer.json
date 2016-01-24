@@ -1,11 +1,12 @@
 {
-    "name": "rkrater/synology",
+    "name": "mikespub/synology",
     "description": "Synology API interface",
     "homepage": "https://github.com/zzarbi/synology",
     "version": "1.0.0-dev",
     "keywords" : [
         "synology",
-        "nas"
+        "nas",
+        "api"
     ],
     "type": "library",
     "license": "MIT",
@@ -13,6 +14,10 @@
         {
             "name": "Nicolas Cerveaux",
             "email": "nicolas.cerveaux@gmail.com"
+        },
+        {
+            "name": "Quentin SOMAZZI",
+            "homepage": "http://qsomazzi.fr/"
         }
     ],
     "minimum-stability": "dev",
@@ -27,7 +32,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Synology_": "src/Synology/"
+            "Synology": "src/"
         }
     }
 }

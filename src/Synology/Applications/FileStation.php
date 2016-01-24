@@ -1,20 +1,29 @@
-<?php 
-// see http://ukdl.synology.com/download/Document/DeveloperGuide/Synology_File_Station_API_Guide.pdf
-class Synology_FileStation_Api extends Synology_Api_Authenticate
+<?php
+
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class FileStation
+ *
+ * @see     http://ukdl.synology.com/download/Document/DeveloperGuide/Synology_File_Station_API_Guide.pdf
+ * @package Synology\Applications
+ */
+class FileStation extends Authenticate
 {
-
     const API_SERVICE_NAME = 'FileStation';
-
     const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
-     * @param boolean $verifySSL
+     * @param int    $version
+     * @param bool   $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -35,32 +44,38 @@ class Synology_FileStation_Api extends Synology_Api_Authenticate
     /**
      * Get Available Shares
      *
-     * @param string $onlywritable
-     * @param number $limit
-     * @param number $offset
-     * @param string $sortby
-     * @param string $sortdirection
-     * @param bool $additional
+     * @param bool|string $onlyWritable
+     * @param int|number  $limit
+     * @param int|number  $offset
+     * @param string      $sortBy
+     * @param string      $sortDirection
+     * @param bool        $additional
+     *
      * @return array
+     *
+     * @throws Exception
      */
-    public function getShares($onlywritable = false, $limit = 25, $offset = 0, $sortby = 'name', $sortdirection = 'asc', $additional = false)
+    public function getShares($onlyWritable = false, $limit = 25, $offset = 0, $sortBy = 'name', $sortDirection = 'asc', $additional = false)
     {
-        return $this->_request('List', 'FileStation/file_share.cgi', 'list_share', array(
-            'onlywritable' => $onlywritable,
-            'limit' => $limit,
-            'offset' => $offset,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection,
-            'additional' => $additional ? 'real_path,owner,time,perm,volume_status' : ''
-        ));
+        return $this->_request('List', 'FileStation/file_share.cgi', 'list_share', [
+            'onlywritable'   => $onlyWritable,
+            'limit'          => $limit,
+            'offset'         => $offset,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection,
+            'additional'     => $additional ? 'real_path,owner,time,perm,volume_status' : ''
+        ]);
     }
 
     /**
      * Get info about an object
      *
      * @param string $type (List|Sharing)
-     * @param strng $id
+     * @param string $id
+     *
      * @return array
+     *
+     * @throws Exception
      */
     public function getObjectInfo($type, $id)
     {
@@ -73,65 +88,68 @@ class Synology_FileStation_Api extends Synology_Api_Authenticate
                 $path = 'FileStation/file_sharing.cgi';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
-        return $this->_request($type, $path, 'getinfo', array(
-            'id' => $id
-        ));
+
+        return $this->_request($type, $path, 'getinfo', ['id' => $id]);
     }
 
     /**
      * Get a list of files/directories in a given path
      *
-     * @param string $path like '/home'
-     * @param number $limit
-     * @param number $offset
-     * @param string $sortby (name|size|user|group|mtime|atime|ctime|crtime|posix|type)
-     * @param string $sortdirection
-     * @param string $pattern
-     * @param string $filetype (all|file|dir)
-     * @param bool $additional
+     * @param string     $path     like '/home'
+     * @param int|number $limit
+     * @param int|number $offset
+     * @param string     $sortBy   (name|size|user|group|mtime|atime|ctime|crtime|posix|type)
+     * @param string     $sortDirection
+     * @param string     $pattern
+     * @param string     $fileType (all|file|dir)
+     * @param bool       $additional
+     *
      * @return array
+     * @throws Exception
      */
-    public function getList($path = '/home', $limit = 25, $offset = 0, $sortby = 'name', $sortdirection = 'asc', $pattern = '', $filetype = 'all', $additional = false)
+    public function getList($path = '/home', $limit = 25, $offset = 0, $sortBy = 'name', $sortDirection = 'asc', $pattern = '', $fileType = 'all', $additional = false)
     {
-        return $this->_request('List', 'FileStation/file_share.cgi', 'list', array(
-            'folder_path' => $path,
-            'limit' => $limit,
-            'offset' => $offset,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection,
-            'pattern' => $pattern,
-            'filetype' => $filetype,
-            'additional' => $additional ? 'real_path,size,owner,time,perm' : ''
-        ));
+        return $this->_request('List', 'FileStation/file_share.cgi', 'list', [
+            'folder_path'    => $path,
+            'limit'          => $limit,
+            'offset'         => $offset,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection,
+            'pattern'        => $pattern,
+            'filetype'       => $fileType,
+            'additional'     => $additional ? 'real_path,size,owner,time,perm' : ''
+        ]);
     }
 
     /**
      * Search for files/directories in a given path
      *
-     * @param string $pattern
-     * @param string $path like '/home'
-     * @param number $limit
-     * @param number $offset
-     * @param string $sortby (name|size|user|group|mtime|atime|ctime|crtime|posix|type)
-     * @param string $sortdirection (asc|desc)
-     * @param string $filetype (all|file|dir)
-     * @param bool $additional
+     * @param string     $pattern
+     * @param string     $path          like '/home'
+     * @param int|number $limit
+     * @param int|number $offset
+     * @param string     $sortBy        (name|size|user|group|mtime|atime|ctime|crtime|posix|type)
+     * @param string     $sortDirection (asc|desc)
+     * @param string     $fileType      (all|file|dir)
+     * @param bool       $additional
+     *
      * @return array
+     * @throws Exception
      */
-    public function search($pattern, $path = '/home', $limit = 25, $offset = 0, $sortby = 'name', $sortdirection = 'asc', $filetype = 'all', $additional = false)
+    public function search($pattern, $path = '/home', $limit = 25, $offset = 0, $sortBy = 'name', $sortDirection = 'asc', $fileType = 'all', $additional = false)
     {
-        return $this->_request('List', 'FileStation/file_share.cgi', 'list', array(
-            'folder_path' => $path,
-            'limit' => $limit,
-            'offset' => $offset,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection,
-            'pattern' => $pattern,
-            'filetype' => $filetype,
-            'additional' => $additional ? 'real_path,size,owner,time,perm' : ''
-        ));
+        return $this->_request('List', 'FileStation/file_share.cgi', 'list', [
+            'folder_path'    => $path,
+            'limit'          => $limit,
+            'offset'         => $offset,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection,
+            'pattern'        => $pattern,
+            'filetype'       => $fileType,
+            'additional'     => $additional ? 'real_path,size,owner,time,perm' : ''
+        ]);
     }
 
     /**
@@ -139,23 +157,24 @@ class Synology_FileStation_Api extends Synology_Api_Authenticate
      *
      * @param string $path (comma separated)
      * @param string $mode
+     *
      * @return array
      */
     public function download($path, $mode = 'open')
     {
-        return $this->_request('Download', 'FileStation/file_download.cgi', 'download', array(
+        return $this->_request('Download', 'FileStation/file_download.cgi', 'download', [
             'path' => $path,
             'mode' => $mode
-        ));
+        ]);
     }
 
     public function createFolder($folder_path, $name, $force_parent = false, $additional = false)
     {
-        return $this->_request('CreateFolder', 'FileStation/file_crtfdr.cgi', 'create', array(
-            'folder_path' => $folder_path,
-            'name' => $name,
+        return $this->_request('CreateFolder', 'FileStation/file_crtfdr.cgi', 'create', [
+            'folder_path'  => $folder_path,
+            'name'         => $name,
             'force_parent' => $force_parent,
-            'additional' => $additional ? 'real_path,size,owner,time,perm' : ''
-        ));
+            'additional'   => $additional ? 'real_path,size,owner,time,perm' : ''
+        ]);
     }
 }
