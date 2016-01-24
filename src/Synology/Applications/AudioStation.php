@@ -12,19 +12,17 @@ use Synology\Exception;
  */
 class AudioStation extends Authenticate
 {
-
     const API_SERVICE_NAME = 'AudioStation';
-
     const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
-     * @param boolean $verifySSL
+     * @param int    $version
+     * @param bool   $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -39,16 +37,19 @@ class AudioStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', 'AudioStation/info.cgi', 'getinfo', array(), 2);
+        return $this->_request('Info', 'AudioStation/info.cgi', 'getinfo', [], 2);
     }
 
     /**
      * Get a list of objects
      *
      * @param string $type (Album|Composer|Genre|Artist|Folder|Song|Radio|Playlist|RemotePlayer|MediaServer)
-     * @param int $limit
-     * @param int $offset
+     * @param int    $limit
+     * @param int    $offset
+     *
      * @return array
+     *
+     * @throws Exception
      */
     public function getObjects($type, $limit = 25, $offset = 0, $additional = 'song_tag,song_audio,song_rating')
     {
@@ -87,19 +88,19 @@ class AudioStation extends Authenticate
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }
-        return $this->_request($type, $path, 'list', array(
-            'limit' => $limit,
-            'offset' => $offset,
-            'additional' => $additional
-        ));
+
+        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset, 'additional' => $additional]);
     }
 
     /**
      * Get info about an object
      *
      * @param string $type (Folder|Song|Playlist)
-     * @param strng $id
+     * @param string $id
+     *
      * @return array
+     *
+     * @throws Exception
      */
     public function getObjectInfo($type, $id)
     {
@@ -117,17 +118,19 @@ class AudioStation extends Authenticate
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }
-        return $this->_request($type, $path, 'getinfo', array(
-            'id' => $id
-        ));
+
+        return $this->_request($type, $path, 'getinfo', ['id' => $id]);
     }
 
     /**
      * Get cover of an object
      *
      * @param string $type (Song|Folder)
-     * @param strng $id
+     * @param string $id
+     *
      * @return array
+     *
+     * @throws Exception
      */
     public function getObjectCover($type, $id)
     {
@@ -142,31 +145,30 @@ class AudioStation extends Authenticate
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }
-        return $this->_request('Cover', 'AudioStation/cover.cgi', $method, array(
-            'id' => $id
-        ));
+
+        return $this->_request('Cover', 'AudioStation/cover.cgi', $method, ['id' => $id]);
     }
 
     /**
      * Search for Movie|TVShow|TVShowEpisode|HomeVideo|TVRecording|Collection
      *
-     * @param string $name
-     * @param string $type (Movie|TVShow|TVShowEpisode|HomeVideo|TVRecording|Collection)
-     * @param number $limit
-     * @param number $offset
-     * @param string $sortby (title|original_available)
-     * @param string $sortdirection (asc|desc)
+     * @param string     $name
+     * @param int|number $limit
+     * @param int|number $offset
+     * @param string     $sortBy        (title|original_available)
+     * @param string     $sortDirection (asc|desc)
+     *
      * @return array
      */
-    public function searchSong($name, $limit = 25, $offset = 0, $sortby = 'title', $sortdirection = 'asc')
+    public function searchSong($name, $limit = 25, $offset = 0, $sortBy = 'title', $sortDirection = 'asc')
     {
-        return $this->_request('Song', 'AudioStation/song.cgi', 'search', array(
-            'title' => $name,
-            'limit' => $limit,
-            'offset' => $offset,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection
-        ));
+        return $this->_request('Song', 'AudioStation/song.cgi', 'search', [
+            'title'          => $name,
+            'limit'          => $limit,
+            'offset'         => $offset,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection
+        ]);
     }
 
     /**
@@ -174,18 +176,19 @@ class AudioStation extends Authenticate
      *
      * @param string $artist
      * @param number $limit
-     * @param string $sortby (name, ...)
-     * @param string $sortdirection (asc|desc)
+     * @param string $sortBy        (name, ...)
+     * @param string $sortDirection (asc|desc)
+     *
      * @return array
      */
-    public function listAlbumsOfArtist($artist, $limit = -1, $sortby = 'name', $sortdirection = 'ASC')
+    public function listAlbumsOfArtist($artist, $limit = -1, $sortBy = 'name', $sortDirection = 'ASC')
     {
-        return $this->_request('Album', 'AudioStation/album.cgi', 'list', array(
-            'artist' => $artist,
-            'limit' => $limit,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection
-        ), 2, 'post');
+        return $this->_request('Album', 'AudioStation/album.cgi', 'list', [
+            'artist'         => $artist,
+            'limit'          => $limit,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection
+        ], 2, 'post');
     }
 
     /**
@@ -194,27 +197,28 @@ class AudioStation extends Authenticate
      * @param string $artist
      * @param string $album
      * @param number $limit
-     * @param string $sortby (track, ...)
-     * @param string $sortdirection (asc|desc)
-     * @param string $additional (song_tag, song_audio, song_rating)
+     * @param string $sortBy        (track, ...)
+     * @param string $sortDirection (asc|desc)
+     * @param string $additional    (song_tag, song_audio, song_rating)
+     *
      * @return array
      */
-    public function listSongsInAlbum($artist, $album, $limit = -1, $sortby = 'track', $sortdirection = 'ASC', $additional = 'song_tag,song_audio,song_rating')
+    public function listSongsInAlbum($artist, $album, $limit = -1, $sortBy = 'track', $sortDirection = 'ASC', $additional = 'song_tag,song_audio,song_rating')
     {
-        return $this->_request('Song', 'AudioStation/song.cgi', 'search', array(
-            'album' => $album,
-            'album_artist' => $artist,
-            'limit' => $limit,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection,
-            'additional' => $additional
-        ), 2, 'post');
+        return $this->_request('Song', 'AudioStation/song.cgi', 'search', [
+            'album'          => $album,
+            'album_artist'   => $artist,
+            'limit'          => $limit,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection,
+            'additional'     => $additional
+        ], 2, 'post');
     }
 
     public function stream($id)
     {
-        return $this->_request('Stream', 'AudioStation/stream.cgi', 'stream', array(
+        return $this->_request('Stream', 'AudioStation/stream.cgi', 'stream', [
             'id' => $id
-        ), 2, 'get');
+        ], 2, 'get');
     }
 }

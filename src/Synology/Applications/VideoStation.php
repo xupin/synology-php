@@ -12,19 +12,17 @@ use Synology\Exception;
  */
 class VideoStation extends Authenticate
 {
-
     const API_SERVICE_NAME = 'VideoStation';
-
     const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
-     * @param boolean $verifySSL
+     * @param int    $version
+     * @param bool   $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -46,9 +44,12 @@ class VideoStation extends Authenticate
      * Get a list of objects
      *
      * @param string $type (Movie|TVShow|TVShowEpisode|HomeVideo|TVRecording|Collection|Library)
-     * @param int $limit
-     * @param int $offset
+     * @param int    $limit
+     * @param int    $offset
+     *
      * @return array
+     *
+     * @throws Exception
      */
     public function getObjects($type, $limit = 25, $offset = 0)
     {
@@ -79,24 +80,25 @@ class VideoStation extends Authenticate
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }
-        return $this->_request($type, $path, 'list', array(
-            'limit' => $limit,
-            'offset' => $offset
-        ));
+
+        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
     }
 
     /**
      * Search for Movie|TVShow|TVShowEpisode|HomeVideo|TVRecording|Collection
      *
-     * @param string $name
-     * @param string $type (Movie|TVShow|TVShowEpisode|HomeVideo|TVRecording|Collection)
-     * @param number $limit
-     * @param number $offset
-     * @param string $sortby (title|original_available)
-     * @param string $sortdirection (asc|desc)
+     * @param string     $name
+     * @param string     $type          (Movie|TVShow|TVShowEpisode|HomeVideo|TVRecording|Collection)
+     * @param int|number $limit
+     * @param int|number $offset
+     * @param string     $sortBy        (title|original_available)
+     * @param string     $sortDirection (asc|desc)
+     *
      * @return array
+     *
+     * @throws Exception
      */
-    public function searchObject($name, $type, $limit = 25, $offset = 0, $sortby = 'title', $sortdirection = 'asc')
+    public function searchObject($name, $type, $limit = 25, $offset = 0, $sortBy = 'title', $sortDirection = 'asc')
     {
         $path = '';
         $type = ucfirst($type);
@@ -122,13 +124,13 @@ class VideoStation extends Authenticate
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }
-        
-        return $this->_request($type, $path, 'search', array(
-            'title' => $name,
-            'limit' => $limit,
-            'offset' => $offset,
-            'sort_by' => $sortby,
-            'sort_direction' => $sortdirection
-        ));
+
+        return $this->_request($type, $path, 'search', [
+            'title'          => $name,
+            'limit'          => $limit,
+            'offset'         => $offset,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection
+        ]);
     }
 }

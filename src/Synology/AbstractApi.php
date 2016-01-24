@@ -9,35 +9,22 @@ namespace Synology;
  */
 abstract class AbstractApi
 {
-
     const PROTOCOL_HTTP = 'http';
-
     const PROTOCOL_HTTPS = 'https';
-
     const API_NAMESPACE = 'SYNO';
+    const CONNECT_TIMEOUT = 30000; //30s
 
-    const CONNECT_TIMEOUT = 30000; // 30s
     private $_protocol = self::PROTOCOL_HTTP;
-
     private $_port = 80;
-
     private $_address = '';
-
     private $_version = 1;
-
     private $_serviceName = null;
-
     private $_namespace = null;
-
     private $_debug = false;
-    
     private $_verifySSL = false;
-
     private $_separator = '&';
-
     private $enc_type = PHP_QUERY_RFC3986;
-
-    private $_errorCodes = array(
+    private $_errorCodes = [
         100 => 'Unknown error',
         101 => 'No parameter of API, method or version',
         102 => 'The requested API does not exist',
@@ -46,7 +33,7 @@ abstract class AbstractApi
         105 => 'The logged in session does not have permission',
         106 => 'Session timeout',
         107 => 'Session interrupted by duplicate login'
-    );
+    ];
 
     /**
      * Setup API
@@ -54,27 +41,27 @@ abstract class AbstractApi
      * @param string $serviceName
      * @param string $namespace
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
-     * @param boolean $verifySSL
+     * @param int    $version
+     * @param bool   $verifySSL
      */
     public function __construct($serviceName, $namespace, $address, $port = null, $protocol = self::PROTOCOL_HTTP, $version = 1, $verifySSL = false)
     {
         $this->_serviceName = $serviceName;
-        $this->_namespace = $namespace;
-        $this->_address = $address;
-        $this->_verifySSL = $verifySSL;
-        $this->_separator = ini_get('arg_separator.output');
+        $this->_namespace   = $namespace;
+        $this->_address     = $address;
+        $this->_verifySSL   = $verifySSL;
+        $this->_separator   = ini_get('arg_separator.output');
 
-        if (! empty($port) && is_numeric($port)) {
-            $this->_port = (int) $port;
+        if (!empty($port) && is_numeric($port)) {
+            $this->_port = (int)$port;
         }
-        
-        if (! empty($protocol)) {
+
+        if (!empty($protocol)) {
             $this->_protocol = $protocol;
         }
-        
+
         $this->_version = $version;
     }
 
@@ -90,8 +77,10 @@ abstract class AbstractApi
 
     /**
      * Get ApiName
-     * 
+     *
      * @param string $api
+     *
+     * @return string
      */
     private function _getApiName($api)
     {
@@ -104,58 +93,59 @@ abstract class AbstractApi
      * @param string $api
      * @param string $path
      * @param string $method
-     * @param array $params
-     * @param int $version
+     * @param array  $params
+     * @param int    $version
      * @param string $httpMethod
-     * @return stdClass array bool
+     *
+     * @return array|bool|\stdClass
+     *
+     * @throws Exception
      */
-    protected function _request($api, $path, $method, $params = array(), $version = null, $httpMethod = 'get')
+    protected function _request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
     {
-        if (! is_array($params)) {
-            if (! empty($params)) {
-                $params = array(
-                    $params
-                );
+        if (!is_array($params)) {
+            if (!empty($params)) {
+                $params = [$params];
             } else {
-                $params = array();
+                $params = [];
             }
         }
-        $params['api'] = $this->_getApiName($api);
-        $params['version'] = ((int) $version > 0) ? (int) $version : $this->_version;
-        $params['method'] = $method;
-        
+        $params['api']     = $this->_getApiName($api);
+        $params['version'] = ((int)$version > 0) ? (int)$version : $this->_version;
+        $params['method']  = $method;
+
         // create a new cURL resource
         $ch = curl_init();
-        
+
         if ($httpMethod !== 'post') {
             $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, null, $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
-            
+
             curl_setopt($ch, CURLOPT_URL, $url);
         } else {
             $url = $this->_getBaseUrl() . $path;
             $this->log($url, 'Requested Url');
             $this->log($params, 'Post Variable');
-            
-            // set the url, number of POST vars, POST data
+
+            //set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
             curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, null, $this->_separator, $this->enc_type));
         }
-        
+
         // set URL and other appropriate options
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
-        
+
         // Verify SSL or not
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->_verifySSL);
-        
+
         // grab URL and pass it to the browser
         $result = curl_exec($ch);
-        $info = curl_getinfo($ch);
-        
+        $info   = curl_getinfo($ch);
+
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
             if (preg_match('#(plain|text)#', $info['content_type'])) {
@@ -172,16 +162,16 @@ abstract class AbstractApi
                 throw new Exception('Connection Error');
             }
         }
-        
+
         // close cURL resource, and free up system resources
         curl_close($ch);
     }
 
     /**
+     * @param string $json
      *
-     * @param string $data
      * @throws Exception
-     * @return stdClass array bool
+     * @return \stdClass|array|bool
      */
     private function _parseRequest($json)
     {
@@ -211,13 +201,14 @@ abstract class AbstractApi
     public function activateDebug()
     {
         $this->_debug = true;
+
         return $this;
     }
 
     /**
      * Log different data
      *
-     * @param mixed $value
+     * @param mixed  $value
      * @param string $key
      */
     protected function log($value, $key = null)

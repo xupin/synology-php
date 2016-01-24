@@ -12,19 +12,17 @@ use Synology\Exception;
  */
 class DownloadStation extends Authenticate
 {
-
     const API_SERVICE_NAME = 'DownloadStation';
-
     const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
      *
      * @param string $address
-     * @param int $port
+     * @param int    $port
      * @param string $protocol
-     * @param int $version
-     * @param boolean $verifySSL
+     * @param int    $version
+     * @param bool   $verifySSL
      */
     public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
@@ -45,7 +43,7 @@ class DownloadStation extends Authenticate
     /**
      * Get Limitation settings
      *
-     * @return stdClass
+     * @return \stdClass
      */
     public function getConfig()
     {
@@ -55,7 +53,11 @@ class DownloadStation extends Authenticate
     /**
      * Set Limitation settings
      *
-     * @return boolean
+     * @param $params
+     *
+     * @return bool
+     *
+     * @throws Exception
      */
     public function setConfig($params)
     {
@@ -65,7 +67,7 @@ class DownloadStation extends Authenticate
     /**
      * Get Schedule settings
      *
-     * @return stdClass
+     * @return \stdClass
      */
     public function getScheduleConfig()
     {
@@ -75,7 +77,11 @@ class DownloadStation extends Authenticate
     /**
      * Set Limitation settings
      *
-     * @return boolean
+     * @param $params
+     *
+     * @return bool
+     *
+     * @throws Exception
      */
     public function setScheduleConfig($params)
     {
@@ -85,78 +91,81 @@ class DownloadStation extends Authenticate
     /**
      * Get a list of Task
      *
-     * @param int $offset
-     * @param int $limit
+     * @param int   $offset
+     * @param int   $limit
      * @param array $additional (detail,transfer,file,tracker,peer)
+     *
      * @return boolean
      */
     public function getTaskList($offset = 0, $limit = -1, $additional = null)
     {
-        $params = array();
+        $params = [];
         if (isset($offset)) {
             $params['offset'] = $offset;
         }
-        
+
         if (isset($limit) && $limit > 0) {
             $params['limit'] = $limit;
         }
-        
+
         if (isset($additional) && is_array($additional)) {
             $params['additional'] = implode(',', $additional);
         }
+
         return $this->_request('Task', 'DownloadStation/task.cgi', 'list', $params);
     }
 
     /**
      * Get more info about a task
      *
-     * @param string|array $taskId (one ID or a list of ID)
-     * @param array $additional (detail,transfer,file,tracker,peer)
+     * @param string|array $taskId     (one ID or a list of ID)
+     * @param array        $additional (detail,transfer,file,tracker,peer)
+     *
      * @return boolean
      */
     public function getTaskInfo($taskId, $additional = null)
     {
-        $params = array();
-        
+        $params = [];
+
         if (is_array($taskId)) {
             $params['id'] = implode(',', $taskId);
         } else {
             $params['id'] = $taskId;
         }
-        
+
         if (isset($additional) && is_array($additional)) {
             $params['additional'] = implode(',', $additional);
         }
+
         return $this->_request('Task', 'DownloadStation/task.cgi', 'getinfo', $params);
     }
 
     /**
      * Add a new Task
      *
-     * @param string $uri
+     * @param string  $uri
      * @param unknown $file
-     * @param string $login
-     * @param string $password
-     * @param string $zipPassword
-     * @return Ambigous <stdClass, multitype:, boolean>
+     * @param string  $login
+     * @param string  $password
+     * @param string  $zipPassword
+     *
+     * @return \stdClass
      */
     public function addTask($uri, $file = null, $login = null, $password = null, $zipPassword = null)
     {
-        $params = array(
-            'uri' => $uri
-        );
-        if (! empty($login)) {
+        $params = ['uri' => $uri];
+        if (!empty($login)) {
             $params['login'] = $login;
         }
-        
-        if (! empty($password)) {
+
+        if (!empty($password)) {
             $params['login'] = $password;
         }
-        
-        if (! empty($zipPassword)) {
+
+        if (!empty($zipPassword)) {
             $params['login'] = $zipPassword;
         }
-        
+
         return $this->_request('Task', 'DownloadStation/task.cgi', 'create', $params, null, 'post');
     }
 
@@ -164,56 +173,61 @@ class DownloadStation extends Authenticate
      * Delete a task
      *
      * @param string|array $taskId
-     * @param bool $forceComplete
-     * @return Ambigous <stdClass, multitype:, boolean>
+     * @param bool         $forceComplete
+     *
+     * @return \stdClass
      */
     public function deleteTask($taskId, $forceComplete = false)
     {
-        $params = array();
+        $params = [];
         if (is_array($taskId)) {
             $params['id'] = implode(',', $taskId);
         } else {
             $params['id'] = $taskId;
         }
-        
+
         if ($forceComplete === true) {
             $params['force_complete'] = 'true';
         }
-        
+
         return $this->_request('Task', 'DownloadStation/task.cgi', 'delete', $params, null, 'post');
     }
 
     /**
      * Pause a task
      *
-     * @param ustring|array $taskId
-     * @return Ambigous <stdClass, multitype:, boolean>
+     * @param string|array $taskId
+     *
+     * @return \stdClass
      */
     public function pauseTask($taskId)
     {
-        $params = array();
+        $params = [];
         if (is_array($taskId)) {
             $params['id'] = implode(',', $taskId);
         } else {
             $params['id'] = $taskId;
         }
+
         return $this->_request('Task', 'DownloadStation/task.cgi', 'pause', $params, null, 'post');
     }
 
     /**
      * Resume a task
      *
-     * @param ustring|array $taskId
-     * @return Ambigous <stdClass, multitype:, boolean>
+     * @param string|array $taskId
+     *
+     * @return \stdClass
      */
     public function resumeTask($taskId)
     {
-        $params = array();
+        $params = [];
         if (is_array($taskId)) {
             $params['id'] = implode(',', $taskId);
         } else {
             $params['id'] = $taskId;
         }
+
         return $this->_request('Task', 'DownloadStation/task.cgi', 'resume', $params, null, 'post');
     }
 
@@ -232,112 +246,123 @@ class DownloadStation extends Authenticate
      *
      * @param int $offset
      * @param int $limit
-     * @return stdClass
+     *
+     * @return \stdClass
      */
     public function getRssList($offset = 0, $limit = -1)
     {
-        $params = array();
+        $params = [];
         if (isset($offset)) {
             $params['offset'] = $offset;
         }
-        
+
         if (isset($limit) && $limit > 0) {
             $params['limit'] = $limit;
         }
+
         return $this->_request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', $params);
     }
 
     /**
      * Refresh all RSS
      *
-     * @param ustring|array $rssId
-     * @return stdClass
+     * @param string|array $rssId
+     *
+     * @return \stdClass
      */
     public function refreshRss($rssId = 'ALL')
     {
-        $params = array();
+        $params = [];
         if (is_array($rssId)) {
             $params['id'] = implode(',', $rssId);
         } else {
             $params['id'] = $rssId;
         }
-        return $this->_request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', array());
+
+        return $this->_request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', []);
     }
 
     /**
      * Refresh all RSS
      *
-     * @param ustring|array $rssId
-     * @return stdClass
+     * @param string|array $rssId
+     * @param int          $offset
+     * @param int          $limit
+     *
+     * @return \stdClass
+     *
+     * @throws Exception
      */
     public function getRssFeedList($rssId = 'ALL', $offset = 0, $limit = -1)
     {
-        $params = array();
+        $params = [];
         if (is_array($rssId)) {
             $params['id'] = implode(',', $rssId);
         } else {
             $params['id'] = $rssId;
         }
-        
+
         if (isset($offset)) {
             $params['offset'] = $offset;
         }
-        
+
         if (isset($limit) && $limit > 0) {
             $params['limit'] = $limit;
         }
-        
+
         return $this->_request('RSS.Feed', 'DownloadStation/RSSfeed.cgi', 'list', $params);
     }
 
     /**
      * Starts a new search task
      *
-     * @param ustring $keyword The search keyword
-     * @param string $module Module name concatenated by ',' or use 'all' or 'enabled'
-     * @return stdClass
+     * @param  string $keyword The search keyword
+     * @param  string $module  Module name concatenated by ',' or use 'all' or 'enabled'
+     *
+     * @return \stdClass
      */
     public function startSearchTask($keyword, $module = 'enabled')
     {
-        $params = array(
+        $params = [
             'keyword' => $keyword,
-            'module' => $module
-        );
-        
+            'module'  => $module
+        ];
+
         return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'start', $params);
     }
 
     /**
      * Get list of the given search task
      *
-     * @param ustring $taskId
-     * @param integer $offset Beginning task on the requested record
-     * @param integer $limit Number of records requested
-     * @param string $sortBy Possible value is title, size, date, peers, providers, seeds or leech
-     * @param string $sortDirection Possible value is desc or asc
-     * @param string $filterCategory Filter the records by the category using Category ID returned by getCategory function
-     * @param string $filterTitle Filter the records by the title using this parameter
-     * @return stdClass
+     * @param  string  $taskId
+     * @param  integer $offset         Beginning task on the requested record
+     * @param  integer $limit          Number of records requested
+     * @param  string  $sortBy         Possible value is title, size, date, peers, providers, seeds or leech
+     * @param  string  $sortDirection  Possible value is desc or asc
+     * @param  string  $filterCategory Filter the records by the category using Category ID returned by getCategory function
+     * @param  string  $filterTitle    Filter the records by the title using this parameter
+     *
+     * @return \stdClass
      */
     public function getSearchList($taskId, $offset = 0, $limit = -1, $sortBy = 'title', $sortDirection = 'desc', $filterCategory = '', $filterTitle = '')
     {
-        $params = array(
-            'taskid' => $taskId,
-            'offset' => $offset,
-            'limit' => $limit,
-            'sort_by' => $sortBy,
-            'sort_direction' => $sortDirection,
+        $params = [
+            'taskid'          => $taskId,
+            'offset'          => $offset,
+            'limit'           => $limit,
+            'sort_by'         => $sortBy,
+            'sort_direction'  => $sortDirection,
             'filter_category' => $filterCategory,
-            'filter_title' => $filterTitle
-        );
-        
+            'filter_title'    => $filterTitle
+        ];
+
         return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'list', $params);
     }
 
     /**
      * Gets available categories from BTSearch
      *
-     * @return stdClass
+     * @return \stdClass
      */
     public function getCategory()
     {
@@ -346,21 +371,20 @@ class DownloadStation extends Authenticate
 
     /**
      * Stops and destroys a search task
-     * 
-     * @param ustring $taskId
-     * @return stdClass
+     *
+     * @param string $taskId
+     *
+     * @return \stdClass
      */
     public function cleanSearch($taskId)
     {
-        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'clean', array(
-            'taskid' => $taskId
-        ));
+        return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'clean', ['taskid' => $taskId]);
     }
 
     /**
      * Gets the installed modules (torrent providers) from BTSearch
      *
-     * @return stdClass
+     * @return \stdClass
      */
     public function getModule()
     {
