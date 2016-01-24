@@ -1,6 +1,15 @@
 <?php
 
-class Synology_DTV_Api extends Synology_Api_Authenticate
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+
+/**
+ * Class DTV
+ *
+ * @package Synology\Applications
+ */
+class DTV extends Authenticate
 {
 
     const API_SERVICE_NAME = 'DTV';

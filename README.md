@@ -1,6 +1,9 @@
 Synology PHP
 =================
 
+This is an update of ``https://github.com/zzarbi/synology`` with new code standards and namespaces.
+
+
 This is a PHP Library that consume Synology APIs
 
 * SYNO.Api :
@@ -55,7 +58,7 @@ This is a PHP Library that consume Synology APIs
     
 Usage for Synology Api:
 ```php
-$synology = new Synology_Api('192.168.10.5', 5000, 'http', 1);
+$synology = new Synology\Api('192.168.10.5', 5000, 'http', 1);
 //$synology->activateDebug();
 $synology->connect('admin', 'xxxx');
 print_r($synology->getAvailableApi());
@@ -63,7 +66,7 @@ print_r($synology->getAvailableApi());
  
 Usage for AudioStation:
 ```php
-$synology = new Synology_AudioStation_Api('192.168.10.5', 5000, 'http', 1);
+$synology = new Synology\Applications\AudioStation('192.168.10.5', 5000, 'http', 1);
 $synology->connect('admin', 'xxxx');
 print_r($synology->getInfo());
 ```

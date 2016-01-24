@@ -1,6 +1,16 @@
 <?php
 
-class Synology_DownloadStation_Api extends Synology_Api_Authenticate
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class DownloadStation
+ *
+ * @package Synology\Applications
+ */
+class DownloadStation extends Authenticate
 {
 
     const API_SERVICE_NAME = 'DownloadStation';

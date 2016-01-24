@@ -1,6 +1,16 @@
 <?php
 
-class Synology_DSM_Api extends Synology_Api_Authenticate
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class DSM
+ *
+ * @package Synology\Applications
+ */
+class DSM extends Authenticate
 {
 
     const API_SERVICE_NAME = 'DSM';
@@ -81,7 +91,7 @@ class Synology_DSM_Api extends Synology_Api_Authenticate
                 $path = 'dsm/iscsi.cgi';
                 break;
             default:
-                new Synology_Exception('Unknow "' . $type . '" object');
+                new Exception('Unknown "' . $type . '" object');
         }
         return $this->_request($type, $path, 'list', array(
             'limit' => $limit,

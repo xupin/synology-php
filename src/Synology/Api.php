@@ -1,6 +1,13 @@
 <?php
 
-class Synology_Api extends Synology_Abstract
+namespace Synology;
+
+/**
+ * Class Api
+ *
+ * @package Synology
+ */
+class Api extends AbstractApi
 {
 
     const API_SERVICE_NAME = 'API';
@@ -41,7 +48,7 @@ class Synology_Api extends Synology_Abstract
      * @param string $username
      * @param string $password
      * @param string $sessionName
-     * @return Synology_Api
+     * @return Api
      */
     public function connect($username, $password, $sessionName = null)
     {
@@ -69,7 +76,7 @@ class Synology_Api extends Synology_Abstract
     /**
      * Logout from Synology
      *
-     * @return Synology_Api
+     * @return Api
      */
     public function disconnect()
     {
@@ -85,7 +92,7 @@ class Synology_Api extends Synology_Abstract
     /**
      * Return Session Id
      *
-     * @throws Synology_Exception
+     * @throws Exception
      * @return string
      */
     public function getSessionId()
@@ -93,7 +100,7 @@ class Synology_Api extends Synology_Abstract
         if ($this->_sid) {
             return $this->_sid;
         } else {
-            throw new Synology_Exception('Missing session');
+            throw new Exception('Missing session');
         }
     }
 

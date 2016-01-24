@@ -1,6 +1,17 @@
 <?php 
-// see http://ukdl.synology.com/download/Document/DeveloperGuide/Synology_File_Station_API_Guide.pdf
-class Synology_FileStation_Api extends Synology_Api_Authenticate
+
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class FileStation
+ *
+ * @see     http://ukdl.synology.com/download/Document/DeveloperGuide/Synology_File_Station_API_Guide.pdf
+ * @package Synology\Applications
+ */
+class FileStation extends Authenticate
 {
 
     const API_SERVICE_NAME = 'FileStation';
@@ -73,7 +84,7 @@ class Synology_FileStation_Api extends Synology_Api_Authenticate
                 $path = 'FileStation/file_sharing.cgi';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
         return $this->_request($type, $path, 'getinfo', array(
             'id' => $id

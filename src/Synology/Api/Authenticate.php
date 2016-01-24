@@ -1,6 +1,17 @@
 <?php
 
-class Synology_Api_Authenticate extends Synology_Abstract
+namespace Synology\Api;
+
+use Synology\AbstractApi;
+use Synology\Api;
+use Synology\Exception;
+
+/**
+ * Class Authenticate
+ *
+ * @package Synology\Api
+ */
+class Authenticate extends AbstractApi
 {
 
     private $_authApi = null;
@@ -21,7 +32,7 @@ class Synology_Api_Authenticate extends Synology_Abstract
     {
         parent::__construct($serviceName, $namespace, $address, $port, $protocol, $version, $verifySSL);
         $this->_sessionName = $serviceName;
-        $this->_authApi = new Synology_Api($address, $port, $protocol, $version);
+        $this->_authApi     = new Api($address, $port, $protocol, $version);
     }
 
     /**
@@ -43,8 +54,8 @@ class Synology_Api_Authenticate extends Synology_Abstract
         return $this->_authApi->disconnect();
     }
     
-    /*
-     * (non-PHPdoc) @see Synology_Abstract::_request()
+    /**
+     * {@inheritDoc}
      */
     protected function _request($api, $path, $method, $params = array(), $version = null, $httpMethod = 'get')
     {
@@ -63,11 +74,11 @@ class Synology_Api_Authenticate extends Synology_Abstract
             
             return parent::_request($api, $path, $method, $params, $version, $httpMethod);
         }
-        throw new Synology_Exception('Not Connected');
+        throw new Exception('Not Connected');
     }
     
-    /*
-     * (non-PHPdoc) @see Synology_Abstract::activateDebug()
+    /**
+     * {@inheritDoc}
      */
     public function activateDebug()
     {

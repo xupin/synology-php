@@ -1,6 +1,16 @@
 <?php
 
-class Synology_VideoStation_Api extends Synology_Api_Authenticate
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class VideoStation
+ *
+ * @package Synology\Applications
+ */
+class VideoStation extends Authenticate
 {
 
     const API_SERVICE_NAME = 'VideoStation';
@@ -67,7 +77,7 @@ class Synology_VideoStation_Api extends Synology_Api_Authenticate
                 $path = 'VideoStation/library.cgi';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
         return $this->_request($type, $path, 'list', array(
             'limit' => $limit,
@@ -110,7 +120,7 @@ class Synology_VideoStation_Api extends Synology_Api_Authenticate
                 $path = 'VideoStation/collection.cgi';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
         
         return $this->_request($type, $path, 'search', array(

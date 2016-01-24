@@ -1,6 +1,16 @@
 <?php
 
-class Synology_AudioStation_Api extends Synology_Api_Authenticate
+namespace Synology\Applications;
+
+use Synology\Api\Authenticate;
+use Synology\Exception;
+
+/**
+ * Class AudioStation
+ *
+ * @package Synology\Applications
+ */
+class AudioStation extends Authenticate
 {
 
     const API_SERVICE_NAME = 'AudioStation';
@@ -75,7 +85,7 @@ class Synology_AudioStation_Api extends Synology_Api_Authenticate
                 $path = 'AudioStation/media_server.cgi';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
         return $this->_request($type, $path, 'list', array(
             'limit' => $limit,
@@ -105,7 +115,7 @@ class Synology_AudioStation_Api extends Synology_Api_Authenticate
                 $path = 'AudioStation/playlist.cgi';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
         return $this->_request($type, $path, 'getinfo', array(
             'id' => $id
@@ -130,7 +140,7 @@ class Synology_AudioStation_Api extends Synology_Api_Authenticate
                 $method = 'getfoldercover';
                 break;
             default:
-                throw new Synology_Exception('Unknow "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
         return $this->_request('Cover', 'AudioStation/cover.cgi', $method, array(
             'id' => $id

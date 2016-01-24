@@ -1,6 +1,13 @@
 <?php
 
-class Synology_Abstract
+namespace Synology;
+
+/**
+ * Class AbstractApi
+ *
+ * @package Synology
+ */
+abstract class AbstractApi
 {
 
     const PROTOCOL_HTTP = 'http';
@@ -25,6 +32,8 @@ class Synology_Abstract
     private $_debug = false;
     
     private $_verifySSL = false;
+
+    private $_separator = '&';
 
     private $enc_type = PHP_QUERY_RFC3986;
 
@@ -56,6 +65,8 @@ class Synology_Abstract
         $this->_namespace = $namespace;
         $this->_address = $address;
         $this->_verifySSL = $verifySSL;
+        $this->_separator = ini_get('arg_separator.output');
+
         if (! empty($port) && is_numeric($port)) {
             $this->_port = (int) $port;
         }
@@ -117,7 +128,7 @@ class Synology_Abstract
         $ch = curl_init();
         
         if ($httpMethod !== 'post') {
-            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, null, null, $this->enc_type);
+            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, null, $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
             
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -129,7 +140,7 @@ class Synology_Abstract
             // set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, null, null, $this->enc_type));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, null, $this->_separator, $this->enc_type));
         }
         
         // set URL and other appropriate options
@@ -155,10 +166,10 @@ class Synology_Abstract
         } else {
             curl_close($ch);
             if ($info['total_time'] >= (self::CONNECT_TIMEOUT / 1000)) {
-                throw new Synology_Exception('Connection Timeout');
+                throw new Exception('Connection Timeout');
             } else {
                 $this->log($result, 'Result');
-                throw new Synology_Exception('Connection Error');
+                throw new Exception('Connection Error');
             }
         }
         
@@ -183,7 +194,7 @@ class Synology_Abstract
                 }
             } else {
                 if (array_key_exists($data->error->code, $this->_errorCodes)) {
-                    throw new Synology_Exception($this->_errorCodes[$data->error->code]);
+                    throw new Exception($this->_errorCodes[$data->error->code]);
                 }
             }
         } else {
@@ -195,7 +206,7 @@ class Synology_Abstract
     /**
      * Activate the debug mode
      *
-     * @return Synology_Abstract
+     * @return AbstractApi
      */
     public function activateDebug()
     {
