@@ -26,6 +26,8 @@ class Synology_Abstract
     
     private $_verifySSL = false;
 
+    private $enc_type = PHP_QUERY_RFC3986;
+
     private $_errorCodes = array(
         100 => 'Unknown error',
         101 => 'No parameter of API, method or version',
@@ -115,7 +117,7 @@ class Synology_Abstract
         $ch = curl_init();
         
         if ($httpMethod !== 'post') {
-            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params);
+            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, null, null, $this->enc_type);
             $this->log($url, 'Requested Url');
             
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -127,7 +129,7 @@ class Synology_Abstract
             // set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, null, null, $this->enc_type));
         }
         
         // set URL and other appropriate options
@@ -221,4 +223,13 @@ class Synology_Abstract
             echo PHP_EOL;
         }
     }
+
+    /**
+     * @param int $enc_type
+     */
+    public function setEncType($enc_type)
+    {
+        $this->enc_type = $enc_type;
+    }
+
 }

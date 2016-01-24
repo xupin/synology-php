@@ -148,4 +148,14 @@ class Synology_FileStation_Api extends Synology_Api_Authenticate
             'mode' => $mode
         ));
     }
+
+    public function createFolder($folder_path, $name, $force_parent = false, $additional = false)
+    {
+        return $this->_request('CreateFolder', 'FileStation/file_crtfdr.cgi', 'create', array(
+            'folder_path' => $folder_path,
+            'name' => $name,
+            'force_parent' => $force_parent,
+            'additional' => $additional ? 'real_path,size,owner,time,perm' : ''
+        ));
+    }
 }
