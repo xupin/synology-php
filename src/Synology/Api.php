@@ -10,6 +10,7 @@ namespace Synology;
 class Api extends AbstractApi
 {
     const API_SERVICE_NAME = 'API';
+    const API_NAMESPACE = 'SYNO';
 
     private $_sid = null;
     private $_sessionName = 'default';
@@ -21,10 +22,11 @@ class Api extends AbstractApi
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = 1)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(self::API_SERVICE_NAME, $this->_apiNamespace, $address, $port, $protocol, $version);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 
     /**
@@ -34,22 +36,7 @@ class Api extends AbstractApi
      */
     public function getAvailableApi()
     {
-        $services = [];
-        foreach ($this->_request('Info', 'query.cgi', 'query', ['query' => 'all']) as $key => $value) {
-            $keys = explode('.', $key);
-            if (!array_key_exists($keys[0], $services)) {
-                $services[$keys[0]] = [];
-            }
-
-
-            if (!array_key_exists($keys[1], $services[$keys[0]])) {
-                $services[$keys[0]][$keys[1]] = [];
-            }
-
-            $services[$keys[0]][$keys[1]][$keys[2]] = $value;
-        }
-
-        return $services;
+        return $this->_request('Info', 'query.cgi', 'query', ['query' => 'all']);
     }
 
     /**

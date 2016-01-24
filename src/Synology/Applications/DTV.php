@@ -12,6 +12,7 @@ use Synology\Api\Authenticate;
 class DTV extends Authenticate
 {
     const API_SERVICE_NAME = 'DTV';
+    const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -20,9 +21,10 @@ class DTV extends Authenticate
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = 1)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(self::API_SERVICE_NAME, $this->_apiNamespace, $address, $port, $protocol, $version);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 }

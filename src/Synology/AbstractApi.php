@@ -11,9 +11,8 @@ abstract class AbstractApi
 {
     const PROTOCOL_HTTP = 'http';
     const PROTOCOL_HTTPS = 'https';
+    const API_NAMESPACE = 'SYNO';
     const CONNECT_TIMEOUT = 30000; //30s
-
-    protected $_apiNamespace = 'SYNO';
 
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
@@ -22,6 +21,9 @@ abstract class AbstractApi
     private $_serviceName = null;
     private $_namespace = null;
     private $_debug = false;
+    private $_verifySSL = false;
+    private $_separator = '&';
+    private $enc_type = PHP_QUERY_RFC3986;
     private $_errorCodes = [
         100 => 'Unknown error',
         101 => 'No parameter of API, method or version',
@@ -42,12 +44,16 @@ abstract class AbstractApi
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($serviceName, $namespace, $address, $port = null, $protocol = self::PROTOCOL_HTTP, $version = 1)
+    public function __construct($serviceName, $namespace, $address, $port = null, $protocol = self::PROTOCOL_HTTP, $version = 1, $verifySSL = false)
     {
         $this->_serviceName = $serviceName;
         $this->_namespace   = $namespace;
         $this->_address     = $address;
+        $this->_verifySSL   = $verifySSL;
+        $this->_separator   = ini_get('arg_separator.output');
+
         if (!empty($port) && is_numeric($port)) {
             $this->_port = (int)$port;
         }
@@ -112,7 +118,7 @@ abstract class AbstractApi
         $ch = curl_init();
 
         if ($httpMethod !== 'post') {
-            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params);
+            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, null, $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
 
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -124,13 +130,17 @@ abstract class AbstractApi
             //set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, null, $this->_separator, $this->enc_type));
         }
 
         // set URL and other appropriate options
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
+
+        // Verify SSL or not
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->_verifySSL);
 
         // grab URL and pass it to the browser
         $result = curl_exec($ch);
@@ -215,4 +225,13 @@ abstract class AbstractApi
             echo PHP_EOL;
         }
     }
+
+    /**
+     * @param int $enc_type
+     */
+    public function setEncType($enc_type)
+    {
+        $this->enc_type = $enc_type;
+    }
+
 }

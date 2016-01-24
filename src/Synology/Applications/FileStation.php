@@ -14,6 +14,7 @@ use Synology\Exception;
 class FileStation extends Authenticate
 {
     const API_SERVICE_NAME = 'FileStation';
+    const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -22,10 +23,11 @@ class FileStation extends Authenticate
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = 1)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(self::API_SERVICE_NAME, $this->_apiNamespace, $address, $port, $protocol, $version);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 
     /**
@@ -77,6 +79,7 @@ class FileStation extends Authenticate
      */
     public function getObjectInfo($type, $id)
     {
+        $path = '';
         switch ($type) {
             case 'List':
                 $path = 'FileStation/file_share.cgi';
@@ -162,6 +165,16 @@ class FileStation extends Authenticate
         return $this->_request('Download', 'FileStation/file_download.cgi', 'download', [
             'path' => $path,
             'mode' => $mode
+        ]);
+    }
+
+    public function createFolder($folder_path, $name, $force_parent = false, $additional = false)
+    {
+        return $this->_request('CreateFolder', 'FileStation/file_crtfdr.cgi', 'create', [
+            'folder_path'  => $folder_path,
+            'name'         => $name,
+            'force_parent' => $force_parent,
+            'additional'   => $additional ? 'real_path,size,owner,time,perm' : ''
         ]);
     }
 }
