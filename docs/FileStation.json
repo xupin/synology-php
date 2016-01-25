@@ -15,6 +15,14 @@
 			"1": ["list_share", "list", "getinfo"]
 		}
 	},
+	"SYNO.FileStation.Snapshot": {
+		"path": "FileStation/file_snapshot.cgi",
+		"minVersion": 1,
+		"maxVersion": 1,
+		"methods": {
+			"1": ["list", "desc", "history"]
+		}
+	},
 	"SYNO.FileStation.Search": {
 		"path": "FileStation/file_find.cgi",
 		"minVersion": 1,
@@ -50,9 +58,10 @@
 	"SYNO.FileStation.CopyMove": {
 		"path": "FileStation/file_MVCP.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["start", "stop", "status"]
+			"1": ["start", "stop", "status"],
+			"2": ["start", "stop", "status"]
 		}
 	},
 	"SYNO.FileStation.CreateFolder": {
@@ -82,9 +91,10 @@
 	"SYNO.FileStation.Compress": {
 		"path": "FileStation/file_compress.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["start", "stop", "status"]
+			"1": ["start", "stop", "status"],
+			"2": ["start", "stop", "status"]
 		}
 	},
 	"SYNO.FileStation.Extract": {
@@ -114,9 +124,10 @@
 	"SYNO.FileStation.CheckPermission": {
 		"path": "FileStation/file_permission.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["write"]
+			"1": ["write"],
+			"2": ["write"]
 		}
 	},
 	"SYNO.FileStation.Upload": {
@@ -138,17 +149,35 @@
 	"SYNO.FileStation.Sharing": {
 		"path": "FileStation/file_sharing.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["getinfo", "list", "create", "delete", "clear_invalid", "edit"]
+			"1": ["getinfo", "list", "create", "delete", "clear_invalid", "edit"],
+			"2": ["getinfo", "list", "create", "delete", "clear_invalid", "edit", "list_share_me"]
 		}
 	},
 	"SYNO.FileStation.BackgroundTask": {
 		"path": "FileStation/background_task.cgi",
 		"minVersion": 1,
+		"maxVersion": 2,
+		"methods": {
+			"1": ["list", "clear_finished"],
+			"2": ["list", "clear_finished"]
+		}
+	},
+	"SYNO.FileStation.OpenGoogleDrive": {
+		"path": "FileStation/file_opengdrive.cgi",
+		"minVersion": 1,
 		"maxVersion": 1,
 		"methods": {
-			"1": ["list", "clear_finished"]
+			"1": ["open"]
+		}
+	},
+	"SYNO.FileStation.CheckExist": {
+		"path": "FileStation/file_checkDir.cgi",
+		"minVersion": 1,
+		"maxVersion": 1,
+		"methods": {
+			"1": ["check"]
 		}
 	}
 }

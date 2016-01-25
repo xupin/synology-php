@@ -10,65 +10,77 @@
 	"SYNO.VideoStation.Video": {
 		"path": "VideoStation/video.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["download"]
+			"1": ["download", "getinfo", "delete_symlink"],
+			"2": ["download", "delete", "getinfo", "delete_symlink"]
 		}
 	},
 	"SYNO.VideoStation.Movie": {
 		"path": "VideoStation/movie.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 3,
 		"methods": {
-			"1": ["list", "search", "getinfo", "edit"]
+			"1": ["list", "search", "getinfo", "edit"],
+			"2": ["list", "search", "getinfo", "edit", "set_watched"],
+			"3": ["list", "search", "getinfo", "edit", "delete", "set_watched"]
 		}
 	}, 
 	"SYNO.VideoStation.TVShow": {
 		"path": "VideoStation/tvshow.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["list", "search", "getinfo", "edit"]
+			"1": ["list", "search", "getinfo", "edit"],
+			"2": ["list", "search", "getinfo", "edit"]
 		}
 	},
 	"SYNO.VideoStation.TVShowEpisode": {
 		"path": "VideoStation/tvshow_episode.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 3,
 		"methods": {
-			"1": ["list", "search", "getinfo", "edit", "edit_adv"]
+			"1": ["list", "search", "getinfo", "edit", "edit_adv"],
+			"2": ["list", "search", "getinfo", "edit", "edit_adv", "set_watched"],
+			"3": ["list", "search", "getinfo", "edit", "delete", "edit_adv", "set_watched"]
 		}
 	},
 	"SYNO.VideoStation.HomeVideo": {
 		"path": "VideoStation/homevideo.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 3,
 		"methods": {
-			"1": ["list", "search", "getinfo", "edit"]
+			"1": ["list", "search", "getinfo", "edit"],
+			"2": ["list", "search", "getinfo", "edit", "set_watched"],
+			"3": ["list", "search", "getinfo", "edit", "delete", "set_watched"]
 		}
 	}, 
 	"SYNO.VideoStation.TVRecording": {
 		"path": "VideoStation/tvrecord.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 3,
 		"methods": {
-			"1": ["list", "search", "getinfo", "edit"]
+			"1": ["list", "search", "getinfo", "edit"],
+			"2": ["list", "search", "getinfo", "edit", "set_watched"],
+			"3": ["list", "search", "getinfo", "edit", "delete", "set_watched"]
 		}
 	},
 	"SYNO.VideoStation.Collection": {
 		"path": "VideoStation/collection.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["list", "getinfo", "video_list", "search", "video_getinfo", "create", "delete", "edit", "addvideo", "deletevideo"]
+			"1": ["list", "video_list", "search", "create", "delete", "edit", "addvideo", "deletevideo"],
+			"2": ["list", "video_list", "search", "create", "delete", "edit", "addvideo", "deletevideo", "getinfo", "create_smart", "edit_smart"]
 		}
 	},
 	"SYNO.VideoStation.Metadata": {
 		"path": "VideoStation/metadata.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["list"]
+			"1": ["list"],
+			"2": ["list"]
 		}
 	}, 
 	"SYNO.VideoStation.Poster": {
@@ -93,7 +105,7 @@
 		"maxVersion": 1,
 		"methods": {
 			"1": ["getimage", "setimage"]
-		}	
+		}
 	},
 	"SYNO.VideoStation.Streaming": {
 		"path": "VideoStation/vtestreaming.cgi",
@@ -196,10 +208,11 @@
 	"SYNO.VideoStation.Subtitle": {
 		"path": "VideoStation/subtitle.cgi",
 		"minVersion": 1,
-		"maxVersion": 2,
+		"maxVersion": 3,
 		"methods": {
 			"1": ["list", "get"],
-			"2": ["list", "get"]
+			"2": ["list", "get"],
+			"3": ["list", "get", "search", "download"]
 		}
 	},
 	"SYNO.VideoStation.Rating": {
@@ -229,9 +242,10 @@
 	"SYNO.VideoStation.Folder" : {
 		"path": "VideoStation/folder.cgi",
 		"minVersion": 1,
-		"maxVersion": 1,
+		"maxVersion": 2,
 		"methods": {
-			"1": ["list"]
+			"1": ["list"],
+			"2": ["list"]
 		}
 	},
 	"SYNO.VideoStation.WatchStatus" : {
@@ -248,6 +262,22 @@
 		"maxVersion": 1,
 		"methods": {
 			"1": ["list"]
+		}
+	},
+	"SYNO.VideoStation.Sharing": {
+		"path": "VideoStation/sharing.cgi",
+		"minVersion": 1,
+		"maxVersion": 1,
+		"methods": {
+			"1": ["get", "set"]
+		}
+	},
+	"SYNO.VideoStation.Misc": {
+		"path": "VideoStation/misc.cgi",
+		"minVersion": 1,
+		"maxVersion": 1,
+		"methods": {
+			"1": ["reset_timeout"]
 		}
 	}
 }
