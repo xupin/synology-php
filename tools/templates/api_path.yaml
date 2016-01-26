@@ -1,0 +1,106 @@
+  '/query.cgi?api=SYNO.API.Info&version=1&method=query&query={query}':
+    get:
+      tags:
+        - SYNO.API
+      summary: Return query for SYNO.API.Info
+      operationId: SYNO.API.Info.query
+      parameters:
+        - in: path
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  '/auth.cgi?api=SYNO.API.Auth&version=4&method=login&account={account}&passwd={passwd}&session={session}&format={format}':
+    get:
+      tags:
+        - SYNO.API
+      summary: Return login for SYNO.API.Auth
+      operationId: SYNO.API.Auth.login
+      parameters:
+        - in: path
+          name: account
+          description: Username
+          required: true
+          type: string
+          default: username
+        - in: path
+          name: passwd
+          description: Password
+          required: true
+          type: string
+          default: passwd
+        - in: path
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: path
+          name: format
+          description: Format (cookie or sid)
+          required: true
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  '/auth.cgi?api=SYNO.API.Auth&version=4&method=logout&session={session}&_sid={_sid}':
+    get:
+      tags:
+        - SYNO.API
+      summary: Return logout for SYNO.API.Auth
+      operationId: SYNO.API.Auth.logout
+      parameters:
+        - in: path
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - $ref: '#/parameters/path_sid'
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      #security:
+      #  - query_sid: []
+  '/encryption.cgi?api=SYNO.API.Encryption&version=1&method=getinfo&_sid={_sid}':
+    get:
+      tags:
+        - SYNO.API
+      summary: Return getinfo for SYNO.API.Encryption
+      operationId: SYNO.API.Encryption.getinfo
+      parameters:
+        - $ref: '#/parameters/path_sid'
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      #security:
+      #  - query_sid: []

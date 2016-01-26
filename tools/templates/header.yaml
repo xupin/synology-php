@@ -1,0 +1,89 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires modifying
+    the .htaccess file in /usr/syno/synoman/webapi:
+
+    ```
+    # CHECKME: add CORS support for Swagger Editor
+    SetEnvIf Origin ":" IS_CORS
+    Header set Access-Control-Allow-Origin "%http%://%host%" env=IS_CORS
+    Header set Access-Control-Allow-Headers "*" env=IS_CORS
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS" env=IS_CORS
+    # CHECKME: add correct JSON content type for Swagger Editor
+    SetEnvIf Accept "application/json" IS_JSON
+    Header set Content-Type application/json env=IS_JSON
+    ```
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are two versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: %host%:%port%
+basePath: /webapi
+schemes:
+  - %http%
+parameters:
+  %location%_sid:
+    name: _sid
+    description: Session ID in %location%
+    in: %location%
+    type: string
+    required: true
+    default: (Please login via SYNO.API.Auth and update the sid value here)
+#securityDefinitions:
+#  query_sid:
+#    type: apiKey
+#    name: _sid
+#    in: query
+#  cookie_sid:
+#    type: apiKey
+#    name: Cookie
+#    in: header
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: “true” when the request finishes successfully, “false” when the request fails with an error code.
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
