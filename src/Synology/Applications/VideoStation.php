@@ -13,6 +13,7 @@ use Synology\Exception;
 class VideoStation extends Authenticate
 {
     const API_SERVICE_NAME = 'VideoStation';
+    const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -21,10 +22,11 @@ class VideoStation extends Authenticate
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = 1)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(self::API_SERVICE_NAME, $this->_apiNamespace, $address, $port, $protocol, $version);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 
     /**
@@ -37,7 +39,6 @@ class VideoStation extends Authenticate
     {
         return $this->_request('Info', 'VideoStation/info.cgi', 'getinfo');
     }
-
 
     /**
      * Get a list of objects
@@ -52,6 +53,7 @@ class VideoStation extends Authenticate
      */
     public function getObjects($type, $limit = 25, $offset = 0)
     {
+        $path = '';
         $type = ucfirst($type);
         switch ($type) {
             case 'Movie':
@@ -98,6 +100,7 @@ class VideoStation extends Authenticate
      */
     public function searchObject($name, $type, $limit = 25, $offset = 0, $sortBy = 'title', $sortDirection = 'asc')
     {
+        $path = '';
         $type = ucfirst($type);
         switch ($type) {
             case 'Movie':

@@ -18,7 +18,7 @@ class Authenticate extends AbstractApi
 
     /**
      * Constructor
-     *
+     * 
      * @param string $serviceName
      * @param string $namespace
      * @param string $address
@@ -26,13 +26,12 @@ class Authenticate extends AbstractApi
      * @param string $protocol
      * @param int    $version
      */
-    public function __construct($serviceName, $namespace, $address, $port = null, $protocol = null, $version = 1)
+    public function __construct($serviceName, $namespace, $address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct($serviceName, $namespace, $address, $port, $protocol, $version);
+        parent::__construct($serviceName, $namespace, $address, $port, $protocol, $version, $verifySSL);
         $this->_sessionName = $serviceName;
         $this->_authApi     = new Api($address, $port, $protocol, $version);
     }
-
 
     /**
      * Connect to Synology

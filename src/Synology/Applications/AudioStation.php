@@ -6,13 +6,14 @@ use Synology\Api\Authenticate;
 use Synology\Exception;
 
 /**
- * Class Synology_AudioStation_Api
+ * Class AudioStation
  *
  * @package Synology\Applications
  */
 class AudioStation extends Authenticate
 {
     const API_SERVICE_NAME = 'AudioStation';
+    const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -21,10 +22,11 @@ class AudioStation extends Authenticate
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = 1)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(self::API_SERVICE_NAME, $this->_apiNamespace, $address, $port, $protocol, $version);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 
     /**
@@ -49,8 +51,9 @@ class AudioStation extends Authenticate
      *
      * @throws Exception
      */
-    public function getObjects($type, $limit = 25, $offset = 0)
+    public function getObjects($type, $limit = 25, $offset = 0, $additional = 'song_tag,song_audio,song_rating')
     {
+        $path = '';
         switch ($type) {
             case 'Album':
                 $path = 'AudioStation/album.cgi';
@@ -86,7 +89,7 @@ class AudioStation extends Authenticate
                 throw new Exception('Unknown "' . $type . '" object');
         }
 
-        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset]);
+        return $this->_request($type, $path, 'list', ['limit' => $limit, 'offset' => $offset, 'additional' => $additional]);
     }
 
     /**
@@ -101,6 +104,7 @@ class AudioStation extends Authenticate
      */
     public function getObjectInfo($type, $id)
     {
+        $path = '';
         switch ($type) {
             case 'Folder':
                 $path = 'AudioStation/folder.cgi';
@@ -130,6 +134,7 @@ class AudioStation extends Authenticate
      */
     public function getObjectCover($type, $id)
     {
+        $method = '';
         switch ($type) {
             case 'Song':
                 $method = 'getsongcover';
@@ -164,5 +169,56 @@ class AudioStation extends Authenticate
             'sort_by'        => $sortBy,
             'sort_direction' => $sortDirection
         ]);
+    }
+
+    /**
+     * List Albums of an Artist
+     *
+     * @param string $artist
+     * @param number $limit
+     * @param string $sortBy        (name, ...)
+     * @param string $sortDirection (asc|desc)
+     *
+     * @return array
+     */
+    public function listAlbumsOfArtist($artist, $limit = -1, $sortBy = 'name', $sortDirection = 'ASC')
+    {
+        return $this->_request('Album', 'AudioStation/album.cgi', 'list', [
+            'artist'         => $artist,
+            'limit'          => $limit,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection
+        ], 2, 'post');
+    }
+
+    /**
+     * List Song objects in an Album
+     *
+     * @param string $artist
+     * @param string $album
+     * @param number $limit
+     * @param string $sortBy        (track, ...)
+     * @param string $sortDirection (asc|desc)
+     * @param string $additional    (song_tag, song_audio, song_rating)
+     *
+     * @return array
+     */
+    public function listSongsInAlbum($artist, $album, $limit = -1, $sortBy = 'track', $sortDirection = 'ASC', $additional = 'song_tag,song_audio,song_rating')
+    {
+        return $this->_request('Song', 'AudioStation/song.cgi', 'search', [
+            'album'          => $album,
+            'album_artist'   => $artist,
+            'limit'          => $limit,
+            'sort_by'        => $sortBy,
+            'sort_direction' => $sortDirection,
+            'additional'     => $additional
+        ], 2, 'post');
+    }
+
+    public function stream($id)
+    {
+        return $this->_request('Stream', 'AudioStation/stream.cgi', 'stream', [
+            'id' => $id
+        ], 2, 'get');
     }
 }

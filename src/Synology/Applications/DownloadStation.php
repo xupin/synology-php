@@ -13,6 +13,7 @@ use Synology\Exception;
 class DownloadStation extends Authenticate
 {
     const API_SERVICE_NAME = 'DownloadStation';
+    const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -21,10 +22,11 @@ class DownloadStation extends Authenticate
      * @param int    $port
      * @param string $protocol
      * @param int    $version
+     * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = 1)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(self::API_SERVICE_NAME, $this->_apiNamespace, $address, $port, $protocol, $version);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 
     /**
@@ -142,13 +144,14 @@ class DownloadStation extends Authenticate
      * Add a new Task
      *
      * @param string  $uri
+     * @param unknown $file
      * @param string  $login
      * @param string  $password
      * @param string  $zipPassword
      *
      * @return \stdClass
      */
-    public function addTask($uri, $login = null, $password = null, $zipPassword = null)
+    public function addTask($uri, $file = null, $login = null, $password = null, $zipPassword = null)
     {
         $params = ['uri' => $uri];
         if (!empty($login)) {
@@ -279,12 +282,10 @@ class DownloadStation extends Authenticate
         return $this->_request('RSS.Site', 'DownloadStation/RSSsite.cgi', 'list', []);
     }
 
-
     /**
      * Refresh all RSS
      *
      * @param string|array $rssId
-     *
      * @param int          $offset
      * @param int          $limit
      *
