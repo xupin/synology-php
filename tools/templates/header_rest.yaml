@@ -5,19 +5,9 @@ info:
     [Generate your own swagger file](https://github.com/mikespub/synology)
 
 
-    If you want to try this out on your own Synology, this requires modifying
-    the .htaccess file in /usr/syno/synoman/webapi:
-
-    ```
-    # CHECKME: add CORS support for Swagger Editor
-    SetEnvIf Origin ":" IS_CORS
-    Header set Access-Control-Allow-Origin "%http%://%host%" env=IS_CORS
-    Header set Access-Control-Allow-Headers "*" env=IS_CORS
-    Header set Access-Control-Allow-Methods "GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS" env=IS_CORS
-    # CHECKME: add correct JSON content type for Swagger Editor
-    SetEnvIf Accept "application/json" IS_JSON
-    Header set Content-Type application/json env=IS_JSON
-    ```
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
 
 
     Except for SYNO.API.Info query, most API calls assume that you have
@@ -26,7 +16,7 @@ info:
     in your swagger file so that all API calls can use the right value.
 
 
-    There are two versions of the swagger file available, one using short
+    There are many versions of the swagger file available, one using short
     urls with query parameters, and the other specifying the complete path
     including the 4 standard parameters for each API method. Any special
     additional parameters needed for a particular API method are not taken
@@ -39,27 +29,15 @@ info:
   license:
     name: MIT
     url: 'https://opensource.org/licenses/MIT'
-host: %host%:%port%
-basePath: /webapi
+host: %host%
+basePath: /rest.php
 schemes:
   - %http%
-parameters:
-  %location%_sid:
+securityDefinitions:
+  query_sid:
+    type: apiKey
     name: _sid
-    description: Session ID in %location%
-    in: %location%
-    type: string
-    required: true
-    default: (Please login via SYNO.API.Auth and update the sid value here)
-#securityDefinitions:
-#  query_sid:
-#    type: apiKey
-#    name: _sid
-#    in: query
-#  cookie_sid:
-#    type: apiKey
-#    name: Cookie
-#    in: header
+    in: query
 consumes:
   - application/json
   - text/plain

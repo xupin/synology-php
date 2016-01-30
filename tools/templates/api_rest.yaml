@@ -1,29 +1,10 @@
-  /query.cgi:
+  /SYNO.API.Info/v1/query:
     get:
       tags:
-        - SYNO.API
+        - API
       summary: Return query for SYNO.API.Info
-      operationId: SYNO.API.Info.query
+      operationId: API_Info_query
       parameters:
-        - in: query
-          name: api
-          description: Name of the API requested
-          required: true
-          type: string
-          default: SYNO.API.Info
-        - in: query
-          name: version
-          description: Version of the API requested
-          required: true
-          type: integer
-          default: 1
-        - in: query
-          name: method
-          description: Method of the API requested
-          required: true
-          type: string
-          enum: [query]
-          default: query
         - in: query
           name: query
           description: Requested API information
@@ -39,32 +20,13 @@
           description: Abnormal Response
           schema:
             type: object
-  /auth.cgi:
+  /SYNO.API.Auth/v4/login:
     get:
       tags:
-        - SYNO.API
+        - API
       summary: Return login for SYNO.API.Auth
-      operationId: SYNO.API.Auth.login
+      operationId: API_Auth_login
       parameters:
-        - in: query
-          name: api
-          description: Name of the API requested
-          required: true
-          type: string
-          default: SYNO.API.Auth
-        - in: query
-          name: version
-          description: Version of the API requested
-          required: true
-          type: integer
-          default: 4
-        - in: query
-          name: method
-          description: Method of the API requested
-          required: true
-          type: string
-          enum: [login, logout]
-          default: login
         - in: query
           name: account
           description: Username
@@ -98,3 +60,27 @@
           description: Abnormal Response
           schema:
             type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
