@@ -1,0 +1,44 @@
+{
+    "SYNO.CloudSync": {
+        "lib": "lib/SYNO.CloudSync.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "pause",
+                "resume",
+                "unlink",
+                "get_property",
+                "get_config",
+                "set_global_config",
+                "set_personal_config",
+                "get_user_info",
+                "get_log",
+                "get_recently_change",
+                "get_syncfolder_list",
+                "get_oauth_info",
+                "get_connection_setting",
+                "get_selective_folder_list",
+                "get_selective_folder_list_wizard",
+                "get_selective_sync_config",
+                "test_connection_s3",
+                "test_connection_openstack",
+                "test_connection_webdav",
+                "test_connection_gcs",
+                "set_connection_setting",
+                "set_selective_sync_config",
+                "list_conn",
+                "list_s3_bucket",
+                "list_openstack_container",
+                "create_s3_bucket",
+                "list_gcs_bucket",
+                "create_gcs_bucket",
+                "create_openstack_container",
+                "create_link",
+                "export_key"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

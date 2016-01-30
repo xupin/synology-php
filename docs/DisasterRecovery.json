@@ -1,0 +1,28 @@
+{
+    "SYNO.DisasterRecovery.Log": {
+        "lib": "lib/SYNO.DisasterRecovery.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.DisasterRecovery.Retention": {
+        "lib": "lib/SYNO.DisasterRecovery.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

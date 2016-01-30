@@ -1,0 +1,27 @@
+{
+    "SYNO.Entry.Request.Polling": {
+        "lib": "lib/webapi_entry_polling.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Entry.Request": {
+        "lib": "lib/NotExist.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "request"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

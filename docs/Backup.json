@@ -1,0 +1,417 @@
+{
+    "SYNO.Backup.App": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get_icon"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.App.Backup": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "mysql_check",
+                "surveillance_check"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.App.Restore": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "list_install",
+                "mysql_check",
+                "surveillance_check"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Config.Backup": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "start",
+                "status",
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Config.Restore": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "upload",
+                "list",
+                "delete",
+                "list_conflict",
+                "check",
+                "start",
+                "status"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Log": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Repository": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "delete",
+                "create",
+                "get",
+                "set",
+                "find",
+                "check_permission"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Repository.Certificate": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "verify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Repository.PrivilegedUser": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "add",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Restore": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "cancel",
+                "status"
+            ],
+            "2": [
+                "restore"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Server": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Service.NetworkBackup": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Service.TimeBackup": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Service.VersionBackup": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Share.Restore": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Source.Folder": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Storage.Connect.Network": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Storage.S3.Bucket": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Storage.S3.Region": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Storage.Share.Local": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Storage.Volume.Local": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Target": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "set",
+                "find",
+                "get_candidate_dir",
+                "get_property",
+                "get_space"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Target.File": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "copy",
+                "restore",
+                "download",
+                "status",
+                "cancel"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Target.Folder": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Target.Owner": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Target.PrivilegedUser": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "add",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Task": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "delete",
+                "backup",
+                "relink",
+                "cancel"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Task.Data": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Backup.Version": {
+        "lib": "lib/SYNO.Backup.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "lock",
+                "delete",
+                "list_folder",
+                "summary",
+                "rotate"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

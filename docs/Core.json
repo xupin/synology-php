@@ -1,0 +1,3647 @@
+{
+    "SYNO.Core.ACL": {
+        "lib": "lib/SYNO.Core.ACL.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "status",
+                "stop",
+                "list_owners",
+                "inspect",
+                "check_admin"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AHA": {
+        "lib": "lib/SYNO.Core.AHA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "switchover",
+                "recovery",
+                "shutdown",
+                "reboot",
+                "turn_off_beep",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AHA.Enclosure": {
+        "lib": "lib/SYNO.Core.AHA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AHA.Log": {
+        "lib": "lib/SYNO.Core.AHA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AHA.Monitor": {
+        "lib": "lib/SYNO.Core.AHA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AHA.Network": {
+        "lib": "lib/SYNO.Core.AHA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AHA.Node": {
+        "lib": "lib/SYNO.Core.AHA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppNotify": {
+        "lib": "lib/SYNO.Core.AppNotify.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPortal": {
+        "lib": "lib/SYNO.Core.AppPortal.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "list"
+            ],
+            "2": [
+                "get",
+                "set",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPortal.Config": {
+        "lib": "lib/SYNO.Core.AppPortal.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPortal.Image": {
+        "lib": "lib/SYNO.Core.AppPortal.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPortal.Style": {
+        "lib": "lib/SYNO.Core.AppPortal.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPriv": {
+        "lib": "lib/SYNO.Core.AppPriv.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "get"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPriv.App": {
+        "lib": "lib/SYNO.Core.AppPriv.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ],
+            "2": [
+                "preview",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.AppPriv.Rule": {
+        "lib": "lib/SYNO.Core.AppPriv.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "delete",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.BandwidthControl": {
+        "lib": "lib/SYNO.Core.BandwidthControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.BandwidthControl.Protocol": {
+        "lib": "lib/SYNO.Core.BandwidthControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.BandwidthControl.Status": {
+        "lib": "lib/SYNO.Core.BandwidthControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CMS.Cache": {
+        "lib": "lib/webapi_cache_client.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "push"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CMS.Policy": {
+        "lib": "lib/webapi_gpo_client.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "fetch"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CMS.Info": {
+        "lib": "lib/SYNO.Core.CMS.Info.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CMS": {
+        "lib": "lib/SYNO.Core.CMS.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "begin_join",
+                "end_join",
+                "disjoin"
+            ],
+            "2": [
+                "begin_join",
+                "end_join",
+                "disjoin"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CMS.ServerInfo": {
+        "lib": "lib/SYNO.Core.CMS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CMS.Token": {
+        "lib": "lib/SYNO.Core.CMS.Token.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "update",
+                "check",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Certificate": {
+        "lib": "lib/SYNO.Core.Certificate.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "export",
+                "import"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Certificate.CRT": {
+        "lib": "lib/SYNO.Core.Certificate.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "recreate"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Certificate.CSR": {
+        "lib": "lib/SYNO.Core.Certificate.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "renew",
+                "sign"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.CurrentConnection": {
+        "lib": "lib/libwebapi-CurrentConnection.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_by_user",
+                "kick_connection",
+                "disable_user",
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DDNS.ExtIP": {
+        "lib": "lib/SYNO.Core.DDNS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DDNS.Provider": {
+        "lib": "lib/SYNO.Core.DDNS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "delete",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DDNS.Record": {
+        "lib": "lib/SYNO.Core.DDNS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "update_ip_address",
+                "create",
+                "delete",
+                "set",
+                "test"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DDNS.Synology": {
+        "lib": "lib/SYNO.Core.DDNS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "register_account",
+                "register_hostname",
+                "send_verified_mail",
+                "list_domain",
+                "get_myds_account"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DataCollect": {
+        "lib": "lib/libwebapi-DataCollect.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DataCollect.Application": {
+        "lib": "lib/libwebapi-DataCollect.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "record"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Desktop.Timeout": {
+        "lib": "lib/SYNO.Core.Desktop.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check",
+                "get",
+                "reset"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.Domain": {
+        "lib": "lib/SYNO.Core.Directory.Domain.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "set",
+                "get",
+                "test_dc",
+                "get_domain_list",
+                "update_start",
+                "update_status",
+                "update_stop"
+            ],
+            "2": [
+                "get_domain_list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.Domain.Conf": {
+        "lib": "lib/SYNO.Core.Directory.Domain.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.Domain.Schedule": {
+        "lib": "lib/SYNO.Core.Directory.Domain.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.LDAP": {
+        "lib": "lib/SYNO.Core.Directory.LDAP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.LDAP.BaseDN": {
+        "lib": "lib/SYNO.Core.Directory.LDAP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.LDAP.Profile": {
+        "lib": "lib/SYNO.Core.Directory.LDAP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.SSO": {
+        "lib": "lib/SYNO.Core.Directory.SSO.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "register"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.SSO.utils": {
+        "lib": "lib/SYNO.Core.Directory.SSO.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "exchange"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Bluetooth": {
+        "lib": "lib/libwebapi-Bluetooth.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set_discovery"
+            ],
+            "2": [
+                "list",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Bluetooth.Device": {
+        "lib": "lib/libwebapi-Bluetooth.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Bluetooth.Settings": {
+        "lib": "lib/libwebapi-Bluetooth.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.DefaultPermission": {
+        "lib": "lib/SYNO.Core.ExternalDevice.DefaultPermission.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "print_test",
+                "clean"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer.BonjourSharing": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer.Driver": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer.Network": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "eject",
+                "get",
+                "set",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer.Network.Host": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer.OAuth": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "revoke"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Printer.USB": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Printer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "eject",
+                "get",
+                "set",
+                "release_mfp"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Storage.EUnit": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Storage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Storage.SD": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Storage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Storage.Setting": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Storage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Storage.USB": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Storage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "format",
+                "eject",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.Storage.eSATA": {
+        "lib": "lib/SYNO.Core.ExternalDevice.Storage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "format",
+                "eject"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ExternalDevice.UPS": {
+        "lib": "lib/libwebapiups.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.EzInternet": {
+        "lib": "lib/SYNO.Core.EzInternet.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.File": {
+        "lib": "lib/webapi_file.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "save",
+                "load",
+                "list",
+                "create"
+            ],
+            "2": [
+                "save",
+                "load",
+                "list",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.File.Thumbnail": {
+        "lib": "lib/webapi_file.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.AFP": {
+        "lib": "lib/SYNO.Core.FileServ.AFP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.FTP": {
+        "lib": "lib/SYNO.Core.FileServ.FTP.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ],
+            "2": [
+                "set",
+                "get"
+            ],
+            "3": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.FTP.ChrootUser": {
+        "lib": "lib/SYNO.Core.FileServ.FTP.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "delete",
+                "add"
+            ],
+            "2": [
+                "load",
+                "save"
+            ]
+        },
+        "minVersion": 2,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.FTP.SFTP": {
+        "lib": "lib/SYNO.Core.FileServ.FTP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.FTP.Security": {
+        "lib": "lib/SYNO.Core.FileServ.FTP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get",
+                "list_ftp_share"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.NFS": {
+        "lib": "lib/SYNO.Core.FileServ.NFS.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ],
+            "2": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.NFS.AdvancedSetting": {
+        "lib": "lib/SYNO.Core.FileServ.NFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.NFS.IDMap": {
+        "lib": "lib/SYNO.Core.FileServ.NFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "create",
+                "set",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.NFS.Kerberos": {
+        "lib": "lib/SYNO.Core.FileServ.NFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "upload_key",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.NFS.SharePrivilege": {
+        "lib": "lib/SYNO.Core.FileServ.NFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.SMB": {
+        "lib": "lib/SYNO.Core.FileServ.SMB.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "set",
+                "get",
+                "clean_cache"
+            ],
+            "2": [
+                "set",
+                "get",
+                "clean_cache"
+            ],
+            "3": [
+                "set",
+                "get",
+                "clean_cache"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.WebDAV": {
+        "lib": "lib/SYNO.Core.FileServ.WebDAV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.WebDAV.CalDAV": {
+        "lib": "lib/SYNO.Core.FileServ.WebDAV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.FileServ.WebDAV.CalDAV.Calendar": {
+        "lib": "lib/SYNO.Core.FileServ.WebDAV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "create",
+                "delete",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Group": {
+        "lib": "lib/SYNO.Core.Group.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "delete",
+                "create",
+                "admin_check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Group.Member": {
+        "lib": "lib/SYNO.Core.Group.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "add",
+                "remove",
+                "admin_check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.BeepControl": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "stop_beep"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.DCOutput": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.DCOutput.Task": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "update",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.FanSpeed": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.Hibernation": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.LCM": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.Led.Brightness": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "update",
+                "set_current_brightness",
+                "get_static_data"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.MemoryLayout": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.PowerRecovery": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.PowerSchedule": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Hardware.ZRAM": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MediaIndexing": {
+        "lib": "lib/mediaindexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "get",
+                "set",
+                "reindex"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MediaIndexing.IndexFolder": {
+        "lib": "lib/mediaindexing-indexfolder.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MediaIndexing.MediaConverter": {
+        "lib": "lib/mediaindexing-mediaconverter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "pause",
+                "resume"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MyDSCenter": {
+        "lib": "lib/mydscenter.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "register"
+            ],
+            "2": [
+                "login",
+                "logout",
+                "register",
+                "query"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MyDSCenter.Account": {
+        "lib": "lib/mydscenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MyDSCenter.Purchase": {
+        "lib": "lib/mydscenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MyDSCenter.Unify": {
+        "lib": "lib/mydscenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "authen",
+                "migrate",
+                "check",
+                "disable_notify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.TrafficControl.RouterRules": {
+        "lib": "lib/SYNO.Core.Network.TrafficControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.TrafficControl.Rules": {
+        "lib": "lib/SYNO.Core.Network.TrafficControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network": {
+        "lib": "lib/libwebapi-Network.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "test_internet"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Bond": {
+        "lib": "lib/libwebapi-Bond.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "list",
+                "create",
+                "delete",
+                "set_mode"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Bridge": {
+        "lib": "lib/libwebapi-Bridge.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.DHCPServer": {
+        "lib": "lib/libwebapi-DHCPServer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.DHCPServer.ClientList": {
+        "lib": "lib/libwebapi-DHCPServer.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.DHCPServer.PXE": {
+        "lib": "lib/libwebapi-DHCPServer.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "list"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.DHCPServer.Reservation": {
+        "lib": "lib/libwebapi-DHCPServer.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.DHCPServer.WPAD": {
+        "lib": "lib/libwebapi-DHCPServer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Ethernet": {
+        "lib": "lib/libwebapi-Ethernet.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.IPv6": {
+        "lib": "lib/libwebapi-ipv6.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.IPv6.Router": {
+        "lib": "lib/libwebapi-IPv6Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.IPv6.Router.Prefix": {
+        "lib": "lib/libwebapi-IPv6Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "add",
+                "remove",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.IPv6Tunnel": {
+        "lib": "lib/libwebapi-IPv6Tunnel.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Interface": {
+        "lib": "lib/libwebapi-Network-Interface.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.LocalBridge": {
+        "lib": "lib/libwebapi-LocalBridge.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.MACClone": {
+        "lib": "lib/libwebapi-MacClone.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "getRemoteMACAddress"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.PPPoE": {
+        "lib": "lib/libwebapi-PPPoE.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "list",
+                "connect",
+                "disconnect"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.PPPoE.Relay": {
+        "lib": "lib/libwebapi-PPPoE.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Proxy": {
+        "lib": "lib/libwebapi-Proxy.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.ConnectionList": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "delete",
+                "getcount"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.CountryCode": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "get_tip",
+                "set_tip",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.DMZ": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.Gateway.List": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.LocalLan": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.MacFilter": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.ParentalControl": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.PkgList": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.PortForward": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.Static.Route": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "test",
+                "tablesget"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Router.Topology": {
+        "lib": "lib/libwebapi-Router.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.UPnPServer": {
+        "lib": "lib/libwebapi-UPnPServer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.USBModem": {
+        "lib": "lib/libwebapi-USBModem.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "getapn",
+                "set",
+                "unlocksim",
+                "modifypin",
+                "unlockpuk",
+                "connect",
+                "disconnect"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.VPN": {
+        "lib": "lib/libwebapi-VPNClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check",
+                "connect",
+                "disconnect"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.VPN.L2TP": {
+        "lib": "lib/libwebapi-VPNClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "delete",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.VPN.OpenVPN": {
+        "lib": "lib/libwebapi-VPNClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "delete",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.VPN.OpenVPN.CA": {
+        "lib": "lib/libwebapi-VPNClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.VPN.PPTP": {
+        "lib": "lib/libwebapi-VPNClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "delete",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.WOL": {
+        "lib": "lib/libwebapi-WOL.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "wake"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Wifi.Client": {
+        "lib": "lib/libwebapi-Wifi.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "connect",
+                "disconnect",
+                "scan",
+                "create_adhoc"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Wifi.Hotspot": {
+        "lib": "lib/libwebapi-Wifi.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.Wifi.WPS": {
+        "lib": "lib/libwebapi-Wifi.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start_pbc",
+                "start_pin"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Mail": {
+        "lib": "lib/SYNO.Core.Notification.Mail.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "send_test"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Mail.Conf": {
+        "lib": "lib/SYNO.Core.Notification.Mail.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Mail.Auth": {
+        "lib": "lib/SYNO.Core.Notification.Mail.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.SMS": {
+        "lib": "lib/SYNO.Core.Notification.SMS.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "send_test"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.SMS.Conf": {
+        "lib": "lib/SYNO.Core.Notification.SMS.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.SMS.Provider": {
+        "lib": "lib/SYNO.Core.Notification.SMS.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "create",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Push": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "send_test"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Push.Conf": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "status"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Push.Mail": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "status",
+                "send_verify",
+                "send_test"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Push.Mobile": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "unpair"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Push.AuthToken": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Advance.FilterSettings": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "list"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Advance.CustomizedData": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "reset"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Advance.WarningPercentage": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.CMS": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "send_test"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.CMS.Conf": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Notification.Advance.Variables": {
+        "lib": "lib/libNotification.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.OTP": {
+        "lib": "lib/SYNO.Core.User.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "reset"
+            ],
+            "2": [
+                "get",
+                "reset",
+                "get_one",
+                "save_mail",
+                "get_qrcode",
+                "edit_secret_key",
+                "auth_tmp_code"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.OTP.EnforcePolicy": {
+        "lib": "lib/SYNO.Core.User.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Package": {
+        "lib": "/usr/syno/synoman/webman/modules/PkgManApp/SYNO.Core.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Package.Control": {
+        "lib": "/usr/syno/synoman/webman/modules/PkgManApp/SYNO.Core.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Package.Installation": {
+        "lib": "/usr/syno/synoman/webman/modules/PkgManApp/SYNO.Core.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "upload",
+                "install",
+                "clean"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Package.Server": {
+        "lib": "/usr/syno/synoman/webman/modules/PkgManApp/SYNO.Core.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Package.Setting": {
+        "lib": "/usr/syno/synoman/webman/modules/PkgManApp/SYNO.Core.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Package.Uninstallation": {
+        "lib": "/usr/syno/synoman/webman/modules/PkgManApp/SYNO.Core.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "uninstall"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "detect",
+                "detect_status",
+                "get_current_process"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding.Compatibility": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "test",
+                "test_status",
+                "stop",
+                "upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding.RouterConf": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding.RouterInfo": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding.RouterList": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding.Rules": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "save",
+                "save_status",
+                "load",
+                "test",
+                "test_status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.PortForwarding.Rules.Serv": {
+        "lib": "lib/SYNO.Core.PortForwarding.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check",
+                "test",
+                "test_status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.QuickConnect": {
+        "lib": "lib/SYNO.Core.QuickConnect.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "status",
+                "get",
+                "set",
+                "set_server_alias"
+            ],
+            "2": [
+                "get",
+                "set",
+                "set_server_alias"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.QuickConnect.Permission": {
+        "lib": "lib/SYNO.Core.QuickConnect.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.QuickConnect.Upnp": {
+        "lib": "lib/SYNO.Core.QuickConnect.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Quota": {
+        "lib": "lib/SYNO.Core.Quota.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "inspect"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.RecycleBin": {
+        "lib": "lib/SYNO.Core.RecycleBin.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "stop",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.RecycleBin.User": {
+        "lib": "lib/SYNO.Core.RecycleBin.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "stop",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Region.Language": {
+        "lib": "lib/SYNO.Core.Region.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Region.NTP": {
+        "lib": "lib/SYNO.Core.Region.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "sync",
+                "listzone"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Region.NTP.Server": {
+        "lib": "lib/SYNO.Core.Region.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Report": {
+        "lib": "lib/SYNO.Core.Report.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "create",
+                "delete",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Report.Analyzer": {
+        "lib": "lib/SYNO.Core.Report.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getdata",
+                "confirmduplicate"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Report.Config": {
+        "lib": "lib/SYNO.Core.Report.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Report.History": {
+        "lib": "lib/SYNO.Core.Report.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SNMP": {
+        "lib": "lib/SYNO.Core.SNMP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.AutoBlock": {
+        "lib": "lib/SYNO.Core.Security.AutoBlock.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.AutoBlock.Rules": {
+        "lib": "lib/SYNO.Core.Security.AutoBlock.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list",
+                "delete",
+                "create",
+                "upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.DoS": {
+        "lib": "lib/SYNO.Core.Security.DoS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.Firewall.Conf": {
+        "lib": "lib/SYNO.Core.Security.Firewall.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.Firewall.Rules": {
+        "lib": "lib/SYNO.Core.Security.Firewall.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "load",
+                "save_start",
+                "save_status",
+                "save_stop"
+            ],
+            "2": [
+                "load",
+                "save_start",
+                "save_status",
+                "save_stop",
+                "countries_list",
+                "list_country_ip"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.Firewall.Rules.Serv": {
+        "lib": "lib/SYNO.Core.Security.Firewall.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "policy_check",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.VPNPassthrough": {
+        "lib": "lib/SYNO.Core.Security.VPNPassthrough.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.VPNPassthrough.Status": {
+        "lib": "lib/SYNO.Core.Security.VPNPassthrough.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.DSM": {
+        "lib": "lib/SYNO.Core.Security.DSM.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.DSM.Embed": {
+        "lib": "lib/SYNO.Core.Security.DSM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SecurityScan.Conf": {
+        "lib": "lib/SYNO.Core.SecurityScan.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get",
+                "time_get",
+                "first_get",
+                "group_enum",
+                "group_set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SecurityScan.Operation": {
+        "lib": "lib/SYNO.Core.SecurityScan.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "stop",
+                "fixme",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SecurityScan.Status": {
+        "lib": "lib/SYNO.Core.SecurityScan.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "system_get",
+                "rule_get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Service": {
+        "lib": "lib/libwebapi-Service.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "control"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Service.Conf": {
+        "lib": "lib/libwebapi-Service.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Service.PortInfo": {
+        "lib": "lib/libwebapi-Service.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "move_status",
+                "stop_move",
+                "list",
+                "get",
+                "delete",
+                "validate_delete",
+                "validate_set",
+                "restore",
+                "clone"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Crypto": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "decrypt",
+                "encrypt",
+                "validate_encrypt"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Crypto.Key": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "export",
+                "verify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.CryptoFile": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "decrypt"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Fileindex": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "reindex",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Migration": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check",
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Migration.Task": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Permission": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_by_user",
+                "list_by_group",
+                "set",
+                "set_by_user_group"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Share.Snapshot": {
+        "lib": "lib/SYNO.Core.Share.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set_schedule",
+                "get_schedule",
+                "create",
+                "list",
+                "delete",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Storage.Disk": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get_smart_info",
+                "do_smart_test",
+                "get_smart_test_log"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Storage.Pool": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "create",
+                "delete",
+                "expand_by_add_disk",
+                "get_progress"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Storage.Volume": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "create",
+                "create_on_pool",
+                "expand_pool_child",
+                "get_progress"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Storage.iSCSILUN": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Storage.iSCSITargets": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SupportForm.Form": {
+        "lib": "lib/libwebapi-SupportForm.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SupportForm.Log": {
+        "lib": "lib/libwebapi-SupportForm.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SupportForm.Service": {
+        "lib": "lib/libwebapi-SupportForm.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient": {
+        "lib": "lib/SYNO.Core.SyslogClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "test"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.CA": {
+        "lib": "lib/SYNO.Core.SyslogClient.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "upload",
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.CustRule": {
+        "lib": "lib/SYNO.Core.SyslogClient.CustRule.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "delete",
+                "create",
+                "enable",
+                "disable"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.FileTransfer": {
+        "lib": "lib/SYNO.Core.SyslogClient.FileTransfer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.History": {
+        "lib": "lib/SYNO.Core.SyslogClient.History.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "export",
+                "clear"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.Log": {
+        "lib": "lib/SYNO.Core.SyslogClient.Log.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "export",
+                "clear",
+                "get_remotearch_subfolder"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.PersonalActivity": {
+        "lib": "lib/SYNO.Core.SyslogClient.PersonalActivity.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "loginhistory"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.Setting.Notify": {
+        "lib": "lib/SYNO.Core.SyslogClient.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.Setting.Server": {
+        "lib": "lib/SYNO.Core.SyslogClient.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.Setting.Storage": {
+        "lib": "lib/SYNO.Core.SyslogClient.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.SyslogClient.Status": {
+        "lib": "lib/SYNO.Core.SyslogClient.Status.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "device_enum",
+                "attr_enum",
+                "latestlog_get",
+                "eps_get",
+                "cnt_get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.System": {
+        "lib": "lib/SYNO.Core.System.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "shutdown",
+                "reboot",
+                "reset",
+                "info"
+            ],
+            "2": [
+                "info"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.System.Utilization": {
+        "lib": "lib/SYNO.Core.System.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.TFTP": {
+        "lib": "lib/libCoreTFTP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.TaskScheduler": {
+        "lib": "lib/SYNO.Core.TaskScheduler.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set_enable",
+                "delete",
+                "run",
+                "set",
+                "create"
+            ],
+            "2": [
+                "get",
+                "set",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Terminal": {
+        "lib": "lib/SYNO.Core.Terminal.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ],
+            "2": [
+                "set",
+                "get"
+            ],
+            "3": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Theme.Image": {
+        "lib": "lib/SYNO.Core.Theme.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "upload",
+                "get",
+                "clean_history"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Theme.Login": {
+        "lib": "lib/SYNO.Core.Theme.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "progress",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.AutoUpgrade": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "cancel"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.Group": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "info"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.Group.Download": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "cancel",
+                "progress"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.GroupInstall": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.GroupInstall.Network": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.Patch": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "upload",
+                "clean",
+                "verify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.Server": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.Server.Download": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "cancel",
+                "progress"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Upgrade.Setting": {
+        "lib": "lib/SYNO.Core.Upgrade.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.User": {
+        "lib": "lib/SYNO.Core.User.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "delete",
+                "create",
+                "parse_user_list",
+                "import",
+                "import_status",
+                "import_stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.User.Home": {
+        "lib": "lib/SYNO.Core.User.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.User.PasswordPolicy": {
+        "lib": "lib/SYNO.Core.User.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.UserSettings": {
+        "lib": "lib/SYNO.Core.UserSettings.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "apply"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.DSM": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.DSM.External": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.HTTP": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.HTTP.Dependency": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.HTTP.VHost": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.PHP": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Web.PHP.Extension": {
+        "lib": "lib/SYNO.Core.Web.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "SYNO.SocialAccount": {
+        "lib": "lib/webapi_socialaccount.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "status"
+            ],
+            "2": [
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SocialAccount.Friend": {
+        "lib": "lib/webapi_socialaccount.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SocialAccount.Token": {
+        "lib": "lib/webapi_socialaccount.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

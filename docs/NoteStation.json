@@ -1,0 +1,414 @@
+{
+    "SYNO.NoteStation.Info": {
+        "lib": "/var/packages/NoteStation/target/webapi/info/SYNO.NoteStation.Info.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "searchplace"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Share.Priv": {
+        "lib": "/var/packages/NoteStation/target/webapi/share/SYNO.NoteStation.Share.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Shard": {
+        "lib": "/var/packages/NoteStation/target/webapi/shard/SYNO.NoteStation.Shard.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "init"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Shard.Link": {
+        "lib": "/var/packages/NoteStation/target/webapi/shard/SYNO.NoteStation.Shard.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Note": {
+        "lib": "/var/packages/NoteStation/target/webapi/note/SYNO.NoteStation.Note.so",
+        "minVersion": 1,
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "download",
+                "set",
+                "idle",
+                "create",
+                "delete",
+                "restore",
+                "copy"
+            ],
+            "2": [
+                "list",
+                "get",
+                "download",
+                "set",
+                "idle",
+                "create",
+                "delete",
+                "restore",
+                "copy"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Note.Version": {
+        "lib": "/var/packages/NoteStation/target/webapi/note/SYNO.NoteStation.Note.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list",
+                "restore"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Note.AppLink": {
+        "lib": "/var/packages/NoteStation/target/webapi/note/SYNO.NoteStation.Note.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Note.Encrypt": {
+        "lib": "/var/packages/NoteStation/target/webapi/note/SYNO.NoteStation.Note.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "check",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Note.Polling": {
+        "lib": "/var/packages/NoteStation/target/webapi/note/SYNO.NoteStation.Note.so",
+        "minVersion": 1,
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "set",
+                "set_status",
+                "set_stop",
+                "copy",
+                "copy_status",
+                "copy_stop"
+            ],
+            "2": [
+                "set",
+                "set_status",
+                "set_stop",
+                "copy",
+                "copy_status",
+                "copy_stop",
+                "create",
+                "create_status",
+                "create_stop"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Note.Ghost": {
+        "lib": "/var/packages/NoteStation/target/webapi/note/SYNO.NoteStation.Note.so",
+        "minVersion": 2,
+        "maxVersion": 2,
+        "methods": {
+            "2": [
+                "create"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Notebook": {
+        "lib": "/var/packages/NoteStation/target/webapi/notebook/SYNO.NoteStation.Notebook.so",
+        "minVersion": 1,
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "create",
+                "set",
+                "delete"
+            ],
+            "2": [
+                "list",
+                "get",
+                "create",
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Notebook.Preset": {
+        "lib": "/var/packages/NoteStation/target/webapi/notebook/SYNO.NoteStation.Notebook.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Notebook.Polling": {
+        "lib": "/var/packages/NoteStation/target/webapi/notebook/SYNO.NoteStation.Notebook.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "archive",
+                "archive_status",
+                "archive_stop"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Tag": {
+        "lib": "/var/packages/NoteStation/target/webapi/tag/SYNO.NoteStation.Tag.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Shortcut": {
+        "lib": "/var/packages/NoteStation/target/webapi/shortcut/SYNO.NoteStation.Shortcut.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.FTS": {
+        "lib": "/var/packages/NoteStation/target/webapi/fts/SYNO.NoteStation.FTS.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "search"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Permission": {
+        "lib": "/var/packages/NoteStation/target/webapi/permission/SYNO.NoteStation.Permission.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Permission.Public": {
+        "lib": "/var/packages/NoteStation/target/webapi/permission/SYNO.NoteStation.Permission.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Permission.User": {
+        "lib": "/var/packages/NoteStation/target/webapi/permission/SYNO.NoteStation.Permission.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Setting": {
+        "lib": "/var/packages/NoteStation/target/webapi/setting/SYNO.NoteStation.Setting.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "init",
+                "get",
+                "set"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Setting.DSM": {
+        "lib": "/var/packages/NoteStation/target/webapi/setting/SYNO.NoteStation.Setting.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Import.Evernote": {
+        "lib": "/var/packages/NoteStation/target/webapi/import/SYNO.NoteStation.Import.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "init",
+                "get_status",
+                "get_polling_task",
+                "prepare_notebooks",
+                "prepare_notebooks_status",
+                "list_notebooks",
+                "add_import_task",
+                "import",
+                "import_status",
+                "import_stop",
+                "import_lock",
+                "get_oauth_url",
+                "get_oauth_token",
+                "check_oauth_token"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Import.Notebook": {
+        "lib": "/var/packages/NoteStation/target/webapi/import/SYNO.NoteStation.Import.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Stack": {
+        "lib": "/var/packages/NoteStation/target/webapi/stack/SYNO.NoteStation.Stack.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Todo": {
+        "lib": "/var/packages/NoteStation/target/webapi/todo/SYNO.NoteStation.Todo.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "create",
+                "delete"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Export.Notebook": {
+        "lib": "/var/packages/NoteStation/target/webapi/export/SYNO.NoteStation.Export.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.NoteStation.Export.Note": {
+        "lib": "/var/packages/NoteStation/target/webapi/export/SYNO.NoteStation.Export.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop",
+                "download"
+            ]
+        },
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

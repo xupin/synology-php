@@ -1,0 +1,27 @@
+{
+    "SYNO.ACEEditor": {
+        "lib": "lib/SYNO.ACEEditor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "translate"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.ACEEditor.Preference": {
+        "lib": "lib/SYNO.ACEEditor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "_______________________________________________________entry.cgi",
+        "requestFormat": "JSON"
+    }
+}
