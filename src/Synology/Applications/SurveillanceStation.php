@@ -2,6 +2,7 @@
 /**
  *
  * @author Ondrej Pospisil <https://github.com/pospon>
+ * https://global.download.synology.com/download/Document/DeveloperGuide/Surveillance_Station_Web_API_v2.4.pdf
  */
 
 namespace Synology\Applications;
