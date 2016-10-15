@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Synology : PHP Implementation of Synology Download Station">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Synology</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mikespub/synology">View on GitHub</a>
+
+          <h1 id="project_title">Synology</h1>
+          <h2 id="project_tagline">PHP Implementation of Synology Download Station</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mikespub/synology/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mikespub/synology/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="synology-php" class="anchor" href="#synology-php" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synology PHP</h1>
+
+<p>This is an update of <code>https://github.com/zzarbi/synology</code> with new code standards and namespaces.</p>
+
+<p>This is a PHP Library that consume Synology APIs</p>
+
+<ul>
+<li>
+<p>SYNO.Api :</p>
+
+<ul>
+<li>connect</li>
+<li>disconnect</li>
+<li>getAvailableApi</li>
+</ul>
+</li>
+<li>
+<p>SYNO.DownloadStation :</p>
+
+<ul>
+<li>connect</li>
+<li>disconnect</li>
+<li>getInfo</li>
+<li>getConfig</li>
+<li>setConfig</li>
+<li>getScheduleConfig</li>
+<li>setScheduleConfig</li>
+<li>getTaskList</li>
+<li>getTaskInfo</li>
+<li>addTask</li>
+<li>deleteTask</li>
+<li>pauseTask</li>
+<li>resumeTask</li>
+<li>getStatistics</li>
+<li>getRssList</li>
+<li>refreshRss</li>
+<li>getRssFeedList</li>
+</ul>
+</li>
+<li>
+<p>SYNO.AudioStation:</p>
+
+<ul>
+<li>connect</li>
+<li>disconnect</li>
+<li>getInfo</li>
+<li>getObjects</li>
+<li>getObjectInfo</li>
+<li>getObjectCover</li>
+<li>searchSong</li>
+</ul>
+</li>
+<li>
+<p>SYNO.FileStation:</p>
+
+<ul>
+<li>connect</li>
+<li>disconnect</li>
+<li>getInfo</li>
+<li>getShares</li>
+<li>getObjectInfo</li>
+<li>getList</li>
+<li>search</li>
+<li>download</li>
+</ul>
+</li>
+<li>
+<p>SYNO.VideoStation:</p>
+
+<ul>
+<li>connect</li>
+<li>disconnect</li>
+<li>getInfo</li>
+<li>getObjects</li>
+<li>searchObject</li>
+</ul>
+</li>
+</ul>
+
+<p>Usage for Synology Api:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-smi">$synology</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Synology\</span><span class="pl-c1">Api</span>(<span class="pl-s"><span class="pl-pds">'</span>192.168.10.5<span class="pl-pds">'</span></span>, <span class="pl-c1">5000</span>, <span class="pl-s"><span class="pl-pds">'</span>http<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>);</span>
+<span class="pl-s1"><span class="pl-c">//$synology-&gt;activateDebug();</span></span>
+<span class="pl-s1"><span class="pl-smi">$synology</span><span class="pl-k">-&gt;</span>connect(<span class="pl-s"><span class="pl-pds">'</span>admin<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>xxxx<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-c1">print_r</span>(<span class="pl-smi">$synology</span><span class="pl-k">-&gt;</span>getAvailableApi());</span></pre></div>
+
+<p>Usage for AudioStation:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-smi">$synology</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Synology\Applications\</span><span class="pl-c1">AudioStation</span>(<span class="pl-s"><span class="pl-pds">'</span>192.168.10.5<span class="pl-pds">'</span></span>, <span class="pl-c1">5000</span>, <span class="pl-s"><span class="pl-pds">'</span>http<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>);</span>
+<span class="pl-s1"><span class="pl-smi">$synology</span><span class="pl-k">-&gt;</span>connect(<span class="pl-s"><span class="pl-pds">'</span>admin<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>xxxx<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-c1">print_r</span>(<span class="pl-smi">$synology</span><span class="pl-k">-&gt;</span>getInfo());</span></pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Synology maintained by <a href="https://github.com/mikespub">mikespub</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
