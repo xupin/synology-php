@@ -1,16 +1,29 @@
 {
-    "SYNO.AudioPlayer.Stream": {
-        "path": "AudioPlayer/stream.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
+    "SYNO.AudioPlayer": {
+        "lib": "/usr/syno/synoman/webapi/lib/SYNO.AudioPlayer.so",
+        "maxVersion": 2,
         "methods": {
-            "1": [
-                "getinfo",
-                "stream",
-                "transcode",
+            "2": [
+                "list_media_info",
                 "get_media_info",
-                "list_media_info"
+                "get_support_info"
             ]
-        }
+        },
+        "minVersion": 2,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.AudioPlayer.Stream": {
+        "lib": "/usr/syno/synoman/webapi/lib/SYNO.AudioPlayer.so",
+        "maxVersion": 2,
+        "methods": {
+            "2": [
+                "transcode",
+                "stream"
+            ]
+        },
+        "minVersion": 2,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

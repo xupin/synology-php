@@ -1,0 +1,58 @@
+{
+    "SYNO.DR.Node": {
+        "lib": "lib/SYNO.DR.Node.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "info",
+                "test_sync_speed",
+                "test_download_speed",
+                "test_privilege",
+                "test_connection"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.DR.Node.Credential": {
+        "lib": "lib/SYNO.DR.Node.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "get",
+                "list",
+                "relay",
+                "reverse_create",
+                "test_create",
+                "test_reverse_create",
+                "test_set",
+                "temp_create",
+                "temp_reverse_create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.DR.Node.Session": {
+        "lib": "lib/SYNO.DR.Node.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create",
+                "temp_create",
+                "get",
+                "delete"
+            ],
+            "2": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

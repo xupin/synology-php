@@ -1,32 +1,47 @@
 {
-    "SYNO.FolderSharing.List": {
-        "path": "FolderSharing/file_share.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list"
-            ]
-        }
-    },
-    "SYNO.FolderSharing.Thumb": {
-        "path": "FolderSharing/file_thumb.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get"
-            ]
-        }
-    },
     "SYNO.FolderSharing.Download": {
-        "path": "FolderSharing/file_download.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FolderSharing.Download.so",
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "download"
+            ],
+            "2": [
+                "download"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FolderSharing.List": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FolderSharing.List.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FolderSharing.Thumb": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FolderSharing.Thumb.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

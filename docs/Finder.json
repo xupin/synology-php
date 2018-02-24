@@ -1,0 +1,222 @@
+{
+    "SYNO.Finder.AppIndexing.Search": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.AppIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "search"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.Bookmark": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.Bookmark.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "del",
+                "get",
+                "add"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.Elastic.SearchHistory": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.Elastic.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.Elastic.Spotlight": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.Elastic.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "boost"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.Elastic.Term": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.Elastic.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_avail_db",
+                "suggest"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.File": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.File.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.File.Cover": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.File.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.File.Thumbnail": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.File.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.FileIndexing.Folder": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.FileIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "reindex",
+                "delete",
+                "list",
+                "list_group",
+                "summary",
+                "set",
+                "add",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.FileIndexing.Highlight": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.FileIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "highlight"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.FileIndexing.Indicate": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.FileIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "indicate"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.FileIndexing.Search": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.FileIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "search"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.FileIndexing.Status": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.FileIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "resume",
+                "pause",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.FileIndexing.Term": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.FileIndexing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.Preference": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.Preference.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.Settings": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.Settings.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Finder.UserGrp": {
+        "lib": "/var/packages/SynoFinder/target/webapi/SYNO.Finder.UserGrp.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_group",
+                "list_user"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

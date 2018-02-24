@@ -1,0 +1,230 @@
+{
+    "SYNO.Storage.CGI.Check": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "do_disk_scan",
+                "remove_ask_for_remap_scan",
+                "remove_ask_for_raid_force_scan",
+                "remove_ask_for_wcache_lost_data_scrubbing",
+                "remove_ask_for_fsck_scan",
+                "remove_ask_for_fsck",
+                "is_data_scrubbing",
+                "do_data_scrubbing",
+                "ignore_data_scrubbing",
+                "is_building",
+                "reboot_after_rebuild",
+                "should_ask_for_fsck_scan",
+                "schedule_next_suggestion",
+                "disable_suggestion",
+                "update_raid_list",
+                "get_space_for_scrubbing",
+                "add_schedule_raid_data_scrubbing_task",
+                "has_scrubbing_schedule"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.DualEnclosure": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Enclosure": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Flashcache": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check_system_raid",
+                "configure",
+                "create",
+                "estimate_mem_size",
+                "estimate_repair",
+                "load_history_data",
+                "remove",
+                "repair",
+                "statistics",
+                "statistics_check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.HddMan": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "send_health_report"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Pool": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "cancel_data_scrubbing",
+                "cancel_create",
+                "create",
+                "data_scrubbing",
+                "delete",
+                "edit_desc",
+                "enum_resource",
+                "estimate_size",
+                "expand_by_add_disk",
+                "expand_unallocated",
+                "expand_unfinished_shr",
+                "migrate",
+                "remove_lun",
+                "repair"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Smart": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "get_health_info",
+                "get_smart_info",
+                "get_smart_test_log",
+                "do_smart_test",
+                "secure_erase",
+                "list",
+                "update_smartctl_db",
+                "smart_warning_set",
+                "smart_warning_get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Smart.Scheduler": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "list",
+                "delete",
+                "run",
+                "change_state"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Spare": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Spare.Conf": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Storage": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load_info",
+                "load_system_raid",
+                "login_check",
+                "repair_sys_partition",
+                "repair_system_partition",
+                "set_system_raid"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Volume": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "cancel_create",
+                "cancel_data_scrubbing",
+                "cancel_defrag",
+                "cancel_fs_scrubbing",
+                "create_on_existing_pool",
+                "create",
+                "data_scrubbing",
+                "defrag",
+                "delete",
+                "deploy_unused",
+                "enum_resource",
+                "estimate_size",
+                "expand_by_add_disk",
+                "expand_pool_child",
+                "expand_unallocated",
+                "expand_unfinished_shr",
+                "convert_shr_to_pool",
+                "fs_scrubbing",
+                "migrate",
+                "next_trim_time_get",
+                "repair",
+                "ssd_trim_get",
+                "ssd_trim_save",
+                "vol_extent_size_get",
+                "vol_extent_size_set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

@@ -1,19 +1,448 @@
 {
-    "SYNO.FileStation.VFS.Protocol": {
-        "lib": "lib/SYNO.FileStation.so",
+    "SYNO.FileStation.BackgroundTask": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.BackgroundTask.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "list",
+                "clear_finished"
+            ],
+            "2": [
+                "list",
+                "clear_finished"
+            ],
+            "3": [
+                "list",
+                "clear_finished"
+            ]
+        },
         "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.CheckExist": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Directory.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "check"
+            ],
+            "2": [
+                "check"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.CheckPermission": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.CheckPermission.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "write"
+            ],
+            "2": [
+                "write"
+            ],
+            "3": [
+                "write"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Compress": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Compress.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ],
+            "2": [
+                "start",
+                "status",
+                "stop"
+            ],
+            "3": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.CopyMove": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.CopyMove.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ],
+            "2": [
+                "start",
+                "status",
+                "stop"
+            ],
+            "3": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.CreateFolder": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Directory.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "create"
+            ],
+            "2": [
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Delete": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Delete.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "start",
+                "stop",
+                "status",
+                "delete"
+            ],
+            "2": [
+                "start",
+                "stop",
+                "status",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.DirSize": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Directory.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ],
+            "2": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Download": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Download.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "download"
+            ],
+            "2": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.External.GoogleDrive": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.External.GoogleDrive.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "open"
+            ],
+            "2": [
+                "open"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Extract": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Extract.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "start",
+                "status",
+                "stop"
+            ],
+            "2": [
+                "list",
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Favorite": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Favorite.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "edit",
+                "delete",
+                "add",
+                "clear_broken",
+                "replace_all"
+            ],
+            "2": [
+                "list",
+                "edit",
+                "delete",
+                "add",
+                "clear_broken",
+                "replace_all"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.FormUpload": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Upload.so",
+        "maxVersion": 2,
+        "methods": {
+            "2": [
+                "start",
+                "status",
+                "cancel"
+            ]
+        },
+        "minVersion": 2,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Info": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Info.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.List": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.List.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "list_share",
+                "getinfo"
+            ],
+            "2": [
+                "list",
+                "list_share",
+                "getinfo"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.MD5": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.MD5.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ],
+            "2": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Mount": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Mount.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "list"
+                "mount_iso",
+                "mount_remote",
+                "unmount"
             ]
         },
-        "path": "_______________________________________________________entry.cgi",
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.FileStation.VFS.User": {
-        "lib": "lib/SYNO.FileStation.so",
+    "SYNO.FileStation.Mount.List": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Mount.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "unmount",
+                "reconnect",
+                "remount"
+            ]
+        },
         "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Notify": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Notify.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "all",
+                "one"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Property": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Property.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Property.ACLOwner": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Property.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Property.CompressSize": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Property.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Property.Mtime": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Property.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Rename": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Rename.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "rename"
+            ],
+            "2": [
+                "rename"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Search": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Search.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "start",
+                "stop",
+                "clean"
+            ],
+            "2": [
+                "list",
+                "start",
+                "stop",
+                "clean"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Search.History": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Search.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Settings": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Settings.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -21,12 +450,187 @@
                 "set"
             ]
         },
-        "path": "_______________________________________________________entry.cgi",
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Sharing": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Sharing.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "create",
+                "list",
+                "edit",
+                "delete",
+                "clear_invalid",
+                "getinfo"
+            ],
+            "2": [
+                "create",
+                "list",
+                "list_share_me",
+                "edit",
+                "delete",
+                "clear_invalid",
+                "getinfo"
+            ],
+            "3": [
+                "create",
+                "list",
+                "list_share_me",
+                "edit",
+                "delete",
+                "clear_invalid",
+                "getinfo"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Sharing.Download": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Sharing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Snapshot": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Snapshot.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "history",
+                "desc"
+            ],
+            "2": [
+                "list",
+                "history",
+                "desc"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Thumb": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Thumb.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Timeout": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Misc.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "avoid"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.UIString": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Misc.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getjs"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.Upload": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Upload.so",
+        "maxVersion": 3,
+        "methods": {
+            "2": [
+                "upload"
+            ],
+            "3": [
+                "upload"
+            ]
+        },
+        "minVersion": 2,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.UserGrp": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.UserGrp.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_user",
+                "list_group",
+                "list_all"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.VFS.Connection": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "set",
+                "delete",
+                "list",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.VFS.File": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.FileStation.VFS.GDrive": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VFS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.FileStation.VFS.Profile": {
-        "lib": "lib/SYNO.FileStation.so",
-        "minVersion": 1,
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VFS.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -37,313 +641,48 @@
                 "list"
             ]
         },
-        "path": "_______________________________________________________entry.cgi",
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.FileStation.VFS.Connection": {
-        "lib": "lib/SYNO.FileStation.so",
-        "minVersion": 1,
+    "SYNO.FileStation.VFS.Protocol": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VFS.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "create",
-                "set",
-                "delete",
-                "list",
-                "get"
+                "list"
             ]
         },
-        "path": "_______________________________________________________entry.cgi",
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.FileStation.VFS.GDrive": {
-        "lib": "lib/SYNO.FileStation.so",
-        "minVersion": 1,
+    "SYNO.FileStation.VFS.User": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VFS.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "download"
+                "get",
+                "set"
             ]
         },
-        "path": "_______________________________________________________entry.cgi",
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
-    },
-    "SYNO.FileStation.Info": {
-        "path": "FileStation/info.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "getinfo"
-            ]
-        }
-    },
-    "SYNO.FileStation.List": {
-        "path": "FileStation/file_share.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list_share",
-                "list",
-                "getinfo"
-            ]
-        }
-    },
-    "SYNO.FileStation.Snapshot": {
-        "path": "FileStation/file_snapshot.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list",
-                "desc",
-                "history"
-            ]
-        }
-    },
-    "SYNO.FileStation.Search": {
-        "path": "FileStation/file_find.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "start",
-                "list",
-                "stop",
-                "clean"
-            ]
-        }
     },
     "SYNO.FileStation.VirtualFolder": {
-        "path": "FileStation/file_virtual.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.VirtualFolder.so",
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "list"
-            ]
-        }
-    },
-    "SYNO.FileStation.Favorite": {
-        "path": "FileStation/file_favorite.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list",
-                "add",
-                "delete",
-                "clear_broken",
-                "edit",
-                "replace_all"
-            ]
-        }
-    },
-    "SYNO.FileStation.Delete": {
-        "path": "FileStation/file_delete.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "start",
-                "stop",
-                "status",
-                "delete"
-            ]
-        }
-    },
-    "SYNO.FileStation.CopyMove": {
-        "path": "FileStation/file_MVCP.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "start",
-                "stop",
-                "status"
             ],
             "2": [
-                "start",
-                "stop",
-                "status"
-            ]
-        }
-    },
-    "SYNO.FileStation.CreateFolder": {
-        "path": "FileStation/file_crtfdr.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "create"
-            ]
-        }
-    },
-    "SYNO.FileStation.Rename": {
-        "path": "FileStation/file_rename.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "rename"
-            ]
-        }
-    },
-    "SYNO.FileStation.Thumb": {
-        "path": "FileStation/file_thumb.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get"
-            ]
-        }
-    },
-    "SYNO.FileStation.Compress": {
-        "path": "FileStation/file_compress.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "start",
-                "stop",
-                "status"
-            ],
-            "2": [
-                "start",
-                "stop",
-                "status"
-            ]
-        }
-    },
-    "SYNO.FileStation.Extract": {
-        "path": "FileStation/file_extract.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "start",
-                "stop",
-                "status",
                 "list"
             ]
-        }
-    },
-    "SYNO.FileStation.DirSize": {
-        "path": "FileStation/file_dirSize.cgi",
+        },
         "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "start",
-                "status",
-                "stop"
-            ]
-        }
-    },
-    "SYNO.FileStation.MD5": {
-        "path": "FileStation/file_md5.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "start",
-                "status",
-                "stop"
-            ]
-        }
-    },
-    "SYNO.FileStation.CheckPermission": {
-        "path": "FileStation/file_permission.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "write"
-            ],
-            "2": [
-                "write"
-            ]
-        }
-    },
-    "SYNO.FileStation.Upload": {
-        "path": "FileStation/api_upload.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "upload"
-            ]
-        }
-    },
-    "SYNO.FileStation.Download": {
-        "path": "FileStation/file_download.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "download"
-            ]
-        }
-    },
-    "SYNO.FileStation.Sharing": {
-        "path": "FileStation/file_sharing.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "getinfo",
-                "list",
-                "create",
-                "delete",
-                "clear_invalid",
-                "edit"
-            ],
-            "2": [
-                "getinfo",
-                "list",
-                "create",
-                "delete",
-                "clear_invalid",
-                "edit",
-                "list_share_me"
-            ]
-        }
-    },
-    "SYNO.FileStation.BackgroundTask": {
-        "path": "FileStation/background_task.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "list",
-                "clear_finished"
-            ],
-            "2": [
-                "list",
-                "clear_finished"
-            ]
-        }
-    },
-    "SYNO.FileStation.OpenGoogleDrive": {
-        "path": "FileStation/file_opengdrive.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "open"
-            ]
-        }
-    },
-    "SYNO.FileStation.CheckExist": {
-        "path": "FileStation/file_checkDir.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "check"
-            ]
-        }
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

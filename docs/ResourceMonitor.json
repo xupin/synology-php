@@ -9,7 +9,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     }
 }

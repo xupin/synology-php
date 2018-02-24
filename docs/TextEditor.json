@@ -1,26 +1,23 @@
 {
-    "SYNO.Entry.Request.Polling": {
-        "lib": "lib/webapi_entry_polling.so",
+    "SYNO.TextEditor": {
+        "lib": "/var/packages/TextEditor/target/webapi/lib/SYNO.TextEditor.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "status",
-                "list"
+                "translate"
             ]
         },
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Entry.Request": {
-        "lib": "lib/NotExist.so",
-        "maxVersion": 2,
+    "SYNO.TextEditor.Preference": {
+        "lib": "/var/packages/TextEditor/target/webapi/lib/SYNO.TextEditor.so",
+        "maxVersion": 1,
         "methods": {
             "1": [
-                "request"
-            ],
-            "2": [
-                "request"
+                "set",
+                "get"
             ]
         },
         "minVersion": 1,

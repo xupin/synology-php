@@ -9,7 +9,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.S2S.Server.Pair": {
@@ -23,7 +23,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.S2S.Client": {
@@ -35,7 +35,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.S2S.Client.Job": {
@@ -54,7 +54,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     }
 }

@@ -1,0 +1,33 @@
+{
+    "SYNO.License": {
+        "lib": "lib/SYNO.License.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "activate",
+                "deactivate",
+                "import",
+                "export",
+                "check_code",
+                "check_sync",
+                "check_connection",
+                "delete",
+                "check_extend_code",
+                "extend",
+                "check_extend_target"
+            ],
+            "2": [
+                "list",
+                "activate",
+                "deactivate",
+                "check_code",
+                "check_extend_code",
+                "check_extend_target"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}
