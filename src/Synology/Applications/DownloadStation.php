@@ -143,15 +143,16 @@ class DownloadStation extends Authenticate
     /**
      * Add a new Task
      *
-     * @param string  $uri
-     * @param unknown $file
-     * @param string  $login
-     * @param string  $password
-     * @param string  $zipPassword
+     * @param string $uri
+     * @param string $file
+     * @param string $login
+     * @param string $password
+     * @param string $zipPassword
+     * @param string $destination
      *
      * @return \stdClass
      */
-    public function addTask($uri, $file = null, $login = null, $password = null, $zipPassword = null)
+    public function addTask($uri, $file = null, $login = null, $password = null, $zipPassword = null, $destination = null)
     {
         $params = ['uri' => $uri];
         if (!empty($login)) {
@@ -164,6 +165,10 @@ class DownloadStation extends Authenticate
 
         if (!empty($zipPassword)) {
             $params['login'] = $zipPassword;
+        }
+
+        if (!empty($destination)) {
+            $params['destination'] = $destination;
         }
 
         return $this->_request('Task', 'DownloadStation/task.cgi', 'create', $params, null, 'post');
