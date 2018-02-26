@@ -17,10 +17,13 @@
  * refresh_api_files() below and generate the swagger files again.
  */
 
+// TODO: run example.php afterwards to copy files for Swagger Editor
+//
 //refresh_api_files('../docs/');
 //exit;
 
 $json_file = 'combined.json';
+//if (true || !is_file($json_file)) {
 if (!is_file($json_file)) {
     combine_json_files();
 }
@@ -107,6 +110,7 @@ function generate_swagger($apilist, $debug=false) {
             $params['api'] = $api;
             echo "\t".$api."\n";
             $params['tag'] = explode('.', $api)[1];
+            $params['tag2'] = explode('.', $api)[2];
             foreach ($values as $idx => $val) {
                 echo "\t\t".$idx.":".$val."\n";
             }
@@ -213,8 +217,10 @@ function clean_values($values) {
                     $method = array_keys($method)[0];
                     array_push($methodlist, $method);
                 }
-            }
-            $cleaned['methods'][$idx] = $methodlist;
+			}
+            // Core.MediaIndex has duplicate get & set methods
+            //$cleaned['methods'][$idx] = $methodlist;
+            $cleaned['methods'][$idx] = array_unique($methodlist);
         }
     }
     return $cleaned;
@@ -222,7 +228,8 @@ function clean_values($values) {
 
 function combine_json_files() {
     // Get current paths from SYNO.API.Info
-    // TODO: retrieve current paths for active packages
+	// TODO: retrieve current paths for active packages
+	// http://192.168.x.x/rest.php/SYNO.API.Info/v1/query
     $filepath = 'query.json';
     $auth = [];
     if (is_file($filepath)) {
@@ -260,21 +267,26 @@ function combine_json_files() {
             if (strpos($api, 'PhotoStation') === false) {
                 if (!$auth[$api]) {
                     echo "Unknown api $api\n";
-                    exit;
-                }
-                if ($values['path'] && $values['path'] != $auth[$api]['path']) {
-                    echo "Invalid path ".$values['path']." for api $api in $file\n";
-                    continue;
-                }
-                if ($values['maxVersion'] && $values['maxVersion'] != $auth[$api]['maxVersion']) {
-                    echo "Invalid maxVersion ".$values['maxVersion']." for api $api in $file\n";
-                    exit;
+                    //continue;
+                    //exit;
+                } else {
+                    if ($values['path'] && $values['path'] != $auth[$api]['path']) {
+                        echo "Invalid path ".$values['path']." for api $api in $file\n";
+                        //continue;
+                        exit;
+                    }
+                    if ($values['maxVersion'] && $values['maxVersion'] != $auth[$api]['maxVersion']) {
+                        echo "Invalid maxVersion ".$values['maxVersion']." for api $api in $file\n";
+                        exit;
+                    }
                 }
             }
             $root = implode('.', array_slice(explode('.', $api), 0, 2));
             if ($apilist[$root] && $apilist[$root][$api]) {
                 echo "Already seen $api\n";
-                exit;
+                $apilist[$root][$api] = array_merge($apilist[$root][$api], $values);
+                continue;
+                //exit;
             }
             if ($auth[$api]) {
                 $apilist[$root][$api] = array_merge($values, $auth[$api]);
@@ -304,8 +316,10 @@ function refresh_api_files($basedir) {
     }
     // Find *Station packages and corresponding *.api files in the appstore (adapt volume if needed)
     $path = '/volume1/@appstore/';
-    $found = `find $path -path '*Station/*' -name '*.api' -exec cp {} $basedir \;`;
-    $found = `find $path -path '*Station/*' -name '*.lib' -exec cp {} $basedir \;`;
+    #$found = `find $path -path '*Station/*' -name '*.api' -exec cp {} $basedir \;`;
+    $found = `find $path -name '*.api' -exec cp {} $basedir \;`;
+    #$found = `find $path -path '*Station/*' -name '*.lib' -exec cp {} $basedir \;`;
+    $found = `find $path -name '*.lib' -exec cp {} $basedir \;`;
     // Some cleanup of incomplete API files
     $checkme = ['Auth.api', 'Query.api', 'NoteStation.lib'];
     foreach ($checkme as $file) {

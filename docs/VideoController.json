@@ -16,7 +16,8 @@
                 "pause",
                 "stop",
                 "seek",
-                "status"
+                "status",
+                "set_repeat"
             ]
         }
     },

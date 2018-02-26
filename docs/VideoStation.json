@@ -1,4 +1,43 @@
 {
+    "SYNO.VideoStation.AcrossLibrary": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_library",
+                "list_movie"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation.Backdrop": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "add",
+                "delete_all",
+                "get"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation.OfflineConversion": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "list",
+                "restart",
+                "restart_all",
+                "stop",
+                "stop_all"
+            ]
+        },
+        "minVersion": 1
+    },
     "SYNO.VideoStation.Info": {
         "path": "VideoStation/info.cgi",
         "minVersion": 1,
@@ -12,7 +51,7 @@
     "SYNO.VideoStation.Video": {
         "path": "VideoStation/video.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "download",
@@ -24,13 +63,20 @@
                 "delete",
                 "getinfo",
                 "delete_symlink"
+            ],
+            "3": [
+                "download",
+                "delete",
+                "getinfo",
+                "delete_symlink",
+                "get_track_info"
             ]
         }
     },
     "SYNO.VideoStation.Movie": {
         "path": "VideoStation/movie.cgi",
         "minVersion": 1,
-        "maxVersion": 3,
+        "maxVersion": 4,
         "methods": {
             "1": [
                 "list",
@@ -52,13 +98,22 @@
                 "edit",
                 "delete",
                 "set_watched"
+            ],
+            "4": [
+                "list",
+                "search",
+                "getinfo",
+                "edit",
+                "delete",
+                "set_watched",
+                "set_rating"
             ]
         }
     },
     "SYNO.VideoStation.TVShow": {
         "path": "VideoStation/tvshow.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list",
@@ -71,13 +126,19 @@
                 "search",
                 "getinfo",
                 "edit"
+            ],
+            "3": [
+                "list",
+                "search",
+                "getinfo",
+                "edit"
             ]
         }
     },
     "SYNO.VideoStation.TVShowEpisode": {
         "path": "VideoStation/tvshow_episode.cgi",
         "minVersion": 1,
-        "maxVersion": 3,
+        "maxVersion": 4,
         "methods": {
             "1": [
                 "list",
@@ -102,13 +163,23 @@
                 "delete",
                 "edit_adv",
                 "set_watched"
+            ],
+            "4": [
+                "list",
+                "search",
+                "getinfo",
+                "edit",
+                "delete",
+                "edit_adv",
+                "set_watched",
+                "set_rating"
             ]
         }
     },
     "SYNO.VideoStation.HomeVideo": {
         "path": "VideoStation/homevideo.cgi",
         "minVersion": 1,
-        "maxVersion": 3,
+        "maxVersion": 4,
         "methods": {
             "1": [
                 "list",
@@ -130,6 +201,15 @@
                 "edit",
                 "delete",
                 "set_watched"
+            ],
+            "4": [
+                "list",
+                "search",
+                "getinfo",
+                "edit",
+                "delete",
+                "set_watched",
+                "set_rating"
             ]
         }
     },
@@ -164,7 +244,7 @@
     "SYNO.VideoStation.Collection": {
         "path": "VideoStation/collection.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list",
@@ -188,18 +268,34 @@
                 "getinfo",
                 "create_smart",
                 "edit_smart"
+            ],
+            "3": [
+                "list",
+                "video_list",
+                "search",
+                "create",
+                "delete",
+                "edit",
+                "addvideo",
+                "deletevideo",
+                "getinfo",
+                "create_smart",
+                "edit_smart"
             ]
         }
     },
     "SYNO.VideoStation.Metadata": {
         "path": "VideoStation/metadata.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list"
             ],
             "2": [
+                "list"
+            ],
+            "3": [
                 "list"
             ]
         }
@@ -207,53 +303,49 @@
     "SYNO.VideoStation.Poster": {
         "path": "VideoStation/poster.cgi",
         "minVersion": 1,
-        "maxVersion": 1,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "getimage",
                 "setimage"
-            ]
-        }
-    },
-    "SYNO.VideoStation.Rating": {
-        "path": "VideoStation/rater.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "updateinfo"
+            ],
+            "2": [
+                "getimage",
+                "setimage"
+            ],
+            "3": [
+                "getimage",
+                "setimage",
+                "deleteimage"
             ]
         }
     },
     "SYNO.VideoStation.Streaming": {
         "path": "VideoStation/vtestreaming.cgi",
         "minVersion": 1,
-        "maxVersion": 1,
+        "maxVersion": 3,
         "methods": {
             "1": [
+                "open",
+                "stream",
+                "close"
+            ],
+            "2": [
+                "open",
+                "stream",
+                "close"
+            ],
+            "3": [
                 "open",
                 "stream",
                 "close"
             ]
         }
     },
-    "SYNO.VideoStation.PluginSearch": {
-        "path": "VideoStation/pluginsearch.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "start",
-                "stop",
-                "list",
-                "query"
-            ]
-        }
-    },
     "SYNO.VideoStation.Subtitle": {
         "path": "VideoStation/subtitle.cgi",
         "minVersion": 1,
-        "maxVersion": 3,
+        "maxVersion": 4,
         "methods": {
             "1": [
                 "list",
@@ -268,6 +360,13 @@
                 "get",
                 "search",
                 "download"
+            ],
+            "4": [
+                "list",
+                "get",
+                "search",
+                "download",
+                "discover"
             ]
         }
     },
@@ -308,10 +407,14 @@
     "SYNO.VideoStation.Library": {
         "path": "VideoStation/library.cgi",
         "minVersion": 1,
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "list"
+            ],
+            "2": [
+                "list",
+                "set_visibility"
             ]
         }
     },

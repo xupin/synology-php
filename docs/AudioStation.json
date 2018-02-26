@@ -21,12 +21,15 @@
     "SYNO.AudioStation.Album": {
         "path": "AudioStation/album.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list"
             ],
             "2": [
+                "list"
+            ],
+            "3": [
                 "list"
             ]
         }
@@ -47,25 +50,35 @@
     "SYNO.AudioStation.Genre": {
         "path": "AudioStation/genre.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list"
             ],
             "2": [
                 "list"
+            ],
+            "3": [
+                "list",
+                "list_default_genre"
             ]
         }
     },
     "SYNO.AudioStation.Artist": {
         "path": "AudioStation/artist.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 4,
         "methods": {
             "1": [
                 "list"
             ],
             "2": [
+                "list"
+            ],
+            "3": [
+                "list"
+            ],
+            "4": [
                 "list"
             ]
         }
@@ -92,7 +105,7 @@
     "SYNO.AudioStation.Song": {
         "path": "AudioStation/song.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list",
@@ -100,6 +113,14 @@
                 "getinfo"
             ],
             "2": [
+                "list",
+                "search",
+                "getinfo",
+                "setrating",
+                "setsharing",
+                "getsharing"
+            ],
+            "3": [
                 "list",
                 "search",
                 "getinfo",
@@ -145,7 +166,7 @@
     "SYNO.AudioStation.Playlist": {
         "path": "AudioStation/playlist.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list",
@@ -172,13 +193,28 @@
                 "saveplaying",
                 "savesearch",
                 "removemissing"
+            ],
+            "3": [
+                "list",
+                "getinfo",
+                "create",
+                "delete",
+                "rename",
+                "copytolibrary",
+                "updatesongs",
+                "createsmart",
+                "updatesmart",
+                "editsharing",
+                "saveplaying",
+                "savesearch",
+                "removemissing"
             ]
         }
     },
     "SYNO.AudioStation.RemotePlayer": {
         "path": "AudioStation/remote_player.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "list",
@@ -190,6 +226,17 @@
                 "setpassword"
             ],
             "2": [
+                "list",
+                "getinfo",
+                "getstatus",
+                "getplaylist",
+                "updateplaylist",
+                "control",
+                "setmultiple",
+                "testpassword",
+                "setpassword"
+            ],
+            "3": [
                 "list",
                 "getinfo",
                 "getstatus",
@@ -277,7 +324,7 @@
     "SYNO.AudioStation.Cover": {
         "path": "AudioStation/cover.cgi",
         "minVersion": 1,
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "getsongcover",
@@ -285,6 +332,11 @@
                 "getcover"
             ],
             "2": [
+                "getsongcover",
+                "getfoldercover",
+                "getcover"
+            ],
+            "3": [
                 "getsongcover",
                 "getfoldercover",
                 "getcover"
@@ -310,5 +362,85 @@
                 "list"
             ]
         }
+    },
+    "SYNO.AudioStation.Pin": {
+        "lib": "/var/packages/AudioStation/target/webapi5/pin/SYNO.AudioStation.Pin.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "reorder",
+                "unpin",
+                "rename",
+                "pin",
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.AudioStation.Tag": {
+        "lib": "/var/packages/AudioStation/target/webapi5/tag/SYNO.AudioStation.Tag.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getinfo",
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.AudioStation.VoiceAssistant.Info": {
+        "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.AudioStation.VoiceAssistant.Stream": {
+        "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "stream",
+                "transcode"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.AudioStation.VoiceAssistant.Browse": {
+        "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "count_search",
+                "search",
+                "search_playlist",
+                "get_playlist",
+                "get_cover"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.AudioStation.VoiceAssistant.Challenge": {
+        "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.AudioStation.Browse.Playlist": {
+        "lib": "/var/packages/AudioStation/target/webapi5/browse/SYNO.AudioStation.Browse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "add_track"
+            ]
+        },
+        "minVersion": 1
     }
 }
