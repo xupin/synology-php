@@ -1,0 +1,149 @@
+{
+    "SYNO.CloudStation.Server": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_status",
+                "get_directory_service_status",
+                "get_extension",
+                "get_client_link",
+                "check_user",
+                "delete_database",
+                "resume_freeze"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Config": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Connection": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "delete"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.DBUsage": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "start",
+                "stop",
+                "get"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Log": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "delete"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Node": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_parent",
+                "list_version",
+                "activity"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Node.Delete": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Node.Download": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop",
+                "finish"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Node.Restore": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "finish"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Privilege": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "status"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Profile": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set",
+                "delete"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.CloudStation.Server.Share": {
+        "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_active",
+                "list",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    }
+}

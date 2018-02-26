@@ -1,0 +1,572 @@
+{
+    "SYNO.VideoStation2.AcrossLibrary": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_library",
+                "list_movie"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Backdrop": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "add",
+                "delete_all",
+                "get"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Collection": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "add_video",
+                "create",
+                "create_smart",
+                "delete",
+                "delete_video",
+                "edit",
+                "edit_smart",
+                "getinfo",
+                "list",
+                "list_video"
+            ],
+            "2": [
+                "add_video",
+                "create",
+                "create_smart",
+                "delete",
+                "delete_video",
+                "edit",
+                "edit_smart",
+                "getinfo",
+                "list",
+                "list_video"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Controller.Device": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Controller.Password": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "test"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Controller.Playback": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "pause",
+                "play",
+                "seek",
+                "set_repeat",
+                "status",
+                "stop"
+            ],
+            "2": [
+                "pause",
+                "play",
+                "seek",
+                "set_repeat",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Controller.Volume": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.Channel": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete_all",
+                "edit",
+                "getinfo",
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.ChannelScan": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_country",
+                "getinfo",
+                "get_region",
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.DVBSScan": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create_lnb",
+                "create_satellite",
+                "delete_lnb",
+                "delete_satellite",
+                "edit_lnb",
+                "edit_satellite",
+                "edit_tp",
+                "get_default_tp",
+                "getinfo",
+                "get_lnb",
+                "get_satellite",
+                "get_tp",
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.Program": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "search",
+                "update"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.Schedule": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "create_repeat",
+                "create_userdefine",
+                "delete",
+                "delete_passed",
+                "delete_repeat",
+                "delete_userdefine",
+                "edit_repeat",
+                "edit_userdefine",
+                "getinfo_repeat",
+                "getinfo_userdefine",
+                "list",
+                "stop"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.Statistic": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getinfo"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.StreamController": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getinfo",
+                "set_streaming",
+                "stop_streaming"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.Streaming": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "close",
+                "open",
+                "stream"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.StreamingNonAuth": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "stream"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.DTV.Tuner": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "getinfo",
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.File": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "delete",
+                "delete_symlink",
+                "download",
+                "getinfo",
+                "get_track_info",
+                "set_watchstatus"
+            ],
+            "2": [
+                "delete",
+                "delete_symlink",
+                "download",
+                "getinfo",
+                "get_playback_setting",
+                "get_track_info",
+                "set_playback_setting",
+                "set_watchstatus"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Folder": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.HomeVideo": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "delete",
+                "edit",
+                "getinfo",
+                "list",
+                "set_rating",
+                "set_watched"
+            ],
+            "2": [
+                "delete",
+                "edit",
+                "getinfo",
+                "list",
+                "set_rating",
+                "set_watched",
+                "time_line"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Info": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Library": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set_visibility"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Metadata": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Misc": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "reset_timeout"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Movie": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "edit",
+                "getinfo",
+                "list",
+                "set_rating",
+                "set_watched"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.OfflineConversion": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "list",
+                "restart",
+                "restart_all",
+                "stop",
+                "stop_all"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.ParentalControl": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "get",
+                "list",
+                "list_certificate",
+                "list_user",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.PluginSearch": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "query",
+                "start",
+                "stop"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Poster": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Setting.Folder": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Setting.Network": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_preferred_interface",
+                "list",
+                "set_preferred_interface"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Setting.Personal": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Setting.PreAnalysis": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "trigger"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Sharing": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Streaming": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "close",
+                "open",
+                "stream"
+            ],
+            "2": [
+                "close",
+                "open",
+                "stream"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.Subtitle": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "discover",
+                "download",
+                "get",
+                "list",
+                "search"
+            ],
+            "2": [
+                "discover",
+                "download",
+                "get",
+                "get_offset",
+                "list",
+                "search",
+                "set_offset"
+            ],
+            "3": [
+                "discover",
+                "download",
+                "get",
+                "get_offset",
+                "list",
+                "search",
+                "set_offset"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.TVRecording": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "edit",
+                "getinfo",
+                "list",
+                "list_channel",
+                "list_program",
+                "set_watched"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.TVShow": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "edit",
+                "getinfo",
+                "list"
+            ]
+        },
+        "minVersion": 1
+    },
+    "SYNO.VideoStation2.TVShowEpisode": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "edit",
+                "getinfo",
+                "list",
+                "edit_adv",
+                "set_rating",
+                "set_watched"
+            ]
+        },
+        "minVersion": 1
+    }
+}
