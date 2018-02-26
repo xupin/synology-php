@@ -375,7 +375,9 @@
                 "list"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.AudioStation.Tag": {
         "lib": "/var/packages/AudioStation/target/webapi5/tag/SYNO.AudioStation.Tag.so",
@@ -386,7 +388,9 @@
                 "list"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.AudioStation.VoiceAssistant.Info": {
         "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -396,7 +400,9 @@
                 "get"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.AudioStation.VoiceAssistant.Stream": {
         "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -407,7 +413,9 @@
                 "transcode"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.AudioStation.VoiceAssistant.Browse": {
         "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -421,7 +429,9 @@
                 "get_cover"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.AudioStation.VoiceAssistant.Challenge": {
         "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -431,7 +441,9 @@
                 "get"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.AudioStation.Browse.Playlist": {
         "lib": "/var/packages/AudioStation/target/webapi5/browse/SYNO.AudioStation.Browse.so",
@@ -441,6 +453,8 @@
                 "add_track"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

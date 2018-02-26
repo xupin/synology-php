@@ -376,7 +376,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioStation.Tag": {
             "lib": "/var/packages/AudioStation/target/webapi5/tag/SYNO.AudioStation.Tag.so",
@@ -387,7 +389,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioStation.VoiceAssistant.Info": {
             "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -397,7 +401,9 @@
                     "get"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioStation.VoiceAssistant.Stream": {
             "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -408,7 +414,9 @@
                     "transcode"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioStation.VoiceAssistant.Browse": {
             "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -422,7 +430,9 @@
                     "get_cover"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioStation.VoiceAssistant.Challenge": {
             "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
@@ -432,7 +442,9 @@
                     "get"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioStation.Browse.Playlist": {
             "lib": "/var/packages/AudioStation/target/webapi5/browse/SYNO.AudioStation.Browse.so",
@@ -442,7 +454,9 @@
                     "add_track"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         }
     },
     "SYNO.DownloadStation": {
@@ -1595,7 +1609,9 @@
                     "resume_freeze"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Config": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1606,7 +1622,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Connection": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1617,7 +1635,9 @@
                     "delete"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.DBUsage": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1630,7 +1650,9 @@
                     "get"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Log": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1641,7 +1663,9 @@
                     "delete"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Node": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1654,7 +1678,9 @@
                     "activity"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Node.Delete": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1665,7 +1691,9 @@
                     "status"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Node.Download": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1678,7 +1706,9 @@
                     "finish"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Node.Restore": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1690,7 +1720,9 @@
                     "finish"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Privilege": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1702,7 +1734,9 @@
                     "status"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Profile": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1714,7 +1748,9 @@
                     "delete"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.CloudStation.Server.Share": {
             "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -1726,7 +1762,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         }
     },
     "SYNO.CloudSync": {
@@ -8986,7 +9024,9 @@
                     "list_movie"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation.Backdrop": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -8998,7 +9038,9 @@
                     "get"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation.OfflineConversion": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9014,7 +9056,9 @@
                     "stop_all"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation.Info": {
             "path": "VideoStation/info.cgi",
@@ -9428,7 +9472,9 @@
                     "list_movie"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Backdrop": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9440,7 +9486,9 @@
                     "get"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Collection": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9471,7 +9519,9 @@
                     "list_video"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Controller.Device": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
@@ -9481,7 +9531,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Controller.Password": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
@@ -9492,7 +9544,9 @@
                     "test"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Controller.Playback": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
@@ -9515,7 +9569,9 @@
                     "stop"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Controller.Volume": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
@@ -9526,7 +9582,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.Channel": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9539,7 +9597,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.ChannelScan": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9554,7 +9614,9 @@
                     "stop"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.DVBSScan": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9578,7 +9640,9 @@
                     "stop"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.Program": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9590,7 +9654,9 @@
                     "update"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.Schedule": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9612,7 +9678,9 @@
                     "stop"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.Statistic": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9622,7 +9690,9 @@
                     "getinfo"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.StreamController": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9634,7 +9704,9 @@
                     "stop_streaming"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.Streaming": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9646,7 +9718,9 @@
                     "stream"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.StreamingNonAuth": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9656,7 +9730,9 @@
                     "stream"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.DTV.Tuner": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
@@ -9667,7 +9743,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.File": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
@@ -9692,7 +9770,9 @@
                     "set_watchstatus"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Folder": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9702,7 +9782,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.HomeVideo": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9726,7 +9808,9 @@
                     "time_line"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Info": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9736,7 +9820,9 @@
                     "get"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Library": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9747,7 +9833,9 @@
                     "set_visibility"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Metadata": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9757,7 +9845,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Misc": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9767,7 +9857,9 @@
                     "reset_timeout"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Movie": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9782,7 +9874,9 @@
                     "set_watched"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.OfflineConversion": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9798,7 +9892,9 @@
                     "stop_all"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.ParentalControl": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9813,7 +9909,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.PluginSearch": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9826,7 +9924,9 @@
                     "stop"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Poster": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9838,7 +9938,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Setting.Folder": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
@@ -9848,7 +9950,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Setting.Network": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
@@ -9860,7 +9964,9 @@
                     "set_preferred_interface"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Setting.Personal": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9871,7 +9977,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Setting.PreAnalysis": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9883,7 +9991,9 @@
                     "trigger"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Sharing": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9894,7 +10004,9 @@
                     "set"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Streaming": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
@@ -9911,7 +10023,9 @@
                     "stream"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Subtitle": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
@@ -9943,7 +10057,9 @@
                     "set_offset"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.TVRecording": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9959,7 +10075,9 @@
                     "set_watched"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.TVShow": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9971,7 +10089,9 @@
                     "list"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.TVShowEpisode": {
             "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -9987,7 +10107,9 @@
                     "set_watched"
                 ]
             },
-            "minVersion": 1
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         }
     },
     "SYNO.WebStation": {

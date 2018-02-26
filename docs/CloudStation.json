@@ -13,7 +13,9 @@
                 "resume_freeze"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Config": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -24,7 +26,9 @@
                 "set"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Connection": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -35,7 +39,9 @@
                 "delete"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.DBUsage": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -48,7 +54,9 @@
                 "get"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Log": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -59,7 +67,9 @@
                 "delete"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Node": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -72,7 +82,9 @@
                 "activity"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Node.Delete": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -83,7 +95,9 @@
                 "status"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Node.Download": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -96,7 +110,9 @@
                 "finish"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Node.Restore": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -108,7 +124,9 @@
                 "finish"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Privilege": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -120,7 +138,9 @@
                 "status"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Profile": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -132,7 +152,9 @@
                 "delete"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.CloudStation.Server.Share": {
         "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
@@ -144,6 +166,8 @@
                 "set"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

@@ -8,7 +8,9 @@
                 "list_movie"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.VideoStation.Backdrop": {
         "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -20,7 +22,9 @@
                 "get"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.VideoStation.OfflineConversion": {
         "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
@@ -36,7 +40,9 @@
                 "stop_all"
             ]
         },
-        "minVersion": 1
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.VideoStation.Info": {
         "path": "VideoStation/info.cgi",
