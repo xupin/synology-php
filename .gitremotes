@@ -1,0 +1,12 @@
+[remote "qsomazzi"]
+	fetch = +refs/heads/*:refs/remotes/qsomazzi/*
+	url = https://github.com/qsomazzi/synology.git
+[remote "rkrater"]
+	fetch = +refs/heads/*:refs/remotes/rkrater/*
+	url = https://github.com/rkrater/synology.git
+[remote "zzarbi"]
+	fetch = +refs/heads/*:refs/remotes/zzarbi/*
+	url = https://github.com/zzarbi/synology.git
+[branch "zzarbi_master"]
+	remote = zzarbi
+	merge = refs/heads/master
