@@ -41,6 +41,7 @@ abstract class AbstractApi
             'Auth' => [
                 101 => 'The account parameter is not specified',
                 400 => 'Invalid password',
+                403 => 'One time password not specified',
             ],
         ],
     ];
