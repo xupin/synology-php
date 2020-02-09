@@ -17,7 +17,7 @@ abstract class AbstractApi
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
     private $_address = '';
-    private $_version = 1;
+    protected $_version = 1;
     private $_serviceName = null;
     private $_namespace = null;
     private $_debug = false;
@@ -25,14 +25,24 @@ abstract class AbstractApi
     private $_separator = '&';
     private $enc_type = PHP_QUERY_RFC3986;
     private $_errorCodes = [
-        100 => 'Unknown error',
-        101 => 'No parameter of API, method or version',
-        102 => 'The requested API does not exist',
-        103 => 'The requested method does not exist',
-        104 => 'The requested version does not support the functionality',
-        105 => 'The logged in session does not have permission',
-        106 => 'Session timeout',
-        107 => 'Session interrupted by duplicate login'
+        '?' => [
+            '?' => [
+                100 => 'Unknown error',
+                101 => 'No parameter of API, method or version',
+                102 => 'The requested API does not exist',
+                103 => 'The requested method does not exist',
+                104 => 'The requested version does not support the functionality',
+                105 => 'The logged in session does not have permission',
+                106 => 'Session timeout',
+                107 => 'Session interrupted by duplicate login',
+            ],
+        ],
+        'auth.cgi' => [
+            'Auth' => [
+                101 => 'The account parameter is not specified',
+                400 => 'Invalid password',
+            ],
+        ],
     ];
 
     /**
@@ -149,7 +159,7 @@ abstract class AbstractApi
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
             if (preg_match('#(plain|text)#', $info['content_type'])) {
-                return $this->_parseRequest($result);
+                return $this->_parseRequest($api, $path, $result);
             } else {
                 return $result;
             }
@@ -168,12 +178,14 @@ abstract class AbstractApi
     }
 
     /**
+     * @param string $api
+     * @param string $path
      * @param string $json
      *
      * @throws Exception
      * @return \stdClass|array|bool
      */
-    private function _parseRequest($json)
+    private function _parseRequest($api, $path, $json)
     {
         if (($data = json_decode(trim($json))) !== null) {
             if ($data->success == 1) {
@@ -183,8 +195,11 @@ abstract class AbstractApi
                     return true;
                 }
             } else {
-                if (array_key_exists($data->error->code, $this->_errorCodes)) {
-                    throw new Exception($this->_errorCodes[$data->error->code]);
+                if (isset($this->_errorCodes[$path][$api][$data->error->code])) {
+                    throw new Exception($this->_errorCodes[$path][$api][$data->error->code]);
+                }
+                else {
+                    throw new Exception('Error #' . $data->error->code);
                 }
             }
         } else {

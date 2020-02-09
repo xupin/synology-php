@@ -38,12 +38,13 @@ class Authenticate extends AbstractApi
      *
      * @param string $login
      * @param string $password
+     * @param int|null $code
      *
      * @return Api
      */
-    public function connect($login, $password)
+    public function connect($login, $password, $code = null)
     {
-        return $this->_authApi->connect($login, $password, $this->_sessionName);
+        return $this->_authApi->connect($login, $password, $this->_sessionName, $code);
     }
 
     /**
