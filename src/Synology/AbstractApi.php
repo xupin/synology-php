@@ -196,14 +196,16 @@ abstract class AbstractApi
                     return true;
                 }
             } else {
-                if (isset($this->_errorCodes[$path][$api][$data->error->code])) {
-                    throw new Exception($this->_errorCodes[$path][$api][$data->error->code]);
+                $code = $data->error->code;
+
+                if (isset($this->_errorCodes[$path][$api][$code])) {
+                    throw new Exception($this->_errorCodes[$path][$api][$code], $code);
                 }
-                elseif (isset($this->_errorCodes['?']['?'][$data->error->code])) {
-                    throw new Exception($this->_errorCodes['?']['?'][$data->error->code]);
+                elseif (isset($this->_errorCodes['?']['?'][$code])) {
+                    throw new Exception($this->_errorCodes['?']['?'][$code], $code);
                 }
                 else {
-                    throw new Exception('Error #' . $data->error->code);
+                    throw new Exception('Unknown error', $code);
                 }
             }
         } else {
