@@ -45,10 +45,11 @@ class Api extends AbstractApi
      * @param string $username
      * @param string $password
      * @param string $sessionName
+     * @param int|null $code
      *
      * @return Api
      */
-    public function connect($username, $password, $sessionName = null)
+    public function connect($username, $password, $sessionName = null, $code = null)
     {
         if (!empty($sessionName)) {
             $this->_sessionName = $sessionName;
@@ -63,7 +64,12 @@ class Api extends AbstractApi
             'session' => $this->_sessionName,
             'format'  => 'sid'
         ];
-        $data = $this->_request('Auth', 'auth.cgi', 'login', $options, 2);
+
+        if ($this->_version > 2 && $code !== null) {
+            $options['otp_code'] = $code;
+        }
+
+        $data = $this->_request('Auth', 'auth.cgi', 'login', $options, $this->_version);
 
         // save session name id
         $this->_sid = $data->sid;
