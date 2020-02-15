@@ -199,6 +199,9 @@ abstract class AbstractApi
                 if (isset($this->_errorCodes[$path][$api][$data->error->code])) {
                     throw new Exception($this->_errorCodes[$path][$api][$data->error->code]);
                 }
+                elseif (isset($this->_errorCodes['?']['?'][$data->error->code])) {
+                    throw new Exception($this->_errorCodes['?']['?'][$data->error->code]);
+                }
                 else {
                     throw new Exception('Error #' . $data->error->code);
                 }
