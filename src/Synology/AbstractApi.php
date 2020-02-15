@@ -44,6 +44,12 @@ abstract class AbstractApi
                 403 => 'One time password not specified',
             ],
         ],
+        'entry.cgi' => [
+            'HomeMode' => [
+                400 => 'Operation Failed',
+                401 => 'Parameter invalid',
+            ],
+        ],
     ];
 
     /**
@@ -159,7 +165,11 @@ abstract class AbstractApi
 
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
-            if (preg_match('#(plain|text)#', $info['content_type'])) {
+            if (in_array($info['content_type'], [
+                'plain',
+                'text',
+                'application/json; charset="UTF-8"',
+            ])) {
                 return $this->_parseRequest($api, $path, $result);
             } else {
                 return $result;
