@@ -1,13 +1,12 @@
 {
-    "name": "qsomazzi/synology",
+    "name": "chmez/synology-api",
     "description": "Handle Synology API",
     "keywords": ["synology", "api"],
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Quentin SOMAZZI",
-            "homepage": "http://qsomazzi.fr/"
+            "name": "ChMEZ"
         }
     ],
     "autoload": {
