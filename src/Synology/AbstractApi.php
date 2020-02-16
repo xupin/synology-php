@@ -44,6 +44,12 @@ abstract class AbstractApi
                 403 => 'One time password not specified',
             ],
         ],
+        'entry.cgi' => [
+            'HomeMode' => [
+                400 => 'Operation Failed',
+                401 => 'Parameter invalid',
+            ],
+        ],
     ];
 
     /**
@@ -159,7 +165,11 @@ abstract class AbstractApi
 
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
-            if (preg_match('#(plain|text)#', $info['content_type'])) {
+            if (in_array($info['content_type'], [
+                'plain',
+                'text',
+                'application/json; charset="UTF-8"',
+            ])) {
                 return $this->_parseRequest($api, $path, $result);
             } else {
                 return $result;
@@ -196,14 +206,16 @@ abstract class AbstractApi
                     return true;
                 }
             } else {
-                if (isset($this->_errorCodes[$path][$api][$data->error->code])) {
-                    throw new Exception($this->_errorCodes[$path][$api][$data->error->code]);
+                $code = $data->error->code;
+
+                if (isset($this->_errorCodes[$path][$api][$code])) {
+                    throw new Exception($this->_errorCodes[$path][$api][$code], $code);
                 }
-                elseif (isset($this->_errorCodes['?']['?'][$data->error->code])) {
-                    throw new Exception($this->_errorCodes['?']['?'][$data->error->code]);
+                elseif (isset($this->_errorCodes['?']['?'][$code])) {
+                    throw new Exception($this->_errorCodes['?']['?'][$code], $code);
                 }
                 else {
-                    throw new Exception('Error #' . $data->error->code);
+                    throw new Exception('Unknown error', $code);
                 }
             }
         } else {

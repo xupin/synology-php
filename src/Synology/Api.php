@@ -16,6 +16,13 @@ class Api extends AbstractApi
     private $_sessionName = 'default';
 
     /**
+     * TRUE if the connection shouldn't be closed automatically.
+     *
+     * @var boolean
+     */
+    private $_keepConnection = false;
+
+    /**
      * Info API setup
      *
      * @param string $address
@@ -108,6 +115,21 @@ class Api extends AbstractApi
     }
 
     /**
+     * Set session ID.
+     *
+     * @param string $sid
+     *   The session ID.
+     *
+     * @return $this
+     */
+    public function setSessionId($sid)
+    {
+        $this->_sid = $sid;
+
+        return $this;
+    }
+
+    /**
      * Return true if connected
      *
      * @return boolean
@@ -131,9 +153,23 @@ class Api extends AbstractApi
         return $this->_sessionName;
     }
 
+    /**
+     * Turn off automatically closing the connection.
+     *
+     * @param boolean $keepConnection
+     *   (optional) TRUE if the connection shouldn't be closed automatically.
+     *
+     * @return $this
+     */
+    public function keepConnection($keepConnection = true) {
+        $this->_keepConnection = $keepConnection;
+
+        return $this;
+    }
+
     public function __destruct()
     {
-        if ($this->_sid !== null) {
+        if ($this->_sid !== null && !$this->_keepConnection) {
             $this->disconnect();
         }
     }
