@@ -82,4 +82,22 @@ class SurveillanceStation extends Authenticate
         return $this->_request('HomeMode', static::$path, 'GetInfo', $parameters, 1);
     }
 
+    /**
+     * Switch home mode on/off.
+     *
+     * @param boolean $on
+     *   True to turn on home mode, while false to turn it off.
+     *
+     * @return array|bool|\stdClass
+     *   This method has no specific response data. It returns an empty success
+     *   response if it completes without error.
+     */
+    public function switchHomeMode($on)
+    {
+        $parameters = [
+            'on' => $on,
+        ];
+        return $this->_request('HomeMode', static::$path, 'Switch', $parameters, 1);
+    }
+
 }

@@ -62,6 +62,7 @@ This is a PHP Library that consume Synology APIs
     * getInfo
     * getCameraList
     * getHomeModeInfo
+    * switchHomeMode
 
 Usage for Synology Api:
 ```php
