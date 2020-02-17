@@ -165,11 +165,7 @@ abstract class AbstractApi
 
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
-            if (in_array($info['content_type'], [
-                'plain',
-                'text',
-                'application/json; charset="UTF-8"',
-            ])) {
+            if (preg_match('#(plain|text|json)#', $info['content_type'])) {
                 return $this->_parseRequest($api, $path, $result);
             } else {
                 return $result;
