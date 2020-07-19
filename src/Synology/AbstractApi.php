@@ -156,7 +156,7 @@ abstract class AbstractApi
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
 
         // Verify SSL or not
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL ? 2 : 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->_verifySSL);
 
         // grab URL and pass it to the browser
