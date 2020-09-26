@@ -1,0 +1,90 @@
+{
+    "SYNO.SecurityAdvisor.Conf": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get",
+                "init"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecurityAdvisor.Conf.Checklist": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecurityAdvisor.Conf.Checklist.Alert": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecurityAdvisor.Conf.Location": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecurityAdvisor.LoginActivity": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecurityAdvisor.Report": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecurityAdvisor.Report.HTML": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "open"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

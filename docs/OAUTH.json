@@ -1,0 +1,61 @@
+{
+    "SYNO.OAUTH.Client": {
+        "lib": "/var/packages/OAuthService/target/webapi/SYNO.OAUTH.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "add",
+                "enable",
+                "disable",
+                "del"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.OAUTH.Common": {
+        "lib": "/var/packages/OAuthService/target/webapi/SYNO.OAUTH.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.OAUTH.Log": {
+        "lib": "/var/packages/OAuthService/target/webapi/SYNO.OAUTH.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "del",
+                "add",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.OAUTH.Token": {
+        "lib": "/var/packages/OAuthService/target/webapi/SYNO.OAUTH.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "revoke",
+                "verify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

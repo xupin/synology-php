@@ -1,4 +1,34 @@
 {
+    "SYNO.ResourceMonitor.EventRule": {
+        "lib": "lib/SYNO.ResourceMonitor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set",
+                "delete",
+                "onoff"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.ResourceMonitor.Log": {
+        "lib": "lib/SYNO.ResourceMonitor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "clear",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.ResourceMonitor.Setting": {
         "lib": "lib/SYNO.ResourceMonitor.so",
         "maxVersion": 1,

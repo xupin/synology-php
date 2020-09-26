@@ -8,6 +8,7 @@
                 "resume",
                 "unlink_connection",
                 "unlink_session",
+                "get_available_clouds",
                 "get_property",
                 "get_config",
                 "set_global_config",
@@ -43,7 +44,11 @@
                 "create_s3_bucket",
                 "list_gcs_bucket",
                 "create_gcs_bucket",
+                "list_gsd_drive",
+                "update_gsd_conn_info",
                 "list_b2_bucket",
+                "list_share_point_sites",
+                "list_share_point_drives",
                 "create_b2_bucket",
                 "list_acs_container",
                 "create_acs_container",
@@ -54,7 +59,11 @@
                 "export_key_by_name",
                 "get_conn_auth_info",
                 "get_server_folder_list",
-                "create_server_folder"
+                "create_server_folder",
+                "request_onedrive_access_token",
+                "dump_event_tree",
+                "megadisk_request_code",
+                "megadisk_confirm_code"
             ]
         },
         "minVersion": 1,

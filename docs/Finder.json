@@ -106,6 +106,8 @@
             "1": [
                 "reindex",
                 "delete",
+                "check",
+                "stop_check",
                 "list",
                 "list_group",
                 "summary",

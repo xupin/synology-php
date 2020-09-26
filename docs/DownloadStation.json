@@ -104,25 +104,5 @@
         },
         "minVersion": 1,
         "path": "DownloadStation/task.cgi"
-    },
-    "SYNO.DownloadStation.Xunlei.Task": {
-        "maxVersion": 2,
-        "methods": {
-            "2": [
-                "list",
-                "add",
-                "add_by_file",
-                "delete",
-                "pause",
-                "restart",
-                "verify_account",
-                "login",
-                "get_download_default_dest",
-                "download_to_local",
-                "get_task_detail"
-            ]
-        },
-        "minVersion": 2,
-        "path": "DownloadStation/xunlei/dl_queue.cgi"
     }
 }

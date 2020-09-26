@@ -16,12 +16,7 @@
                 "is_building",
                 "reboot_after_rebuild",
                 "should_ask_for_fsck_scan",
-                "schedule_next_suggestion",
-                "disable_suggestion",
-                "update_raid_list",
-                "get_space_for_scrubbing",
-                "add_schedule_raid_data_scrubbing_task",
-                "has_scrubbing_schedule"
+                "ignore_ebox_reassemble_notification"
             ]
         },
         "minVersion": 1,
@@ -45,7 +40,19 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "load"
+                "load",
+                "exp_fw_update",
+                "exp_fw_fail_get",
+                "exp_fw_update_list_get",
+                "exp_fw_update_status_get",
+                "exp_fw_update_cancel_notify",
+                "is_exp_connected",
+                "sha_exp_fw_update",
+                "sha_exp_fw_fail_get",
+                "sha_exp_fw_update_list_get",
+                "sha_exp_fw_update_status_get",
+                "sha_exp_fw_update_cancel_notify",
+                "sha_is_exp_connected"
             ]
         },
         "minVersion": 1,
@@ -64,6 +71,7 @@
                 "estimate_repair",
                 "load_history_data",
                 "remove",
+                "remove_cancel",
                 "repair",
                 "statistics",
                 "statistics_check"
@@ -93,11 +101,14 @@
         "methods": {
             "1": [
                 "cancel_data_scrubbing",
+                "pause_data_scrubbing",
                 "cancel_create",
                 "create",
                 "data_scrubbing",
                 "delete",
                 "edit_desc",
+                "get_setting",
+                "set_setting",
                 "enum_resource",
                 "estimate_size",
                 "expand_by_add_disk",
@@ -105,7 +116,10 @@
                 "expand_unfinished_shr",
                 "migrate",
                 "remove_lun",
-                "repair"
+                "repair",
+                "set_data_scrubbing_schedule",
+                "update_raid_sb_cache",
+                "remove_raid_sb_cache"
             ]
         },
         "minVersion": 1,
@@ -184,7 +198,26 @@
                 "login_check",
                 "repair_sys_partition",
                 "repair_system_partition",
-                "set_system_raid"
+                "set_system_raid",
+                "set_schedule_plan",
+                "get_schedule_plan",
+                "set_resync_speed",
+                "get_resync_speed",
+                "set_data_scrubbing_schedule",
+                "set_data_scrubbing_schedule_status",
+                "reload_raid_config"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.TaipeiEnclosure": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load"
             ]
         },
         "minVersion": 1,
@@ -198,6 +231,7 @@
             "1": [
                 "cancel_create",
                 "cancel_data_scrubbing",
+                "pause_data_scrubbing",
                 "cancel_defrag",
                 "cancel_fs_scrubbing",
                 "create_on_existing_pool",
@@ -220,7 +254,8 @@
                 "ssd_trim_get",
                 "ssd_trim_save",
                 "vol_extent_size_get",
-                "vol_extent_size_set"
+                "vol_extent_size_set",
+                "set_data_scrubbing_schedule"
             ]
         },
         "minVersion": 1,

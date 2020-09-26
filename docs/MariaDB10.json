@@ -1,0 +1,20 @@
+{
+    "SYNO.MariaDB10.lib": {
+        "lib": "/var/packages/MariaDB10/target/webapi/SYNO.MariaDB10.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_info",
+                "apply",
+                "get_user",
+                "reset_root_password",
+                "change_password",
+                "rebuild",
+                "validate_password"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

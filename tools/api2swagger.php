@@ -217,7 +217,7 @@ function clean_values($values) {
                     $method = array_keys($method)[0];
                     array_push($methodlist, $method);
                 }
-			}
+            }
             // Core.MediaIndex has duplicate get & set methods
             //$cleaned['methods'][$idx] = $methodlist;
             $cleaned['methods'][$idx] = array_unique($methodlist);
@@ -228,8 +228,9 @@ function clean_values($values) {
 
 function combine_json_files() {
     // Get current paths from SYNO.API.Info
-	// TODO: retrieve current paths for active packages
-	// http://192.168.x.x/rest.php/SYNO.API.Info/v1/query
+    // TODO: retrieve current paths for active packages
+    // http://192.168.x.x/rest.php/SYNO.API.Info/v1/query
+    // http://localhost:5000/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=ALL
     $filepath = 'query.json';
     $auth = [];
     if (is_file($filepath)) {
@@ -269,6 +270,12 @@ function combine_json_files() {
                     echo "Unknown api $api\n";
                     //continue;
                     //exit;
+                    if (empty($values['path'])) {
+                        $values['path'] = 'entry.cgi';
+                        if (empty($values['requestFormat'])) {
+                            $values['requestFormat'] = 'JSON';
+                        }
+                    }
                 } else {
                     if ($values['path'] && $values['path'] != $auth[$api]['path']) {
                         echo "Invalid path ".$values['path']." for api $api in $file\n";

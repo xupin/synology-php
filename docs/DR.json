@@ -30,7 +30,8 @@
                 "test_reverse_create",
                 "test_set",
                 "temp_create",
-                "temp_reverse_create"
+                "temp_reverse_create",
+                "delete"
             ]
         },
         "minVersion": 1,

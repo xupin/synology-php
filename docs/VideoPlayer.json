@@ -10,5 +10,17 @@
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
+    },
+    "SYNO.VideoPlayer.SynologyDrive.Subtitle": {
+        "lib": "lib/SYNO.VideoPlayer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

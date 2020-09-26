@@ -1,4 +1,17 @@
 {
+    "SYNO.License.HA": {
+        "lib": "lib/SYNO.License.HA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_uuid",
+                "ha_remote_login"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.License": {
         "lib": "lib/SYNO.License.so",
         "maxVersion": 2,

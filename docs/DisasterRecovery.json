@@ -21,7 +21,9 @@
                 "get",
                 "get_timezone",
                 "set",
-                "set_timezone"
+                "set_timezone",
+                "delete",
+                "info"
             ]
         },
         "minVersion": 1,

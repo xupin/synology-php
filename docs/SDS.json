@@ -1,4 +1,57 @@
 {
+    "SYNO.SDS.Backup.Client.Common.Log": {
+        "lib": "/var/packages/HyperBackup/target/webapi/SYNO.SDS.Backup.Client.Common.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SDS.Backup.Client.Common.Statistic": {
+        "lib": "/var/packages/HyperBackup/target/webapi/SYNO.SDS.Backup.Client.Common.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "config_set",
+                "config_get",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SDS.Backup.Client.Common.Target": {
+        "lib": "/var/packages/HyperBackup/target/webapi/SYNO.SDS.Backup.Client.Common.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "password_verify",
+                "private_key_verify"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SDS.Backup.Client.Common.Version": {
+        "lib": "/var/packages/HyperBackup/target/webapi/SYNO.SDS.Backup.Client.Common.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check_file_log",
+                "download_file_log"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.SDS.Backup.Client.Explore.File": {
         "lib": "/var/packages/HyperBackup/target/webapi/SYNO.SDS.Backup.Client.Explore.so",
         "maxVersion": 2,
