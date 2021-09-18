@@ -1,4 +1,5 @@
 <?php
+
 $api2url = [];
 $api2url['SYNO.AudioStation.Info'] = 'AudioStation/info.cgi';
 $api2url['SYNO.AudioStation.Album'] = 'AudioStation/album.cgi';

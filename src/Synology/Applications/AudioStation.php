@@ -12,8 +12,8 @@ use Synology\Exception;
  */
 class AudioStation extends Authenticate
 {
-    const API_SERVICE_NAME = 'AudioStation';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'AudioStation';
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -167,7 +167,7 @@ class AudioStation extends Authenticate
             'limit'          => $limit,
             'offset'         => $offset,
             'sort_by'        => $sortBy,
-            'sort_direction' => $sortDirection
+            'sort_direction' => $sortDirection,
         ]);
     }
 
@@ -187,7 +187,7 @@ class AudioStation extends Authenticate
             'artist'         => $artist,
             'limit'          => $limit,
             'sort_by'        => $sortBy,
-            'sort_direction' => $sortDirection
+            'sort_direction' => $sortDirection,
         ], 2, 'post');
     }
 
@@ -211,14 +211,14 @@ class AudioStation extends Authenticate
             'limit'          => $limit,
             'sort_by'        => $sortBy,
             'sort_direction' => $sortDirection,
-            'additional'     => $additional
+            'additional'     => $additional,
         ], 2, 'post');
     }
 
     public function stream($id)
     {
         return $this->_request('Stream', 'AudioStation/stream.cgi', 'stream', [
-            'id' => $id
+            'id' => $id,
         ], 2, 'get');
     }
 }

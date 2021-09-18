@@ -9,10 +9,10 @@ namespace Synology;
  */
 abstract class AbstractApi
 {
-    const PROTOCOL_HTTP = 'http';
-    const PROTOCOL_HTTPS = 'https';
-    const API_NAMESPACE = 'SYNO';
-    const CONNECT_TIMEOUT = 30000; //30s
+    public const PROTOCOL_HTTP = 'http';
+    public const PROTOCOL_HTTPS = 'https';
+    public const API_NAMESPACE = 'SYNO';
+    public const CONNECT_TIMEOUT = 30000; //30s
 
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
@@ -32,7 +32,7 @@ abstract class AbstractApi
         104 => 'The requested version does not support the functionality',
         105 => 'The logged in session does not have permission',
         106 => 'Session timeout',
-        107 => 'Session interrupted by duplicate login'
+        107 => 'Session interrupted by duplicate login',
     ];
 
     /**
@@ -233,5 +233,4 @@ abstract class AbstractApi
     {
         $this->enc_type = $enc_type;
     }
-
 }

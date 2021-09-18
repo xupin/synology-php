@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER['HTTP_HOST'] != 'localhost' &&
     $_SERVER['HTTP_HOST'] != '127.0.0.1' &&
     $_SERVER['HTTP_HOST'] != 'diskstation' &&
@@ -160,14 +161,16 @@ if (200 == $info['http_code']) {
 
 send_json($content);
 
-function send_json($content) {
+function send_json($content)
+{
     ob_end_clean();
     $type = 'application/json';
     header("Content-type: $type");
     echo json_encode($content);
 }
 
-function send_html($content) {
+function send_html($content)
+{
     ob_end_clean();
     $type = 'text/html';
     header("Content-type: $type");

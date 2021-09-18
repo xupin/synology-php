@@ -12,9 +12,8 @@ use Synology\Exception;
 
 class SurveillanceStation extends Authenticate
 {
-
-    const API_SERVICE_NAME = 'SurveillanceStation';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'SurveillanceStation';
+    public const API_NAMESPACE = 'SYNO';
 
     private static $path = 'entry.cgi';
 

@@ -18,7 +18,7 @@ class Authenticate extends AbstractApi
 
     /**
      * Constructor
-     * 
+     *
      * @param string $serviceName
      * @param string $namespace
      * @param string $address

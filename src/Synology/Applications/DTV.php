@@ -11,8 +11,8 @@ use Synology\Api\Authenticate;
  */
 class DTV extends Authenticate
 {
-    const API_SERVICE_NAME = 'DTV';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'DTV';
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup

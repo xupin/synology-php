@@ -9,8 +9,8 @@ namespace Synology;
  */
 class Api extends AbstractApi
 {
-    const API_SERVICE_NAME = 'API';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'API';
+    public const API_NAMESPACE = 'SYNO';
 
     private $_sid = null;
     private $_sessionName = 'default';
@@ -61,7 +61,7 @@ class Api extends AbstractApi
             'account' => $username,
             'passwd'  => $password,
             'session' => $this->_sessionName,
-            'format'  => 'sid'
+            'format'  => 'sid',
         ];
         $data = $this->_request('Auth', 'auth.cgi', 'login', $options, 2);
 

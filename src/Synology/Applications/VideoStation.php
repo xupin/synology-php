@@ -12,8 +12,8 @@ use Synology\Exception;
  */
 class VideoStation extends Authenticate
 {
-    const API_SERVICE_NAME = 'VideoStation';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'VideoStation';
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -130,7 +130,7 @@ class VideoStation extends Authenticate
             'limit'          => $limit,
             'offset'         => $offset,
             'sort_by'        => $sortBy,
-            'sort_direction' => $sortDirection
+            'sort_direction' => $sortDirection,
         ]);
     }
 }

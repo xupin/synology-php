@@ -37,12 +37,14 @@ if (!$apilist) {
 generate_swagger($apilist, true);
 exit;
 
-function load_template($name) {
+function load_template($name)
+{
     $file = 'templates'.DIRECTORY_SEPARATOR.$name.'.yaml';
     return file_get_contents($file);
 }
 
-function replace_params($template, $params) {
+function replace_params($template, $params)
+{
     $search = [];
     $replace = [];
     foreach ($params as $key => $val) {
@@ -52,16 +54,20 @@ function replace_params($template, $params) {
     return str_replace($search, $replace, $template);
 }
 
-function get_ip_address() {
+function get_ip_address()
+{
     $hostname = gethostname();
     echo $hostname;
     $ip = gethostbyname($hostname);
     echo $ip;
-    if ($ip != $hostname) return $ip;
+    if ($ip != $hostname) {
+        return $ip;
+    }
     return 'diskstation';
 }
 
-function generate_swagger($apilist, $debug=false) {
+function generate_swagger($apilist, $debug=false)
+{
     // if running on the Synology, this should be enough to start
     //$host = get_ip_address();
     $host = 'diskstation';
@@ -198,7 +204,8 @@ $api2url = [];
     echo 'Generated '.$map_file."\n";
 }
 
-function clean_values($values) {
+function clean_values($values)
+{
     $getvars = ['maxVersion', 'minVersion', 'path', 'requestFormat', 'methods', 'lib'];
     $cleaned = [];
     foreach ($values as $key => $val) {
@@ -226,7 +233,8 @@ function clean_values($values) {
     return $cleaned;
 }
 
-function combine_json_files() {
+function combine_json_files()
+{
     // Get current paths from SYNO.API.Info
     // TODO: retrieve current paths for active packages
     // http://192.168.x.x/rest.php/SYNO.API.Info/v1/query
@@ -316,7 +324,8 @@ function combine_json_files() {
     //var_dump($apilist);
 }
 
-function refresh_api_files($basedir) {
+function refresh_api_files($basedir)
+{
     // Create basedir if necessary
     if (!is_dir($basedir)) {
         mkdir($basedir);
