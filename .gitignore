@@ -4,3 +4,4 @@
 .settings/
 /vendor/
 composer.phar
+.php-cs-fixer.cache
