@@ -242,9 +242,12 @@
     },
     "SYNO.Core.CMS.ServerInfo": {
         "lib": "lib/SYNO.Core.CMS.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
+                "update"
+            ],
+            "2": [
                 "update"
             ]
         },
@@ -693,6 +696,19 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Core.Directory.LDAP.User": {
+        "lib": "lib/SYNO.Core.Directory.LDAP.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set_pwd",
+                "set_data"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Core.Directory.SSO.Profile": {
         "lib": "lib/SYNO.Core.Directory.SSO.so",
         "maxVersion": 1,
@@ -740,6 +756,19 @@
             "1": [
                 "get",
                 "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.DisableAdmin": {
+        "lib": "lib/SYNO.Core.DisableAdmin.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "ignore"
             ]
         },
         "minVersion": 1,
@@ -1498,6 +1527,21 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Core.Hardware.OOBManagement": {
+        "lib": "lib/libHardware.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set",
+                "update",
+                "exec"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Core.Hardware.PowerRecovery": {
         "lib": "lib/libHardware.so",
         "maxVersion": 1,
@@ -1849,6 +1893,31 @@
             "1": [
                 "get",
                 "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MyDSCenter.Login": {
+        "lib": "lib/mydscenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "pkce_config_get",
+                "pkce_login"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.MyDSCenter.Logout": {
+        "lib": "lib/mydscenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "pkce_logout"
             ]
         },
         "minVersion": 1,
@@ -2969,18 +3038,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.Package.Account": {
-        "lib": "lib/SYNO.Core.Package.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.Core.Package.Control": {
         "lib": "lib/SYNO.Core.Package.so",
         "maxVersion": 1,
@@ -3500,7 +3557,8 @@
             ],
             "3": [
                 "get_misc_config",
-                "set_misc_config"
+                "set_misc_config",
+                "check_availability"
             ]
         },
         "minVersion": 1,
@@ -3547,7 +3605,9 @@
                 "load_ds_info",
                 "check_permission",
                 "hide_welcome",
-                "set_udc"
+                "set_udc",
+                "set_mib",
+                "load_mib_info"
             ]
         },
         "minVersion": 1,
@@ -3634,7 +3694,8 @@
                 "set",
                 "sync",
                 "listzone",
-                "setzone"
+                "setzone",
+                "ensure_ntp_sync_and_enable"
             ],
             "2": [
                 "get",
@@ -3775,6 +3836,19 @@
             "1": [
                 "delete_file",
                 "list_share"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.ResetAdmin": {
+        "lib": "lib/SYNO.Core.ResetAdmin.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "disable"
             ]
         },
         "minVersion": 1,
@@ -4454,7 +4528,29 @@
                 "disk_test_log_get",
                 "get_disk_log_importing_progress",
                 "disk_partition_rescan",
-                "disks_info_get"
+                "disks_info_get",
+                "upload_offlinekit",
+                "get_offlinekit_ver"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Storage.Disk.FWUpgrade": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list_drive",
+                "prepare",
+                "start_upgrade",
+                "defer_upgrade",
+                "poll",
+                "get_summary",
+                "cancel_send_notification",
+                "cancel_auto_launch",
+                "send_notification"
             ]
         },
         "minVersion": 1,
@@ -5014,13 +5110,16 @@
     },
     "SYNO.Core.Upgrade.Patch": {
         "lib": "lib/SYNO.Core.Upgrade.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "upload",
                 "clean",
                 "verify",
                 "validate"
+            ],
+            "2": [
+                "verify"
             ]
         },
         "minVersion": 1,

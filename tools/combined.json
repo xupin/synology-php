@@ -1,980 +1,98 @@
 {
-    "SYNO.AudioStation": {
-        "SYNO.AudioStation.Info": {
-            "path": "AudioStation/info.cgi",
-            "minVersion": 1,
-            "maxVersion": 4,
+    "SYNO.API": {
+        "SYNO.API.Auth.Key": {
+            "lib": "lib/SYNO.API.Auth.so",
+            "maxVersion": 7,
             "methods": {
-                "1": [
-                    "getinfo"
-                ],
-                "2": [
-                    "getinfo"
-                ],
-                "3": [
-                    "getinfo"
-                ],
-                "4": [
-                    "getinfo"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Album": {
-            "path": "AudioStation/album.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list"
-                ],
-                "3": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Composer": {
-            "path": "AudioStation/composer.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Genre": {
-            "path": "AudioStation/genre.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list"
-                ],
-                "3": [
-                    "list",
-                    "list_default_genre"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Artist": {
-            "path": "AudioStation/artist.cgi",
-            "minVersion": 1,
-            "maxVersion": 4,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list"
-                ],
-                "3": [
-                    "list"
-                ],
-                "4": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Folder": {
-            "path": "AudioStation/folder.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo"
-                ],
-                "2": [
-                    "list",
-                    "getinfo"
-                ],
-                "3": [
-                    "list",
-                    "getinfo"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Song": {
-            "path": "AudioStation/song.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "getinfo"
-                ],
-                "2": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "setrating",
-                    "setsharing",
-                    "getsharing"
-                ],
-                "3": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "setrating",
-                    "setsharing",
-                    "getsharing"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Stream": {
-            "path": "AudioStation/stream.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "stream",
-                    "transcode"
-                ],
-                "2": [
-                    "stream",
-                    "transcode"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Radio": {
-            "path": "AudioStation/radio.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list",
-                    "add",
-                    "updateradios"
-                ],
-                "2": [
-                    "list",
-                    "add",
-                    "search",
-                    "updateradios"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Playlist": {
-            "path": "AudioStation/playlist.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "delete",
-                    "rename",
-                    "copytolibrary",
-                    "updatesongs",
-                    "createsmart",
-                    "updatesmart"
-                ],
-                "2": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "delete",
-                    "rename",
-                    "copytolibrary",
-                    "updatesongs",
-                    "createsmart",
-                    "updatesmart",
-                    "editsharing",
-                    "saveplaying",
-                    "savesearch",
-                    "removemissing"
-                ],
-                "3": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "delete",
-                    "rename",
-                    "copytolibrary",
-                    "updatesongs",
-                    "createsmart",
-                    "updatesmart",
-                    "editsharing",
-                    "saveplaying",
-                    "savesearch",
-                    "removemissing"
-                ]
-            }
-        },
-        "SYNO.AudioStation.RemotePlayer": {
-            "path": "AudioStation/remote_player.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "getstatus",
-                    "getplaylist",
-                    "updateplaylist",
-                    "control",
-                    "testpassword",
-                    "setpassword"
-                ],
-                "2": [
-                    "list",
-                    "getinfo",
-                    "getstatus",
-                    "getplaylist",
-                    "updateplaylist",
-                    "control",
-                    "setmultiple",
-                    "testpassword",
-                    "setpassword"
-                ],
-                "3": [
-                    "list",
-                    "getinfo",
-                    "getstatus",
-                    "getplaylist",
-                    "updateplaylist",
-                    "control",
-                    "setmultiple",
-                    "testpassword",
-                    "setpassword"
-                ]
-            }
-        },
-        "SYNO.AudioStation.RemotePlayerStatus": {
-            "path": "AudioStation/remote_player_status.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getstatus"
-                ]
-            }
-        },
-        "SYNO.AudioStation.WebPlayer": {
-            "path": "AudioStation/web_player.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getplaylist",
-                    "updateplaylist"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Proxy": {
-            "path": "AudioStation/proxy.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getstreamid",
-                    "stream",
-                    "getsonginfo",
-                    "deletesonginfo"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Lyrics": {
-            "path": "AudioStation/lyrics.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "getlyrics",
-                    "setlyrics"
-                ],
-                "2": [
-                    "getlyrics",
-                    "setlyrics"
-                ]
-            }
-        },
-        "SYNO.AudioStation.LyricsSearch": {
-            "path": "AudioStation/lyrics_search.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "searchlyrics"
-                ],
-                "2": [
-                    "searchlyrics"
-                ]
-            }
-        },
-        "SYNO.AudioStation.MediaServer": {
-            "path": "AudioStation/media_server.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Cover": {
-            "path": "AudioStation/cover.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "getsongcover",
-                    "getfoldercover",
-                    "getcover"
-                ],
-                "2": [
-                    "getsongcover",
-                    "getfoldercover",
-                    "getcover"
-                ],
-                "3": [
-                    "getsongcover",
-                    "getfoldercover",
-                    "getcover"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Download": {
-            "path": "AudioStation/download.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "download"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Search": {
-            "path": "AudioStation/search.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.AudioStation.Pin": {
-            "lib": "/var/packages/AudioStation/target/webapi5/pin/SYNO.AudioStation.Pin.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "reorder",
-                    "unpin",
-                    "rename",
-                    "pin",
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.AudioStation.Tag": {
-            "lib": "/var/packages/AudioStation/target/webapi5/tag/SYNO.AudioStation.Tag.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo",
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.AudioStation.VoiceAssistant.Info": {
-            "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
+                "7": [
+                    "grant",
                     "get"
                 ]
             },
-            "minVersion": 1,
+            "minVersion": 7,
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
-        "SYNO.AudioStation.VoiceAssistant.Stream": {
-            "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
+        "SYNO.API.Info": {
+            "path": "query.cgi",
+            "minVersion": 1,
             "maxVersion": 1,
             "methods": {
                 "1": [
-                    "stream",
-                    "transcode"
+                    "query"
                 ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
+            }
         },
-        "SYNO.AudioStation.VoiceAssistant.Browse": {
-            "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "count_search",
-                    "search",
-                    "search_playlist",
-                    "get_playlist",
-                    "get_cover"
-                ]
-            },
+        "SYNO.API.Auth": {
+            "path": "auth.cgi",
             "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.AudioStation.VoiceAssistant.Challenge": {
-            "lib": "/var/packages/AudioStation/target/webapi5/voice_assistant/SYNO.AudioStation.VoiceAssistant.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.AudioStation.Browse.Playlist": {
-            "lib": "/var/packages/AudioStation/target/webapi5/browse/SYNO.AudioStation.Browse.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "add_track"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        }
-    },
-    "SYNO.DownloadStation": {
-        "SYNO.DownloadStation.BTSearch": {
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "start",
-                    "list",
-                    "getCategory",
-                    "clean",
-                    "getModule"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/btsearch.cgi"
-        },
-        "SYNO.DownloadStation.Info": {
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "getinfo",
-                    "getconfig",
-                    "setserverconfig"
-                ],
-                "2": [
-                    "getinfo",
-                    "getconfig",
-                    "setserverconfig"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/info.cgi"
-        },
-        "SYNO.DownloadStation.RSS.Feed": {
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/RSSfeed.cgi"
-        },
-        "SYNO.DownloadStation.RSS.Site": {
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "refresh"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/RSSsite.cgi"
-        },
-        "SYNO.DownloadStation.Schedule": {
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getconfig",
-                    "setconfig"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/schedule.cgi"
-        },
-        "SYNO.DownloadStation.Statistic": {
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/statistic.cgi"
-        },
-        "SYNO.DownloadStation.Task": {
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "delete",
-                    "resume",
-                    "pause"
-                ],
-                "2": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "delete",
-                    "resume",
-                    "pause",
-                    "edit"
-                ],
-                "3": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "delete",
-                    "resume",
-                    "pause",
-                    "edit"
-                ]
-            },
-            "minVersion": 1,
-            "path": "DownloadStation/task.cgi"
-        }
-    },
-    "SYNO.PhotoStation": {
-        "SYNO.PhotoStation.Auth": {
-            "path": "auth.php",
-            "minVersion": 1,
-            "maxVersion": 1,
+            "maxVersion": 6,
             "methods": {
                 "1": [
                     "login",
-                    "photo_login",
+                    "logout"
+                ],
+                "2": [
+                    "login",
+                    "logout"
+                ],
+                "3": [
+                    "login",
+                    "logout"
+                ],
+                "4": [
+                    "login",
+                    "logout"
+                ],
+                "5": [
+                    "login",
                     "logout",
-                    "checkauth"
+                    "synotoken",
+                    "session"
+                ],
+                "6": [
+                    "login",
+                    "logout",
+                    "synotoken",
+                    "session"
                 ]
             }
         },
-        "SYNO.PhotoStation.Info": {
-            "path": "info.php",
+        "SYNO.API.OTP": {
+            "path": "otp.cgi",
             "minVersion": 1,
-            "maxVersion": 2,
+            "maxVersion": 1,
             "methods": {
-                "2": [
-                    "getinfo",
-                    "getexternalip"
-                ],
+                "1": [
+                    "setup"
+                ]
+            }
+        },
+        "SYNO.API.Encryption": {
+            "path": "encryption.cgi",
+            "minVersion": 1,
+            "maxVersion": 1,
+            "methods": {
                 "1": [
                     "getinfo"
                 ]
             }
-        },
-        "SYNO.PhotoStation.Album": {
-            "path": "album.php",
-            "minVersion": 1,
+        }
+    },
+    "SYNO.ActiveInsight": {
+        "SYNO.ActiveInsight.Package": {
+            "lib": "lib/SYNO.ActiveInsight.so",
             "maxVersion": 1,
             "methods": {
                 "1": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "edit",
-                    "delete",
-                    "arrangeitem",
-                    "move",
-                    "cleararrangeitem",
-                    "cancel"
+                    "get_status",
+                    "start_mib",
+                    "stop_mib"
                 ]
-            }
-        },
-        "SYNO.PhotoStation.Permission": {
-            "path": "permission.php",
+            },
             "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getalbum",
-                    "editalbum",
-                    "editgroup",
-                    "list_public_share",
-                    "edit_public_share"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Photo": {
-            "path": "photo.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "listexif",
-                    "listfeatureditem",
-                    "listgpsgroup",
-                    "listgpsgroupeditem",
-                    "getinfo",
-                    "getexif",
-                    "edit",
-                    "delete",
-                    "copy",
-                    "cancel"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Thumb": {
-            "path": "thumb.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "get_dsm_thumb"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Cover": {
-            "path": "cover.php",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "set"
-                ],
-                "2": [
-                    "set",
-                    "setsmart"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.SmartAlbum": {
-            "path": "smart_album.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "edit",
-                    "delete"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.File": {
-            "path": "file.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "uploadphoto",
-                    "uploadvideo"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Download": {
-            "path": "download.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getphoto",
-                    "getvideo",
-                    "getitem"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Category": {
-            "path": "category.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "edit",
-                    "delete",
-                    "arrangecategory",
-                    "listitem",
-                    "additem",
-                    "removeitem",
-                    "arrangeitem"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.About": {
-            "path": "about.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set",
-                    "set_visibility"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Tag": {
-            "path": "tag.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "create",
-                    "edit",
-                    "delete",
-                    "searchplace",
-                    "delete_unconfirmed_tag"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.PhotoTag": {
-            "path": "photo_tag.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "people_tag",
-                    "geo_tag",
-                    "desc_tag",
-                    "delete",
-                    "people_tag_confirm"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Comment": {
-            "path": "comment.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "create",
-                    "delete"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Timeline": {
-            "path": "timeline.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getindex"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Group": {
-            "path": "group.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "get",
-                    "get_dsm_group",
-                    "getmember",
-                    "create",
-                    "edit",
-                    "editmember",
-                    "delete"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Rotate": {
-            "path": "rotate.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "set"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.SlideshowMusic": {
-            "path": "slideshow_music.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "get",
-                    "add",
-                    "edit",
-                    "delete"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.DsmShare": {
-            "path": "dsm_share.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "copy",
-                    "copymusic"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.SharedAlbum": {
-            "path": "shared_album.php",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "getinfo_public",
-                    "create",
-                    "edit",
-                    "delete",
-                    "add_items",
-                    "remove_items",
-                    "edit_public_share",
-                    "get_single_item",
-                    "set_single_item"
-                ],
-                "2": [
-                    "list",
-                    "getinfo",
-                    "getinfo_public",
-                    "create",
-                    "edit",
-                    "delete",
-                    "add_items",
-                    "remove_items",
-                    "edit_public_share",
-                    "get_single_item",
-                    "set_single_item"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.PhotoLog": {
-            "path": "log.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "clear",
-                    "export"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Path": {
-            "path": "path.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getpath",
-                    "checkpath"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Watermark": {
-            "path": "watermark.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getshare",
-                    "listshare",
-                    "upload",
-                    "copy",
-                    "delete",
-                    "remove"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Public": {
-            "path": "public.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.Migration": {
-            "path": "migration.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "export_blog"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.ACL": {
-            "path": "acl.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.AdvancedShare": {
-            "path": "advanced_share.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo",
-                    "add_comment",
-                    "list_comment",
-                    "set_color_label",
-                    "list_area",
-                    "add_area",
-                    "delete_area",
-                    "list_log"
-                ]
-            }
-        },
-        "SYNO.PhotoStation.AppPrivilege": {
-            "path": "app_privilege.php",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "check",
-                    "seenmoments"
-                ]
-            }
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         }
     },
     "SYNO.AudioPlayer": {
@@ -1002,22 +120,6 @@
                 ]
             },
             "minVersion": 2,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        }
-    },
-    "SYNO.Aviary": {
-        "SYNO.Aviary": {
-            "lib": "lib/SYNO.AviaryEditor.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "avoid_timeout",
-                    "save",
-                    "save_progress"
-                ]
-            },
-            "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
         }
@@ -1372,18 +474,6 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
-        "SYNO.Backup.Server": {
-            "lib": "/var/packages/HyperBackup/target/webapi/SYNO.Backup.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
         "SYNO.Backup.Share.Restore": {
             "lib": "/var/packages/HyperBackup/target/webapi/SYNO.Backup.so",
             "maxVersion": 2,
@@ -1512,7 +602,8 @@
                     "set",
                     "status",
                     "get",
-                    "mark"
+                    "mark",
+                    "get_support_cloud"
                 ]
             },
             "minVersion": 1,
@@ -1545,179 +636,6 @@
             "methods": {
                 "1": [
                     "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        }
-    },
-    "SYNO.CloudStation": {
-        "SYNO.CloudStation.Server": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get_status",
-                    "get_directory_service_status",
-                    "get_extension",
-                    "get_client_link",
-                    "check_user",
-                    "delete_database",
-                    "resume_freeze"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Config": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Connection": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "delete"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.DBUsage": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "status",
-                    "start",
-                    "stop",
-                    "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Log": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "delete"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Node": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "list_parent",
-                    "list_version",
-                    "activity"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Node.Delete": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "start",
-                    "status"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Node.Download": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "start",
-                    "status",
-                    "stop",
-                    "finish"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Node.Restore": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "start",
-                    "status",
-                    "finish"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Privilege": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "set",
-                    "status"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Profile": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "set",
-                    "delete"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudStation.Server.Share": {
-            "lib": "/var/packages/CloudStation/target/lib/SYNO.CloudStation.Server.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list_active",
-                    "list",
-                    "set"
                 ]
             },
             "minVersion": 1,
@@ -2042,9 +960,12 @@
         },
         "SYNO.Core.CMS.ServerInfo": {
             "lib": "lib/SYNO.Core.CMS.so",
-            "maxVersion": 1,
+            "maxVersion": 2,
             "methods": {
                 "1": [
+                    "update"
+                ],
+                "2": [
                     "update"
                 ]
             },
@@ -2493,6 +1414,19 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Core.Directory.LDAP.User": {
+            "lib": "lib/SYNO.Core.Directory.LDAP.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set_pwd",
+                    "set_data"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.Core.Directory.SSO.Profile": {
             "lib": "lib/SYNO.Core.Directory.SSO.so",
             "maxVersion": 1,
@@ -2540,6 +1474,19 @@
                 "1": [
                     "get",
                     "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.DisableAdmin": {
+            "lib": "lib/SYNO.Core.DisableAdmin.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "ignore"
                 ]
             },
             "minVersion": 1,
@@ -3298,6 +2245,21 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Core.Hardware.OOBManagement": {
+            "lib": "lib/libHardware.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set",
+                    "update",
+                    "exec"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.Core.Hardware.PowerRecovery": {
             "lib": "lib/libHardware.so",
             "maxVersion": 1,
@@ -3649,6 +2611,31 @@
                 "1": [
                     "get",
                     "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.MyDSCenter.Login": {
+            "lib": "lib/mydscenter.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "pkce_config_get",
+                    "pkce_login"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.MyDSCenter.Logout": {
+            "lib": "lib/mydscenter.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "pkce_logout"
                 ]
             },
             "minVersion": 1,
@@ -4769,18 +3756,6 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
-        "SYNO.Core.Package.Account": {
-            "lib": "lib/SYNO.Core.Package.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
         "SYNO.Core.Package.Control": {
             "lib": "lib/SYNO.Core.Package.so",
             "maxVersion": 1,
@@ -5300,7 +4275,8 @@
                 ],
                 "3": [
                     "get_misc_config",
-                    "set_misc_config"
+                    "set_misc_config",
+                    "check_availability"
                 ]
             },
             "minVersion": 1,
@@ -5347,7 +4323,9 @@
                     "load_ds_info",
                     "check_permission",
                     "hide_welcome",
-                    "set_udc"
+                    "set_udc",
+                    "set_mib",
+                    "load_mib_info"
                 ]
             },
             "minVersion": 1,
@@ -5434,7 +4412,8 @@
                     "set",
                     "sync",
                     "listzone",
-                    "setzone"
+                    "setzone",
+                    "ensure_ntp_sync_and_enable"
                 ],
                 "2": [
                     "get",
@@ -5575,6 +4554,19 @@
                 "1": [
                     "delete_file",
                     "list_share"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.ResetAdmin": {
+            "lib": "lib/SYNO.Core.ResetAdmin.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "disable"
                 ]
             },
             "minVersion": 1,
@@ -6254,7 +5246,29 @@
                     "disk_test_log_get",
                     "get_disk_log_importing_progress",
                     "disk_partition_rescan",
-                    "disks_info_get"
+                    "disks_info_get",
+                    "upload_offlinekit",
+                    "get_offlinekit_ver"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Storage.Disk.FWUpgrade": {
+            "lib": "lib/libStorage.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list_drive",
+                    "prepare",
+                    "start_upgrade",
+                    "defer_upgrade",
+                    "poll",
+                    "get_summary",
+                    "cancel_send_notification",
+                    "cancel_auto_launch",
+                    "send_notification"
                 ]
             },
             "minVersion": 1,
@@ -6814,13 +5828,16 @@
         },
         "SYNO.Core.Upgrade.Patch": {
             "lib": "lib/SYNO.Core.Upgrade.so",
-            "maxVersion": 1,
+            "maxVersion": 2,
             "methods": {
                 "1": [
                     "upload",
                     "clean",
                     "verify",
                     "validate"
+                ],
+                "2": [
+                    "verify"
                 ]
             },
             "minVersion": 1,
@@ -7236,6 +6253,114 @@
             "requestFormat": "JSON"
         }
     },
+    "SYNO.DownloadStation": {
+        "SYNO.DownloadStation.BTSearch": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "start",
+                    "list",
+                    "getCategory",
+                    "clean",
+                    "getModule"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/btsearch.cgi"
+        },
+        "SYNO.DownloadStation.Info": {
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "getinfo",
+                    "getconfig",
+                    "setserverconfig"
+                ],
+                "2": [
+                    "getinfo",
+                    "getconfig",
+                    "setserverconfig"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/info.cgi"
+        },
+        "SYNO.DownloadStation.RSS.Feed": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/RSSfeed.cgi"
+        },
+        "SYNO.DownloadStation.RSS.Site": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "refresh"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/RSSsite.cgi"
+        },
+        "SYNO.DownloadStation.Schedule": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getconfig",
+                    "setconfig"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/schedule.cgi"
+        },
+        "SYNO.DownloadStation.Statistic": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/statistic.cgi"
+        },
+        "SYNO.DownloadStation.Task": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "list",
+                    "getinfo",
+                    "create",
+                    "delete",
+                    "resume",
+                    "pause"
+                ],
+                "2": [
+                    "list",
+                    "getinfo",
+                    "create",
+                    "delete",
+                    "resume",
+                    "pause",
+                    "edit"
+                ],
+                "3": [
+                    "list",
+                    "getinfo",
+                    "create",
+                    "delete",
+                    "resume",
+                    "pause",
+                    "edit"
+                ]
+            },
+            "minVersion": 1,
+            "path": "DownloadStation/task.cgi"
+        }
+    },
     "SYNO.DownloadStation2": {
         "SYNO.DownloadStation2.BTSearch": {
             "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.BTSearch.so",
@@ -7637,6 +6762,20 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.DownloadStation2.Task.Complete": {
+            "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.Task.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "start",
+                    "status",
+                    "stop"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.DownloadStation2.Task.List": {
             "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.Task.so",
             "maxVersion": 2,
@@ -7701,19 +6840,6 @@
                 "2": [
                     "get",
                     "download"
-                ]
-            },
-            "minVersion": 2,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.DownloadStation2.XunleiLixian": {
-            "lib": "DownloadStation/SYNO.DownloadStation2.XunleiLixian.so",
-            "maxVersion": 2,
-            "methods": {
-                "2": [
-                    "download_captcha",
-                    "set_account"
                 ]
             },
             "minVersion": 2,
@@ -8756,37 +7882,6 @@
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
-        },
-        "SYNO.License": {
-            "lib": "lib/SYNO.License.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list",
-                    "activate",
-                    "deactivate",
-                    "import",
-                    "export",
-                    "check_code",
-                    "check_sync",
-                    "check_connection",
-                    "delete",
-                    "check_extend_code",
-                    "extend",
-                    "check_extend_target"
-                ],
-                "2": [
-                    "list",
-                    "activate",
-                    "deactivate",
-                    "check_code",
-                    "check_extend_code",
-                    "check_extend_target"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
         }
     },
     "SYNO.MariaDB10": {
@@ -8802,6 +7897,90 @@
                     "change_password",
                     "rebuild",
                     "validate_password"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
+    "SYNO.MediaServer": {
+        "SYNO.MediaServer.ClientList": {
+            "lib": "/var/packages/MediaServer/target/webapi/client_list/SYNO.MediaServer.ClientList.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "clear_client",
+                    "save_client",
+                    "list_client",
+                    "list_profile"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.MediaServer.IndexedFolder": {
+            "lib": "/var/packages/MediaServer/target/webapi/indexed_folder/SYNO.MediaServer.IndexedFolder.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.MediaServer.Log": {
+            "lib": "/var/packages/MediaServer/target/webapi/log/SYNO.MediaServer.Log.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "clear",
+                    "download",
+                    "set",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.MediaServer.Menu": {
+            "lib": "/var/packages/MediaServer/target/webapi/menu/SYNO.MediaServer.Menu.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get_lang_text",
+                    "set",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.MediaServer.Setting": {
+            "lib": "/var/packages/MediaServer/target/webapi/setting/SYNO.MediaServer.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.MediaServer.VideoCollection": {
+            "lib": "/var/packages/MediaServer/target/webapi/video_collection/SYNO.MediaServer.VideoCollection.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set",
+                    "get"
                 ]
             },
             "minVersion": 1,
@@ -8922,6 +8101,32 @@
                     "status",
                     "stop",
                     "clean"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
+    "SYNO.Remote": {
+        "SYNO.Remote.Credential.Challenge": {
+            "lib": "lib/SYNO.Remote.Credential.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Remote.Credential.Verifier": {
+            "lib": "lib/SYNO.Remote.Credential.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
                 ]
             },
             "minVersion": 1,
@@ -9593,1104 +8798,6 @@
             "requestFormat": "JSON"
         }
     },
-    "SYNO.VideoStation": {
-        "SYNO.VideoStation.AcrossLibrary": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list_library",
-                    "list_movie"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation.Backdrop": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "add",
-                    "delete_all",
-                    "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation.OfflineConversion": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "create",
-                    "delete",
-                    "list",
-                    "restart",
-                    "restart_all",
-                    "stop",
-                    "stop_all"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation.Info": {
-            "path": "VideoStation/info.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Video": {
-            "path": "VideoStation/video.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "download",
-                    "getinfo",
-                    "delete_symlink"
-                ],
-                "2": [
-                    "download",
-                    "delete",
-                    "getinfo",
-                    "delete_symlink"
-                ],
-                "3": [
-                    "download",
-                    "delete",
-                    "getinfo",
-                    "delete_symlink",
-                    "get_track_info"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Movie": {
-            "path": "VideoStation/movie.cgi",
-            "minVersion": 1,
-            "maxVersion": 4,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit"
-                ],
-                "2": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "set_watched"
-                ],
-                "3": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "set_watched"
-                ],
-                "4": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "set_watched",
-                    "set_rating"
-                ]
-            }
-        },
-        "SYNO.VideoStation.TVShow": {
-            "path": "VideoStation/tvshow.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit"
-                ],
-                "2": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit"
-                ],
-                "3": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit"
-                ]
-            }
-        },
-        "SYNO.VideoStation.TVShowEpisode": {
-            "path": "VideoStation/tvshow_episode.cgi",
-            "minVersion": 1,
-            "maxVersion": 4,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "edit_adv"
-                ],
-                "2": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "edit_adv",
-                    "set_watched"
-                ],
-                "3": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "edit_adv",
-                    "set_watched"
-                ],
-                "4": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "edit_adv",
-                    "set_watched",
-                    "set_rating"
-                ]
-            }
-        },
-        "SYNO.VideoStation.HomeVideo": {
-            "path": "VideoStation/homevideo.cgi",
-            "minVersion": 1,
-            "maxVersion": 4,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit"
-                ],
-                "2": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "set_watched"
-                ],
-                "3": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "set_watched"
-                ],
-                "4": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "set_watched",
-                    "set_rating"
-                ]
-            }
-        },
-        "SYNO.VideoStation.TVRecording": {
-            "path": "VideoStation/tvrecord.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit"
-                ],
-                "2": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "set_watched"
-                ],
-                "3": [
-                    "list",
-                    "search",
-                    "getinfo",
-                    "edit",
-                    "delete",
-                    "set_watched"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Collection": {
-            "path": "VideoStation/collection.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list",
-                    "video_list",
-                    "search",
-                    "create",
-                    "delete",
-                    "edit",
-                    "addvideo",
-                    "deletevideo"
-                ],
-                "2": [
-                    "list",
-                    "video_list",
-                    "search",
-                    "create",
-                    "delete",
-                    "edit",
-                    "addvideo",
-                    "deletevideo",
-                    "getinfo",
-                    "create_smart",
-                    "edit_smart"
-                ],
-                "3": [
-                    "list",
-                    "video_list",
-                    "search",
-                    "create",
-                    "delete",
-                    "edit",
-                    "addvideo",
-                    "deletevideo",
-                    "getinfo",
-                    "create_smart",
-                    "edit_smart"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Metadata": {
-            "path": "VideoStation/metadata.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list"
-                ],
-                "3": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Poster": {
-            "path": "VideoStation/poster.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "getimage",
-                    "setimage"
-                ],
-                "2": [
-                    "getimage",
-                    "setimage"
-                ],
-                "3": [
-                    "getimage",
-                    "setimage",
-                    "deleteimage"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Streaming": {
-            "path": "VideoStation/vtestreaming.cgi",
-            "minVersion": 1,
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "open",
-                    "stream",
-                    "close"
-                ],
-                "2": [
-                    "open",
-                    "stream",
-                    "close"
-                ],
-                "3": [
-                    "open",
-                    "stream",
-                    "close"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Subtitle": {
-            "path": "VideoStation/subtitle.cgi",
-            "minVersion": 1,
-            "maxVersion": 4,
-            "methods": {
-                "1": [
-                    "list",
-                    "get"
-                ],
-                "2": [
-                    "list",
-                    "get"
-                ],
-                "3": [
-                    "list",
-                    "get",
-                    "search",
-                    "download"
-                ],
-                "4": [
-                    "list",
-                    "get",
-                    "search",
-                    "download",
-                    "discover"
-                ]
-            }
-        },
-        "SYNO.VideoStation.AudioTrack": {
-            "path": "VideoStation/audiotrack.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Folder": {
-            "path": "VideoStation/folder.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.VideoStation.WatchStatus": {
-            "path": "VideoStation/watchstatus.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo",
-                    "setinfo"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Library": {
-            "path": "VideoStation/library.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "list"
-                ],
-                "2": [
-                    "list",
-                    "set_visibility"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Sharing": {
-            "path": "VideoStation/sharing.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set"
-                ]
-            }
-        },
-        "SYNO.VideoStation.Misc": {
-            "path": "VideoStation/misc.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "reset_timeout"
-                ]
-            }
-        }
-    },
-    "SYNO.VideoStation2": {
-        "SYNO.VideoStation2.AcrossLibrary": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list_library",
-                    "list_movie"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Backdrop": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "add",
-                    "delete_all",
-                    "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Collection": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "add_video",
-                    "create",
-                    "create_smart",
-                    "delete",
-                    "delete_video",
-                    "edit",
-                    "edit_smart",
-                    "getinfo",
-                    "list",
-                    "list_video"
-                ],
-                "2": [
-                    "add_video",
-                    "create",
-                    "create_smart",
-                    "delete",
-                    "delete_video",
-                    "edit",
-                    "edit_smart",
-                    "getinfo",
-                    "list",
-                    "list_video"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Controller.Device": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Controller.Password": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "set",
-                    "test"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Controller.Playback": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "pause",
-                    "play",
-                    "seek",
-                    "set_repeat",
-                    "status",
-                    "stop"
-                ],
-                "2": [
-                    "pause",
-                    "play",
-                    "seek",
-                    "set_repeat",
-                    "status",
-                    "stop"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Controller.Volume": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.Channel": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "delete_all",
-                    "edit",
-                    "getinfo",
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.ChannelScan": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get_country",
-                    "getinfo",
-                    "get_region",
-                    "start",
-                    "status",
-                    "stop"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.DVBSScan": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "create_lnb",
-                    "create_satellite",
-                    "delete_lnb",
-                    "delete_satellite",
-                    "edit_lnb",
-                    "edit_satellite",
-                    "edit_tp",
-                    "get_default_tp",
-                    "getinfo",
-                    "get_lnb",
-                    "get_satellite",
-                    "get_tp",
-                    "start",
-                    "status",
-                    "stop"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.Program": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "update"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.Schedule": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "create",
-                    "create_repeat",
-                    "create_userdefine",
-                    "delete",
-                    "delete_passed",
-                    "delete_repeat",
-                    "delete_userdefine",
-                    "edit_repeat",
-                    "edit_userdefine",
-                    "getinfo_repeat",
-                    "getinfo_userdefine",
-                    "list",
-                    "stop"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.Statistic": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.StreamController": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo",
-                    "set_streaming",
-                    "stop_streaming"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.Streaming": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "close",
-                    "open",
-                    "stream"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.StreamingNonAuth": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "stream"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.DTV.Tuner": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo",
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.File": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "delete",
-                    "delete_symlink",
-                    "download",
-                    "getinfo",
-                    "get_track_info",
-                    "set_watchstatus"
-                ],
-                "2": [
-                    "delete",
-                    "delete_symlink",
-                    "download",
-                    "getinfo",
-                    "get_playback_setting",
-                    "get_track_info",
-                    "set_playback_setting",
-                    "set_watchstatus"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Folder": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.HomeVideo": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "delete",
-                    "edit",
-                    "getinfo",
-                    "list",
-                    "set_rating",
-                    "set_watched"
-                ],
-                "2": [
-                    "delete",
-                    "edit",
-                    "getinfo",
-                    "list",
-                    "set_rating",
-                    "set_watched",
-                    "time_line"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Info": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Library": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "set_visibility"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Metadata": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Misc": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "reset_timeout"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Movie": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "delete",
-                    "edit",
-                    "getinfo",
-                    "list",
-                    "set_rating",
-                    "set_watched"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.OfflineConversion": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "create",
-                    "delete",
-                    "list",
-                    "restart",
-                    "restart_all",
-                    "stop",
-                    "stop_all"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.ParentalControl": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "delete",
-                    "get",
-                    "list",
-                    "list_certificate",
-                    "list_user",
-                    "set"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.PluginSearch": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "query",
-                    "start",
-                    "stop"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Poster": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "delete",
-                    "get",
-                    "set"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Setting.Folder": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Setting.Network": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get_preferred_interface",
-                    "list",
-                    "set_preferred_interface"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Setting.Personal": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Setting.PreAnalysis": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set",
-                    "trigger"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Sharing": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "get",
-                    "set"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Streaming": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "close",
-                    "open",
-                    "stream"
-                ],
-                "2": [
-                    "close",
-                    "open",
-                    "stream"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.Subtitle": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
-            "maxVersion": 3,
-            "methods": {
-                "1": [
-                    "discover",
-                    "download",
-                    "get",
-                    "list",
-                    "search"
-                ],
-                "2": [
-                    "discover",
-                    "download",
-                    "get",
-                    "get_offset",
-                    "list",
-                    "search",
-                    "set_offset"
-                ],
-                "3": [
-                    "discover",
-                    "download",
-                    "get",
-                    "get_offset",
-                    "list",
-                    "search",
-                    "set_offset"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.TVRecording": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "delete",
-                    "edit",
-                    "getinfo",
-                    "list",
-                    "list_channel",
-                    "list_program",
-                    "set_watched"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.TVShow": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "edit",
-                    "getinfo",
-                    "list"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.VideoStation2.TVShowEpisode": {
-            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "delete",
-                    "edit",
-                    "getinfo",
-                    "list",
-                    "edit_adv",
-                    "set_rating",
-                    "set_watched"
-                ]
-            },
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        }
-    },
     "SYNO.WebStation": {
         "SYNO.WebStation.Default": {
             "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
@@ -10773,273 +8880,6 @@
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
-        }
-    },
-    "SYNO.VideoController": {
-        "SYNO.VideoController.Playback": {
-            "path": "VideoController/playback.cgi",
-            "minVersion": 1,
-            "maxVersion": 2,
-            "methods": {
-                "1": [
-                    "play",
-                    "pause",
-                    "stop",
-                    "seek",
-                    "status"
-                ],
-                "2": [
-                    "play",
-                    "pause",
-                    "stop",
-                    "seek",
-                    "status",
-                    "set_repeat"
-                ]
-            }
-        },
-        "SYNO.VideoController.Volume": {
-            "path": "VideoController/volume.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "setvolume",
-                    "getvolume"
-                ]
-            }
-        },
-        "SYNO.VideoController.Device": {
-            "path": "VideoController/device.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list"
-                ]
-            }
-        },
-        "SYNO.VideoController.Password": {
-            "path": "VideoController/password.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "setpassword",
-                    "testpassword"
-                ]
-            }
-        }
-    },
-    "SYNO.VideoStataion": {
-        "SYNO.VideoStataion.Poster": {
-            "path": "VideoStation/poster.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getimage",
-                    "setimage"
-                ]
-            }
-        }
-    },
-    "SYNO.DTV": {
-        "SYNO.DTV.ChannelScan": {
-            "path": "VideoStation/channelscan.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getcountry",
-                    "getregion",
-                    "getconfig",
-                    "start",
-                    "stop",
-                    "status"
-                ]
-            }
-        },
-        "SYNO.DTV.DVBSScan": {
-            "path": "VideoStation/dvbsscan.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getconfig",
-                    "get_satellite",
-                    "create_satellite",
-                    "edit_satellite",
-                    "delete_satellite",
-                    "get_lnb",
-                    "create_lnb",
-                    "edit_lnb",
-                    "delete_lnb",
-                    "get_tp",
-                    "get_tp_default",
-                    "save_tp",
-                    "start",
-                    "stop",
-                    "status"
-                ]
-            }
-        },
-        "SYNO.DTV.Channel": {
-            "path": "VideoStation/channellist.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo",
-                    "delete_all_channels",
-                    "edit"
-                ]
-            }
-        },
-        "SYNO.DTV.Program": {
-            "path": "VideoStation/programlist.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "search",
-                    "update"
-                ]
-            }
-        },
-        "SYNO.DTV.Schedule": {
-            "path": "VideoStation/schedule_recording.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "create",
-                    "delete",
-                    "delete_passed",
-                    "create_repeat",
-                    "getinfo_repeat",
-                    "edit_repeat",
-                    "delete_repeat",
-                    "getinfo_userdefine",
-                    "create_userdefine",
-                    "edit_userdefine",
-                    "delete_userdefine"
-                ]
-            }
-        },
-        "SYNO.DTV.Controller": {
-            "path": "VideoStation/dtvcontrol.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getchannel",
-                    "setchannel"
-                ]
-            }
-        },
-        "SYNO.DTV.Streaming": {
-            "path": "VideoStation/dtvstreaming.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "open",
-                    "stream",
-                    "close"
-                ]
-            }
-        },
-        "SYNO.DTV.Statistic": {
-            "path": "VideoStation/dtvstatistic.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo"
-                ]
-            }
-        },
-        "SYNO.DTV.Tuner": {
-            "path": "VideoStation/tuner.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "list",
-                    "getinfo"
-                ]
-            }
-        }
-    },
-    "SYNO.API": {
-        "SYNO.API.Info": {
-            "path": "query.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "query"
-                ]
-            }
-        },
-        "SYNO.API.Auth": {
-            "path": "auth.cgi",
-            "minVersion": 1,
-            "maxVersion": 6,
-            "methods": {
-                "1": [
-                    "login",
-                    "logout"
-                ],
-                "2": [
-                    "login",
-                    "logout"
-                ],
-                "3": [
-                    "login",
-                    "logout"
-                ],
-                "4": [
-                    "login",
-                    "logout"
-                ],
-                "5": [
-                    "login",
-                    "logout",
-                    "synotoken",
-                    "session"
-                ],
-                "6": [
-                    "login",
-                    "logout",
-                    "synotoken",
-                    "session"
-                ]
-            }
-        },
-        "SYNO.API.OTP": {
-            "path": "otp.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "setup"
-                ]
-            }
-        },
-        "SYNO.API.Encryption": {
-            "path": "encryption.cgi",
-            "minVersion": 1,
-            "maxVersion": 1,
-            "methods": {
-                "1": [
-                    "getinfo"
-                ]
-            }
         }
     }
 }

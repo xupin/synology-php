@@ -1,0 +1,84 @@
+{
+    "SYNO.MediaServer.ClientList": {
+        "lib": "/var/packages/MediaServer/target/webapi/client_list/SYNO.MediaServer.ClientList.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "clear_client",
+                "save_client",
+                "list_client",
+                "list_profile"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.MediaServer.IndexedFolder": {
+        "lib": "/var/packages/MediaServer/target/webapi/indexed_folder/SYNO.MediaServer.IndexedFolder.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.MediaServer.Log": {
+        "lib": "/var/packages/MediaServer/target/webapi/log/SYNO.MediaServer.Log.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "clear",
+                "download",
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.MediaServer.Menu": {
+        "lib": "/var/packages/MediaServer/target/webapi/menu/SYNO.MediaServer.Menu.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_lang_text",
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.MediaServer.Setting": {
+        "lib": "/var/packages/MediaServer/target/webapi/setting/SYNO.MediaServer.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.MediaServer.VideoCollection": {
+        "lib": "/var/packages/MediaServer/target/webapi/video_collection/SYNO.MediaServer.VideoCollection.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

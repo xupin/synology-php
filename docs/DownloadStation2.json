@@ -399,6 +399,20 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.DownloadStation2.Task.Complete": {
+        "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.Task.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "start",
+                "status",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.DownloadStation2.Task.List": {
         "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.Task.so",
         "maxVersion": 2,
@@ -463,19 +477,6 @@
             "2": [
                 "get",
                 "download"
-            ]
-        },
-        "minVersion": 2,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.DownloadStation2.XunleiLixian": {
-        "lib": "DownloadStation/SYNO.DownloadStation2.XunleiLixian.so",
-        "maxVersion": 2,
-        "methods": {
-            "2": [
-                "download_captcha",
-                "set_account"
             ]
         },
         "minVersion": 2,

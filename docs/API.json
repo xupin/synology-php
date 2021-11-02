@@ -1,4 +1,17 @@
 {
+    "SYNO.API.Auth.Key": {
+        "lib": "lib/SYNO.API.Auth.so",
+        "maxVersion": 7,
+        "methods": {
+            "7": [
+                "grant",
+                "get"
+            ]
+        },
+        "minVersion": 7,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.API.Info": {
         "path": "query.cgi",
         "minVersion": 1,

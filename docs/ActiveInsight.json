@@ -1,11 +1,12 @@
 {
-    "SYNO.License.HA": {
-        "lib": "lib/SYNO.License.HA.so",
+    "SYNO.ActiveInsight.Package": {
+        "lib": "lib/SYNO.ActiveInsight.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "get_uuid",
-                "ha_remote_login"
+                "get_status",
+                "start_mib",
+                "stop_mib"
             ]
         },
         "minVersion": 1,

@@ -348,18 +348,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Backup.Server": {
-        "lib": "/var/packages/HyperBackup/target/webapi/SYNO.Backup.so",
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "list"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.Backup.Share.Restore": {
         "lib": "/var/packages/HyperBackup/target/webapi/SYNO.Backup.so",
         "maxVersion": 2,
@@ -488,7 +476,8 @@
                 "set",
                 "status",
                 "get",
-                "mark"
+                "mark",
+                "get_support_cloud"
             ]
         },
         "minVersion": 1,

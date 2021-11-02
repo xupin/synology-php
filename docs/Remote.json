@@ -1,0 +1,26 @@
+{
+    "SYNO.Remote.Credential.Challenge": {
+        "lib": "lib/SYNO.Remote.Credential.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Remote.Credential.Verifier": {
+        "lib": "lib/SYNO.Remote.Credential.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}
