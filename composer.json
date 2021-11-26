@@ -1,12 +1,12 @@
 {
-    "name": "chmez/synology-api",
+    "name": "dream-rhythm/synology-api",
     "description": "Handle Synology API",
     "keywords": ["synology", "api"],
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "ChMEZ"
+            "name": "dream-rhythm"
         }
     ],
     "autoload": {
