@@ -11,6 +11,19 @@ This is a PHP Library that consume Synology APIs
     * disconnect
     * getAvailableApi
 
+* SYNO.SynologyDriveServer :
+    * connect
+    * disconnect
+    * getConnection
+    * getShare
+    * getLog
+
+* SYNO.CloudStationServer :
+    * connect
+    * disconnect
+    * getConnection
+    * getLog
+
 * SYNO.DownloadStation :
     * connect
     * disconnect
