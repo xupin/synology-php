@@ -14,8 +14,8 @@
         "php": "^5.4"
     },
     "autoload": {
-        "psr-0": {
-            "Synology": "src/"
+        "psr-4": {
+            "Synology\\": "src/Synology"
         }
     }
 }
