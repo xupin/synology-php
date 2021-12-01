@@ -68,7 +68,7 @@ class CloudStationServer extends Authenticate
             'offset' => $offset,
             'limit' => $limit,
             'get_all' => 'false',
-            'keyword' => $keyword,
+            'keyword' => '"' . $keyword . '"',
             'datefrom' => $datefrom,
             'dateto' => $dateto,
             'log_type' => $logtype,
