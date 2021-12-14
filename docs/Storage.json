@@ -1,4 +1,42 @@
 {
+    "SYNO.Storage.CGI.BtrfsDedupe": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_status",
+                "manual_dedupe",
+                "dry_run",
+                "get_volume_info",
+                "set_volume_schedule_config",
+                "set_schedule_plan",
+                "get_schedule_plan",
+                "check_quota",
+                "clear_quota",
+                "stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Cache.Protection": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_config",
+                "update_config",
+                "enable_passive",
+                "disable_passive",
+                "get_status",
+                "get_status_all"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Storage.CGI.Check": {
         "lib": "lib/libStorage.so",
         "maxVersion": 1,
@@ -6,7 +44,6 @@
             "1": [
                 "do_disk_scan",
                 "remove_ask_for_remap_scan",
-                "remove_ask_for_raid_force_scan",
                 "remove_ask_for_wcache_lost_data_scrubbing",
                 "remove_ask_for_fsck_scan",
                 "remove_ask_for_fsck",
@@ -15,8 +52,20 @@
                 "ignore_data_scrubbing",
                 "is_building",
                 "reboot_after_rebuild",
-                "should_ask_for_fsck_scan",
-                "ignore_ebox_reassemble_notification"
+                "should_ask_for_fsck_scan"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.DetectedPool": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "assemble",
+                "remove"
             ]
         },
         "minVersion": 1,
@@ -66,15 +115,21 @@
             "1": [
                 "check_system_raid",
                 "configure",
-                "create",
+                "check_can_create",
+                "is_redundancy_degraded",
                 "estimate_mem_size",
-                "estimate_repair",
-                "load_history_data",
+                "check_volume_abnormal_cant_create_cache",
                 "remove",
                 "remove_cancel",
                 "repair",
-                "statistics",
-                "statistics_check"
+                "create_feasibility_hard_check",
+                "enable",
+                "check_can_lock_space",
+                "advisor_poll",
+                "check_pin_metadata_and_rec_size",
+                "advisor_history_get",
+                "advisor_start",
+                "advisor_stop"
             ]
         },
         "minVersion": 1,
@@ -106,6 +161,7 @@
                 "create",
                 "data_scrubbing",
                 "delete",
+                "deactivate",
                 "edit_desc",
                 "get_setting",
                 "set_setting",
@@ -115,9 +171,12 @@
                 "expand_unallocated",
                 "expand_unfinished_shr",
                 "migrate",
-                "remove_lun",
                 "repair",
-                "set_data_scrubbing_schedule",
+                "replace",
+                "check_fast_repair",
+                "is_disk_detected_old_info",
+                "reassemble",
+                "remove_missing_pool",
                 "update_raid_sb_cache",
                 "remove_raid_sb_cache"
             ]
@@ -169,7 +228,11 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "set"
+                "add",
+                "edit",
+                "delete",
+                "potential_spares_dump",
+                "list"
             ]
         },
         "minVersion": 1,
@@ -181,6 +244,7 @@
         "maxVersion": 1,
         "methods": {
             "1": [
+                "get",
                 "set"
             ]
         },
@@ -194,18 +258,27 @@
         "methods": {
             "1": [
                 "load_info",
-                "load_system_raid",
+                "load_bad_disks",
                 "login_check",
                 "repair_sys_partition",
                 "repair_system_partition",
-                "set_system_raid",
+                "repair_rootbackup",
                 "set_schedule_plan",
                 "get_schedule_plan",
                 "set_resync_speed",
                 "get_resync_speed",
                 "set_data_scrubbing_schedule",
                 "set_data_scrubbing_schedule_status",
-                "reload_raid_config"
+                "set_fast_repair_config",
+                "get_fast_repair_config",
+                "set_auto_repair_config",
+                "get_auto_repair_config",
+                "get_sche_task_list",
+                "reload_raid_config",
+                "get_space_reclaim_status",
+                "get_space_reclaim_schedule",
+                "set_space_reclaim_schedule",
+                "delay_space_reclaim"
             ]
         },
         "minVersion": 1,
@@ -255,7 +328,25 @@
                 "ssd_trim_save",
                 "vol_extent_size_get",
                 "vol_extent_size_set",
-                "set_data_scrubbing_schedule"
+                "transfer_to_rw",
+                "get_space_usage",
+                "enable_space_usage",
+                "disable_space_usage",
+                "set_setting",
+                "failover_keep_rw"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Volume.Installer": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "quick_create_precheck",
+                "quick_create"
             ]
         },
         "minVersion": 1,

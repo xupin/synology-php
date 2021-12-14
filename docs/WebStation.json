@@ -12,6 +12,23 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.WebStation.ErrorPage": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "import",
+                "export",
+                "remove",
+                "update",
+                "create",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.HTTP.VHost": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
@@ -41,19 +58,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.WebStation.PHP.Extension": {
-        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get",
-                "set"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.WebStation.PHP.Profile": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
@@ -69,12 +73,54 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.WebStation.Shortcut": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "remove",
+                "list",
+                "update",
+                "create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.Status": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,
         "methods": {
             "1": [
                 "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebStation.WebService.Portal": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "remove",
+                "create",
+                "update",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebStation.WebService.Service": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
             ]
         },
         "minVersion": 1,

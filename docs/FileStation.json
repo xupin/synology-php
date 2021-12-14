@@ -341,6 +341,21 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.FileStation.PhotoUpload": {
+        "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Upload.so",
+        "maxVersion": 3,
+        "methods": {
+            "2": [
+                "upload"
+            ],
+            "3": [
+                "upload"
+            ]
+        },
+        "minVersion": 2,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.FileStation.Property": {
         "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Property.so",
         "maxVersion": 1,
@@ -522,12 +537,15 @@
     },
     "SYNO.FileStation.Thumb": {
         "lib": "/var/packages/FileStation/target/webapi/SYNO.FileStation.Thumb.so",
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "get"
             ],
             "2": [
+                "get"
+            ],
+            "3": [
                 "get"
             ]
         },

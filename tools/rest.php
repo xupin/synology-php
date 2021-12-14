@@ -32,9 +32,9 @@ if (empty($_SERVER['PATH_INFO'])) {
     $more = '';
     if ($sid) {
         $more = '?_sid='.$sid;
-        $content .= '<li>Session ID: '.$sid.' <a href="/rest.php/SYNO.API.Auth/v4/logout">Logout</a></li>';
+        $content .= '<li>Session ID: '.$sid.' <a href="/rest.php/SYNO.API.Auth/v7/logout">Logout</a></li>';
     } else {
-        $content .= '<li><form action="/rest.php/SYNO.API.Auth/v4/login" method="GET">Account: <input type="text" name="account" value=""> Password: <input type="password" name="passwd" value=""> Session: <input type="text" name="session" value="DownloadStation"> <input type="hidden" name="format" value="sid"><input type="submit" value="Login"></form></li>';
+        $content .= '<li><form action="/rest.php/SYNO.API.Auth/v7/login" method="GET">Account: <input type="text" name="account" value=""> Password: <input type="password" name="passwd" value=""> Session: <input type="text" name="session" value="DownloadStation"> <input type="hidden" name="format" value="sid"><input type="submit" value="Login"></form></li>';
     }
     foreach ($apilist as $root => $json) {
         $content .= '<li>'.$root.'<ul>';
@@ -139,10 +139,10 @@ if (200 == $info['http_code']) {
     */
     //$content['error']['errors']['result'] = json_decode($result);
     $content = json_decode($result, true);
-    if ($_SERVER['PATH_INFO'] == '/SYNO.API.Auth/v4/login' && $content['data']['sid']) {
+    if ($_SERVER['PATH_INFO'] == '/SYNO.API.Auth/v7/login' && $content['data']['sid']) {
         apcu_store('rest_sid', $content['data']['sid']);
     }
-    if ($_SERVER['PATH_INFO'] == '/SYNO.API.Auth/v4/logout') {
+    if ($_SERVER['PATH_INFO'] == '/SYNO.API.Auth/v7/logout') {
         apcu_delete('rest_sid');
     }
 } else {
@@ -166,6 +166,9 @@ function send_json($content)
     ob_end_clean();
     $type = 'application/json';
     header("Content-type: $type");
+    if (!empty($_SERVER['HTTP_ORIGIN']) && substr($_SERVER['HTTP_ORIGIN'], 0, 15) == 'http://192.168.') {
+        header("Access-Control-Allow-Origin: " . $_SERVER['HTTP_ORIGIN']);
+    }
     echo json_encode($content);
 }
 

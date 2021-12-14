@@ -26,5 +26,18 @@
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
+    },
+    "SYNO.Entry.SocketIo": {
+        "lib": "/usr/syno/synoman/webapi/lib/webapi_entry_socket.io.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "listeners_count",
+                "emit"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

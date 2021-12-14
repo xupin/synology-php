@@ -1,0 +1,101 @@
+{
+    "SYNO.Network.DHCPServer": {
+        "lib": "/var/packages/DhcpServer/target/webapi/dhcpserver/SYNO.Network.DHCPServer.so",
+        "maxVersion": 4,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get",
+                "set"
+            ],
+            "3": [
+                "get",
+                "set"
+            ],
+            "4": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Network.DHCPServer.ClientList": {
+        "lib": "/var/packages/DhcpServer/target/webapi/dhcpserver/SYNO.Network.DHCPServer.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list",
+                "delete_devices"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Network.DHCPServer.PXE": {
+        "lib": "/var/packages/DhcpServer/target/webapi/dhcpserver/SYNO.Network.DHCPServer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Network.DHCPServer.Reservation": {
+        "lib": "/var/packages/DhcpServer/target/webapi/dhcpserver/SYNO.Network.DHCPServer.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get",
+                "set"
+            ],
+            "3": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Network.DHCPServer.Vendor": {
+        "lib": "/var/packages/DhcpServer/target/webapi/dhcpserver/SYNO.Network.DHCPServer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Network.DHCPServer.WPAD": {
+        "lib": "/var/packages/DhcpServer/target/webapi/dhcpserver/SYNO.Network.DHCPServer.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

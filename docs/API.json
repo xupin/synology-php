@@ -1,4 +1,50 @@
 {
+    "SYNO.API.Auth": {
+        "lib": "lib/SYNO.API.Auth.so",
+        "maxVersion": 7,
+        "methods": {
+            "1": [
+                "logout"
+            ],
+            "2": [
+                "logout"
+            ],
+            "3": [
+                "logout",
+                "login"
+            ],
+            "4": [
+                "logout",
+                "login"
+            ],
+            "5": [
+                "synotoken",
+                "session",
+                "logout",
+                "login"
+            ],
+            "6": [
+                "oidc",
+                "Logout",
+                "Login",
+                "reset",
+                "session",
+                "synotoken",
+                "token",
+                "logout",
+                "login"
+            ],
+            "7": [
+                "suspend",
+                "resume",
+                "reset",
+                "logout",
+                "login"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi"
+    },
     "SYNO.API.Auth.Key": {
         "lib": "lib/SYNO.API.Auth.so",
         "maxVersion": 7,
@@ -12,69 +58,77 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.API.Info": {
-        "path": "query.cgi",
-        "minVersion": 1,
+    "SYNO.API.Auth.Key.Code": {
+        "lib": "lib/SYNO.API.Auth.so",
+        "maxVersion": 7,
+        "methods": {
+            "7": [
+                "get"
+            ]
+        },
+        "minVersion": 7,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.API.Auth.RedirectURI": {
+        "lib": "lib/SYNO.API.Auth.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "query"
+                "check"
             ]
-        }
-    },
-    "SYNO.API.Auth": {
-        "path": "auth.cgi",
+        },
         "minVersion": 1,
-        "maxVersion": 6,
-        "methods": {
-            "1": [
-                "login",
-                "logout"
-            ],
-            "2": [
-                "login",
-                "logout"
-            ],
-            "3": [
-                "login",
-                "logout"
-            ],
-            "4": [
-                "login",
-                "logout"
-            ],
-            "5": [
-                "login",
-                "logout",
-                "synotoken",
-                "session"
-            ],
-            "6": [
-                "login",
-                "logout",
-                "synotoken",
-                "session"
-            ]
-        }
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
-    "SYNO.API.OTP": {
-        "path": "otp.cgi",
-        "minVersion": 1,
+    "SYNO.API.Auth.Type": {
+        "lib": "lib/SYNO.API.Auth.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "setup"
+                "get"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.API.Auth.UIConfig": {
+        "lib": "lib/SYNO.API.Auth.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     },
     "SYNO.API.Encryption": {
-        "path": "encryption.cgi",
-        "minVersion": 1,
+        "lib": "lib/SYNO.API.Encryption.so",
         "maxVersion": 1,
         "methods": {
             "1": [
                 "getinfo"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.API.Info": {
+        "lib": "lib/SYNO.API.Info.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "query",
+                "Query"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
     }
 }

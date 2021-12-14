@@ -1,12 +1,19 @@
 {
     "SYNO.ActiveInsight.Package": {
-        "lib": "lib/SYNO.ActiveInsight.so",
-        "maxVersion": 1,
+        "lib": "ActiveInsight/SYNO.ActiveInsight.so",
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "get_status",
                 "start_mib",
-                "stop_mib"
+                "stop_mib",
+                "change_mode"
+            ],
+            "2": [
+                "get_status",
+                "start_mib",
+                "stop_mib",
+                "change_mode"
             ]
         },
         "minVersion": 1,

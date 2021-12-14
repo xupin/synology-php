@@ -97,9 +97,7 @@
         "maxVersion": 2,
         "methods": {
             "1": [
-                "get",
-                "password_verify",
-                "private_key_verify"
+                "get"
             ]
         },
         "minVersion": 1,

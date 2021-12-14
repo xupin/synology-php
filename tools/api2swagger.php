@@ -20,6 +20,7 @@
 // TODO: run example.php afterwards to copy files for Swagger Editor
 //
 //refresh_api_files('../docs/');
+//merge_query_files();
 //exit;
 
 $json_file = 'combined.json';
@@ -141,13 +142,14 @@ function generate_swagger($apilist, $debug=false)
             }
             $params['version'] = $values['maxVersion'];
             $methods = $values['methods'][$params['version']];
-            echo "\t\t(".count($methods).") ".implode(',', $methods)."\n";
             if (!$methods) {
                 var_dump($values);
                 var_dump($params);
                 $methods = $values['methods'][$values['minVersion']];
+                $params['version'] = $values['minVersion'];
                 //exit;
             }
+            echo "\t\t(".count($methods).") ".implode(',', $methods)."\n";
             $params['hash'] = '';
             if (in_array('list', $methods)) {
                 $params['default'] = 'list';
@@ -233,6 +235,47 @@ function clean_values($values)
     return $cleaned;
 }
 
+function merge_assoc_array($old, $new)
+{
+    foreach ($new as $key => $values) {
+        if (!array_key_exists($key, $old)) {
+            $old[$key] = $new[$key];
+            continue;
+        }
+        if (is_array($values) && is_array($old[$key])) {
+            if (count($values) > 0 && is_string(array_key_first($values)) && count($old[$key]) > 0 && is_string(array_key_first($old[$key]))) {
+                $old[$key] = merge_assoc_array($old[$key], $values);
+                continue;
+            }
+            echo $key . ': ' . implode('-', $old[$key]) . ' != ' . implode('-', $values);
+        }
+        if ($values == $old[$key]) {
+            continue;
+        }
+        $old[$key] = $values;
+    }
+    return $old;
+}
+
+function merge_query_files()
+{
+    $files = [];
+    $files['old'] = 'query.old.json';
+    $files['cur'] = 'query.cur.json';
+    $files['new'] = 'query.new.json';
+    $json = [];
+    $apilist = [];
+    foreach ($files as $key => $filepath) {
+        $contents = file_get_contents($filepath);
+        $json[$key] = json_decode($contents, true);
+    }
+    $files['tmp'] = 'query.tmp.json';
+    $json['tmp'] = merge_assoc_array($json['old'], $json['cur']);
+    $json['tmp'] = merge_assoc_array($json['tmp'], $json['new']);
+    $json_output = json_encode($json['tmp'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    file_put_contents($files['tmp'], $json_output);
+}
+
 function combine_json_files()
 {
     // Get current paths from SYNO.API.Info
@@ -271,6 +314,9 @@ function combine_json_files()
         echo $file."\n";
         $contents = file_get_contents($filepath);
         $json = json_decode($contents, true);
+        if (empty($json)) {
+            continue;
+        }
         foreach ($json as $api => $values) {
             $values = clean_values($values);
             if (strpos($api, 'PhotoStation') === false) {
@@ -310,6 +356,7 @@ function combine_json_files()
             }
         }
     }
+    ksort($apilist);
     $json_output = json_encode($apilist, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     $json_file = 'combined.json';
     file_put_contents($json_file, $json_output);

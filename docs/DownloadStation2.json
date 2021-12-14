@@ -134,6 +134,19 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.DownloadStation2.Settings.AutoExtraction": {
+        "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.Settings.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.DownloadStation2.Settings.BT": {
         "lib": "/var/packages/DownloadStation/target/webapi/SYNO.DownloadStation2.Settings.so",
         "maxVersion": 1,
@@ -159,7 +172,8 @@
                 "create",
                 "delete",
                 "update_check",
-                "update"
+                "update",
+                "toggle_plugins"
             ]
         },
         "minVersion": 1,

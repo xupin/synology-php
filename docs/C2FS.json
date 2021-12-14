@@ -1,0 +1,130 @@
+{
+    "SYNO.C2FS.Account": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "fetch_info"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.Bucket": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "ask_account",
+                "password_key_export",
+                "get_account_mount",
+                "decrypt",
+                "encrypt"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.Conf": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "confbackup_import",
+                "confbackup_export"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.File": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "evict",
+                "pin",
+                "get_cache_status",
+                "get_local_status"
+            ],
+            "2": [
+                "evict"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.Share": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "set_permission",
+                "stop_daemons",
+                "start_daemons",
+                "restart_daemons",
+                "set",
+                "validate_set",
+                "unmount",
+                "mount",
+                "remount",
+                "validate_delete",
+                "delete",
+                "list",
+                "create",
+                "reauth"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.Share.Status": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "is_connected_to_server"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.Transform": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "re_add_progress",
+                "list_progress",
+                "export_invalid_files",
+                "cancel",
+                "transform_to_c2share",
+                "validate_for_service",
+                "get_progress"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.C2FS.Utils": {
+        "lib": "HybridShare/SYNO.C2FS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load_global_config",
+                "get_ds_info",
+                "check_ntp_enable"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

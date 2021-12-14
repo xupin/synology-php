@@ -1,0 +1,155 @@
+{
+    "SYNO.Docker.Container": {
+        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "export",
+                "import",
+                "get",
+                "get_log",
+                "get_process",
+                "list",
+                "restart",
+                "set",
+                "set_start",
+                "set_status",
+                "signal",
+                "start",
+                "stop",
+                "upload"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Container.Log": {
+        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "export",
+                "get",
+                "get_date_by_id",
+                "get_date_list",
+                "search"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Container.Profile": {
+        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "duplicate",
+                "export",
+                "import",
+                "upload"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Container.Resource": {
+        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Container.PkgProfile": {
+        "lib": "/var/packages/Docker/target/webapi/container/SYNO.Docker.Container.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "remove"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Image": {
+        "lib": "/var/packages/Docker/target/webapi/image/SYNO.Docker.Image.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "pull_start",
+                "pull_status",
+                "export",
+                "import",
+                "delete",
+                "upload",
+                "get"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Log": {
+        "lib": "/var/packages/Docker/target/webapi/log/SYNO.Docker.Log.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "clear",
+                "export"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Registry": {
+        "lib": "/var/packages/Docker/target/webapi/registry/SYNO.Docker.Registry.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "search",
+                "tags",
+                "get",
+                "create",
+                "set",
+                "using",
+                "delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Docker.Network": {
+        "lib": "/var/packages/Docker/target/webapi/network/SYNO.Docker.Network.so",
+        "minVersion": 1,
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "list_container",
+                "create",
+                "remove",
+                "connect",
+                "disconnect",
+                "set",
+                "get"
+            ]
+        },
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

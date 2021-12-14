@@ -1,0 +1,237 @@
+{
+    "SYNO.SecureSignIn.Authenticator": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "revoke",
+                "revokeAll",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Authenticator.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "revoke",
+                "revokeAll"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Authenticator.Info": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Authenticator.Registration": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "register",
+                "available"
+            ],
+            "2": [
+                "invite"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Authenticator.Registration.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "available"
+            ],
+            "2": [
+                "invite"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Authenticator.Request": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "revoke",
+                "status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Authenticator.Verdict": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/authenticator/SYNO.SecureSignIn.Authenticator.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "approve",
+                "deny"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Fido.Manage": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/fido/SYNO.SecureSignIn.Fido.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "update",
+                "delete",
+                "deleteAll"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Fido.Manage.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/fido/SYNO.SecureSignIn.Fido.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "update",
+                "delete",
+                "deleteAll"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Fido.Register": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/fido/SYNO.SecureSignIn.Fido.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_attest",
+                "register"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Fido.Register.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/fido/SYNO.SecureSignIn.Fido.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_attest",
+                "register"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Method": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/method/SYNO.SecureSignIn.Method.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Method.Admin": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/method/SYNO.SecureSignIn.Method.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "reset"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Method.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/method/SYNO.SecureSignIn.Method.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "get_user",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Package": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/package/SYNO.SecureSignIn.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Package.Ex": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/package/SYNO.SecureSignIn.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SecureSignIn.Package.Request": {
+        "lib": "/var/packages/SecureSignIn/target/webapi/package/SYNO.SecureSignIn.Package.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "available"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

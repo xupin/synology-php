@@ -1,0 +1,28 @@
+{
+    "SYNO.USBCopy": {
+        "lib": "/var/packages/USBCopy/target/lib/SYNO.USBCopy.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "create",
+                "get",
+                "get_filter",
+                "set_setting",
+                "set_trigger_time",
+                "set_filter",
+                "delete",
+                "run",
+                "cancel",
+                "enable",
+                "disable",
+                "get_global_setting",
+                "set_global_setting",
+                "get_log_list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}
