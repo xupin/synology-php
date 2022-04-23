@@ -38,12 +38,13 @@ class Authenticate extends AbstractApi
      *
      * @param string $login
      * @param string $password
+     * @param int|null $code
      *
      * @return Api
      */
-    public function connect($login, $password)
+    public function connect($login, $password, $code = null)
     {
-        return $this->_authApi->connect($login, $password, $this->_sessionName);
+        return $this->_authApi->connect($login, $password, $this->_sessionName, $code);
     }
 
     /**
@@ -55,11 +56,48 @@ class Authenticate extends AbstractApi
     }
 
     /**
+     * Return Session Id
+     *
+     * @throws Exception
+     *
+     * @return string
+     */
+    public function getSessionId()
+    {
+        return $this->_authApi->getSessionId();
+    }
+
+    /**
+     * Set session ID.
+     *
+     * @param string $sid
+     *   The session ID.
+     *
+     * @return $this
+     */
+    public function setSessionId($sid)
+    {
+        $this->_authApi->setSessionId($sid);
+
+        return $this;
+    }
+
+    /**
+     * Return true if connected
+     *
+     * @return boolean
+     */
+    public function isConnected()
+    {
+        return $this->_authApi->isConnected();
+    }
+
+    /**
      * {@inheritDoc}
      */
     protected function _request($api, $path, $method, $params = [], $version = null, $httpMethod = 'get')
     {
-        if ($this->_authApi->isConnected()) {
+        if ($this->isConnected()) {
             if (!is_array($params)) {
                 if (!empty($params)) {
                     $params = [$params];
@@ -68,7 +106,7 @@ class Authenticate extends AbstractApi
                 }
             }
 
-            $params['_sid'] = $this->_authApi->getSessionId();
+            $params['_sid'] = $this->getSessionId();
 
             return parent::_request($api, $path, $method, $params, $version, $httpMethod);
         }
@@ -82,5 +120,19 @@ class Authenticate extends AbstractApi
     {
         parent::activateDebug();
         $this->_authApi->activateDebug();
+    }
+
+    /**
+     * Turn off automatically closing the connection.
+     *
+     * @param boolean $keepConnection
+     *   (optional) TRUE if the connection shouldn't be closed automatically.
+     *
+     * @return $this
+     */
+    public function keepConnection($keepConnection = true) {
+        $this->_authApi->keepConnection($keepConnection);
+
+        return $this;
     }
 }

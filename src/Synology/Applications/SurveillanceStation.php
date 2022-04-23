@@ -62,4 +62,42 @@ class SurveillanceStation extends Authenticate
         ];
         return $this->_request('Camera', static::$path, 'GetSnapshot', $parameters);
     }
+
+    /**
+     * Get home mode related setting and information, including current binding
+     * mobile devices if required.
+     *
+     * @param boolean $need_mobiles
+     *   (optional) Home mode info will conclude which mobile devices is binding
+     *   to the server, default to false.
+     *
+     * @return array|bool|\stdClass
+     *   The home mode related setting and information.
+     */
+    public function getHomeModeInfo($need_mobiles = FALSE)
+    {
+        $parameters = [
+            'need_mobiles' => $need_mobiles,
+        ];
+        return $this->_request('HomeMode', static::$path, 'GetInfo', $parameters, 1);
+    }
+
+    /**
+     * Switch home mode on/off.
+     *
+     * @param boolean $on
+     *   True to turn on home mode, while false to turn it off.
+     *
+     * @return array|bool|\stdClass
+     *   This method has no specific response data. It returns an empty success
+     *   response if it completes without error.
+     */
+    public function switchHomeMode($on)
+    {
+        $parameters = [
+            'on' => $on,
+        ];
+        return $this->_request('HomeMode', static::$path, 'Switch', $parameters, 1);
+    }
+
 }
