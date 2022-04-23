@@ -1,17 +1,21 @@
 {
-    "name": "chmez/synology-api",
+    "name": "dream-rhythm/synology-api",
     "description": "Handle Synology API",
     "keywords": ["synology", "api"],
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "ChMEZ"
+            "name": "dream-rhythm"
         }
     ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4"
+    },
     "autoload": {
-        "psr-0": {
-            "Synology": "src/"
+        "psr-4": {
+            "Synology\\": "src/Synology"
         }
     }
 }

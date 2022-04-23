@@ -56,7 +56,7 @@ class Api extends AbstractApi
      *
      * @return Api
      */
-    public function connect($username, $password, $sessionName = null, $code = null)
+    public function connect($username, $password, $sessionName = null, $code = null, $auth_version = '3')
     {
         if (!empty($sessionName)) {
             $this->_sessionName = $sessionName;
@@ -76,7 +76,7 @@ class Api extends AbstractApi
             $options['otp_code'] = $code;
         }
 
-        $data = $this->_request('Auth', 'auth.cgi', 'login', $options, $this->_version);
+        $data = $this->_request('Auth', 'auth.cgi', 'login', $options, $auth_version);
 
         // save session name id
         $this->_sid = $data->sid;
