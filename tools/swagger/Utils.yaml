@@ -32,6 +32,7 @@ info:
 host: diskstation
 basePath: /rest.php
 schemes:
+  - https
   - http
 securityDefinitions:
   query_sid:

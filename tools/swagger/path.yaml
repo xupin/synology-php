@@ -42,6 +42,7 @@ info:
 host: diskstation:5000
 basePath: /webapi
 schemes:
+  - https
   - http
 parameters:
   path_sid:
