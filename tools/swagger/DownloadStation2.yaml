@@ -1,0 +1,1972 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.BTSearch/v1/list_category:
+    get:
+      tags:
+        - DownloadStation2.BTSearch
+      summary: Return list_category for SYNO.DownloadStation2.BTSearch
+      operationId: BTSearch_list_category
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.BTSearch/v1/list:
+    get:
+      tags:
+        - DownloadStation2.BTSearch
+      summary: Return list for SYNO.DownloadStation2.BTSearch
+      operationId: BTSearch_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.BTSearch/v1/stop:
+    get:
+      tags:
+        - DownloadStation2.BTSearch
+      summary: Return stop for SYNO.DownloadStation2.BTSearch
+      operationId: BTSearch_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.BTSearch/v1/start:
+    get:
+      tags:
+        - DownloadStation2.BTSearch
+      summary: Return start for SYNO.DownloadStation2.BTSearch
+      operationId: BTSearch_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Captcha/v2/download:
+    get:
+      tags:
+        - DownloadStation2.Captcha
+      summary: Return download for SYNO.DownloadStation2.Captcha
+      operationId: Captcha_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Captcha/v2/set:
+    get:
+      tags:
+        - DownloadStation2.Captcha
+      summary: Return set for SYNO.DownloadStation2.Captcha
+      operationId: Captcha_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Captcha/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Captcha
+      summary: Return list for SYNO.DownloadStation2.Captcha
+      operationId: Captcha_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Package.Info/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Package
+      summary: Return get for SYNO.DownloadStation2.Package.Info
+      operationId: Package_Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Package.Module/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Package
+      summary: Return get for SYNO.DownloadStation2.Package.Module
+      operationId: Package_Module_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Package.Module/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Package
+      summary: Return list for SYNO.DownloadStation2.Package.Module
+      operationId: Package_Module_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Package.Service/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Package
+      summary: Return get for SYNO.DownloadStation2.Package.Service
+      operationId: Package_Service_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Feed/v1/add:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return add for SYNO.DownloadStation2.RSS.Feed
+      operationId: RSS_Feed_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Feed/v1/updateall:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return updateall for SYNO.DownloadStation2.RSS.Feed
+      operationId: RSS_Feed_updateall
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Feed/v1/update:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return update for SYNO.DownloadStation2.RSS.Feed
+      operationId: RSS_Feed_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Feed/v1/delete:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return delete for SYNO.DownloadStation2.RSS.Feed
+      operationId: RSS_Feed_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Feed/v1/set:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return set for SYNO.DownloadStation2.RSS.Feed
+      operationId: RSS_Feed_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Feed/v1/list:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return list for SYNO.DownloadStation2.RSS.Feed
+      operationId: RSS_Feed_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Filter/v1/test:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return test for SYNO.DownloadStation2.RSS.Filter
+      operationId: RSS_Filter_test
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Filter/v1/delete:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return delete for SYNO.DownloadStation2.RSS.Filter
+      operationId: RSS_Filter_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Filter/v1/list:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return list for SYNO.DownloadStation2.RSS.Filter
+      operationId: RSS_Filter_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Filter/v1/set:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return set for SYNO.DownloadStation2.RSS.Filter
+      operationId: RSS_Filter_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Filter/v1/add:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return add for SYNO.DownloadStation2.RSS.Filter
+      operationId: RSS_Filter_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Item/v1/clear:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return clear for SYNO.DownloadStation2.RSS.Item
+      operationId: RSS_Item_clear
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.RSS.Item/v1/list:
+    get:
+      tags:
+        - DownloadStation2.RSS
+      summary: Return list for SYNO.DownloadStation2.RSS.Item
+      operationId: RSS_Item_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/verify:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return verify for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_verify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return list for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/update:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return update for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/delete:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return delete for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FileHosting/v2/create:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return create for SYNO.DownloadStation2.Settings.FileHosting
+      operationId: Settings_FileHosting_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.AutoExtraction/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.AutoExtraction
+      operationId: Settings_AutoExtraction_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.AutoExtraction/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.AutoExtraction
+      operationId: Settings_AutoExtraction_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BT/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.BT
+      operationId: Settings_BT_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BT/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.BT
+      operationId: Settings_BT_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/list:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return list for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/verify:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return verify for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_verify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/create:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return create for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/delete:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return delete for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/update_check:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return update_check for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_update_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/update:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return update for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.BTSearch/v1/toggle_plugins:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return toggle_plugins for SYNO.DownloadStation2.Settings.BTSearch
+      operationId: Settings_BTSearch_toggle_plugins
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Emule/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Emule
+      operationId: Settings_Emule_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Emule/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Emule
+      operationId: Settings_Emule_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Emule.Location/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Emule.Location
+      operationId: Settings_Emule_Location_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Emule.Location/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Emule.Location
+      operationId: Settings_Emule_Location_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FtpHttp/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.FtpHttp
+      operationId: Settings_FtpHttp_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.FtpHttp/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.FtpHttp
+      operationId: Settings_FtpHttp_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Global/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Global
+      operationId: Settings_Global_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Global/v2/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Global
+      operationId: Settings_Global_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Global/v2/read_progress:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return read_progress for SYNO.DownloadStation2.Settings.Global
+      operationId: Settings_Global_read_progress
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Location/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Location
+      operationId: Settings_Location_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Location/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Location
+      operationId: Settings_Location_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Nzb/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Nzb
+      operationId: Settings_Nzb_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Nzb/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Nzb
+      operationId: Settings_Nzb_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Rss/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Rss
+      operationId: Settings_Rss_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Rss/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Rss
+      operationId: Settings_Rss_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Scheduler/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return get for SYNO.DownloadStation2.Settings.Scheduler
+      operationId: Settings_Scheduler_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Settings.Scheduler/v1/set:
+    get:
+      tags:
+        - DownloadStation2.Settings
+      summary: Return set for SYNO.DownloadStation2.Settings.Scheduler
+      operationId: Settings_Scheduler_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return get for SYNO.DownloadStation2.Task.BT
+      operationId: Task_BT_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT/v2/set:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return set for SYNO.DownloadStation2.Task.BT
+      operationId: Task_BT_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.File/v2/set:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return set for SYNO.DownloadStation2.Task.BT.File
+      operationId: Task_BT_File_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.File/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return list for SYNO.DownloadStation2.Task.BT.File
+      operationId: Task_BT_File_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.File/v2/copy:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return copy for SYNO.DownloadStation2.Task.BT.File
+      operationId: Task_BT_File_copy
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.Peer/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return list for SYNO.DownloadStation2.Task.BT.Peer
+      operationId: Task_BT_Peer_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.Tracker/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return list for SYNO.DownloadStation2.Task.BT.Tracker
+      operationId: Task_BT_Tracker_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.Tracker/v2/add:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return add for SYNO.DownloadStation2.Task.BT.Tracker
+      operationId: Task_BT_Tracker_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.BT.Tracker/v2/delete:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return delete for SYNO.DownloadStation2.Task.BT.Tracker
+      operationId: Task_BT_Tracker_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.NZB.File/v1/list:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return list for SYNO.DownloadStation2.Task.NZB.File
+      operationId: Task_NZB_File_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.NZB.Log/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return get for SYNO.DownloadStation2.Task.NZB.Log
+      operationId: Task_NZB_Log_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.eMule/v1/list_upload:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return list_upload for SYNO.DownloadStation2.Task.eMule
+      operationId: Task_eMule_list_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/resume_condition:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return resume_condition for SYNO.DownloadStation2.Task
+      operationId: Task_resume_condition
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/pause_condition:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return pause_condition for SYNO.DownloadStation2.Task
+      operationId: Task_pause_condition
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/delete_condition:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return delete_condition for SYNO.DownloadStation2.Task
+      operationId: Task_delete_condition
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/create:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return create for SYNO.DownloadStation2.Task
+      operationId: Task_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/list:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return list for SYNO.DownloadStation2.Task
+      operationId: Task_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return get for SYNO.DownloadStation2.Task
+      operationId: Task_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/delete:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return delete for SYNO.DownloadStation2.Task
+      operationId: Task_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/pause:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return pause for SYNO.DownloadStation2.Task
+      operationId: Task_pause
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/resume:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return resume for SYNO.DownloadStation2.Task
+      operationId: Task_resume
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task/v2/edit:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return edit for SYNO.DownloadStation2.Task
+      operationId: Task_edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.Complete/v1/start:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return start for SYNO.DownloadStation2.Task.Complete
+      operationId: Task_Complete_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.Complete/v1/status:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return status for SYNO.DownloadStation2.Task.Complete
+      operationId: Task_Complete_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.Complete/v1/stop:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return stop for SYNO.DownloadStation2.Task.Complete
+      operationId: Task_Complete_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.List/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return get for SYNO.DownloadStation2.Task.List
+      operationId: Task_List_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.List/v2/download:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return download for SYNO.DownloadStation2.Task.List
+      operationId: Task_List_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.List/v2/delete:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return delete for SYNO.DownloadStation2.Task.List
+      operationId: Task_List_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.List.Polling/v2/download_stop:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return download_stop for SYNO.DownloadStation2.Task.List.Polling
+      operationId: Task_List_Polling_download_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.List.Polling/v2/download_status:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return download_status for SYNO.DownloadStation2.Task.List.Polling
+      operationId: Task_List_Polling_download_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.List.Polling/v2/download:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return download for SYNO.DownloadStation2.Task.List.Polling
+      operationId: Task_List_Polling_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.Source/v2/download:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return download for SYNO.DownloadStation2.Task.Source
+      operationId: Task_Source_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Task.Statistic/v1/get:
+    get:
+      tags:
+        - DownloadStation2.Task
+      summary: Return get for SYNO.DownloadStation2.Task.Statistic
+      operationId: Task_Statistic_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Thumbnail/v2/get:
+    get:
+      tags:
+        - DownloadStation2.Thumbnail
+      summary: Return get for SYNO.DownloadStation2.Thumbnail
+      operationId: Thumbnail_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.Thumbnail/v2/download:
+    get:
+      tags:
+        - DownloadStation2.Thumbnail
+      summary: Return download for SYNO.DownloadStation2.Thumbnail
+      operationId: Thumbnail_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Search/v1/download:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return download for SYNO.DownloadStation2.eMule.Search
+      operationId: eMule_Search_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Search/v1/list:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return list for SYNO.DownloadStation2.eMule.Search
+      operationId: eMule_Search_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Search/v1/stop:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return stop for SYNO.DownloadStation2.eMule.Search
+      operationId: eMule_Search_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Search/v1/start:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return start for SYNO.DownloadStation2.eMule.Search
+      operationId: eMule_Search_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/get_status:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return get_status for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_get_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/connect_kad:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return connect_kad for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_connect_kad
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/disconnect:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return disconnect for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_disconnect
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/connect:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return connect for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_connect
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/delete:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return delete for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/add:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return add for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.DownloadStation2.eMule.Server/v1/list:
+    get:
+      tags:
+        - DownloadStation2.eMule
+      summary: Return list for SYNO.DownloadStation2.eMule.Server
+      operationId: eMule_Server_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

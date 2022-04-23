@@ -1,0 +1,1666 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Info/v1/get:
+    get:
+      tags:
+        - NoteStation.Info
+      summary: Return get for SYNO.NoteStation.Info
+      operationId: Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Info/v1/searchplace:
+    get:
+      tags:
+        - NoteStation.Info
+      summary: Return searchplace for SYNO.NoteStation.Info
+      operationId: Info_searchplace
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Share.Priv/v1/list:
+    get:
+      tags:
+        - NoteStation.Share
+      summary: Return list for SYNO.NoteStation.Share.Priv
+      operationId: Share_Priv_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Shard/v1/get:
+    get:
+      tags:
+        - NoteStation.Shard
+      summary: Return get for SYNO.NoteStation.Shard
+      operationId: Shard_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Shard/v1/init:
+    get:
+      tags:
+        - NoteStation.Shard
+      summary: Return init for SYNO.NoteStation.Shard
+      operationId: Shard_init
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Shard.Link/v1/get:
+    get:
+      tags:
+        - NoteStation.Shard
+      summary: Return get for SYNO.NoteStation.Shard.Link
+      operationId: Shard_Link_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/list:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return list for SYNO.NoteStation.Note
+      operationId: Note_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/get:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return get for SYNO.NoteStation.Note
+      operationId: Note_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/download:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return download for SYNO.NoteStation.Note
+      operationId: Note_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/set:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return set for SYNO.NoteStation.Note
+      operationId: Note_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/idle:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return idle for SYNO.NoteStation.Note
+      operationId: Note_idle
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/create:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return create for SYNO.NoteStation.Note
+      operationId: Note_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/delete:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return delete for SYNO.NoteStation.Note
+      operationId: Note_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/restore:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return restore for SYNO.NoteStation.Note
+      operationId: Note_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note/v2/copy:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return copy for SYNO.NoteStation.Note
+      operationId: Note_copy
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Version/v1/get:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return get for SYNO.NoteStation.Note.Version
+      operationId: Note_Version_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Version/v1/list:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return list for SYNO.NoteStation.Note.Version
+      operationId: Note_Version_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Version/v1/restore:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return restore for SYNO.NoteStation.Note.Version
+      operationId: Note_Version_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.AppLink/v1/get:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return get for SYNO.NoteStation.Note.AppLink
+      operationId: Note_AppLink_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Encrypt/v1/create:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return create for SYNO.NoteStation.Note.Encrypt
+      operationId: Note_Encrypt_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Encrypt/v1/check:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return check for SYNO.NoteStation.Note.Encrypt
+      operationId: Note_Encrypt_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Encrypt/v1/delete:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return delete for SYNO.NoteStation.Note.Encrypt
+      operationId: Note_Encrypt_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/set:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return set for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/set_status:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return set_status for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_set_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/set_stop:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return set_stop for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_set_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/copy:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return copy for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_copy
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/copy_status:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return copy_status for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_copy_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/copy_stop:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return copy_stop for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_copy_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/create:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return create for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/create_status:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return create_status for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_create_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Polling/v2/create_stop:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return create_stop for SYNO.NoteStation.Note.Polling
+      operationId: Note_Polling_create_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Note.Ghost/v2/create:
+    get:
+      tags:
+        - NoteStation.Note
+      summary: Return create for SYNO.NoteStation.Note.Ghost
+      operationId: Note_Ghost_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook/v2/list:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return list for SYNO.NoteStation.Notebook
+      operationId: Notebook_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook/v2/get:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return get for SYNO.NoteStation.Notebook
+      operationId: Notebook_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook/v2/create:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return create for SYNO.NoteStation.Notebook
+      operationId: Notebook_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook/v2/set:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return set for SYNO.NoteStation.Notebook
+      operationId: Notebook_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook/v2/delete:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return delete for SYNO.NoteStation.Notebook
+      operationId: Notebook_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook.Preset/v1/set:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return set for SYNO.NoteStation.Notebook.Preset
+      operationId: Notebook_Preset_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook.Polling/v1/archive:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return archive for SYNO.NoteStation.Notebook.Polling
+      operationId: Notebook_Polling_archive
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook.Polling/v1/archive_status:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return archive_status for SYNO.NoteStation.Notebook.Polling
+      operationId: Notebook_Polling_archive_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Notebook.Polling/v1/archive_stop:
+    get:
+      tags:
+        - NoteStation.Notebook
+      summary: Return archive_stop for SYNO.NoteStation.Notebook.Polling
+      operationId: Notebook_Polling_archive_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Tag/v1/list:
+    get:
+      tags:
+        - NoteStation.Tag
+      summary: Return list for SYNO.NoteStation.Tag
+      operationId: Tag_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Tag/v1/set:
+    get:
+      tags:
+        - NoteStation.Tag
+      summary: Return set for SYNO.NoteStation.Tag
+      operationId: Tag_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Tag/v1/delete:
+    get:
+      tags:
+        - NoteStation.Tag
+      summary: Return delete for SYNO.NoteStation.Tag
+      operationId: Tag_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Shortcut/v1/list:
+    get:
+      tags:
+        - NoteStation.Shortcut
+      summary: Return list for SYNO.NoteStation.Shortcut
+      operationId: Shortcut_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Shortcut/v1/set:
+    get:
+      tags:
+        - NoteStation.Shortcut
+      summary: Return set for SYNO.NoteStation.Shortcut
+      operationId: Shortcut_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Shortcut/v1/delete:
+    get:
+      tags:
+        - NoteStation.Shortcut
+      summary: Return delete for SYNO.NoteStation.Shortcut
+      operationId: Shortcut_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.FTS/v1/search:
+    get:
+      tags:
+        - NoteStation.FTS
+      summary: Return search for SYNO.NoteStation.FTS
+      operationId: FTS_search
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Permission/v1/set:
+    get:
+      tags:
+        - NoteStation.Permission
+      summary: Return set for SYNO.NoteStation.Permission
+      operationId: Permission_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Permission/v1/delete:
+    get:
+      tags:
+        - NoteStation.Permission
+      summary: Return delete for SYNO.NoteStation.Permission
+      operationId: Permission_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Permission.Public/v1/set:
+    get:
+      tags:
+        - NoteStation.Permission
+      summary: Return set for SYNO.NoteStation.Permission.Public
+      operationId: Permission_Public_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Permission.Public/v1/delete:
+    get:
+      tags:
+        - NoteStation.Permission
+      summary: Return delete for SYNO.NoteStation.Permission.Public
+      operationId: Permission_Public_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Permission.User/v1/set:
+    get:
+      tags:
+        - NoteStation.Permission
+      summary: Return set for SYNO.NoteStation.Permission.User
+      operationId: Permission_User_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Permission.User/v1/delete:
+    get:
+      tags:
+        - NoteStation.Permission
+      summary: Return delete for SYNO.NoteStation.Permission.User
+      operationId: Permission_User_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Setting/v1/init:
+    get:
+      tags:
+        - NoteStation.Setting
+      summary: Return init for SYNO.NoteStation.Setting
+      operationId: Setting_init
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Setting/v1/get:
+    get:
+      tags:
+        - NoteStation.Setting
+      summary: Return get for SYNO.NoteStation.Setting
+      operationId: Setting_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Setting/v1/set:
+    get:
+      tags:
+        - NoteStation.Setting
+      summary: Return set for SYNO.NoteStation.Setting
+      operationId: Setting_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Setting.DSM/v1/get:
+    get:
+      tags:
+        - NoteStation.Setting
+      summary: Return get for SYNO.NoteStation.Setting.DSM
+      operationId: Setting_DSM_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/init:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return init for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_init
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/get_status:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return get_status for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_get_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/get_polling_task:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return get_polling_task for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_get_polling_task
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/prepare_notebooks:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return prepare_notebooks for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_prepare_notebooks
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/prepare_notebooks_status:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return prepare_notebooks_status for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_prepare_notebooks_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/list_notebooks:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return list_notebooks for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_list_notebooks
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/add_import_task:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return add_import_task for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_add_import_task
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/import:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return import for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/import_status:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return import_status for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_import_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/import_stop:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return import_stop for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_import_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/import_lock:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return import_lock for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_import_lock
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/get_oauth_url:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return get_oauth_url for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_get_oauth_url
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/get_oauth_token:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return get_oauth_token for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_get_oauth_token
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Evernote/v1/check_oauth_token:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return check_oauth_token for SYNO.NoteStation.Import.Evernote
+      operationId: Import_Evernote_check_oauth_token
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Notebook/v1/start:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return start for SYNO.NoteStation.Import.Notebook
+      operationId: Import_Notebook_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Notebook/v1/status:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return status for SYNO.NoteStation.Import.Notebook
+      operationId: Import_Notebook_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Import.Notebook/v1/stop:
+    get:
+      tags:
+        - NoteStation.Import
+      summary: Return stop for SYNO.NoteStation.Import.Notebook
+      operationId: Import_Notebook_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Stack/v1/set:
+    get:
+      tags:
+        - NoteStation.Stack
+      summary: Return set for SYNO.NoteStation.Stack
+      operationId: Stack_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Stack/v1/delete:
+    get:
+      tags:
+        - NoteStation.Stack
+      summary: Return delete for SYNO.NoteStation.Stack
+      operationId: Stack_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Todo/v1/list:
+    get:
+      tags:
+        - NoteStation.Todo
+      summary: Return list for SYNO.NoteStation.Todo
+      operationId: Todo_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Todo/v1/get:
+    get:
+      tags:
+        - NoteStation.Todo
+      summary: Return get for SYNO.NoteStation.Todo
+      operationId: Todo_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Todo/v1/set:
+    get:
+      tags:
+        - NoteStation.Todo
+      summary: Return set for SYNO.NoteStation.Todo
+      operationId: Todo_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Todo/v1/create:
+    get:
+      tags:
+        - NoteStation.Todo
+      summary: Return create for SYNO.NoteStation.Todo
+      operationId: Todo_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Todo/v1/delete:
+    get:
+      tags:
+        - NoteStation.Todo
+      summary: Return delete for SYNO.NoteStation.Todo
+      operationId: Todo_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Notebook/v1/start:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return start for SYNO.NoteStation.Export.Notebook
+      operationId: Export_Notebook_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Notebook/v1/status:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return status for SYNO.NoteStation.Export.Notebook
+      operationId: Export_Notebook_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Notebook/v1/stop:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return stop for SYNO.NoteStation.Export.Notebook
+      operationId: Export_Notebook_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Note/v1/start:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return start for SYNO.NoteStation.Export.Note
+      operationId: Export_Note_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Note/v1/status:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return status for SYNO.NoteStation.Export.Note
+      operationId: Export_Note_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Note/v1/stop:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return stop for SYNO.NoteStation.Export.Note
+      operationId: Export_Note_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.NoteStation.Export.Note/v1/download:
+    get:
+      tags:
+        - NoteStation.Export
+      summary: Return download for SYNO.NoteStation.Export.Note
+      operationId: Export_Note_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

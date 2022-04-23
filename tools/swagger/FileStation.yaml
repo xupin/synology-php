@@ -1,0 +1,1870 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.BackgroundTask/v3/list:
+    get:
+      tags:
+        - FileStation.BackgroundTask
+      summary: Return list for SYNO.FileStation.BackgroundTask
+      operationId: BackgroundTask_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.BackgroundTask/v3/clear_finished:
+    get:
+      tags:
+        - FileStation.BackgroundTask
+      summary: Return clear_finished for SYNO.FileStation.BackgroundTask
+      operationId: BackgroundTask_clear_finished
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.CheckExist/v2/check:
+    get:
+      tags:
+        - FileStation.CheckExist
+      summary: Return check for SYNO.FileStation.CheckExist
+      operationId: CheckExist_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.CheckPermission/v3/write:
+    get:
+      tags:
+        - FileStation.CheckPermission
+      summary: Return write for SYNO.FileStation.CheckPermission
+      operationId: CheckPermission_write
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Compress/v3/start:
+    get:
+      tags:
+        - FileStation.Compress
+      summary: Return start for SYNO.FileStation.Compress
+      operationId: Compress_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Compress/v3/status:
+    get:
+      tags:
+        - FileStation.Compress
+      summary: Return status for SYNO.FileStation.Compress
+      operationId: Compress_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Compress/v3/stop:
+    get:
+      tags:
+        - FileStation.Compress
+      summary: Return stop for SYNO.FileStation.Compress
+      operationId: Compress_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.CopyMove/v3/start:
+    get:
+      tags:
+        - FileStation.CopyMove
+      summary: Return start for SYNO.FileStation.CopyMove
+      operationId: CopyMove_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.CopyMove/v3/status:
+    get:
+      tags:
+        - FileStation.CopyMove
+      summary: Return status for SYNO.FileStation.CopyMove
+      operationId: CopyMove_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.CopyMove/v3/stop:
+    get:
+      tags:
+        - FileStation.CopyMove
+      summary: Return stop for SYNO.FileStation.CopyMove
+      operationId: CopyMove_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.CreateFolder/v2/create:
+    get:
+      tags:
+        - FileStation.CreateFolder
+      summary: Return create for SYNO.FileStation.CreateFolder
+      operationId: CreateFolder_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Delete/v2/start:
+    get:
+      tags:
+        - FileStation.Delete
+      summary: Return start for SYNO.FileStation.Delete
+      operationId: Delete_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Delete/v2/stop:
+    get:
+      tags:
+        - FileStation.Delete
+      summary: Return stop for SYNO.FileStation.Delete
+      operationId: Delete_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Delete/v2/status:
+    get:
+      tags:
+        - FileStation.Delete
+      summary: Return status for SYNO.FileStation.Delete
+      operationId: Delete_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Delete/v2/delete:
+    get:
+      tags:
+        - FileStation.Delete
+      summary: Return delete for SYNO.FileStation.Delete
+      operationId: Delete_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.DirSize/v2/start:
+    get:
+      tags:
+        - FileStation.DirSize
+      summary: Return start for SYNO.FileStation.DirSize
+      operationId: DirSize_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.DirSize/v2/status:
+    get:
+      tags:
+        - FileStation.DirSize
+      summary: Return status for SYNO.FileStation.DirSize
+      operationId: DirSize_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.DirSize/v2/stop:
+    get:
+      tags:
+        - FileStation.DirSize
+      summary: Return stop for SYNO.FileStation.DirSize
+      operationId: DirSize_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Download/v2/download:
+    get:
+      tags:
+        - FileStation.Download
+      summary: Return download for SYNO.FileStation.Download
+      operationId: Download_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.External.GoogleDrive/v2/open:
+    get:
+      tags:
+        - FileStation.External
+      summary: Return open for SYNO.FileStation.External.GoogleDrive
+      operationId: External_GoogleDrive_open
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Extract/v2/list:
+    get:
+      tags:
+        - FileStation.Extract
+      summary: Return list for SYNO.FileStation.Extract
+      operationId: Extract_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Extract/v2/start:
+    get:
+      tags:
+        - FileStation.Extract
+      summary: Return start for SYNO.FileStation.Extract
+      operationId: Extract_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Extract/v2/status:
+    get:
+      tags:
+        - FileStation.Extract
+      summary: Return status for SYNO.FileStation.Extract
+      operationId: Extract_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Extract/v2/stop:
+    get:
+      tags:
+        - FileStation.Extract
+      summary: Return stop for SYNO.FileStation.Extract
+      operationId: Extract_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Favorite/v2/list:
+    get:
+      tags:
+        - FileStation.Favorite
+      summary: Return list for SYNO.FileStation.Favorite
+      operationId: Favorite_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Favorite/v2/edit:
+    get:
+      tags:
+        - FileStation.Favorite
+      summary: Return edit for SYNO.FileStation.Favorite
+      operationId: Favorite_edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Favorite/v2/delete:
+    get:
+      tags:
+        - FileStation.Favorite
+      summary: Return delete for SYNO.FileStation.Favorite
+      operationId: Favorite_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Favorite/v2/add:
+    get:
+      tags:
+        - FileStation.Favorite
+      summary: Return add for SYNO.FileStation.Favorite
+      operationId: Favorite_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Favorite/v2/clear_broken:
+    get:
+      tags:
+        - FileStation.Favorite
+      summary: Return clear_broken for SYNO.FileStation.Favorite
+      operationId: Favorite_clear_broken
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Favorite/v2/replace_all:
+    get:
+      tags:
+        - FileStation.Favorite
+      summary: Return replace_all for SYNO.FileStation.Favorite
+      operationId: Favorite_replace_all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.FormUpload/v2/start:
+    get:
+      tags:
+        - FileStation.FormUpload
+      summary: Return start for SYNO.FileStation.FormUpload
+      operationId: FormUpload_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.FormUpload/v2/status:
+    get:
+      tags:
+        - FileStation.FormUpload
+      summary: Return status for SYNO.FileStation.FormUpload
+      operationId: FormUpload_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.FormUpload/v2/cancel:
+    get:
+      tags:
+        - FileStation.FormUpload
+      summary: Return cancel for SYNO.FileStation.FormUpload
+      operationId: FormUpload_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Info/v2/get:
+    get:
+      tags:
+        - FileStation.Info
+      summary: Return get for SYNO.FileStation.Info
+      operationId: Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.List/v2/list:
+    get:
+      tags:
+        - FileStation.List
+      summary: Return list for SYNO.FileStation.List
+      operationId: List_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.List/v2/list_share:
+    get:
+      tags:
+        - FileStation.List
+      summary: Return list_share for SYNO.FileStation.List
+      operationId: List_list_share
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.List/v2/getinfo:
+    get:
+      tags:
+        - FileStation.List
+      summary: Return getinfo for SYNO.FileStation.List
+      operationId: List_getinfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.MD5/v2/start:
+    get:
+      tags:
+        - FileStation.MD5
+      summary: Return start for SYNO.FileStation.MD5
+      operationId: MD5_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.MD5/v2/status:
+    get:
+      tags:
+        - FileStation.MD5
+      summary: Return status for SYNO.FileStation.MD5
+      operationId: MD5_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.MD5/v2/stop:
+    get:
+      tags:
+        - FileStation.MD5
+      summary: Return stop for SYNO.FileStation.MD5
+      operationId: MD5_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount/v1/mount_iso:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return mount_iso for SYNO.FileStation.Mount
+      operationId: Mount_mount_iso
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount/v1/mount_remote:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return mount_remote for SYNO.FileStation.Mount
+      operationId: Mount_mount_remote
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount/v1/unmount:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return unmount for SYNO.FileStation.Mount
+      operationId: Mount_unmount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount.List/v1/get:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return get for SYNO.FileStation.Mount.List
+      operationId: Mount_List_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount.List/v1/unmount:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return unmount for SYNO.FileStation.Mount.List
+      operationId: Mount_List_unmount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount.List/v1/reconnect:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return reconnect for SYNO.FileStation.Mount.List
+      operationId: Mount_List_reconnect
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Mount.List/v1/remount:
+    get:
+      tags:
+        - FileStation.Mount
+      summary: Return remount for SYNO.FileStation.Mount.List
+      operationId: Mount_List_remount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Notify/v1/all:
+    get:
+      tags:
+        - FileStation.Notify
+      summary: Return all for SYNO.FileStation.Notify
+      operationId: Notify_all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Notify/v1/one:
+    get:
+      tags:
+        - FileStation.Notify
+      summary: Return one for SYNO.FileStation.Notify
+      operationId: Notify_one
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.PhotoUpload/v3/upload:
+    get:
+      tags:
+        - FileStation.PhotoUpload
+      summary: Return upload for SYNO.FileStation.PhotoUpload
+      operationId: PhotoUpload_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Property/v1/set:
+    get:
+      tags:
+        - FileStation.Property
+      summary: Return set for SYNO.FileStation.Property
+      operationId: Property_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Property/v1/status:
+    get:
+      tags:
+        - FileStation.Property
+      summary: Return status for SYNO.FileStation.Property
+      operationId: Property_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Property/v1/stop:
+    get:
+      tags:
+        - FileStation.Property
+      summary: Return stop for SYNO.FileStation.Property
+      operationId: Property_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Property.ACLOwner/v1/get:
+    get:
+      tags:
+        - FileStation.Property
+      summary: Return get for SYNO.FileStation.Property.ACLOwner
+      operationId: Property_ACLOwner_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Property.CompressSize/v1/get:
+    get:
+      tags:
+        - FileStation.Property
+      summary: Return get for SYNO.FileStation.Property.CompressSize
+      operationId: Property_CompressSize_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Property.Mtime/v1/get:
+    get:
+      tags:
+        - FileStation.Property
+      summary: Return get for SYNO.FileStation.Property.Mtime
+      operationId: Property_Mtime_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Rename/v2/rename:
+    get:
+      tags:
+        - FileStation.Rename
+      summary: Return rename for SYNO.FileStation.Rename
+      operationId: Rename_rename
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search/v2/list:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return list for SYNO.FileStation.Search
+      operationId: Search_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search/v2/start:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return start for SYNO.FileStation.Search
+      operationId: Search_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search/v2/stop:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return stop for SYNO.FileStation.Search
+      operationId: Search_stop
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search/v2/clean:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return clean for SYNO.FileStation.Search
+      operationId: Search_clean
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search.History/v1/get:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return get for SYNO.FileStation.Search.History
+      operationId: Search_History_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search.History/v1/set:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return set for SYNO.FileStation.Search.History
+      operationId: Search_History_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Search.History/v1/delete:
+    get:
+      tags:
+        - FileStation.Search
+      summary: Return delete for SYNO.FileStation.Search.History
+      operationId: Search_History_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Settings/v1/get:
+    get:
+      tags:
+        - FileStation.Settings
+      summary: Return get for SYNO.FileStation.Settings
+      operationId: Settings_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Settings/v1/set:
+    get:
+      tags:
+        - FileStation.Settings
+      summary: Return set for SYNO.FileStation.Settings
+      operationId: Settings_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/create:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return create for SYNO.FileStation.Sharing
+      operationId: Sharing_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/list:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return list for SYNO.FileStation.Sharing
+      operationId: Sharing_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/list_share_me:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return list_share_me for SYNO.FileStation.Sharing
+      operationId: Sharing_list_share_me
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/edit:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return edit for SYNO.FileStation.Sharing
+      operationId: Sharing_edit
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/delete:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return delete for SYNO.FileStation.Sharing
+      operationId: Sharing_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/clear_invalid:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return clear_invalid for SYNO.FileStation.Sharing
+      operationId: Sharing_clear_invalid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing/v3/getinfo:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return getinfo for SYNO.FileStation.Sharing
+      operationId: Sharing_getinfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Sharing.Download/v1/download:
+    get:
+      tags:
+        - FileStation.Sharing
+      summary: Return download for SYNO.FileStation.Sharing.Download
+      operationId: Sharing_Download_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Snapshot/v2/list:
+    get:
+      tags:
+        - FileStation.Snapshot
+      summary: Return list for SYNO.FileStation.Snapshot
+      operationId: Snapshot_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Snapshot/v2/history:
+    get:
+      tags:
+        - FileStation.Snapshot
+      summary: Return history for SYNO.FileStation.Snapshot
+      operationId: Snapshot_history
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Snapshot/v2/desc:
+    get:
+      tags:
+        - FileStation.Snapshot
+      summary: Return desc for SYNO.FileStation.Snapshot
+      operationId: Snapshot_desc
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Thumb/v3/get:
+    get:
+      tags:
+        - FileStation.Thumb
+      summary: Return get for SYNO.FileStation.Thumb
+      operationId: Thumb_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Timeout/v1/avoid:
+    get:
+      tags:
+        - FileStation.Timeout
+      summary: Return avoid for SYNO.FileStation.Timeout
+      operationId: Timeout_avoid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.UIString/v1/getjs:
+    get:
+      tags:
+        - FileStation.UIString
+      summary: Return getjs for SYNO.FileStation.UIString
+      operationId: UIString_getjs
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.Upload/v3/upload:
+    get:
+      tags:
+        - FileStation.Upload
+      summary: Return upload for SYNO.FileStation.Upload
+      operationId: Upload_upload
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.UserGrp/v1/list_user:
+    get:
+      tags:
+        - FileStation.UserGrp
+      summary: Return list_user for SYNO.FileStation.UserGrp
+      operationId: UserGrp_list_user
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.UserGrp/v1/list_group:
+    get:
+      tags:
+        - FileStation.UserGrp
+      summary: Return list_group for SYNO.FileStation.UserGrp
+      operationId: UserGrp_list_group
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.UserGrp/v1/list_all:
+    get:
+      tags:
+        - FileStation.UserGrp
+      summary: Return list_all for SYNO.FileStation.UserGrp
+      operationId: UserGrp_list_all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Connection/v1/create:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return create for SYNO.FileStation.VFS.Connection
+      operationId: VFS_Connection_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Connection/v1/set:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return set for SYNO.FileStation.VFS.Connection
+      operationId: VFS_Connection_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Connection/v1/delete:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return delete for SYNO.FileStation.VFS.Connection
+      operationId: VFS_Connection_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Connection/v1/list:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return list for SYNO.FileStation.VFS.Connection
+      operationId: VFS_Connection_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Connection/v1/get:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return get for SYNO.FileStation.VFS.Connection
+      operationId: VFS_Connection_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.File/v1/get:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return get for SYNO.FileStation.VFS.File
+      operationId: VFS_File_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.File/v1/set:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return set for SYNO.FileStation.VFS.File
+      operationId: VFS_File_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.GDrive/v1/download:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return download for SYNO.FileStation.VFS.GDrive
+      operationId: VFS_GDrive_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Profile/v1/create:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return create for SYNO.FileStation.VFS.Profile
+      operationId: VFS_Profile_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Profile/v1/set:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return set for SYNO.FileStation.VFS.Profile
+      operationId: VFS_Profile_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Profile/v1/delete:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return delete for SYNO.FileStation.VFS.Profile
+      operationId: VFS_Profile_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Profile/v1/get:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return get for SYNO.FileStation.VFS.Profile
+      operationId: VFS_Profile_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Profile/v1/list:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return list for SYNO.FileStation.VFS.Profile
+      operationId: VFS_Profile_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.Protocol/v1/list:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return list for SYNO.FileStation.VFS.Protocol
+      operationId: VFS_Protocol_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.User/v1/get:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return get for SYNO.FileStation.VFS.User
+      operationId: VFS_User_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VFS.User/v1/set:
+    get:
+      tags:
+        - FileStation.VFS
+      summary: Return set for SYNO.FileStation.VFS.User
+      operationId: VFS_User_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.FileStation.VirtualFolder/v2/list:
+    get:
+      tags:
+        - FileStation.VirtualFolder
+      summary: Return list for SYNO.FileStation.VirtualFolder
+      operationId: VirtualFolder_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

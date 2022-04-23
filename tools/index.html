@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SwaggerIU"
+    />
+    <title>SwaggerUI</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+  </head>
+  <body>
+  <div id="swagger-ui"></div>
+  <script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+  <script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-standalone-preset.js" crossorigin></script>
+  <script>
+    window.onload = () => {
+      window.ui = SwaggerUIBundle({
+        //url: 'https://petstore3.swagger.io/api/v3/openapi.json',
+        //configUrl: "./swagger/urls.yaml",
+        urls: [
+          {"url": "./swagger/ACEEditor.yaml", "name": "ACEEditor"},
+          {"url": "./swagger/API.yaml", "name": "API"},
+          {"url": "./swagger/ActiveInsight.yaml", "name": "ActiveInsight"},
+          {"url": "./swagger/AudioPlayer.yaml", "name": "AudioPlayer"},
+          {"url": "./swagger/AudioStation.yaml", "name": "AudioStation"},
+          {"url": "./swagger/Auth.yaml", "name": "Auth"},
+          {"url": "./swagger/Aviary.yaml", "name": "Aviary"},
+          {"url": "./swagger/Backup.yaml", "name": "Backup"},
+          {"url": "./swagger/C2FS.yaml", "name": "C2FS"},
+          {"url": "./swagger/CloudStation.yaml", "name": "CloudStation"},
+          {"url": "./swagger/CloudSync.yaml", "name": "CloudSync"},
+          {"url": "./swagger/Core.yaml", "name": "Core"},
+          {"url": "./swagger/DR.yaml", "name": "DR"},
+          {"url": "./swagger/DSM.yaml", "name": "DSM"},
+          {"url": "./swagger/DTV.yaml", "name": "DTV"},
+          {"url": "./swagger/DisasterRecovery.yaml", "name": "DisasterRecovery"},
+          {"url": "./swagger/Docker.yaml", "name": "Docker"},
+          {"url": "./swagger/DownloadStation.yaml", "name": "DownloadStation"},
+          {"url": "./swagger/DownloadStation2.yaml", "name": "DownloadStation2"},
+          {"url": "./swagger/Entry.yaml", "name": "Entry"},
+          {"url": "./swagger/FileStation.yaml", "name": "FileStation"},
+          {"url": "./swagger/Finder.yaml", "name": "Finder"},
+          {"url": "./swagger/FolderSharing.yaml", "name": "FolderSharing"},
+          {"url": "./swagger/Foto.yaml", "name": "Foto"},
+          {"url": "./swagger/FotoTeam.yaml", "name": "FotoTeam"},
+          {"url": "./swagger/License.yaml", "name": "License"},
+          {"url": "./swagger/MariaDB10.yaml", "name": "MariaDB10"},
+          {"url": "./swagger/MediaServer.yaml", "name": "MediaServer"},
+          {"url": "./swagger/Network.yaml", "name": "Network"},
+          {"url": "./swagger/NoteStation.yaml", "name": "NoteStation"},
+          {"url": "./swagger/OAUTH.yaml", "name": "OAUTH"},
+          {"url": "./swagger/Package.yaml", "name": "Package"},
+          {"url": "./swagger/PersonMailAccount.yaml", "name": "PersonMailAccount"},
+          {"url": "./swagger/Personal.yaml", "name": "Personal"},
+          {"url": "./swagger/PhotoStation.yaml", "name": "PhotoStation"},
+          {"url": "./swagger/Remote.yaml", "name": "Remote"},
+          {"url": "./swagger/ResourceMonitor.yaml", "name": "ResourceMonitor"},
+          {"url": "./swagger/S2S.yaml", "name": "S2S"},
+          {"url": "./swagger/SAS.yaml", "name": "SAS"},
+          {"url": "./swagger/SDS.yaml", "name": "SDS"},
+          {"url": "./swagger/SecureSignIn.yaml", "name": "SecureSignIn"},
+          {"url": "./swagger/SecurityAdvisor.yaml", "name": "SecurityAdvisor"},
+          {"url": "./swagger/Snap.yaml", "name": "Snap"},
+          {"url": "./swagger/SocialAccount.yaml", "name": "SocialAccount"},
+          {"url": "./swagger/Storage.yaml", "name": "Storage"},
+          {"url": "./swagger/SurveillanceStation.yaml", "name": "SurveillanceStation"},
+          {"url": "./swagger/TextEditor.yaml", "name": "TextEditor"},
+          {"url": "./swagger/USBCopy.yaml", "name": "USBCopy"},
+          {"url": "./swagger/Utils.yaml", "name": "Utils"},
+          {"url": "./swagger/VideoController.yaml", "name": "VideoController"},
+          {"url": "./swagger/VideoPlayer.yaml", "name": "VideoPlayer"},
+          {"url": "./swagger/VideoStataion.yaml", "name": "VideoStataion"},
+          {"url": "./swagger/VideoStation.yaml", "name": "VideoStation"},
+          {"url": "./swagger/VideoStation2.yaml", "name": "VideoStation2"},
+          {"url": "./swagger/WebStation.yaml", "name": "WebStation"},
+          {"url": "./swagger/path.yaml", "name": "path"},
+          {"url": "./swagger/query.yaml", "name": "query"},
+        ],
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl,
+          //SwaggerUIBundle.plugins.Topbar
+        ],
+        layout: "StandaloneLayout",
+      });
+    };
+  </script>
+  </body>
+</html>

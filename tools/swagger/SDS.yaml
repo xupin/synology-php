@@ -1,0 +1,544 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Log/v1/list:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return list for SYNO.SDS.Backup.Client.Common.Log
+      operationId: Backup_Client_Common_Log_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Log/v1/export:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return export for SYNO.SDS.Backup.Client.Common.Log
+      operationId: Backup_Client_Common_Log_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Statistic/v1/config_set:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return config_set for SYNO.SDS.Backup.Client.Common.Statistic
+      operationId: Backup_Client_Common_Statistic_config_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Statistic/v1/config_get:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return config_get for SYNO.SDS.Backup.Client.Common.Statistic
+      operationId: Backup_Client_Common_Statistic_config_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Statistic/v1/get:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return get for SYNO.SDS.Backup.Client.Common.Statistic
+      operationId: Backup_Client_Common_Statistic_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Target/v1/password_verify:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return password_verify for SYNO.SDS.Backup.Client.Common.Target
+      operationId: Backup_Client_Common_Target_password_verify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Target/v1/private_key_verify:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return private_key_verify for SYNO.SDS.Backup.Client.Common.Target
+      operationId: Backup_Client_Common_Target_private_key_verify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Version/v1/check_file_log:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return check_file_log for SYNO.SDS.Backup.Client.Common.Version
+      operationId: Backup_Client_Common_Version_check_file_log
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Common.Version/v1/download_file_log:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return download_file_log for SYNO.SDS.Backup.Client.Common.Version
+      operationId: Backup_Client_Common_Version_download_file_log
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.File/v1/list:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return list for SYNO.SDS.Backup.Client.Explore.File
+      operationId: Backup_Client_Explore_File_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.File/v1/copy:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return copy for SYNO.SDS.Backup.Client.Explore.File
+      operationId: Backup_Client_Explore_File_copy
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.File/v1/restore:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return restore for SYNO.SDS.Backup.Client.Explore.File
+      operationId: Backup_Client_Explore_File_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.File/v1/download:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return download for SYNO.SDS.Backup.Client.Explore.File
+      operationId: Backup_Client_Explore_File_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.Folder/v1/list:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return list for SYNO.SDS.Backup.Client.Explore.Folder
+      operationId: Backup_Client_Explore_Folder_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.Job/v1/list:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return list for SYNO.SDS.Backup.Client.Explore.Job
+      operationId: Backup_Client_Explore_Job_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.Job/v1/cancel:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return cancel for SYNO.SDS.Backup.Client.Explore.Job
+      operationId: Backup_Client_Explore_Job_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.Target/v1/get:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return get for SYNO.SDS.Backup.Client.Explore.Target
+      operationId: Backup_Client_Explore_Target_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.Version/v1/list:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return list for SYNO.SDS.Backup.Client.Explore.Version
+      operationId: Backup_Client_Explore_Version_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Explore.Version/v1/summary:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return summary for SYNO.SDS.Backup.Client.Explore.Version
+      operationId: Backup_Client_Explore_Version_summary
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Fuse.Target/v1/get_avail_mountpoint:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return get_avail_mountpoint for SYNO.SDS.Backup.Client.Fuse.Target
+      operationId: Backup_Client_Fuse_Target_get_avail_mountpoint
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Fuse.Target/v1/mount_by_password:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return mount_by_password for SYNO.SDS.Backup.Client.Fuse.Target
+      operationId: Backup_Client_Fuse_Target_mount_by_password
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Fuse.Target/v1/mount_by_private:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return mount_by_private for SYNO.SDS.Backup.Client.Fuse.Target
+      operationId: Backup_Client_Fuse_Target_mount_by_private
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SDS.Backup.Client.Fuse.Target/v1/umount:
+    get:
+      tags:
+        - SDS.Backup
+      summary: Return umount for SYNO.SDS.Backup.Client.Fuse.Target
+      operationId: Backup_Client_Fuse_Target_umount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

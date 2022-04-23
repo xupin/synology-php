@@ -1,0 +1,731 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Account/v1/fetch_info:
+    get:
+      tags:
+        - C2FS.Account
+      summary: Return fetch_info for SYNO.C2FS.Account
+      operationId: Account_fetch_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Bucket/v1/ask_account:
+    get:
+      tags:
+        - C2FS.Bucket
+      summary: Return ask_account for SYNO.C2FS.Bucket
+      operationId: Bucket_ask_account
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Bucket/v1/password_key_export:
+    get:
+      tags:
+        - C2FS.Bucket
+      summary: Return password_key_export for SYNO.C2FS.Bucket
+      operationId: Bucket_password_key_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Bucket/v1/get_account_mount:
+    get:
+      tags:
+        - C2FS.Bucket
+      summary: Return get_account_mount for SYNO.C2FS.Bucket
+      operationId: Bucket_get_account_mount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Bucket/v1/decrypt:
+    get:
+      tags:
+        - C2FS.Bucket
+      summary: Return decrypt for SYNO.C2FS.Bucket
+      operationId: Bucket_decrypt
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Bucket/v1/encrypt:
+    get:
+      tags:
+        - C2FS.Bucket
+      summary: Return encrypt for SYNO.C2FS.Bucket
+      operationId: Bucket_encrypt
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Conf/v1/confbackup_import:
+    get:
+      tags:
+        - C2FS.Conf
+      summary: Return confbackup_import for SYNO.C2FS.Conf
+      operationId: Conf_confbackup_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Conf/v1/confbackup_export:
+    get:
+      tags:
+        - C2FS.Conf
+      summary: Return confbackup_export for SYNO.C2FS.Conf
+      operationId: Conf_confbackup_export
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.File/v2/evict:
+    get:
+      tags:
+        - C2FS.File
+      summary: Return evict for SYNO.C2FS.File
+      operationId: File_evict
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/set_permission:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return set_permission for SYNO.C2FS.Share
+      operationId: Share_set_permission
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/stop_daemons:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return stop_daemons for SYNO.C2FS.Share
+      operationId: Share_stop_daemons
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/start_daemons:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return start_daemons for SYNO.C2FS.Share
+      operationId: Share_start_daemons
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/restart_daemons:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return restart_daemons for SYNO.C2FS.Share
+      operationId: Share_restart_daemons
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/set:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return set for SYNO.C2FS.Share
+      operationId: Share_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/validate_set:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return validate_set for SYNO.C2FS.Share
+      operationId: Share_validate_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/unmount:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return unmount for SYNO.C2FS.Share
+      operationId: Share_unmount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/mount:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return mount for SYNO.C2FS.Share
+      operationId: Share_mount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/remount:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return remount for SYNO.C2FS.Share
+      operationId: Share_remount
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/validate_delete:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return validate_delete for SYNO.C2FS.Share
+      operationId: Share_validate_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/delete:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return delete for SYNO.C2FS.Share
+      operationId: Share_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/list:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return list for SYNO.C2FS.Share
+      operationId: Share_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/create:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return create for SYNO.C2FS.Share
+      operationId: Share_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share/v1/reauth:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return reauth for SYNO.C2FS.Share
+      operationId: Share_reauth
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Share.Status/v1/is_connected_to_server:
+    get:
+      tags:
+        - C2FS.Share
+      summary: Return is_connected_to_server for SYNO.C2FS.Share.Status
+      operationId: Share_Status_is_connected_to_server
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/re_add_progress:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return re_add_progress for SYNO.C2FS.Transform
+      operationId: Transform_re_add_progress
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/list_progress:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return list_progress for SYNO.C2FS.Transform
+      operationId: Transform_list_progress
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/export_invalid_files:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return export_invalid_files for SYNO.C2FS.Transform
+      operationId: Transform_export_invalid_files
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/cancel:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return cancel for SYNO.C2FS.Transform
+      operationId: Transform_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/transform_to_c2share:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return transform_to_c2share for SYNO.C2FS.Transform
+      operationId: Transform_transform_to_c2share
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/validate_for_service:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return validate_for_service for SYNO.C2FS.Transform
+      operationId: Transform_validate_for_service
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Transform/v1/get_progress:
+    get:
+      tags:
+        - C2FS.Transform
+      summary: Return get_progress for SYNO.C2FS.Transform
+      operationId: Transform_get_progress
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Utils/v1/load_global_config:
+    get:
+      tags:
+        - C2FS.Utils
+      summary: Return load_global_config for SYNO.C2FS.Utils
+      operationId: Utils_load_global_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Utils/v1/get_ds_info:
+    get:
+      tags:
+        - C2FS.Utils
+      summary: Return get_ds_info for SYNO.C2FS.Utils
+      operationId: Utils_get_ds_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.C2FS.Utils/v1/check_ntp_enable:
+    get:
+      tags:
+        - C2FS.Utils
+      summary: Return check_ntp_enable for SYNO.C2FS.Utils
+      operationId: Utils_check_ntp_enable
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

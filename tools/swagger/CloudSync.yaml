@@ -1,0 +1,1173 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/pause:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return pause for SYNO.CloudSync
+      operationId: _pause
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/resume:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return resume for SYNO.CloudSync
+      operationId: _resume
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/unlink_connection:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return unlink_connection for SYNO.CloudSync
+      operationId: _unlink_connection
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/unlink_session:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return unlink_session for SYNO.CloudSync
+      operationId: _unlink_session
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_available_clouds:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_available_clouds for SYNO.CloudSync
+      operationId: _get_available_clouds
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_property:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_property for SYNO.CloudSync
+      operationId: _get_property
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_config:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_config for SYNO.CloudSync
+      operationId: _get_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/set_global_config:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return set_global_config for SYNO.CloudSync
+      operationId: _set_global_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/set_personal_config:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return set_personal_config for SYNO.CloudSync
+      operationId: _set_personal_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_user_info:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_user_info for SYNO.CloudSync
+      operationId: _get_user_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_log:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_log for SYNO.CloudSync
+      operationId: _get_log
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_recently_change:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_recently_change for SYNO.CloudSync
+      operationId: _get_recently_change
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_oauth_info:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_oauth_info for SYNO.CloudSync
+      operationId: _get_oauth_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_connection_setting:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_connection_setting for SYNO.CloudSync
+      operationId: _get_connection_setting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_session_setting:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_session_setting for SYNO.CloudSync
+      operationId: _get_session_setting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_selective_folder_list:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_selective_folder_list for SYNO.CloudSync
+      operationId: _get_selective_folder_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_selective_folder_list_wizard:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_selective_folder_list_wizard for SYNO.CloudSync
+      operationId: _get_selective_folder_list_wizard
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_selective_sync_config:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_selective_sync_config for SYNO.CloudSync
+      operationId: _get_selective_sync_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_default_selective_sync_config:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_default_selective_sync_config for SYNO.CloudSync
+      operationId: _get_default_selective_sync_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/re_auth:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return re_auth for SYNO.CloudSync
+      operationId: _re_auth
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/re_oauth:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return re_oauth for SYNO.CloudSync
+      operationId: _re_oauth
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_connection_s3:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_connection_s3 for SYNO.CloudSync
+      operationId: _test_connection_s3
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_connection_b2:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_connection_b2 for SYNO.CloudSync
+      operationId: _test_connection_b2
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_connection_openstack:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_connection_openstack for SYNO.CloudSync
+      operationId: _test_connection_openstack
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_connection_webdav:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_connection_webdav for SYNO.CloudSync
+      operationId: _test_connection_webdav
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_connection_gcs:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_connection_gcs for SYNO.CloudSync
+      operationId: _test_connection_gcs
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_connection_acs:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_connection_acs for SYNO.CloudSync
+      operationId: _test_connection_acs
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/test_task_setting:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return test_task_setting for SYNO.CloudSync
+      operationId: _test_task_setting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/set_connection_setting:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return set_connection_setting for SYNO.CloudSync
+      operationId: _set_connection_setting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/set_schedule_setting:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return set_schedule_setting for SYNO.CloudSync
+      operationId: _set_schedule_setting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/set_session_setting:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return set_session_setting for SYNO.CloudSync
+      operationId: _set_session_setting
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/set_selective_sync_config:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return set_selective_sync_config for SYNO.CloudSync
+      operationId: _set_selective_sync_config
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_conn:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_conn for SYNO.CloudSync
+      operationId: _list_conn
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_sess:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_sess for SYNO.CloudSync
+      operationId: _list_sess
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_s3_bucket:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_s3_bucket for SYNO.CloudSync
+      operationId: _list_s3_bucket
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_openstack_region:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_openstack_region for SYNO.CloudSync
+      operationId: _list_openstack_region
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_openstack_container:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_openstack_container for SYNO.CloudSync
+      operationId: _list_openstack_container
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_s3_bucket:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_s3_bucket for SYNO.CloudSync
+      operationId: _create_s3_bucket
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_gcs_bucket:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_gcs_bucket for SYNO.CloudSync
+      operationId: _list_gcs_bucket
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_gcs_bucket:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_gcs_bucket for SYNO.CloudSync
+      operationId: _create_gcs_bucket
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_gsd_drive:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_gsd_drive for SYNO.CloudSync
+      operationId: _list_gsd_drive
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/update_gsd_conn_info:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return update_gsd_conn_info for SYNO.CloudSync
+      operationId: _update_gsd_conn_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_b2_bucket:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_b2_bucket for SYNO.CloudSync
+      operationId: _list_b2_bucket
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_share_point_sites:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_share_point_sites for SYNO.CloudSync
+      operationId: _list_share_point_sites
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_share_point_drives:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_share_point_drives for SYNO.CloudSync
+      operationId: _list_share_point_drives
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_b2_bucket:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_b2_bucket for SYNO.CloudSync
+      operationId: _create_b2_bucket
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/list_acs_container:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return list_acs_container for SYNO.CloudSync
+      operationId: _list_acs_container
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_acs_container:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_acs_container for SYNO.CloudSync
+      operationId: _create_acs_container
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_openstack_container:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_openstack_container for SYNO.CloudSync
+      operationId: _create_openstack_container
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_link:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_link for SYNO.CloudSync
+      operationId: _create_link
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_session:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_session for SYNO.CloudSync
+      operationId: _create_session
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/export_key:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return export_key for SYNO.CloudSync
+      operationId: _export_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/export_key_by_name:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return export_key_by_name for SYNO.CloudSync
+      operationId: _export_key_by_name
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_conn_auth_info:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_conn_auth_info for SYNO.CloudSync
+      operationId: _get_conn_auth_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/get_server_folder_list:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return get_server_folder_list for SYNO.CloudSync
+      operationId: _get_server_folder_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/create_server_folder:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return create_server_folder for SYNO.CloudSync
+      operationId: _create_server_folder
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/request_onedrive_access_token:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return request_onedrive_access_token for SYNO.CloudSync
+      operationId: _request_onedrive_access_token
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/dump_event_tree:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return dump_event_tree for SYNO.CloudSync
+      operationId: _dump_event_tree
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/megadisk_request_code:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return megadisk_request_code for SYNO.CloudSync
+      operationId: _megadisk_request_code
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.CloudSync/v1/megadisk_confirm_code:
+    get:
+      tags:
+        - CloudSync.
+      summary: Return megadisk_confirm_code for SYNO.CloudSync
+      operationId: _megadisk_confirm_code
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

@@ -1,0 +1,2244 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App/v1/get_icon:
+    get:
+      tags:
+        - Backup.App
+      summary: Return get_icon for SYNO.Backup.App
+      operationId: App_get_icon
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App.Backup/v1/list:
+    get:
+      tags:
+        - Backup.App
+      summary: Return list for SYNO.Backup.App.Backup
+      operationId: App_Backup_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App.Backup/v1/mysql_check:
+    get:
+      tags:
+        - Backup.App
+      summary: Return mysql_check for SYNO.Backup.App.Backup
+      operationId: App_Backup_mysql_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App.Backup/v1/surveillance_check:
+    get:
+      tags:
+        - Backup.App
+      summary: Return surveillance_check for SYNO.Backup.App.Backup
+      operationId: App_Backup_surveillance_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App.Restore/v1/list:
+    get:
+      tags:
+        - Backup.App
+      summary: Return list for SYNO.Backup.App.Restore
+      operationId: App_Restore_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App.Restore/v1/mysql_check:
+    get:
+      tags:
+        - Backup.App
+      summary: Return mysql_check for SYNO.Backup.App.Restore
+      operationId: App_Restore_mysql_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App.Restore/v1/surveillance_check:
+    get:
+      tags:
+        - Backup.App
+      summary: Return surveillance_check for SYNO.Backup.App.Restore
+      operationId: App_Restore_surveillance_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/set:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return set for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/get:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return get for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/backup:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return backup for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_backup
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/list:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return list for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/restore:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return restore for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/get_meta:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return get_meta for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_get_meta
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/download_private_key:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return download_private_key for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_download_private_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/upload_private_key:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return upload_private_key for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_upload_private_key
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.AutoBackup/v1/status:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return status for SYNO.Backup.Config.AutoBackup
+      operationId: Config_AutoBackup_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.Backup/v1/list:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return list for SYNO.Backup.Config.Backup
+      operationId: Config_Backup_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.Backup/v1/start:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return start for SYNO.Backup.Config.Backup
+      operationId: Config_Backup_start
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.Backup/v1/status:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return status for SYNO.Backup.Config.Backup
+      operationId: Config_Backup_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.Backup/v1/download:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return download for SYNO.Backup.Config.Backup
+      operationId: Config_Backup_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Config.Restore/v2/list:
+    get:
+      tags:
+        - Backup.Config
+      summary: Return list for SYNO.Backup.Config.Restore
+      operationId: Config_Restore_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Service.NetworkBackup/v1/get:
+    get:
+      tags:
+        - Backup.Service
+      summary: Return get for SYNO.Backup.Service.NetworkBackup
+      operationId: Service_NetworkBackup_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Service.NetworkBackup/v1/set:
+    get:
+      tags:
+        - Backup.Service
+      summary: Return set for SYNO.Backup.Service.NetworkBackup
+      operationId: Service_NetworkBackup_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.AmazonCloudDrive.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.AmazonCloudDrive.Container
+      operationId: Storage_AmazonCloudDrive_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.AmazonCloudDrive.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.AmazonCloudDrive.Container
+      operationId: Storage_AmazonCloudDrive_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Azure.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.Azure.Container
+      operationId: Storage_Azure_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Azure.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.Azure.Container
+      operationId: Storage_Azure_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Dropbox.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.Dropbox.Container
+      operationId: Storage_Dropbox_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Dropbox.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.Dropbox.Container
+      operationId: Storage_Dropbox_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.GoogleDrive.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.GoogleDrive.Container
+      operationId: Storage_GoogleDrive_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.GoogleDrive.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.GoogleDrive.Container
+      operationId: Storage_GoogleDrive_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.HiDrive.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.HiDrive.Container
+      operationId: Storage_HiDrive_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.HiDrive.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.HiDrive.Container
+      operationId: Storage_HiDrive_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.OpenStack.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.OpenStack.Container
+      operationId: Storage_OpenStack_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.OpenStack.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.OpenStack.Container
+      operationId: Storage_OpenStack_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.OpenStack.Region/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.OpenStack.Region
+      operationId: Storage_OpenStack_Region_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.S3.Bucket/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.S3.Bucket
+      operationId: Storage_S3_Bucket_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.S3.Bucket/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.S3.Bucket
+      operationId: Storage_S3_Bucket_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.WebDAV.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.WebDAV.Container
+      operationId: Storage_WebDAV_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.WebDAV.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.WebDAV.Container
+      operationId: Storage_WebDAV_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.hubiC.Container/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.hubiC.Container
+      operationId: Storage_hubiC_Container_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.hubiC.Container/v1/create:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return create for SYNO.Backup.Storage.hubiC.Container
+      operationId: Storage_hubiC_Container_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App2.Backup/v2/list:
+    get:
+      tags:
+        - Backup.App2
+      summary: Return list for SYNO.Backup.App2.Backup
+      operationId: App2_Backup_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.App2.Restore/v2/list:
+    get:
+      tags:
+        - Backup.App2
+      summary: Return list for SYNO.Backup.App2.Restore
+      operationId: App2_Restore_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/apply_lun:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return apply_lun for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_apply_lun
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/restore_lun:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return restore_lun for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_restore_lun
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_lun:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_lun for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_lun
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/check_dir:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return check_dir for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_check_dir
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/check_lun:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return check_lun for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_check_lun
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/test_connections:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return test_connections for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_test_connections
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_remote_share:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_remote_share for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_remote_share
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/remote_version_check:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return remote_version_check for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_remote_version_check
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_local_lun_dir:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_local_lun_dir for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_local_lun_dir
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_net_lun_dir:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_net_lun_dir for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_net_lun_dir
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_local_restore_lun_name:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_local_restore_lun_name for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_local_restore_lun_name
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_net_restore_lun_name:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_net_restore_lun_name for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_net_restore_lun_name
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/load_lun_bkp_conf:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return load_lun_bkp_conf for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_load_lun_bkp_conf
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/get_self_host:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return get_self_host for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_get_self_host
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/is_bkp_set_conflict:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return is_bkp_set_conflict for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_is_bkp_set_conflict
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/get_local_dest_dir:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return get_local_dest_dir for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_get_local_dest_dir
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_local_bkp_dest:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_local_bkp_dest for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_local_bkp_dest
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/net_bkp_host:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return net_bkp_host for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_net_bkp_host
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/load_default_adv_schedule:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return load_default_adv_schedule for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_load_default_adv_schedule
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/get_remote_dest_dir:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return get_remote_dest_dir for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_get_remote_dest_dir
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_local_share:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_local_share for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_local_share
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/enum_volume:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return enum_volume for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_enum_volume
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/load_schedule:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return load_schedule for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_load_schedule
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/delete:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return delete for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/bkpnow:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return bkpnow for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_bkpnow
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/cancel:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return cancel for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/restore_cancel:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return restore_cancel for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_restore_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/load_task:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return load_task for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_load_task
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/load_restore_progress:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return load_restore_progress for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_load_restore_progress
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Lunbackup/v1/load_dest_status:
+    get:
+      tags:
+        - Backup.Lunbackup
+      summary: Return load_dest_status for SYNO.Backup.Lunbackup
+      operationId: Lunbackup_load_dest_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/list:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return list for SYNO.Backup.Repository
+      operationId: Repository_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/delete:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return delete for SYNO.Backup.Repository
+      operationId: Repository_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/create:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return create for SYNO.Backup.Repository
+      operationId: Repository_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/get:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return get for SYNO.Backup.Repository
+      operationId: Repository_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/set:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return set for SYNO.Backup.Repository
+      operationId: Repository_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/find:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return find for SYNO.Backup.Repository
+      operationId: Repository_find
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository/v1/mount_fireball:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return mount_fireball for SYNO.Backup.Repository
+      operationId: Repository_mount_fireball
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository.Certificate/v1/verify:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return verify for SYNO.Backup.Repository.Certificate
+      operationId: Repository_Certificate_verify
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository.Certificate/v1/ignore:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return ignore for SYNO.Backup.Repository.Certificate
+      operationId: Repository_Certificate_ignore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Repository.LoginPort/v1/get:
+    get:
+      tags:
+        - Backup.Repository
+      summary: Return get for SYNO.Backup.Repository.LoginPort
+      operationId: Repository_LoginPort_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Restore/v2/restore:
+    get:
+      tags:
+        - Backup.Restore
+      summary: Return restore for SYNO.Backup.Restore
+      operationId: Restore_restore
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Share.Restore/v1/list:
+    get:
+      tags:
+        - Backup.Share
+      summary: Return list for SYNO.Backup.Share.Restore
+      operationId: Share_Restore_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Source.Folder/v1/list:
+    get:
+      tags:
+        - Backup.Source
+      summary: Return list for SYNO.Backup.Source.Folder
+      operationId: Source_Folder_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Connect.Network/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.Connect.Network
+      operationId: Storage_Connect_Network_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Share.Local/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.Share.Local
+      operationId: Storage_Share_Local_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Share.Network/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.Share.Network
+      operationId: Storage_Share_Network_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Storage.Share.Rsync/v1/list:
+    get:
+      tags:
+        - Backup.Storage
+      summary: Return list for SYNO.Backup.Storage.Share.Rsync
+      operationId: Storage_Share_Rsync_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/create:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return create for SYNO.Backup.Target
+      operationId: Target_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/delete:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return delete for SYNO.Backup.Target
+      operationId: Target_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/set:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return set for SYNO.Backup.Target
+      operationId: Target_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/list:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return list for SYNO.Backup.Target
+      operationId: Target_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/get_candidate_dir:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return get_candidate_dir for SYNO.Backup.Target
+      operationId: Target_get_candidate_dir
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/get:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return get for SYNO.Backup.Target
+      operationId: Target_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/private_key_download_by_password:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return private_key_download_by_password for SYNO.Backup.Target
+      operationId: Target_private_key_download_by_password
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/create_cache:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return create_cache for SYNO.Backup.Target
+      operationId: Target_create_cache
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/error_detect:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return error_detect for SYNO.Backup.Target
+      operationId: Target_error_detect
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/error_detect_cancel:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return error_detect_cancel for SYNO.Backup.Target
+      operationId: Target_error_detect_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/status:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return status for SYNO.Backup.Target
+      operationId: Target_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target/v1/damage_report_download:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return damage_report_download for SYNO.Backup.Target
+      operationId: Target_damage_report_download
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Target.Config/v1/list:
+    get:
+      tags:
+        - Backup.Target
+      summary: Return list for SYNO.Backup.Target.Config
+      operationId: Target_Config_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/list:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return list for SYNO.Backup.Task
+      operationId: Task_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/delete:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return delete for SYNO.Backup.Task
+      operationId: Task_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/backup:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return backup for SYNO.Backup.Task
+      operationId: Task_backup
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/resume:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return resume for SYNO.Backup.Task
+      operationId: Task_resume
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/cancel:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return cancel for SYNO.Backup.Task
+      operationId: Task_cancel
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/suspend:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return suspend for SYNO.Backup.Task
+      operationId: Task_suspend
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/discard:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return discard for SYNO.Backup.Task
+      operationId: Task_discard
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/cancel_and_discard:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return cancel_and_discard for SYNO.Backup.Task
+      operationId: Task_cancel_and_discard
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/create:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return create for SYNO.Backup.Task
+      operationId: Task_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/relink:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return relink for SYNO.Backup.Task
+      operationId: Task_relink
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/import:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return import for SYNO.Backup.Task
+      operationId: Task_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/reauth:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return reauth for SYNO.Backup.Task
+      operationId: Task_reauth
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/set:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return set for SYNO.Backup.Task
+      operationId: Task_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/status:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return status for SYNO.Backup.Task
+      operationId: Task_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/get:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return get for SYNO.Backup.Task
+      operationId: Task_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/mark:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return mark for SYNO.Backup.Task
+      operationId: Task_mark
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Task/v1/get_support_cloud:
+    get:
+      tags:
+        - Backup.Task
+      summary: Return get_support_cloud for SYNO.Backup.Task
+      operationId: Task_get_support_cloud
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Version/v2/list:
+    get:
+      tags:
+        - Backup.Version
+      summary: Return list for SYNO.Backup.Version
+      operationId: Version_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Backup.Version.History/v1/get:
+    get:
+      tags:
+        - Backup.Version
+      summary: Return get for SYNO.Backup.Version.History
+      operationId: Version_History_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

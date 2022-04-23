@@ -1,0 +1,799 @@
+swagger: '2.0'
+info:
+  description: >
+    This is a sample swagger file to explore some of the Synology Web APIs.
+    [Generate your own swagger file](https://github.com/mikespub/synology)
+
+
+    If you want to try this out on your own Synology, this requires adding
+    a rest.php file in the base directory of your Web Station to act as a
+    gateway to the actual Synology Web APIs.
+
+
+    Except for SYNO.API.Info query, most API calls assume that you have
+    logged in first via SYNO.API.Auth, and received a session id (sid).
+    You will need to update the default value of the _sid parameter below
+    in your swagger file so that all API calls can use the right value.
+
+
+    There are many versions of the swagger file available, one using short
+    urls with query parameters, and the other specifying the complete path
+    including the 4 standard parameters for each API method. Any special
+    additional parameters needed for a particular API method are not taken
+    into account here (except for login).
+
+  version: 1.0.0
+  title: Synology Web API Explorer
+  contact:
+    url: 'https://github.com/mikespub/synology/issues'
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+host: diskstation
+basePath: /rest.php
+schemes:
+  - http
+securityDefinitions:
+  query_sid:
+    type: apiKey
+    name: _sid
+    in: query
+consumes:
+  - application/json
+  - text/plain
+produces:
+  - application/json
+  - text/plain
+definitions:
+  NormalResponse:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: '"true" when the request finishes successfully, "false" when the request fails with an error code.'
+      data:
+        type: object
+        description: The data object contains all the response information described in each method.
+      error:
+        type: object
+        properties:
+          code:
+            type: integer
+            description: An integer number error code will be returned when a request fails.
+          errors:
+            type: array
+            items:
+              type: object
+paths:
+  /SYNO.API.Info/v1/query:
+    get:
+      tags:
+        - API
+      summary: Return query for SYNO.API.Info
+      operationId: API_Info_query
+      parameters:
+        - in: query
+          name: query
+          description: Requested API information
+          required: true
+          type: string
+          default: all
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/login:
+    get:
+      tags:
+        - API
+      summary: Return login for SYNO.API.Auth
+      operationId: API_Auth_login
+      parameters:
+        - in: query
+          name: account
+          description: Username
+          required: false
+          type: string
+          default: username
+        - in: query
+          name: passwd
+          description: Password
+          required: false
+          type: string
+          default: passwd
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+        - in: query
+          name: format
+          description: Format (cookie or sid)
+          required: false
+          type: string
+          default: sid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+  /SYNO.API.Auth/v4/logout:
+    get:
+      tags:
+        - API
+      summary: Return logout for SYNO.API.Auth
+      operationId: API_Auth_logout
+      parameters:
+        - in: query
+          name: session
+          description: Session Name
+          required: true
+          type: string
+          default: DownloadStation
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator/v1/list:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return list for SYNO.SecureSignIn.Authenticator
+      operationId: Authenticator_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator/v1/revoke:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return revoke for SYNO.SecureSignIn.Authenticator
+      operationId: Authenticator_revoke
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator/v1/revokeAll:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return revokeAll for SYNO.SecureSignIn.Authenticator
+      operationId: Authenticator_revokeAll
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator/v1/update:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return update for SYNO.SecureSignIn.Authenticator
+      operationId: Authenticator_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Ex/v1/list:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return list for SYNO.SecureSignIn.Authenticator.Ex
+      operationId: Authenticator_Ex_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Ex/v1/revoke:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return revoke for SYNO.SecureSignIn.Authenticator.Ex
+      operationId: Authenticator_Ex_revoke
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Ex/v1/revokeAll:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return revokeAll for SYNO.SecureSignIn.Authenticator.Ex
+      operationId: Authenticator_Ex_revokeAll
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Info/v2/get:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return get for SYNO.SecureSignIn.Authenticator.Info
+      operationId: Authenticator_Info_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Registration/v2/invite:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return invite for SYNO.SecureSignIn.Authenticator.Registration
+      operationId: Authenticator_Registration_invite
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Registration.Ex/v2/invite:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return invite for SYNO.SecureSignIn.Authenticator.Registration.Ex
+      operationId: Authenticator_Registration_Ex_invite
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Request/v1/revoke:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return revoke for SYNO.SecureSignIn.Authenticator.Request
+      operationId: Authenticator_Request_revoke
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Request/v1/status:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return status for SYNO.SecureSignIn.Authenticator.Request
+      operationId: Authenticator_Request_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Verdict/v1/get:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return get for SYNO.SecureSignIn.Authenticator.Verdict
+      operationId: Authenticator_Verdict_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Verdict/v1/approve:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return approve for SYNO.SecureSignIn.Authenticator.Verdict
+      operationId: Authenticator_Verdict_approve
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Authenticator.Verdict/v1/deny:
+    get:
+      tags:
+        - SecureSignIn.Authenticator
+      summary: Return deny for SYNO.SecureSignIn.Authenticator.Verdict
+      operationId: Authenticator_Verdict_deny
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage/v1/list:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return list for SYNO.SecureSignIn.Fido.Manage
+      operationId: Fido_Manage_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage/v1/update:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return update for SYNO.SecureSignIn.Fido.Manage
+      operationId: Fido_Manage_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage/v1/delete:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return delete for SYNO.SecureSignIn.Fido.Manage
+      operationId: Fido_Manage_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage/v1/deleteAll:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return deleteAll for SYNO.SecureSignIn.Fido.Manage
+      operationId: Fido_Manage_deleteAll
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage.Ex/v1/list:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return list for SYNO.SecureSignIn.Fido.Manage.Ex
+      operationId: Fido_Manage_Ex_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage.Ex/v1/update:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return update for SYNO.SecureSignIn.Fido.Manage.Ex
+      operationId: Fido_Manage_Ex_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage.Ex/v1/delete:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return delete for SYNO.SecureSignIn.Fido.Manage.Ex
+      operationId: Fido_Manage_Ex_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Manage.Ex/v1/deleteAll:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return deleteAll for SYNO.SecureSignIn.Fido.Manage.Ex
+      operationId: Fido_Manage_Ex_deleteAll
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Register/v1/get_attest:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return get_attest for SYNO.SecureSignIn.Fido.Register
+      operationId: Fido_Register_get_attest
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Register/v1/register:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return register for SYNO.SecureSignIn.Fido.Register
+      operationId: Fido_Register_register
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Register.Ex/v1/get_attest:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return get_attest for SYNO.SecureSignIn.Fido.Register.Ex
+      operationId: Fido_Register_Ex_get_attest
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Fido.Register.Ex/v1/register:
+    get:
+      tags:
+        - SecureSignIn.Fido
+      summary: Return register for SYNO.SecureSignIn.Fido.Register.Ex
+      operationId: Fido_Register_Ex_register
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method/v1/get:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return get for SYNO.SecureSignIn.Method
+      operationId: Method_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method/v1/set:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return set for SYNO.SecureSignIn.Method
+      operationId: Method_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method.Admin/v1/get:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return get for SYNO.SecureSignIn.Method.Admin
+      operationId: Method_Admin_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method.Admin/v1/reset:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return reset for SYNO.SecureSignIn.Method.Admin
+      operationId: Method_Admin_reset
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method.Ex/v1/get:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return get for SYNO.SecureSignIn.Method.Ex
+      operationId: Method_Ex_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method.Ex/v1/get_user:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return get_user for SYNO.SecureSignIn.Method.Ex
+      operationId: Method_Ex_get_user
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Method.Ex/v1/set:
+    get:
+      tags:
+        - SecureSignIn.Method
+      summary: Return set for SYNO.SecureSignIn.Method.Ex
+      operationId: Method_Ex_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Package/v1/get:
+    get:
+      tags:
+        - SecureSignIn.Package
+      summary: Return get for SYNO.SecureSignIn.Package
+      operationId: Package_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Package/v1/set:
+    get:
+      tags:
+        - SecureSignIn.Package
+      summary: Return set for SYNO.SecureSignIn.Package
+      operationId: Package_set
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Package.Ex/v1/get:
+    get:
+      tags:
+        - SecureSignIn.Package
+      summary: Return get for SYNO.SecureSignIn.Package.Ex
+      operationId: Package_Ex_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.SecureSignIn.Package.Request/v1/available:
+    get:
+      tags:
+        - SecureSignIn.Package
+      summary: Return available for SYNO.SecureSignIn.Package.Request
+      operationId: Package_Request_available
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
