@@ -136,7 +136,7 @@ abstract class AbstractApi
         // set URL and other appropriate options
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, static::CONNECT_TIMEOUT);
 
         // Verify SSL or not
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL);
@@ -155,7 +155,7 @@ abstract class AbstractApi
             }
         } else {
             curl_close($ch);
-            if ($info['total_time'] >= (self::CONNECT_TIMEOUT / 1000)) {
+            if ($info['total_time'] >= (static::CONNECT_TIMEOUT / 1000)) {
                 throw new Exception('Connection Timeout');
             } else {
                 $this->log($result, 'Result');
