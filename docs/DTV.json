@@ -1,7 +1,18 @@
 {
-    "SYNO.DTV.ChannelScan": {
-        "path": "VideoStation/channelscan.cgi",
+    "SYNO.DTV.Channel": {
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "getinfo",
+                "delete_all_channels",
+                "edit"
+            ]
+        },
         "minVersion": 1,
+        "path": "VideoStation/channellist.cgi"
+    },
+    "SYNO.DTV.ChannelScan": {
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -12,48 +23,22 @@
                 "stop",
                 "status"
             ]
-        }
-    },
-    "SYNO.DTV.DVBSScan": {
-        "path": "VideoStation/dvbsscan.cgi",
+        },
         "minVersion": 1,
+        "path": "VideoStation/channelscan.cgi"
+    },
+    "SYNO.DTV.Controller": {
         "maxVersion": 1,
         "methods": {
             "1": [
-                "getconfig",
-                "get_satellite",
-                "create_satellite",
-                "edit_satellite",
-                "delete_satellite",
-                "get_lnb",
-                "create_lnb",
-                "edit_lnb",
-                "delete_lnb",
-                "get_tp",
-                "get_tp_default",
-                "save_tp",
-                "start",
-                "stop",
-                "status"
+                "getchannel",
+                "setchannel"
             ]
-        }
-    },
-    "SYNO.DTV.Channel": {
-        "path": "VideoStation/channellist.cgi",
+        },
         "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list",
-                "getinfo",
-                "delete_all_channels",
-                "edit"
-            ]
-        }
+        "path": "VideoStation/dtvcontrol.cgi"
     },
     "SYNO.DTV.Program": {
-        "path": "VideoStation/programlist.cgi",
-        "minVersion": 1,
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -61,11 +46,11 @@
                 "search",
                 "update"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "VideoStation/programlist.cgi"
     },
     "SYNO.DTV.Schedule": {
-        "path": "VideoStation/schedule_recording.cgi",
-        "minVersion": 1,
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -82,22 +67,21 @@
                 "edit_userdefine",
                 "delete_userdefine"
             ]
-        }
-    },
-    "SYNO.DTV.Controller": {
-        "path": "VideoStation/dtvcontrol.cgi",
+        },
         "minVersion": 1,
+        "path": "VideoStation/schedule_recording.cgi"
+    },
+    "SYNO.DTV.Statistic": {
         "maxVersion": 1,
         "methods": {
             "1": [
-                "getchannel",
-                "setchannel"
+                "getinfo"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "VideoStation/dtvstatistic.cgi"
     },
     "SYNO.DTV.Streaming": {
-        "path": "VideoStation/dtvstreaming.cgi",
-        "minVersion": 1,
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -105,27 +89,19 @@
                 "stream",
                 "close"
             ]
-        }
-    },
-    "SYNO.DTV.Statistic": {
-        "path": "VideoStation/dtvstatistic.cgi",
+        },
         "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "getinfo"
-            ]
-        }
+        "path": "VideoStation/dtvstreaming.cgi"
     },
     "SYNO.DTV.Tuner": {
-        "path": "VideoStation/tuner.cgi",
-        "minVersion": 1,
         "maxVersion": 1,
         "methods": {
             "1": [
                 "list",
                 "getinfo"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "VideoStation/tuner.cgi"
     }
 }

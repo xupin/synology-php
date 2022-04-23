@@ -1,0 +1,684 @@
+{
+    "SYNO.Foto.BackgroundTask.File": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.BackgroundTask.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "copy",
+                "delete",
+                "move"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.BackgroundTask.Info": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.BackgroundTask.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "abort_task",
+                "clear_completed_task",
+                "get_error_detail",
+                "get_status",
+                "list_user_task"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Album": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "count",
+                "delete",
+                "download",
+                "get",
+                "list",
+                "set_cover",
+                "set_name",
+                "set_order"
+            ],
+            "2": [
+                "count",
+                "delete",
+                "download",
+                "get",
+                "get_album_list_order",
+                "list",
+                "set_album_list_order",
+                "set_cover",
+                "set_name",
+                "set_order"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Category": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.ConditionAlbum": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "count",
+                "create",
+                "get",
+                "list",
+                "peek_item_count",
+                "set_condition",
+                "suggest"
+            ],
+            "2": [
+                "count",
+                "create",
+                "get",
+                "list",
+                "peek_item_count",
+                "set_condition",
+                "suggest"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Diff": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "get",
+                "get_version"
+            ],
+            "2": [
+                "get",
+                "get_version"
+            ],
+            "3": [
+                "get",
+                "get_version",
+                "list_item"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Folder": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "copy",
+                "count",
+                "create",
+                "delete",
+                "get",
+                "list",
+                "list_parents",
+                "move",
+                "rename",
+                "set_order"
+            ],
+            "2": [
+                "copy",
+                "count",
+                "create",
+                "delete",
+                "get",
+                "list_parents",
+                "list",
+                "move",
+                "rename",
+                "set_cover",
+                "set_order"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.GeneralTag": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "count",
+                "create",
+                "get",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Geocoding": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "count",
+                "get",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Item": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "add_tag",
+                "copy",
+                "count",
+                "count_with_filter",
+                "delete",
+                "get",
+                "get_exif",
+                "get_tag",
+                "list",
+                "list_basic_timeline_info",
+                "list_basic_timeline_info_with_filter",
+                "list_with_filter",
+                "move",
+                "remove_tag",
+                "rename",
+                "set"
+            ],
+            "2": {
+                "0": "add_tag",
+                "1": "copy",
+                "2": "count",
+                "3": "count_with_filter",
+                "4": "delete",
+                "5": "get_exif",
+                "6": "get_tag",
+                "7": "get",
+                "8": "list",
+                "9": "list_basic_timeline_info",
+                "10": "list_basic_timeline_info_with_filter",
+                "12": "list_with_filter",
+                "13": "move",
+                "14": "remove_tag",
+                "15": "rename",
+                "16": "set"
+            }
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.NormalAlbum": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "add_item",
+                "copy",
+                "count",
+                "create",
+                "delete_item",
+                "get",
+                "list",
+                "set_unfreeze"
+            ],
+            "2": [
+                "add_item",
+                "copy",
+                "count",
+                "create",
+                "delete_item",
+                "get",
+                "list",
+                "set_unfreeze"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Person": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "count",
+                "delete_face",
+                "get",
+                "get_migration_status",
+                "list",
+                "list_face",
+                "merge",
+                "separate",
+                "set",
+                "set_cover",
+                "show",
+                "suggest"
+            ],
+            "2": [
+                "count",
+                "delete_face",
+                "get",
+                "get_migration_status",
+                "list",
+                "list_face",
+                "merge",
+                "separate",
+                "set",
+                "set_cover",
+                "show",
+                "suggest"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.RecentlyAdded": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "count",
+                "get_timeline",
+                "list",
+                "list_basic_timeline_info"
+            ],
+            "2": [
+                "count",
+                "get_timeline",
+                "list",
+                "list_basic_timeline_info"
+            ],
+            "3": [
+                "count",
+                "get_timeline",
+                "list_basic_timeline_info",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Timeline": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
+                "get",
+                "get_geocoding",
+                "get_geocoding_with_filter",
+                "get_with_filter"
+            ],
+            "2": [
+                "get_geocoding",
+                "get_geocoding_with_filter",
+                "get",
+                "get_with_filter"
+            ],
+            "3": [
+                "get_geocoding",
+                "get_geocoding_with_filter",
+                "get",
+                "get_with_filter"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Browse.Unit": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "count",
+                "get",
+                "get_thumbnail_status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Development.Admin": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Development.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "refetch_geocoding"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Download": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Download.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Favorite": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Favorite.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Index": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Index.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "reindex"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Migration": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Migration.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_status"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Notification": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Notification.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "subscribe",
+                "unsubscribe"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.PublicSharing": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.PublicSharing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "get_album_cover",
+                "get_ui_string"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Search.Filter": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Search.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list"
+            ],
+            "2": [
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Search.Search": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Search.so",
+        "maxVersion": 4,
+        "methods": {
+            "1": [
+                "count_album",
+                "count_item",
+                "get_geocoding",
+                "get_search_timeline",
+                "list_album",
+                "list_basic_timeline_info",
+                "list_item",
+                "suggest"
+            ],
+            "2": [
+                "count_album",
+                "count_item",
+                "get_geocoding",
+                "get_search_timeline",
+                "list_album",
+                "list_basic_timeline_info",
+                "list_item",
+                "suggest"
+            ],
+            "3": [
+                "count_album",
+                "count_item",
+                "get_geocoding",
+                "get_search_timeline",
+                "list_album",
+                "list_basic_timeline_info",
+                "list_item",
+                "suggest"
+            ],
+            "4": [
+                "count_album",
+                "count_item",
+                "get_geocoding",
+                "get_search_timeline",
+                "list_album",
+                "list_basic_timeline_info",
+                "list_item",
+                "suggest"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Setting.Admin": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Setting.Guest": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Setting.MobileCompatibility": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Setting.TeamSpace": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "list_permission",
+                "set",
+                "set_enable",
+                "update_permission"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Setting.User": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Setting.Wizard": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Sharing.Misc": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Sharing.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "list_shared_with_me_album",
+                "list_user_group"
+            ],
+            "2": [
+                "list_shared_with_me_album",
+                "list_user_group"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Sharing.Passphrase": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Sharing.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "get_permission",
+                "set_shared",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Streaming": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Streaming.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "streaming"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Thumbnail": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Thumbnail.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ],
+            "2": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Upload.Item": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Upload.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "backup_check",
+                "backup_to_path",
+                "upload",
+                "upload_to_folder"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.UserInfo": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.UserInfo.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "me"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

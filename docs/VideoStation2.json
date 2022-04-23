@@ -154,32 +154,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.VideoStation2.DTV.DVBSScan": {
-        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "create_lnb",
-                "create_satellite",
-                "delete_lnb",
-                "delete_satellite",
-                "edit_lnb",
-                "edit_satellite",
-                "edit_tp",
-                "get_default_tp",
-                "getinfo",
-                "get_lnb",
-                "get_satellite",
-                "get_tp",
-                "start",
-                "status",
-                "stop"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.VideoStation2.DTV.Program": {
         "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
         "maxVersion": 1,
@@ -350,9 +324,12 @@
     },
     "SYNO.VideoStation2.Info": {
         "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
+                "get"
+            ],
+            "2": [
                 "get"
             ]
         },
@@ -449,13 +426,31 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.VideoStation2.Plugin": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "check_enabled_plugins",
+                "delete",
+                "edit",
+                "list",
+                "set",
+                "test_plugin",
+                "upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.VideoStation2.PluginSearch": {
         "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
         "maxVersion": 1,
         "methods": {
             "1": [
+                "authentication",
                 "list",
-                "query",
                 "start",
                 "stop"
             ]
@@ -472,6 +467,18 @@
                 "delete",
                 "get",
                 "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.VideoStation2.Screenshot": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create"
             ]
         },
         "minVersion": 1,
@@ -525,6 +532,19 @@
                 "get",
                 "set",
                 "trigger"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.VideoStation2.Setting.VoiceAssistant": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
             ]
         },
         "minVersion": 1,
@@ -641,6 +661,19 @@
                 "edit_adv",
                 "set_rating",
                 "set_watched"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.VideoStation2.VoiceAssistant": {
+        "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "count",
+                "list"
             ]
         },
         "minVersion": 1,

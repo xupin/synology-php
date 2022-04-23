@@ -1,0 +1,86 @@
+{
+    "SYNO.SAS.APIRunner": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/apirunner/SYNO.SAS.APIRunner.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "upload",
+                "adapter",
+                "exec"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SAS.APIRunner.Chatbot": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/apirunner/SYNO.SAS.APIRunner.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "receive"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SAS.Encryption": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/encryption/SYNO.SAS.Encryption.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "status",
+                "exchange"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SAS.Group": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/group/SYNO.SAS.Group.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SAS.Group.Members": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/group/SYNO.SAS.Group.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "add",
+                "remove",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SAS.Guest": {
+        "lib": "/var/packages/SynologyApplicationService/target/webapi/guest/SYNO.SAS.Guest.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "notify",
+                "authorize",
+                "cancel",
+                "stat",
+                "invite",
+                "set",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

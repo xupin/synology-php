@@ -6549,6 +6549,113 @@
             "requestFormat": "JSON"
         }
     },
+    "SYNO.DTV": {
+        "SYNO.DTV.Channel": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "getinfo",
+                    "delete_all_channels",
+                    "edit"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/channellist.cgi"
+        },
+        "SYNO.DTV.ChannelScan": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getcountry",
+                    "getregion",
+                    "getconfig",
+                    "start",
+                    "stop",
+                    "status"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/channelscan.cgi"
+        },
+        "SYNO.DTV.Controller": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getchannel",
+                    "setchannel"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/dtvcontrol.cgi"
+        },
+        "SYNO.DTV.Program": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "update"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/programlist.cgi"
+        },
+        "SYNO.DTV.Schedule": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "create",
+                    "delete",
+                    "delete_passed",
+                    "create_repeat",
+                    "getinfo_repeat",
+                    "edit_repeat",
+                    "delete_repeat",
+                    "getinfo_userdefine",
+                    "create_userdefine",
+                    "edit_userdefine",
+                    "delete_userdefine"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/schedule_recording.cgi"
+        },
+        "SYNO.DTV.Statistic": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/dtvstatistic.cgi"
+        },
+        "SYNO.DTV.Streaming": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "open",
+                    "stream",
+                    "close"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/dtvstreaming.cgi"
+        },
+        "SYNO.DTV.Tuner": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "getinfo"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/tuner.cgi"
+        }
+    },
     "SYNO.DisasterRecovery": {
         "SYNO.DisasterRecovery.Log": {
             "lib": "lib/SYNO.DisasterRecovery.so",
@@ -8398,6 +8505,1113 @@
             "requestFormat": "JSON"
         }
     },
+    "SYNO.Foto": {
+        "SYNO.Foto.BackgroundTask.File": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.BackgroundTask.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "copy",
+                    "delete",
+                    "move"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.BackgroundTask.Info": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.BackgroundTask.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "abort_task",
+                    "clear_completed_task",
+                    "get_error_detail",
+                    "get_status",
+                    "list_user_task"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Album": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "count",
+                    "delete",
+                    "download",
+                    "get",
+                    "list",
+                    "set_cover",
+                    "set_name",
+                    "set_order"
+                ],
+                "2": [
+                    "count",
+                    "delete",
+                    "download",
+                    "get",
+                    "get_album_list_order",
+                    "list",
+                    "set_album_list_order",
+                    "set_cover",
+                    "set_name",
+                    "set_order"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Category": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.ConditionAlbum": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "count",
+                    "create",
+                    "get",
+                    "list",
+                    "peek_item_count",
+                    "set_condition",
+                    "suggest"
+                ],
+                "2": [
+                    "count",
+                    "create",
+                    "get",
+                    "list",
+                    "peek_item_count",
+                    "set_condition",
+                    "suggest"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Diff": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_version"
+                ],
+                "2": [
+                    "get",
+                    "get_version"
+                ],
+                "3": [
+                    "get",
+                    "get_version",
+                    "list_item"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Folder": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "copy",
+                    "count",
+                    "create",
+                    "delete",
+                    "get",
+                    "list",
+                    "list_parents",
+                    "move",
+                    "rename",
+                    "set_order"
+                ],
+                "2": [
+                    "copy",
+                    "count",
+                    "create",
+                    "delete",
+                    "get",
+                    "list_parents",
+                    "list",
+                    "move",
+                    "rename",
+                    "set_cover",
+                    "set_order"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.GeneralTag": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "create",
+                    "get",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Geocoding": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "get",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Item": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "add_tag",
+                    "copy",
+                    "count",
+                    "count_with_filter",
+                    "delete",
+                    "get",
+                    "get_exif",
+                    "get_tag",
+                    "list",
+                    "list_basic_timeline_info",
+                    "list_basic_timeline_info_with_filter",
+                    "list_with_filter",
+                    "move",
+                    "remove_tag",
+                    "rename",
+                    "set"
+                ],
+                "2": {
+                    "0": "add_tag",
+                    "1": "copy",
+                    "2": "count",
+                    "3": "count_with_filter",
+                    "4": "delete",
+                    "5": "get_exif",
+                    "6": "get_tag",
+                    "7": "get",
+                    "8": "list",
+                    "9": "list_basic_timeline_info",
+                    "10": "list_basic_timeline_info_with_filter",
+                    "12": "list_with_filter",
+                    "13": "move",
+                    "14": "remove_tag",
+                    "15": "rename",
+                    "16": "set"
+                }
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.NormalAlbum": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "add_item",
+                    "copy",
+                    "count",
+                    "create",
+                    "delete_item",
+                    "get",
+                    "list",
+                    "set_unfreeze"
+                ],
+                "2": [
+                    "add_item",
+                    "copy",
+                    "count",
+                    "create",
+                    "delete_item",
+                    "get",
+                    "list",
+                    "set_unfreeze"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Person": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "count",
+                    "delete_face",
+                    "get",
+                    "get_migration_status",
+                    "list",
+                    "list_face",
+                    "merge",
+                    "separate",
+                    "set",
+                    "set_cover",
+                    "show",
+                    "suggest"
+                ],
+                "2": [
+                    "count",
+                    "delete_face",
+                    "get",
+                    "get_migration_status",
+                    "list",
+                    "list_face",
+                    "merge",
+                    "separate",
+                    "set",
+                    "set_cover",
+                    "show",
+                    "suggest"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.RecentlyAdded": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "count",
+                    "get_timeline",
+                    "list",
+                    "list_basic_timeline_info"
+                ],
+                "2": [
+                    "count",
+                    "get_timeline",
+                    "list",
+                    "list_basic_timeline_info"
+                ],
+                "3": [
+                    "count",
+                    "get_timeline",
+                    "list_basic_timeline_info",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Timeline": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_geocoding",
+                    "get_geocoding_with_filter",
+                    "get_with_filter"
+                ],
+                "2": [
+                    "get_geocoding",
+                    "get_geocoding_with_filter",
+                    "get",
+                    "get_with_filter"
+                ],
+                "3": [
+                    "get_geocoding",
+                    "get_geocoding_with_filter",
+                    "get",
+                    "get_with_filter"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Browse.Unit": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "get",
+                    "get_thumbnail_status"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Development.Admin": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Development.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "refetch_geocoding"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Download": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Download.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "download"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Favorite": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Favorite.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Index": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Index.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "reindex"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Migration": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Migration.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get_status"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Notification": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Notification.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "subscribe",
+                    "unsubscribe"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.PublicSharing": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.PublicSharing.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_album_cover",
+                    "get_ui_string"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Search.Filter": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Search.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "list"
+                ],
+                "2": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Search.Search": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Search.so",
+            "maxVersion": 4,
+            "methods": {
+                "1": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ],
+                "2": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ],
+                "3": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ],
+                "4": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Setting.Admin": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Setting.Guest": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Setting.MobileCompatibility": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Setting.TeamSpace": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "list_permission",
+                    "set",
+                    "set_enable",
+                    "update_permission"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Setting.User": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Setting.Wizard": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Sharing.Misc": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Sharing.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "list_shared_with_me_album",
+                    "list_user_group"
+                ],
+                "2": [
+                    "list_shared_with_me_album",
+                    "list_user_group"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Sharing.Passphrase": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Sharing.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_permission",
+                    "set_shared",
+                    "update"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Streaming": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Streaming.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "streaming"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Thumbnail": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Thumbnail.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "get"
+                ],
+                "2": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Upload.Item": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Upload.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "backup_check",
+                    "backup_to_path",
+                    "upload",
+                    "upload_to_folder"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.UserInfo": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.UserInfo.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "me"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
+    "SYNO.FotoTeam": {
+        "SYNO.FotoTeam.BackgroundTask.File": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.BackgroundTask.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "copy",
+                    "delete",
+                    "move"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Diff": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_version"
+                ],
+                "2": [
+                    "get",
+                    "get_version"
+                ],
+                "3": [
+                    "get",
+                    "get_version",
+                    "list_item"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Folder": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "copy",
+                    "count",
+                    "create",
+                    "delete",
+                    "get",
+                    "list",
+                    "list_parents",
+                    "move",
+                    "rename",
+                    "set_order"
+                ],
+                "2": [
+                    "copy",
+                    "count",
+                    "create",
+                    "delete",
+                    "get",
+                    "list_parents",
+                    "list",
+                    "move",
+                    "rename",
+                    "set_cover",
+                    "set_order"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.GeneralTag": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "create",
+                    "get",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Geocoding": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "get",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Item": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "add_tag",
+                    "copy",
+                    "count",
+                    "count_with_filter",
+                    "delete",
+                    "get",
+                    "get_exif",
+                    "get_tag",
+                    "list",
+                    "list_basic_timeline_info",
+                    "list_basic_timeline_info_with_filter",
+                    "list_with_filter",
+                    "move",
+                    "remove_tag",
+                    "rename",
+                    "set"
+                ],
+                "2": {
+                    "0": "add_tag",
+                    "1": "copy",
+                    "2": "count",
+                    "3": "count_with_filter",
+                    "4": "delete",
+                    "5": "get_exif",
+                    "6": "get_tag",
+                    "7": "get",
+                    "8": "list",
+                    "9": "list_basic_timeline_info",
+                    "10": "list_basic_timeline_info_with_filter",
+                    "12": "list_with_filter",
+                    "13": "move",
+                    "14": "remove_tag",
+                    "15": "rename",
+                    "16": "set"
+                }
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Person": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "count",
+                    "delete_face",
+                    "get",
+                    "get_migration_status",
+                    "list",
+                    "list_face",
+                    "merge",
+                    "separate",
+                    "set",
+                    "set_cover",
+                    "show",
+                    "suggest"
+                ],
+                "2": [
+                    "count",
+                    "delete_face",
+                    "get",
+                    "get_migration_status",
+                    "list",
+                    "list_face",
+                    "merge",
+                    "separate",
+                    "set",
+                    "set_cover",
+                    "show",
+                    "suggest"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.RecentlyAdded": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "count",
+                    "get_timeline",
+                    "list",
+                    "list_basic_timeline_info"
+                ],
+                "2": [
+                    "count",
+                    "get_timeline",
+                    "list",
+                    "list_basic_timeline_info"
+                ],
+                "3": [
+                    "count",
+                    "get_timeline",
+                    "list_basic_timeline_info",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Timeline": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_geocoding",
+                    "get_geocoding_with_filter",
+                    "get_with_filter"
+                ],
+                "2": [
+                    "get_geocoding",
+                    "get_geocoding_with_filter",
+                    "get",
+                    "get_with_filter"
+                ],
+                "3": [
+                    "get_geocoding",
+                    "get_geocoding_with_filter",
+                    "get",
+                    "get_with_filter"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Browse.Unit": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Browse.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "get",
+                    "get_thumbnail_status"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Download": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Download.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "download"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Index": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Index.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "reindex"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Search.Filter": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Search.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "list"
+                ],
+                "2": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Search.Search": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Search.so",
+            "maxVersion": 4,
+            "methods": {
+                "1": [
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ],
+                "2": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ],
+                "3": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ],
+                "4": [
+                    "count_album",
+                    "count_item",
+                    "get_geocoding",
+                    "get_search_timeline",
+                    "list_album",
+                    "list_basic_timeline_info",
+                    "list_item",
+                    "suggest"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Sharing.FolderBatchPermission": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Sharing.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "update_all_by_member",
+                    "update_by_member"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Sharing.FolderPermission": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Sharing.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get_config",
+                    "get_folder_link",
+                    "set_config",
+                    "update"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Sharing.Passphrase": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Sharing.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "get_permission",
+                    "set_shared",
+                    "update"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Streaming": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Streaming.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "streaming"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Thumbnail": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Thumbnail.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "get"
+                ],
+                "2": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.FotoTeam.Upload.Item": {
+            "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.FotoTeam.Upload.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "backup_check",
+                    "backup_to_path",
+                    "upload",
+                    "upload_to_folder"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
     "SYNO.License": {
         "SYNO.License.HA": {
             "lib": "lib/SYNO.License.HA.so",
@@ -8739,6 +9953,246 @@
             "requestFormat": "JSON"
         }
     },
+    "SYNO.Personal": {
+        "SYNO.Personal.Application.Info": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/application/SYNO.Personal.Application.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "setorder"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.MailAccount": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/mail/SYNO.Personal.MailAccount.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set",
+                    "delete",
+                    "get",
+                    "update",
+                    "test"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.MailAccount.Contacts": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/mail/SYNO.Personal.MailAccount.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.MailAccount.Mail": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/mail/SYNO.Personal.MailAccount.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "send",
+                    "status",
+                    "stop",
+                    "clean"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Conf": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "get"
+                ],
+                "2": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Device": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "unpair",
+                    "list"
+                ],
+                "2": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Event": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "get",
+                    "delete",
+                    "list",
+                    "send"
+                ],
+                "2": [
+                    "list",
+                    "delete"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Filter": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.GDPR": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Identifier": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Mobile": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "stat",
+                    "pair",
+                    "unpair"
+                ],
+                "2": [
+                    "stat",
+                    "pair",
+                    "unpair"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Settings": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "setup",
+                    "set",
+                    "get"
+                ],
+                "2": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.Token": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Notification.VapidPublicKey": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/notification/SYNO.Personal.Notification.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Profile": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/profile/SYNO.Personal.Profile.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "set",
+                    "get"
+                ],
+                "2": [
+                    "list",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Personal.Profile.Photo": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/profile/SYNO.Personal.Profile.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "delete",
+                    "upload"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
     "SYNO.Remote": {
         "SYNO.Remote.Credential": {
             "lib": "lib/SYNO.Remote.Credential.so",
@@ -8887,6 +10341,92 @@
                     "start",
                     "stop",
                     "test_connection"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
+    "SYNO.SAS": {
+        "SYNO.SAS.APIRunner": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/apirunner/SYNO.SAS.APIRunner.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "upload",
+                    "adapter",
+                    "exec"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SAS.APIRunner.Chatbot": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/apirunner/SYNO.SAS.APIRunner.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "receive"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SAS.Encryption": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/encryption/SYNO.SAS.Encryption.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "status",
+                    "exchange"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SAS.Group": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/group/SYNO.SAS.Group.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SAS.Group.Members": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/group/SYNO.SAS.Group.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "add",
+                    "remove",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SAS.Guest": {
+            "lib": "/var/packages/SynologyApplicationService/target/webapi/guest/SYNO.SAS.Guest.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "notify",
+                    "authorize",
+                    "cancel",
+                    "stat",
+                    "invite",
+                    "set",
+                    "get"
                 ]
             },
             "minVersion": 1,
@@ -9801,6 +11341,62 @@
             "requestFormat": "JSON"
         }
     },
+    "SYNO.VideoController": {
+        "SYNO.VideoController.Device": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoController/device.cgi"
+        },
+        "SYNO.VideoController.Password": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "setpassword",
+                    "testpassword"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoController/password.cgi"
+        },
+        "SYNO.VideoController.Playback": {
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "play",
+                    "pause",
+                    "stop",
+                    "seek",
+                    "status"
+                ],
+                "2": [
+                    "play",
+                    "pause",
+                    "stop",
+                    "seek",
+                    "status",
+                    "set_repeat"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoController/playback.cgi"
+        },
+        "SYNO.VideoController.Volume": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "setvolume",
+                    "getvolume"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoController/volume.cgi"
+        }
+    },
     "SYNO.VideoPlayer": {
         "SYNO.VideoPlayer.Subtitle": {
             "lib": "lib/SYNO.VideoPlayer.so",
@@ -9820,6 +11416,1150 @@
             "methods": {
                 "1": [
                     "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        }
+    },
+    "SYNO.VideoStataion": {
+        "SYNO.VideoStataion.Poster": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getimage",
+                    "setimage"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/poster.cgi"
+        }
+    },
+    "SYNO.VideoStation": {
+        "SYNO.VideoStation.AcrossLibrary": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list_library",
+                    "list_movie"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation.Backdrop": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "add",
+                    "delete_all",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation.OfflineConversion": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "create",
+                    "delete",
+                    "list",
+                    "restart",
+                    "restart_all",
+                    "stop",
+                    "stop_all"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation.AudioTrack": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/audiotrack.cgi"
+        },
+        "SYNO.VideoStation.Collection": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "list",
+                    "video_list",
+                    "search",
+                    "create",
+                    "delete",
+                    "edit",
+                    "addvideo",
+                    "deletevideo"
+                ],
+                "2": [
+                    "list",
+                    "video_list",
+                    "search",
+                    "create",
+                    "delete",
+                    "edit",
+                    "addvideo",
+                    "deletevideo",
+                    "getinfo",
+                    "create_smart",
+                    "edit_smart"
+                ],
+                "3": [
+                    "list",
+                    "video_list",
+                    "search",
+                    "create",
+                    "delete",
+                    "edit",
+                    "addvideo",
+                    "deletevideo",
+                    "getinfo",
+                    "create_smart",
+                    "edit_smart"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/collection.cgi"
+        },
+        "SYNO.VideoStation.Folder": {
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "list"
+                ],
+                "2": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/folder.cgi"
+        },
+        "SYNO.VideoStation.HomeVideo": {
+            "maxVersion": 4,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit"
+                ],
+                "2": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "set_watched"
+                ],
+                "3": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "set_watched"
+                ],
+                "4": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "set_watched",
+                    "set_rating"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/homevideo.cgi"
+        },
+        "SYNO.VideoStation.Info": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/info.cgi"
+        },
+        "SYNO.VideoStation.Library": {
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "list"
+                ],
+                "2": [
+                    "list",
+                    "set_visibility"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/library.cgi"
+        },
+        "SYNO.VideoStation.Metadata": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "list"
+                ],
+                "2": [
+                    "list"
+                ],
+                "3": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/metadata.cgi"
+        },
+        "SYNO.VideoStation.Misc": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "reset_timeout"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/misc.cgi"
+        },
+        "SYNO.VideoStation.Movie": {
+            "maxVersion": 4,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit"
+                ],
+                "2": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "set_watched"
+                ],
+                "3": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "set_watched"
+                ],
+                "4": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "set_watched",
+                    "set_rating"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/movie.cgi"
+        },
+        "SYNO.VideoStation.Poster": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "getimage",
+                    "setimage"
+                ],
+                "2": [
+                    "getimage",
+                    "setimage"
+                ],
+                "3": [
+                    "getimage",
+                    "setimage",
+                    "deleteimage"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/poster.cgi"
+        },
+        "SYNO.VideoStation.Sharing": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/sharing.cgi"
+        },
+        "SYNO.VideoStation.Streaming": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "open",
+                    "stream",
+                    "close"
+                ],
+                "2": [
+                    "open",
+                    "stream",
+                    "close"
+                ],
+                "3": [
+                    "open",
+                    "stream",
+                    "close"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/vtestreaming.cgi"
+        },
+        "SYNO.VideoStation.Subtitle": {
+            "maxVersion": 4,
+            "methods": {
+                "1": [
+                    "list",
+                    "get"
+                ],
+                "2": [
+                    "list",
+                    "get"
+                ],
+                "3": [
+                    "list",
+                    "get",
+                    "search",
+                    "download"
+                ],
+                "4": [
+                    "list",
+                    "get",
+                    "search",
+                    "download",
+                    "discover"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/subtitle.cgi"
+        },
+        "SYNO.VideoStation.TVRecording": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit"
+                ],
+                "2": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "set_watched"
+                ],
+                "3": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "set_watched"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/tvrecord.cgi"
+        },
+        "SYNO.VideoStation.TVShow": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit"
+                ],
+                "2": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit"
+                ],
+                "3": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/tvshow.cgi"
+        },
+        "SYNO.VideoStation.TVShowEpisode": {
+            "maxVersion": 4,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "edit_adv"
+                ],
+                "2": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "edit_adv",
+                    "set_watched"
+                ],
+                "3": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "edit_adv",
+                    "set_watched"
+                ],
+                "4": [
+                    "list",
+                    "search",
+                    "getinfo",
+                    "edit",
+                    "delete",
+                    "edit_adv",
+                    "set_watched",
+                    "set_rating"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/tvshow_episode.cgi"
+        },
+        "SYNO.VideoStation.Video": {
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "download",
+                    "getinfo",
+                    "delete_symlink"
+                ],
+                "2": [
+                    "download",
+                    "delete",
+                    "getinfo",
+                    "delete_symlink"
+                ],
+                "3": [
+                    "download",
+                    "delete",
+                    "getinfo",
+                    "delete_symlink",
+                    "get_track_info"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/video.cgi"
+        },
+        "SYNO.VideoStation.WatchStatus": {
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo",
+                    "setinfo"
+                ]
+            },
+            "minVersion": 1,
+            "path": "VideoStation/watchstatus.cgi"
+        }
+    },
+    "SYNO.VideoStation2": {
+        "SYNO.VideoStation2.AcrossLibrary": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list_library",
+                    "list_movie"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Backdrop": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "add",
+                    "delete_all",
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Collection": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "add_video",
+                    "create",
+                    "create_smart",
+                    "delete",
+                    "delete_video",
+                    "edit",
+                    "edit_smart",
+                    "getinfo",
+                    "list",
+                    "list_video"
+                ],
+                "2": [
+                    "add_video",
+                    "create",
+                    "create_smart",
+                    "delete",
+                    "delete_video",
+                    "edit",
+                    "edit_smart",
+                    "getinfo",
+                    "list",
+                    "list_video"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Controller.Device": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Controller.Password": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "set",
+                    "test"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Controller.Playback": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "pause",
+                    "play",
+                    "seek",
+                    "set_repeat",
+                    "status",
+                    "stop"
+                ],
+                "2": [
+                    "pause",
+                    "play",
+                    "seek",
+                    "set_repeat",
+                    "status",
+                    "stop"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Controller.Volume": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Controller.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.Channel": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "delete_all",
+                    "edit",
+                    "getinfo",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.ChannelScan": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get_country",
+                    "getinfo",
+                    "get_region",
+                    "start",
+                    "status",
+                    "stop"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.Program": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "search",
+                    "update"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.Schedule": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "create",
+                    "create_repeat",
+                    "create_userdefine",
+                    "delete",
+                    "delete_passed",
+                    "delete_repeat",
+                    "delete_userdefine",
+                    "edit_repeat",
+                    "edit_userdefine",
+                    "getinfo_repeat",
+                    "getinfo_userdefine",
+                    "list",
+                    "stop"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.Statistic": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.StreamController": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo",
+                    "set_streaming",
+                    "stop_streaming"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.Streaming": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "close",
+                    "open",
+                    "stream"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.StreamingNonAuth": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "stream"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.DTV.Tuner": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.DTV.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "getinfo",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.File": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "delete",
+                    "delete_symlink",
+                    "download",
+                    "getinfo",
+                    "get_track_info",
+                    "set_watchstatus"
+                ],
+                "2": [
+                    "delete",
+                    "delete_symlink",
+                    "download",
+                    "getinfo",
+                    "get_playback_setting",
+                    "get_track_info",
+                    "set_playback_setting",
+                    "set_watchstatus"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Folder": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.HomeVideo": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "delete",
+                    "edit",
+                    "getinfo",
+                    "list",
+                    "set_rating",
+                    "set_watched"
+                ],
+                "2": [
+                    "delete",
+                    "edit",
+                    "getinfo",
+                    "list",
+                    "set_rating",
+                    "set_watched",
+                    "time_line"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Info": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "get"
+                ],
+                "2": [
+                    "get"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Library": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list",
+                    "set_visibility"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Metadata": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Misc": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "reset_timeout"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Movie": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "delete",
+                    "edit",
+                    "getinfo",
+                    "list",
+                    "set_rating",
+                    "set_watched"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.OfflineConversion": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "create",
+                    "delete",
+                    "list",
+                    "restart",
+                    "restart_all",
+                    "stop",
+                    "stop_all"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.ParentalControl": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "delete",
+                    "get",
+                    "list",
+                    "list_certificate",
+                    "list_user",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Plugin": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "check_enabled_plugins",
+                    "delete",
+                    "edit",
+                    "list",
+                    "set",
+                    "test_plugin",
+                    "upload"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.PluginSearch": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "authentication",
+                    "list",
+                    "start",
+                    "stop"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Poster": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "delete",
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Screenshot": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "create"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Setting.Folder": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Setting.Network": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get_preferred_interface",
+                    "list",
+                    "set_preferred_interface"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Setting.Personal": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Setting.PreAnalysis": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set",
+                    "trigger"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Setting.VoiceAssistant": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.Setting.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Sharing": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "get",
+                    "set"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Streaming": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+            "maxVersion": 2,
+            "methods": {
+                "1": [
+                    "close",
+                    "open",
+                    "stream"
+                ],
+                "2": [
+                    "close",
+                    "open",
+                    "stream"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.Subtitle": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.VTE.so",
+            "maxVersion": 3,
+            "methods": {
+                "1": [
+                    "discover",
+                    "download",
+                    "get",
+                    "list",
+                    "search"
+                ],
+                "2": [
+                    "discover",
+                    "download",
+                    "get",
+                    "get_offset",
+                    "list",
+                    "search",
+                    "set_offset"
+                ],
+                "3": [
+                    "discover",
+                    "download",
+                    "get",
+                    "get_offset",
+                    "list",
+                    "search",
+                    "set_offset"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.TVRecording": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "delete",
+                    "edit",
+                    "getinfo",
+                    "list",
+                    "list_channel",
+                    "list_program",
+                    "set_watched"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.TVShow": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "edit",
+                    "getinfo",
+                    "list"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.TVShowEpisode": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "delete",
+                    "edit",
+                    "getinfo",
+                    "list",
+                    "edit_adv",
+                    "set_rating",
+                    "set_watched"
+                ]
+            },
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.VideoStation2.VoiceAssistant": {
+            "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
+            "maxVersion": 1,
+            "methods": {
+                "1": [
+                    "count",
+                    "list"
                 ]
             },
             "minVersion": 1,

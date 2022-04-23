@@ -1,7 +1,26 @@
 {
-    "SYNO.VideoController.Playback": {
-        "path": "VideoController/playback.cgi",
+    "SYNO.VideoController.Device": {
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list"
+            ]
+        },
         "minVersion": 1,
+        "path": "VideoController/device.cgi"
+    },
+    "SYNO.VideoController.Password": {
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "setpassword",
+                "testpassword"
+            ]
+        },
+        "minVersion": 1,
+        "path": "VideoController/password.cgi"
+    },
+    "SYNO.VideoController.Playback": {
         "maxVersion": 2,
         "methods": {
             "1": [
@@ -19,38 +38,19 @@
                 "status",
                 "set_repeat"
             ]
-        }
+        },
+        "minVersion": 1,
+        "path": "VideoController/playback.cgi"
     },
     "SYNO.VideoController.Volume": {
-        "path": "VideoController/volume.cgi",
-        "minVersion": 1,
         "maxVersion": 1,
         "methods": {
             "1": [
                 "setvolume",
                 "getvolume"
             ]
-        }
-    },
-    "SYNO.VideoController.Device": {
-        "path": "VideoController/device.cgi",
+        },
         "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list"
-            ]
-        }
-    },
-    "SYNO.VideoController.Password": {
-        "path": "VideoController/password.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "setpassword",
-                "testpassword"
-            ]
-        }
+        "path": "VideoController/volume.cgi"
     }
 }

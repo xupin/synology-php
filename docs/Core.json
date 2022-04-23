@@ -213,6 +213,25 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Core.CMS": {
+        "lib": "lib/SYNO.Core.CMS.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "begin_join",
+                "end_join",
+                "disjoin"
+            ],
+            "2": [
+                "begin_join",
+                "end_join",
+                "disjoin"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Core.CMS.Cache": {
         "lib": "lib/webapi_cache_client.so",
         "maxVersion": 2,
@@ -229,12 +248,12 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.CMS.Policy": {
-        "lib": "lib/webapi_gpo_client.so",
+    "SYNO.Core.CMS.Identity": {
+        "lib": "lib/SYNO.Core.CMS.Identity.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "fetch"
+                "check"
             ]
         },
         "minVersion": 1,
@@ -253,19 +272,12 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.CMS": {
-        "lib": "lib/SYNO.Core.CMS.so",
-        "maxVersion": 2,
+    "SYNO.Core.CMS.Policy": {
+        "lib": "lib/webapi_gpo_client.so",
+        "maxVersion": 1,
         "methods": {
             "1": [
-                "begin_join",
-                "end_join",
-                "disjoin"
-            ],
-            "2": [
-                "begin_join",
-                "end_join",
-                "disjoin"
+                "fetch"
             ]
         },
         "minVersion": 1,
@@ -308,18 +320,6 @@
                 "update",
                 "check",
                 "get"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.Core.CMS.Identity": {
-        "lib": "lib/SYNO.Core.CMS.Identity.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "check"
             ]
         },
         "minVersion": 1,
@@ -845,20 +845,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.Directory.SSO.Profile": {
-        "lib": "lib/SYNO.Core.Directory.SSO.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "list",
-                "get",
-                "set"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.Core.Directory.SSO": {
         "lib": "lib/SYNO.Core.Directory.SSO.so",
         "maxVersion": 1,
@@ -880,6 +866,20 @@
             "1": [
                 "set",
                 "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Directory.SSO.Profile": {
+        "lib": "lib/SYNO.Core.Directory.SSO.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "list",
+                "get",
+                "set"
             ]
         },
         "minVersion": 1,
@@ -1601,8 +1601,8 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.FileServ.ServiceDiscovery.WSTransfer": {
-        "lib": "/var/packages/SMBService/target/usr/syno/synoman/webapi/lib/SYNO.Core.FileServ.SMB.so",
+    "SYNO.Core.FileServ.ServiceDiscovery": {
+        "lib": "lib/SYNO.Core.FileServ.ServiceDiscovery.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -1614,8 +1614,8 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.FileServ.ServiceDiscovery": {
-        "lib": "lib/SYNO.Core.FileServ.ServiceDiscovery.so",
+    "SYNO.Core.FileServ.ServiceDiscovery.WSTransfer": {
+        "lib": "/var/packages/SMBService/target/usr/syno/synoman/webapi/lib/SYNO.Core.FileServ.SMB.so",
         "maxVersion": 1,
         "methods": {
             "1": [
@@ -2268,32 +2268,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.Network.TrafficControl.RouterRules": {
-        "lib": "lib/SYNO.Core.Network.TrafficControl.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "load",
-                "save"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.Core.Network.TrafficControl.Rules": {
-        "lib": "lib/SYNO.Core.Network.TrafficControl.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "load",
-                "save"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.Core.Network": {
         "lib": "lib/libwebapi-Network.so",
         "maxVersion": 2,
@@ -2545,6 +2519,32 @@
                 "set",
                 "test",
                 "tablesget"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.TrafficControl.RouterRules": {
+        "lib": "lib/SYNO.Core.Network.TrafficControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Network.TrafficControl.Rules": {
+        "lib": "lib/SYNO.Core.Network.TrafficControl.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "load",
+                "save"
             ]
         },
         "minVersion": 1,
@@ -3998,6 +3998,57 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Core.Security.DSM": {
+        "lib": "lib/SYNO.Core.Security.DSM.so",
+        "maxVersion": 4,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ],
+            "2": [
+                "get",
+                "set"
+            ],
+            "3": [
+                "get",
+                "set"
+            ],
+            "4": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.DSM.Embed": {
+        "lib": "lib/SYNO.Core.Security.DSM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.Security.DSM.Proxy": {
+        "lib": "lib/SYNO.Core.Security.DSM.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Core.Security.DoS": {
         "lib": "lib/SYNO.Core.Security.DoS.so",
         "maxVersion": 2,
@@ -4121,57 +4172,6 @@
         "methods": {
             "1": [
                 "policy_check",
-                "set"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.Core.Security.DSM": {
-        "lib": "lib/SYNO.Core.Security.DSM.so",
-        "maxVersion": 4,
-        "methods": {
-            "1": [
-                "get",
-                "set"
-            ],
-            "2": [
-                "get",
-                "set"
-            ],
-            "3": [
-                "get",
-                "set"
-            ],
-            "4": [
-                "get",
-                "set"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.Core.Security.DSM.Embed": {
-        "lib": "lib/SYNO.Core.Security.DSM.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get",
-                "set"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.Core.Security.DSM.Proxy": {
-        "lib": "lib/SYNO.Core.Security.DSM.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get",
                 "set"
             ]
         },
@@ -4834,18 +4834,6 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.Core.System.Status": {
-        "lib": "/usr/syno/synoman/webapi/lib/SYNO.Core.System.Status.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "get"
-            ]
-        },
-        "minVersion": 1,
-        "path": "entry.cgi",
-        "requestFormat": "JSON"
-    },
     "SYNO.Core.System": {
         "lib": "lib/SYNO.Core.System.so",
         "maxVersion": 3,
@@ -4898,6 +4886,18 @@
             "1": [
                 "get",
                 "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Core.System.Status": {
+        "lib": "/usr/syno/synoman/webapi/lib/SYNO.Core.System.Status.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
             ]
         },
         "minVersion": 1,
