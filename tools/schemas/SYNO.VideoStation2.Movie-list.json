@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "movie": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "additional": {
+            "type": "object",
+            "properties": {
+              "watched_ratio": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "watched_ratio"
+            ]
+          },
+          "certificate": {
+            "type": "string"
+          },
+          "create_time": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "last_watched": {
+            "type": "integer"
+          },
+          "library_id": {
+            "type": "integer"
+          },
+          "mapper_id": {
+            "type": "integer"
+          },
+          "original_available": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "integer"
+          },
+          "sort_title": {
+            "type": "string"
+          },
+          "tagline": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "additional",
+          "certificate",
+          "create_time",
+          "id",
+          "last_watched",
+          "library_id",
+          "mapper_id",
+          "original_available",
+          "rating",
+          "sort_title",
+          "tagline",
+          "title"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "movie",
+    "offset",
+    "total"
+  ]
+}

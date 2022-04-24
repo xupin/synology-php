@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "appid": {
+      "type": "string"
+    },
+    "enable_sso": {
+      "type": "boolean"
+    },
+    "host": {
+      "type": "string"
+    },
+    "pingpong": {
+      "type": "null"
+    },
+    "sso_default_login": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "appid",
+    "enable_sso",
+    "host",
+    "pingpong",
+    "sso_default_login"
+  ]
+}
