@@ -33,6 +33,7 @@ abstract class AbstractApi
         105 => 'The logged in session does not have permission',
         106 => 'Session timeout',
         107 => 'Session interrupted by duplicate login',
+        119 => 'Invalid session (starts with number)',
     ];
 
     /**

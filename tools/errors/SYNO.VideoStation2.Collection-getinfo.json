@@ -1,6 +1,10 @@
 {
     "error": {
-        "code": 119
+        "code": 120,
+        "errors": {
+            "name": "id",
+            "reason": "required"
+        }
     },
     "success": false
 }
