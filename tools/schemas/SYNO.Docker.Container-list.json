@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "containers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cmd": {
+            "type": "string"
+          },
+          "created": {
+            "type": "integer"
+          },
+          "exporting": {
+            "type": "boolean"
+          },
+          "finish_time": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "is_ddsm": {
+            "type": "boolean"
+          },
+          "is_package": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "up_status": {
+            "type": "string"
+          },
+          "up_time": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "cmd",
+          "created",
+          "exporting",
+          "finish_time",
+          "id",
+          "image",
+          "is_ddsm",
+          "is_package",
+          "name",
+          "status",
+          "up_status",
+          "up_time"
+        ]
+      }
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "containers",
+    "limit",
+    "offset",
+    "total"
+  ]
+}
