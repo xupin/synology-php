@@ -159,10 +159,10 @@ abstract class AbstractApi
         } else {
             curl_close($ch);
             if ($info['total_time'] >= (static::CONNECT_TIMEOUT / 1000)) {
-                throw new Exception('Connection Timeout');
+                throw new Exception('Connection Timeout', intval($info['http_code']));
             } else {
                 $this->log($result, 'Result');
-                throw new Exception('Connection Error');
+                throw new Exception('Connection Error', intval($info['http_code']));
             }
         }
 
@@ -187,7 +187,7 @@ abstract class AbstractApi
                 }
             } else {
                 if (array_key_exists($data->error->code, $this->_errorCodes)) {
-                    throw new Exception($this->_errorCodes[$data->error->code]);
+                    throw new Exception($this->_errorCodes[$data->error->code], intval($data->error->code));
                 }
                 return $data;
             }
