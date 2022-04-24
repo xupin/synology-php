@@ -174,26 +174,31 @@ function generate_swagger($apilist, $debug=false)
             }
         }
         $tag = explode('.', $root)[1];
-        $rest_file = 'swagger_'.$tag.'.yaml';
+        //$rest_file = 'swagger_'.$tag.'.yaml';
+        $rest_file = $tag.'.yaml';
         file_put_contents($rest_file, $rest_output);
         echo 'Generated '.$rest_file."\n";
     }
     //exit;
 
-    $path_file = 'swagger_path.yaml';
+    //$path_file = 'swagger_path.yaml';
+    $path_file = 'path.yaml';
     file_put_contents($path_file, $path_output);
     echo 'Generated '.$path_file."\n";
 
-    $query_file = 'swagger_query.yaml';
+    //$query_file = 'swagger_query.yaml';
+    $query_file = 'query.yaml';
     file_put_contents($query_file, $query_output);
     echo 'Generated '.$query_file."\n";
 
     //$rest_file = 'swagger_rest.yaml';
+    //$rest_file = 'rest.yaml';
     //file_put_contents($rest_file, $rest_output);
     //echo 'Generated '.$rest_file."\n";
 
     $map_file = 'rest_mapping.php';
     $map_output = '<?php
+
 $api2url = [];
 ';
     //$paths['query.cgi'] = 'SYNO.API.Info';
@@ -323,7 +328,7 @@ function combine_json_files()
                 if (!$auth[$api]) {
                     echo "Unknown api $api\n";
                     //continue;
-                    //exit;
+                    exit;
                     if (empty($values['path'])) {
                         $values['path'] = 'entry.cgi';
                         if (empty($values['requestFormat'])) {
@@ -356,12 +361,14 @@ function combine_json_files()
             }
         }
     }
+    //exit;
     ksort($apilist);
     $json_output = json_encode($apilist, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     $json_file = 'combined.json';
     file_put_contents($json_file, $json_output);
     echo 'Generated '.$json_file."\n";
     foreach ($apilist as $root => $json) {
+        ksort($json);
         $json_output = json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         $tag = explode('.', $root)[1];
         $json_file = $tag.'.json';
@@ -380,11 +387,12 @@ function refresh_api_files($basedir)
     // Find *Station packages and corresponding *.api files in the appstore (adapt volume if needed)
     $path = '/volume1/@appstore/';
     #$found = `find $path -path '*Station/*' -name '*.api' -exec cp {} $basedir \;`;
-    $found = `find $path -name '*.api' -exec cp {} $basedir \;`;
+    $found = `find $path -name '*.api' -exec cp -p {} $basedir \;`;
     #$found = `find $path -path '*Station/*' -name '*.lib' -exec cp {} $basedir \;`;
-    $found = `find $path -name '*.lib' -exec cp {} $basedir \;`;
+    $found = `find $path -name '*.lib' -exec cp -p {} $basedir \;`;
     // Some cleanup of incomplete API files
-    $checkme = ['Auth.api', 'Query.api', 'NoteStation.lib'];
+    //$checkme = ['Auth.api', 'Query.api', 'NoteStation.lib'];
+    $checkme = ['query.api'];
     foreach ($checkme as $file) {
         if (is_file($basedir.$file)) {
             unlink($basedir.$file);
@@ -392,8 +400,8 @@ function refresh_api_files($basedir)
     }
     // Find *.api files in the webapi itself
     $path = '/usr/syno/synoman/webapi/';
-    $found = `find $path -name '*.api' -exec cp {} $basedir \;`;
-    $found = `find $path -name '*.lib' -exec cp {} $basedir \;`;
+    $found = `find $path -name '*.api' -exec cp -p {} $basedir \;`;
+    $found = `find $path -name '*.lib' -exec cp -p {} $basedir \;`;
     $files = scandir($basedir);
     $count = count($files) - 2;
     echo "Found ".$count." API files...\n";

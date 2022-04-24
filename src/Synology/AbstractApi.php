@@ -84,6 +84,9 @@ abstract class AbstractApi
      */
     private function _getApiName($api)
     {
+        if (empty($api)) {
+            return $this->_namespace . '.' . $this->_serviceName;
+        }
         return $this->_namespace . '.' . $this->_serviceName . '.' . $api;
     }
 
@@ -186,6 +189,7 @@ abstract class AbstractApi
                 if (array_key_exists($data->error->code, $this->_errorCodes)) {
                     throw new Exception($this->_errorCodes[$data->error->code]);
                 }
+                return $data;
             }
         } else {
             // return raw data

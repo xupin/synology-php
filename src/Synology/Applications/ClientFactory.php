@@ -30,8 +30,6 @@ class ClientFactory
      * @param string $address
      * @param int    $port
      * @param string $protocol
-     * @param int    $version
-     * @param bool   $verifySSL
      */
     public static function getClient($serviceName, $address, $port = null, $protocol = null)
     {
@@ -39,7 +37,21 @@ class ClientFactory
             $className = "\\Synology\\Applications\\" . $serviceName;
             return new $className($address, $port, $protocol);
         }
-        # @todo return generic client
-        throw new Exception('Unknown "' . $serviceName . '" serviceName');
+        //throw new Exception('Unknown "' . $serviceName . '" serviceName');
+        return static::getGeneric($serviceName, $address, $port, $protocol);
+    }
+
+    /**
+     * Get Generic API Client for serviceName
+     *
+     * @param string $serviceName
+     * @param string $address
+     * @param int    $port
+     * @param string $protocol
+     */
+    public static function getGeneric($serviceName, $address, $port = null, $protocol = null)
+    {
+        $className = "\\Synology\\Applications\\GenericClient";
+        return new $className($serviceName, $address, $port, $protocol);
     }
 }

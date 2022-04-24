@@ -1,4 +1,5 @@
 <?php
+
 $api2url = [];
 $api2url['SYNO.API.Auth'] = 'entry.cgi';
 $api2url['SYNO.API.Auth.Key'] = 'entry.cgi';
