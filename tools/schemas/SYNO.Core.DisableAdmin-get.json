@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "notify_disable_admin": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "notify_disable_admin"
+  ]
+}

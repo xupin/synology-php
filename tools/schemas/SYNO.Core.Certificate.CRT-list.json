@@ -1,0 +1,247 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "certificates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "desc": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "is_broken": {
+            "type": "boolean"
+          },
+          "is_default": {
+            "type": "boolean"
+          },
+          "issuer": {
+            "type": "object",
+            "properties": {
+              "common_name": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "organization": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "department": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "common_name",
+              "country",
+              "organization"
+            ]
+          },
+          "key_types": {
+            "type": "string"
+          },
+          "renewable": {
+            "type": "boolean"
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "isPkg": {
+                  "type": "boolean"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "service": {
+                  "type": "string"
+                },
+                "subscriber": {
+                  "type": "string"
+                },
+                "display_name_i18n": {
+                  "type": "string"
+                },
+                "multiple_cert": {
+                  "type": "boolean"
+                },
+                "user_setable": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "display_name",
+                "isPkg",
+                "owner",
+                "service",
+                "subscriber"
+              ]
+            }
+          },
+          "signature_algorithm": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "object",
+            "properties": {
+              "common_name": {
+                "type": "string"
+              },
+              "sub_alt_name": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "department": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "organization": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "common_name",
+              "sub_alt_name"
+            ]
+          },
+          "user_deletable": {
+            "type": "boolean"
+          },
+          "valid_from": {
+            "type": "string"
+          },
+          "valid_till": {
+            "type": "string"
+          },
+          "self_signed_cacrt_info": {
+            "type": "object",
+            "properties": {
+              "issuer": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string"
+                  },
+                  "common_name": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "department": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "organization": {
+                    "type": "string"
+                  },
+                  "state": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "city",
+                  "common_name",
+                  "country",
+                  "department",
+                  "email",
+                  "organization",
+                  "state"
+                ]
+              },
+              "subject": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string"
+                  },
+                  "common_name": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "department": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "organization": {
+                    "type": "string"
+                  },
+                  "state": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "city",
+                  "common_name",
+                  "country",
+                  "department",
+                  "email",
+                  "organization",
+                  "state"
+                ]
+              }
+            },
+            "required": [
+              "issuer",
+              "subject"
+            ]
+          }
+        },
+        "required": [
+          "desc",
+          "id",
+          "is_broken",
+          "is_default",
+          "issuer",
+          "key_types",
+          "renewable",
+          "services",
+          "signature_algorithm",
+          "subject",
+          "user_deletable",
+          "valid_from",
+          "valid_till"
+        ]
+      }
+    }
+  },
+  "required": [
+    "certificates"
+  ]
+}

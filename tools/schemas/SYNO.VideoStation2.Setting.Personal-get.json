@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "convert_simplified_to_traditional": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "convert_simplified_to_traditional"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_afp": {
+      "type": "boolean"
+    },
+    "enable_disconnect_quick": {
+      "type": "boolean"
+    },
+    "enable_umask": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable_afp",
+    "enable_disconnect_quick",
+    "enable_umask"
+  ]
+}

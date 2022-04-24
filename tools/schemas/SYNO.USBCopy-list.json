@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "conflict_policy": {
+            "type": "string"
+          },
+          "copy_file_path": {
+            "type": "string"
+          },
+          "copy_strategy": {
+            "type": "string"
+          },
+          "default_device_port": {
+            "type": "string"
+          },
+          "destination_path": {
+            "type": "string"
+          },
+          "eject_when_task_done": {
+            "type": "boolean"
+          },
+          "enable_rotation": {
+            "type": "boolean"
+          },
+          "error_code": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "is_default_task": {
+            "type": "boolean"
+          },
+          "is_ds_mounted": {
+            "type": "boolean"
+          },
+          "is_task_runnable": {
+            "type": "boolean"
+          },
+          "is_usb_mounted": {
+            "type": "boolean"
+          },
+          "latest_finish_time": {
+            "type": "integer"
+          },
+          "max_version_count": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "next_run_time": {
+            "type": "string"
+          },
+          "not_keep_dir_structure": {
+            "type": "boolean"
+          },
+          "remove_src_file": {
+            "type": "boolean"
+          },
+          "rename_photo_video": {
+            "type": "boolean"
+          },
+          "rotation_policy": {
+            "type": "string"
+          },
+          "run_when_plug_in": {
+            "type": "boolean"
+          },
+          "schedule_id": {
+            "type": "integer"
+          },
+          "smart_create_date_dir": {
+            "type": "boolean"
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "conflict_policy",
+          "copy_file_path",
+          "copy_strategy",
+          "default_device_port",
+          "destination_path",
+          "eject_when_task_done",
+          "enable_rotation",
+          "error_code",
+          "id",
+          "is_default_task",
+          "is_ds_mounted",
+          "is_task_runnable",
+          "is_usb_mounted",
+          "latest_finish_time",
+          "max_version_count",
+          "name",
+          "next_run_time",
+          "not_keep_dir_structure",
+          "remove_src_file",
+          "rename_photo_video",
+          "rotation_policy",
+          "run_when_plug_in",
+          "schedule_id",
+          "smart_create_date_dir",
+          "source_path",
+          "status",
+          "type"
+        ]
+      }
+    }
+  },
+  "required": [
+    "tasks"
+  ]
+}

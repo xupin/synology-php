@@ -1,0 +1,164 @@
+{
+  "SYNO.Foto.Browse.Album": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.ConditionAlbum": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.Folder": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.GeneralTag": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.Geocoding": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.Item": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.NormalAlbum": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.Person": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Browse.RecentlyAdded": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Foto.Favorite": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.FotoTeam.Browse.Folder": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.FotoTeam.Browse.GeneralTag": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.FotoTeam.Browse.Geocoding": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.FotoTeam.Browse.Item": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.FotoTeam.Browse.Person": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.FotoTeam.Browse.RecentlyAdded": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.SDS.Backup.Client.Common.Log": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.Collection": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.Controller.Device": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.DTV.Tuner": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.Folder": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.HomeVideo": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.Metadata": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.Movie": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.ParentalControl": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.PluginSearch": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.TVRecording": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.TVShow": {
+    "list": {
+      "limit": 10
+    }
+  },
+  "SYNO.VideoStation2.TVShowEpisode": {
+    "list": {
+      "limit": 10
+    }
+  }
+}

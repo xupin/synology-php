@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "protocols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api": {
+            "type": "string"
+          },
+          "default_port": {
+            "type": "integer"
+          },
+          "enable_curl": {
+            "type": "string"
+          },
+          "has_server": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "protocol": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "api",
+          "default_port",
+          "enable_curl",
+          "has_server",
+          "name",
+          "protocol"
+        ]
+      }
+    }
+  },
+  "required": [
+    "protocols"
+  ]
+}

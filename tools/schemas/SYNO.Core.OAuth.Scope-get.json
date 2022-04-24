@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "apis": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "params": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "endpoint": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "params"
+              ]
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "immutable": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "object",
+            "properties": {
+              "chs": {
+                "type": "string"
+              },
+              "cht": {
+                "type": "string"
+              },
+              "csy": {
+                "type": "string"
+              },
+              "dan": {
+                "type": "string"
+              },
+              "enu": {
+                "type": "string"
+              },
+              "fre": {
+                "type": "string"
+              },
+              "ger": {
+                "type": "string"
+              },
+              "hun": {
+                "type": "string"
+              },
+              "ita": {
+                "type": "string"
+              },
+              "jpn": {
+                "type": "string"
+              },
+              "krn": {
+                "type": "string"
+              },
+              "nld": {
+                "type": "string"
+              },
+              "nor": {
+                "type": "string"
+              },
+              "plk": {
+                "type": "string"
+              },
+              "ptb": {
+                "type": "string"
+              },
+              "ptg": {
+                "type": "string"
+              },
+              "rus": {
+                "type": "string"
+              },
+              "spn": {
+                "type": "string"
+              },
+              "sve": {
+                "type": "string"
+              },
+              "tha": {
+                "type": "string"
+              },
+              "trk": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "chs",
+              "cht",
+              "csy",
+              "dan",
+              "enu",
+              "fre",
+              "ger",
+              "hun",
+              "ita",
+              "jpn",
+              "krn",
+              "nld",
+              "nor",
+              "plk",
+              "ptb",
+              "ptg",
+              "rus",
+              "spn",
+              "sve",
+              "tha",
+              "trk"
+            ]
+          },
+          "icon": {
+            "type": "string"
+          },
+          "privilege_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "object",
+            "properties": {
+              "chs": {
+                "type": "string"
+              },
+              "cht": {
+                "type": "string"
+              },
+              "csy": {
+                "type": "string"
+              },
+              "dan": {
+                "type": "string"
+              },
+              "enu": {
+                "type": "string"
+              },
+              "fre": {
+                "type": "string"
+              },
+              "ger": {
+                "type": "string"
+              },
+              "hun": {
+                "type": "string"
+              },
+              "ita": {
+                "type": "string"
+              },
+              "jpn": {
+                "type": "string"
+              },
+              "krn": {
+                "type": "string"
+              },
+              "nld": {
+                "type": "string"
+              },
+              "nor": {
+                "type": "string"
+              },
+              "plk": {
+                "type": "string"
+              },
+              "ptb": {
+                "type": "string"
+              },
+              "ptg": {
+                "type": "string"
+              },
+              "rus": {
+                "type": "string"
+              },
+              "spn": {
+                "type": "string"
+              },
+              "sve": {
+                "type": "string"
+              },
+              "tha": {
+                "type": "string"
+              },
+              "trk": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "chs",
+              "cht",
+              "csy",
+              "dan",
+              "enu",
+              "fre",
+              "ger",
+              "hun",
+              "ita",
+              "jpn",
+              "krn",
+              "nld",
+              "nor",
+              "plk",
+              "ptb",
+              "ptg",
+              "rus",
+              "spn",
+              "sve",
+              "tha",
+              "trk"
+            ]
+          }
+        },
+        "required": [
+          "apis",
+          "id"
+        ]
+      }
+    }
+  },
+  "required": [
+    "scope"
+  ]
+}

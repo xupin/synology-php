@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "disable_shadow_copy": {
+      "type": "boolean"
+    },
+    "disable_strict_allocate": {
+      "type": "boolean"
+    },
+    "enable_access_based_share_enum": {
+      "type": "boolean"
+    },
+    "enable_adserver": {
+      "type": "null"
+    },
+    "enable_aio_read": {
+      "type": "boolean"
+    },
+    "enable_delete_vetofiles": {
+      "type": "boolean"
+    },
+    "enable_dirsort": {
+      "type": "boolean"
+    },
+    "enable_durable_handles": {
+      "type": "boolean"
+    },
+    "enable_enhance_log": {
+      "type": "boolean"
+    },
+    "enable_fruit_locking": {
+      "type": "boolean"
+    },
+    "enable_local_master_browser": {
+      "type": "boolean"
+    },
+    "enable_mask": {
+      "type": "boolean"
+    },
+    "enable_msdfs": {
+      "type": "boolean"
+    },
+    "enable_ntlmv1_auth": {
+      "type": "boolean"
+    },
+    "enable_op_lock": {
+      "type": "boolean"
+    },
+    "enable_reset_on_zero_vc": {
+      "type": "boolean"
+    },
+    "enable_samba": {
+      "type": "boolean"
+    },
+    "enable_server_signing": {
+      "type": "integer"
+    },
+    "enable_smb2_leases": {
+      "type": "boolean"
+    },
+    "enable_symlink": {
+      "type": "boolean"
+    },
+    "enable_syno_catia": {
+      "type": "boolean"
+    },
+    "enable_vetofile": {
+      "type": "boolean"
+    },
+    "enable_widelink": {
+      "type": "boolean"
+    },
+    "offline_files_support": {
+      "type": "boolean"
+    },
+    "smb_encrypt_transport": {
+      "type": "integer"
+    },
+    "smb_max_protocol": {
+      "type": "integer"
+    },
+    "smb_min_protocol": {
+      "type": "integer"
+    },
+    "syno_wildcard_search": {
+      "type": "boolean"
+    },
+    "vetofile": {
+      "type": "string"
+    },
+    "wins": {
+      "type": "string"
+    },
+    "workgroup": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "disable_shadow_copy",
+    "disable_strict_allocate",
+    "enable_access_based_share_enum",
+    "enable_adserver",
+    "enable_aio_read",
+    "enable_delete_vetofiles",
+    "enable_dirsort",
+    "enable_durable_handles",
+    "enable_enhance_log",
+    "enable_fruit_locking",
+    "enable_local_master_browser",
+    "enable_mask",
+    "enable_msdfs",
+    "enable_ntlmv1_auth",
+    "enable_op_lock",
+    "enable_reset_on_zero_vc",
+    "enable_samba",
+    "enable_server_signing",
+    "enable_smb2_leases",
+    "enable_symlink",
+    "enable_syno_catia",
+    "enable_vetofile",
+    "enable_widelink",
+    "offline_files_support",
+    "smb_encrypt_transport",
+    "smb_max_protocol",
+    "smb_min_protocol",
+    "syno_wildcard_search",
+    "vetofile",
+    "wins",
+    "workgroup"
+  ]
+}

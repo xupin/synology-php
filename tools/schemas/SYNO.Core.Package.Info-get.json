@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "object",
+      "properties": {
+        "auth_key": {
+          "type": "string"
+        },
+        "blBetaChannel": {
+          "type": "boolean"
+        },
+        "blOtherServer": {
+          "type": "boolean"
+        },
+        "def_void": {
+          "type": "string"
+        },
+        "ds_build": {
+          "type": "string"
+        },
+        "ds_major": {
+          "type": "string"
+        },
+        "ds_minor": {
+          "type": "string"
+        },
+        "ds_timezone": {
+          "type": "string"
+        },
+        "ds_unique": {
+          "type": "string"
+        },
+        "myPayBaseURL": {
+          "type": "string"
+        },
+        "myds_id": {
+          "type": "string"
+        },
+        "serial": {
+          "type": "string"
+        },
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "auth_key",
+        "blBetaChannel",
+        "blOtherServer",
+        "def_void",
+        "ds_build",
+        "ds_major",
+        "ds_minor",
+        "ds_timezone",
+        "ds_unique",
+        "myPayBaseURL",
+        "myds_id",
+        "serial",
+        "success"
+      ]
+    },
+    "term": {
+      "type": "object",
+      "properties": {
+        "agreed_term_version": {
+          "type": "string"
+        },
+        "curr_term_version": {
+          "type": "string"
+        },
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "agreed_term_version",
+        "curr_term_version",
+        "success"
+      ]
+    }
+  },
+  "required": [
+    "config",
+    "term"
+  ]
+}

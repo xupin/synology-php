@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "create_subfolder": {
+      "type": "boolean"
+    },
+    "delete_archive": {
+      "type": "boolean"
+    },
+    "enable_unzip": {
+      "type": "boolean"
+    },
+    "enable_unzip_service": {
+      "type": "boolean"
+    },
+    "passwords": {
+      "type": "array"
+    },
+    "unzip_location": {
+      "type": "string"
+    },
+    "unzip_overwrite": {
+      "type": "boolean"
+    },
+    "unzip_to_path": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "create_subfolder",
+    "delete_archive",
+    "enable_unzip",
+    "enable_unzip_service",
+    "passwords",
+    "unzip_location",
+    "unzip_overwrite",
+    "unzip_to_path",
+    "username"
+  ]
+}

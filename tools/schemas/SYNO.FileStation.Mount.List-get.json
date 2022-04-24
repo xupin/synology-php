@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "isoList": {
+      "type": "array"
+    },
+    "mountConfig": {
+      "type": "object",
+      "properties": {
+        "enable_iso_mount": {
+          "type": "boolean"
+        },
+        "enable_remote_mount": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "enable_iso_mount",
+        "enable_remote_mount"
+      ]
+    },
+    "remoteList": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "isoList",
+    "mountConfig",
+    "remoteList"
+  ]
+}

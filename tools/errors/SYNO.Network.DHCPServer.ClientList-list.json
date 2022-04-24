@@ -1,0 +1,9 @@
+{
+    "error": {
+        "code": 4302,
+        "errors": {
+            "desc": "bad interface name"
+        }
+    },
+    "success": false
+}

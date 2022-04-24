@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "dht_port": {
+      "type": "integer"
+    },
+    "enable_dht": {
+      "type": "boolean"
+    },
+    "enable_port_forwarding": {
+      "type": "boolean"
+    },
+    "enable_preview": {
+      "type": "boolean"
+    },
+    "enable_seeding_auto_remove": {
+      "type": "boolean"
+    },
+    "encrypt": {
+      "type": "string"
+    },
+    "max_download_rate": {
+      "type": "integer"
+    },
+    "max_peer": {
+      "type": "integer"
+    },
+    "max_upload_rate": {
+      "type": "integer"
+    },
+    "seeding_interval": {
+      "type": "integer"
+    },
+    "seeding_ratio": {
+      "type": "integer"
+    },
+    "tcp_port": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "dht_port",
+    "enable_dht",
+    "enable_port_forwarding",
+    "enable_preview",
+    "enable_seeding_auto_remove",
+    "encrypt",
+    "max_download_rate",
+    "max_peer",
+    "max_upload_rate",
+    "seeding_interval",
+    "seeding_ratio",
+    "tcp_port"
+  ]
+}

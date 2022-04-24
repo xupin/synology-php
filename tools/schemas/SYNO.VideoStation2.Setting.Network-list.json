@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "interface": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "interface": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "interface"
+        ]
+      }
+    }
+  },
+  "required": [
+    "interface"
+  ]
+}

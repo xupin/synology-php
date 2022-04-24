@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "defaultGroup": {
+      "type": "string"
+    },
+    "enableSchedule": {
+      "type": "boolean"
+    },
+    "hour": {
+      "type": "integer"
+    },
+    "minute": {
+      "type": "integer"
+    },
+    "scheduleTaskId": {
+      "type": "integer"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "updateBeforeScan": {
+      "type": "boolean"
+    },
+    "weekday": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "defaultGroup",
+    "enableSchedule",
+    "hour",
+    "minute",
+    "scheduleTaskId",
+    "success",
+    "updateBeforeScan",
+    "weekday"
+  ]
+}

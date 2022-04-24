@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "All": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "appid": {
+            "type": "string"
+          },
+          "cms": {
+            "type": "boolean"
+          },
+          "desktop": {
+            "type": "boolean"
+          },
+          "format": {
+            "type": "string"
+          },
+          "group": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "boolean"
+          },
+          "mobile": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "sms": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          },
+          "warnPercent": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "appid",
+          "cms",
+          "desktop",
+          "format",
+          "group",
+          "level",
+          "mail",
+          "mobile",
+          "name",
+          "sms",
+          "title",
+          "warnPercent"
+        ]
+      }
+    }
+  },
+  "required": [
+    "All"
+  ]
+}

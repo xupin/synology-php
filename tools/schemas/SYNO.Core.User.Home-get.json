@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "enable_domain": {
+      "type": "boolean"
+    },
+    "enable_ldap": {
+      "type": "boolean"
+    },
+    "enable_recycle_bin": {
+      "type": "boolean"
+    },
+    "encryption": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "remote_location": {
+      "type": "string"
+    },
+    "userhome_in_s2s": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable",
+    "enable_domain",
+    "enable_ldap",
+    "enable_recycle_bin",
+    "encryption",
+    "location",
+    "remote_location",
+    "userhome_in_s2s"
+  ]
+}

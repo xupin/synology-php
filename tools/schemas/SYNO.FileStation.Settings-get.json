@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "bandwidth_enable": {
+      "type": "string"
+    },
+    "enable_list_usergrp": {
+      "type": "boolean"
+    },
+    "enable_send_email_attachment": {
+      "type": "boolean"
+    },
+    "enable_sharing_custom_setting": {
+      "type": "string"
+    },
+    "enable_view_google": {
+      "type": "boolean"
+    },
+    "enable_view_microsoft": {
+      "type": "boolean"
+    },
+    "file_request_allow": {
+      "type": "string"
+    },
+    "file_request_group_privilege": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "file_request_privilege": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "link_limit": {
+      "type": "array"
+    },
+    "rf_allow": {
+      "type": "string"
+    },
+    "runpgsql": {
+      "type": "boolean"
+    },
+    "schedule_plan": {
+      "type": "string"
+    },
+    "sharing_allow": {
+      "type": "string"
+    },
+    "sharing_default_limit": {
+      "type": "string"
+    },
+    "sharing_disable_html": {
+      "type": "string"
+    },
+    "sharing_gofile_protocol": {
+      "type": "string"
+    },
+    "sharing_group_privilege": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "sharing_privilege": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "transfer_log_enable": {
+      "type": "boolean"
+    },
+    "use_unix_default_perm": {
+      "type": "boolean"
+    },
+    "vd_allow": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "bandwidth_enable",
+    "enable_list_usergrp",
+    "enable_send_email_attachment",
+    "enable_sharing_custom_setting",
+    "enable_view_google",
+    "enable_view_microsoft",
+    "file_request_allow",
+    "file_request_group_privilege",
+    "file_request_privilege",
+    "link_limit",
+    "rf_allow",
+    "runpgsql",
+    "schedule_plan",
+    "sharing_allow",
+    "sharing_default_limit",
+    "sharing_disable_html",
+    "sharing_gofile_protocol",
+    "sharing_group_privilege",
+    "sharing_privilege",
+    "transfer_log_enable",
+    "use_unix_default_perm",
+    "vd_allow"
+  ]
+}

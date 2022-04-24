@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "read": {
+      "type": "boolean"
+    },
+    "version": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "read",
+    "version"
+  ]
+}

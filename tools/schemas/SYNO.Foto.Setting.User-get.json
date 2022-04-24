@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "alias": {
+      "type": "string"
+    },
+    "ame_status": {
+      "type": "object",
+      "properties": {
+        "has_hevc": {
+          "type": "boolean"
+        },
+        "has_license": {
+          "type": "boolean"
+        },
+        "is_ame_install": {
+          "type": "boolean"
+        },
+        "is_ame_v2": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "has_hevc",
+        "has_license",
+        "is_ame_install",
+        "is_ame_v2"
+      ]
+    },
+    "copy_move_default_action": {
+      "type": "string"
+    },
+    "date_format": {
+      "type": "string"
+    },
+    "enable_home_service": {
+      "type": "boolean"
+    },
+    "enable_person": {
+      "type": "boolean"
+    },
+    "expired_time": {
+      "type": "integer"
+    },
+    "face_feature_version": {
+      "type": "integer"
+    },
+    "home_service_enable": {
+      "type": "boolean"
+    },
+    "is_ge_dsm71": {
+      "type": "boolean"
+    },
+    "item_sort_by": {
+      "type": "string"
+    },
+    "library_source": {
+      "type": "string"
+    },
+    "show_item_info_in_lightbox": {
+      "type": "boolean"
+    },
+    "sort_direction": {
+      "type": "string"
+    },
+    "team_space_auto_backup": {
+      "type": "boolean"
+    },
+    "team_space_permission": {
+      "type": "string"
+    },
+    "time_format": {
+      "type": "string"
+    },
+    "timeline_group_unit": {
+      "type": "string"
+    },
+    "upload_default_action": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "alias",
+    "ame_status",
+    "copy_move_default_action",
+    "date_format",
+    "enable_home_service",
+    "enable_person",
+    "expired_time",
+    "face_feature_version",
+    "home_service_enable",
+    "is_ge_dsm71",
+    "item_sort_by",
+    "library_source",
+    "show_item_info_in_lightbox",
+    "sort_direction",
+    "team_space_auto_backup",
+    "team_space_permission",
+    "time_format",
+    "timeline_group_unit",
+    "upload_default_action",
+    "version"
+  ]
+}

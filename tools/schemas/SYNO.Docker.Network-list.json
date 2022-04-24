@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "network": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "containers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "driver": {
+            "type": "string"
+          },
+          "enable_ipv6": {
+            "type": "boolean"
+          },
+          "gateway": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "iprange": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "subnet": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "containers",
+          "driver",
+          "enable_ipv6",
+          "gateway",
+          "id",
+          "iprange",
+          "name",
+          "subnet"
+        ]
+      }
+    }
+  },
+  "required": [
+    "network"
+  ]
+}

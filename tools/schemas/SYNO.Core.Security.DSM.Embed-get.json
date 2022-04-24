@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_block": {
+      "type": "boolean"
+    },
+    "whitelist": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "enable_block",
+    "whitelist"
+  ]
+}

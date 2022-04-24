@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "listItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fn": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "iconCls": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "fn",
+          "folder",
+          "iconCls",
+          "text"
+        ]
+      }
+    }
+  },
+  "required": [
+    "listItems"
+  ]
+}

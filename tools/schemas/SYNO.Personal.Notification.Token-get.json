@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "oauth_id": {
+      "type": "integer"
+    },
+    "pushbrowser_server": {
+      "type": "string"
+    },
+    "site": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "oauth_id",
+    "pushbrowser_server",
+    "site",
+    "token"
+  ]
+}

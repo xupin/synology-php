@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reflink_copy_enable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "reflink_copy_enable"
+  ]
+}

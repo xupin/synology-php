@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_system_crashed": {
+      "type": "boolean"
+    },
+    "upgrade_ready": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "is_system_crashed",
+    "upgrade_ready"
+  ]
+}

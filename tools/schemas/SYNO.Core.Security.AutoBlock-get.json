@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "attempts": {
+      "type": "integer"
+    },
+    "enable": {
+      "type": "boolean"
+    },
+    "expire_day": {
+      "type": "integer"
+    },
+    "within_mins": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "attempts",
+    "enable",
+    "expire_day",
+    "within_mins"
+  ]
+}

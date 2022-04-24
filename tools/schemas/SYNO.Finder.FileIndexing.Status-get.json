@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "index": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "index",
+        "term"
+      ]
+    }
+  },
+  "required": [
+    "status"
+  ]
+}

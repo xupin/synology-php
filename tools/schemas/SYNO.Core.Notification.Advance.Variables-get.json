@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string"
+    },
+    "http_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_name",
+    "http_url"
+  ]
+}

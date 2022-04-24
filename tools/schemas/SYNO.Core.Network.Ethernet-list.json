@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "block": {
+        "type": "integer"
+      },
+      "dns": {
+        "type": "string"
+      },
+      "duplex": {
+        "type": "boolean"
+      },
+      "enable_ha_ip": {
+        "type": "boolean"
+      },
+      "enable_vlan": {
+        "type": "boolean"
+      },
+      "gateway": {
+        "type": "string"
+      },
+      "ha_local_ip": {
+        "type": "string"
+      },
+      "ha_local_mask": {
+        "type": "string"
+      },
+      "ifname": {
+        "type": "string"
+      },
+      "ip": {
+        "type": "string"
+      },
+      "ipv6": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "is_default_gateway": {
+        "type": "boolean"
+      },
+      "is_main_ha_ip": {
+        "type": "boolean"
+      },
+      "mask": {
+        "type": "string"
+      },
+      "max_supported_speed": {
+        "type": "integer"
+      },
+      "mtu": {
+        "type": "integer"
+      },
+      "mtu_config": {
+        "type": "integer"
+      },
+      "nat": {
+        "type": "boolean"
+      },
+      "speed": {
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "use_dhcp": {
+        "type": "boolean"
+      },
+      "vlan_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "block",
+      "dns",
+      "duplex",
+      "enable_ha_ip",
+      "enable_vlan",
+      "gateway",
+      "ha_local_ip",
+      "ha_local_mask",
+      "ifname",
+      "ip",
+      "ipv6",
+      "is_default_gateway",
+      "is_main_ha_ip",
+      "mask",
+      "max_supported_speed",
+      "mtu",
+      "mtu_config",
+      "nat",
+      "speed",
+      "status",
+      "type",
+      "use_dhcp",
+      "vlan_id"
+    ]
+  }
+}

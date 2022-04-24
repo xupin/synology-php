@@ -1,0 +1,261 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "aperture": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "camera": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "exposure_time_group": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "end": {
+            "type": "object",
+            "properties": {
+              "den": {
+                "type": "integer"
+              },
+              "num": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "den",
+              "num"
+            ]
+          },
+          "start": {
+            "type": "object",
+            "properties": {
+              "den": {
+                "type": "integer"
+              },
+              "num": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "den",
+              "num"
+            ]
+          }
+        },
+        "required": [
+          "end",
+          "start"
+        ]
+      }
+    },
+    "flash": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "focal_length_group": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "end": {
+            "type": "integer"
+          },
+          "start": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "end",
+          "start"
+        ]
+      }
+    },
+    "folder_filter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner_user_id": {
+            "type": "integer"
+          },
+          "parent": {
+            "type": "integer"
+          },
+          "passphrase": {
+            "type": "string"
+          },
+          "shared": {
+            "type": "boolean"
+          },
+          "sort_by": {
+            "type": "string"
+          },
+          "sort_direction": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "owner_user_id",
+          "parent",
+          "passphrase",
+          "shared",
+          "sort_by",
+          "sort_direction"
+        ]
+      }
+    },
+    "general_tag": {
+      "type": "array"
+    },
+    "geocoding": {
+      "type": "array"
+    },
+    "iso": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "item_type": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "lens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    },
+    "person": {
+      "type": "array"
+    },
+    "rating": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "time": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "end_time": {
+            "type": "integer"
+          },
+          "month": {
+            "type": "integer"
+          },
+          "start_time": {
+            "type": "integer"
+          },
+          "year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "end_time",
+          "month",
+          "start_time",
+          "year"
+        ]
+      }
+    }
+  },
+  "required": [
+    "aperture",
+    "camera",
+    "exposure_time_group",
+    "flash",
+    "focal_length_group",
+    "folder_filter",
+    "general_tag",
+    "geocoding",
+    "iso",
+    "item_type",
+    "lens",
+    "person",
+    "rating",
+    "time"
+  ]
+}

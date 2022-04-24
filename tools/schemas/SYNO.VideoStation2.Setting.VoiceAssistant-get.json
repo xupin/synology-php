@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "audio_priority": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "enable_auto_resume": {
+      "type": "boolean"
+    },
+    "enable_subtitle": {
+      "type": "boolean"
+    },
+    "remote_player_id": {
+      "type": "string"
+    },
+    "remote_player_title": {
+      "type": "string"
+    },
+    "subtitle_priority": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "audio_priority",
+    "enable_auto_resume",
+    "enable_subtitle",
+    "remote_player_id",
+    "remote_player_title",
+    "subtitle_priority"
+  ]
+}

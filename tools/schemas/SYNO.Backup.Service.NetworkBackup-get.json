@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "enable_custom_config": {
+      "type": "boolean"
+    },
+    "enable_rsync_account": {
+      "type": "boolean"
+    },
+    "rsync_sshd_port": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enable",
+    "enable_custom_config",
+    "enable_rsync_account",
+    "rsync_sshd_port"
+  ]
+}

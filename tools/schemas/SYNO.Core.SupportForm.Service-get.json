@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "app_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enable": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "enable",
+          "id",
+          "name"
+        ]
+      }
+    },
+    "enable_support_channel": {
+      "type": "boolean"
+    },
+    "expiredate": {
+      "type": "null"
+    },
+    "fan_debug_en": {
+      "type": "boolean"
+    },
+    "fan_num": {
+      "type": "integer"
+    },
+    "hibernation_debug_en": {
+      "type": "boolean"
+    },
+    "hibernation_debug_level": {
+      "type": "integer"
+    },
+    "log_level_up": {
+      "type": "boolean"
+    },
+    "sns_identifier_key": {
+      "type": "null"
+    },
+    "sysstat_dump_en": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "app_list",
+    "enable_support_channel",
+    "expiredate",
+    "fan_debug_en",
+    "fan_num",
+    "hibernation_debug_en",
+    "hibernation_debug_level",
+    "log_level_up",
+    "sns_identifier_key",
+    "sysstat_dump_en"
+  ]
+}

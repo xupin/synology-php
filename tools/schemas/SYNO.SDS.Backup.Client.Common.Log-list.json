@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "error_count": {
+      "type": "integer"
+    },
+    "info_count": {
+      "type": "integer"
+    },
+    "log_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "event",
+          "level",
+          "time",
+          "user"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "warn_count": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "error_count",
+    "info_count",
+    "log_list",
+    "offset",
+    "total",
+    "warn_count"
+  ]
+}

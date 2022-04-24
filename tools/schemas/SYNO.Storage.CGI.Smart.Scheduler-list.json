@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string"
+          },
+          "app": {
+            "type": "string"
+          },
+          "app_args": {
+            "type": "string"
+          },
+          "app_name": {
+            "type": "string"
+          },
+          "can_run": {
+            "type": "boolean"
+          },
+          "edit_app": {
+            "type": "string"
+          },
+          "edit_form": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "next_trigger_time": {
+            "type": "string"
+          },
+          "simple_edit_form": {
+            "type": "boolean"
+          },
+          "task_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "app",
+          "app_args",
+          "app_name",
+          "can_run",
+          "edit_app",
+          "edit_form",
+          "enabled",
+          "id",
+          "next_trigger_time",
+          "simple_edit_form",
+          "task_name"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "total"
+  ]
+}

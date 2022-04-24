@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "custom_port_enable": {
+      "type": "integer"
+    },
+    "nfs_v4_domain": {
+      "type": "string"
+    },
+    "nlm_port": {
+      "type": "integer"
+    },
+    "read_size": {
+      "type": "integer"
+    },
+    "statd_port": {
+      "type": "integer"
+    },
+    "unix_pri_enable": {
+      "type": "boolean"
+    },
+    "write_size": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "custom_port_enable",
+    "nfs_v4_domain",
+    "nlm_port",
+    "read_size",
+    "statd_port",
+    "unix_pri_enable",
+    "write_size"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enc_module_fail": {
+      "type": "boolean"
+    },
+    "eunit_redundant_power_fail": {
+      "type": "boolean"
+    },
+    "fan_fail": {
+      "type": "boolean"
+    },
+    "poweroff_beep": {
+      "type": "boolean"
+    },
+    "poweron_beep": {
+      "type": "boolean"
+    },
+    "redundant_power_fail": {
+      "type": "boolean"
+    },
+    "reset_beep": {
+      "type": "boolean"
+    },
+    "sas_link_fail": {
+      "type": "boolean"
+    },
+    "support_fan_fail": {
+      "type": "boolean"
+    },
+    "support_poweroff_beep": {
+      "type": "boolean"
+    },
+    "support_poweron_beep": {
+      "type": "boolean"
+    },
+    "support_redundant_power_fail": {
+      "type": "boolean"
+    },
+    "support_reset_beep": {
+      "type": "boolean"
+    },
+    "support_volume_crash": {
+      "type": "boolean"
+    },
+    "volume_crash": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enc_module_fail",
+    "eunit_redundant_power_fail",
+    "fan_fail",
+    "poweroff_beep",
+    "poweron_beep",
+    "redundant_power_fail",
+    "reset_beep",
+    "sas_link_fail",
+    "support_fan_fail",
+    "support_poweroff_beep",
+    "support_poweron_beep",
+    "support_redundant_power_fail",
+    "support_reset_beep",
+    "support_volume_crash",
+    "volume_crash"
+  ]
+}

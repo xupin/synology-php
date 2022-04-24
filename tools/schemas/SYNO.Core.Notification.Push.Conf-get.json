@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "mobile_enable": {
+      "type": "boolean"
+    },
+    "msn_account": {
+      "type": "string"
+    },
+    "msn_bot": {
+      "type": "string"
+    },
+    "msn_enable": {
+      "type": "boolean"
+    },
+    "skype_account": {
+      "type": "string"
+    },
+    "skype_bot": {
+      "type": "string"
+    },
+    "skype_enable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "mobile_enable",
+    "msn_account",
+    "msn_bot",
+    "msn_enable",
+    "skype_account",
+    "skype_bot",
+    "skype_enable"
+  ]
+}

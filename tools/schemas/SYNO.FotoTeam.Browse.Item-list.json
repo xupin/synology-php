@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "filesize": {
+            "type": "integer"
+          },
+          "folder_id": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "indexed_time": {
+            "type": "integer"
+          },
+          "owner_user_id": {
+            "type": "integer"
+          },
+          "time": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "filename",
+          "filesize",
+          "folder_id",
+          "id",
+          "indexed_time",
+          "owner_user_id",
+          "time",
+          "type"
+        ]
+      }
+    }
+  },
+  "required": [
+    "list"
+  ]
+}

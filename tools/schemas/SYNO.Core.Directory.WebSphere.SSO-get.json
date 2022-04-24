@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "websphere_client_id": {
+      "type": "string"
+    },
+    "websphere_client_secret": {
+      "type": "string"
+    },
+    "websphere_oidc_host": {
+      "type": "string"
+    },
+    "websphere_oidc_provider": {
+      "type": "string"
+    },
+    "websphere_redirect_uri": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "websphere_client_id",
+    "websphere_client_secret",
+    "websphere_oidc_host",
+    "websphere_oidc_provider",
+    "websphere_redirect_uri"
+  ]
+}

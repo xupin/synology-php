@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "enable_log": {
+      "type": "boolean"
+    },
+    "endip": {
+      "type": "string"
+    },
+    "permission": {
+      "type": "string"
+    },
+    "root_path": {
+      "type": "string"
+    },
+    "startip": {
+      "type": "string"
+    },
+    "timeout": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enable",
+    "enable_log",
+    "endip",
+    "permission",
+    "root_path",
+    "startip",
+    "timeout"
+  ]
+}

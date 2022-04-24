@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "token_expired": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "token_expired"
+  ]
+}

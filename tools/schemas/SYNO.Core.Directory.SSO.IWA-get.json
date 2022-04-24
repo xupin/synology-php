@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_http_negotiate": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable_http_negotiate"
+  ]
+}

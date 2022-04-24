@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "update_interval": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "update_interval"
+  ]
+}

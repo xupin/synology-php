@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "autoupdate_type": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "object",
+      "properties": {
+        "hour": {
+          "type": "integer"
+        },
+        "minute": {
+          "type": "integer"
+        },
+        "week_day": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "hour",
+        "minute",
+        "week_day"
+      ]
+    },
+    "smart_nano_enabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "autoupdate_type",
+    "schedule",
+    "smart_nano_enabled"
+  ]
+}

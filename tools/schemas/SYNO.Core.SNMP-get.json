@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "contact": {
+      "type": "string"
+    },
+    "enable_snmp": {
+      "type": "boolean"
+    },
+    "enable_snmp_v1v2": {
+      "type": "boolean"
+    },
+    "enable_snmp_v3": {
+      "type": "boolean"
+    },
+    "location": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "rocommunity": {
+      "type": "string"
+    },
+    "rouser": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "contact",
+    "enable_snmp",
+    "enable_snmp_v1v2",
+    "enable_snmp_v3",
+    "location",
+    "name",
+    "rocommunity",
+    "rouser"
+  ]
+}

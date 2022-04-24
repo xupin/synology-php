@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string"
+    },
+    "default_content": {
+      "type": "string"
+    },
+    "default_subject": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "content",
+    "default_content",
+    "default_subject",
+    "subject"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_avahi": {
+      "type": "boolean"
+    },
+    "enable_custom_domain": {
+      "type": "boolean"
+    },
+    "enable_hsts": {
+      "type": "boolean"
+    },
+    "enable_https_redirect": {
+      "type": "boolean"
+    },
+    "enable_max_connections": {
+      "type": "boolean"
+    },
+    "enable_reuseport": {
+      "type": "boolean"
+    },
+    "enable_server_header": {
+      "type": "boolean"
+    },
+    "enable_spdy": {
+      "type": "boolean"
+    },
+    "enable_ssdp": {
+      "type": "boolean"
+    },
+    "fqdn": {
+      "type": "null"
+    },
+    "http_port": {
+      "type": "integer"
+    },
+    "https_port": {
+      "type": "integer"
+    },
+    "max_connections": {
+      "type": "integer"
+    },
+    "max_connections_limit": {
+      "type": "object",
+      "properties": {
+        "lower": {
+          "type": "integer"
+        },
+        "upper": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "lower",
+        "upper"
+      ]
+    },
+    "server_header": {
+      "type": "string"
+    },
+    "support_reuseport": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable_avahi",
+    "enable_custom_domain",
+    "enable_hsts",
+    "enable_https_redirect",
+    "enable_max_connections",
+    "enable_reuseport",
+    "enable_server_header",
+    "enable_spdy",
+    "enable_ssdp",
+    "fqdn",
+    "http_port",
+    "https_port",
+    "max_connections",
+    "max_connections_limit",
+    "server_header",
+    "support_reuseport"
+  ]
+}

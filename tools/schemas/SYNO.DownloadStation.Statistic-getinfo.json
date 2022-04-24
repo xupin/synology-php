@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "speed_download": {
+      "type": "integer"
+    },
+    "speed_upload": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "speed_download",
+    "speed_upload"
+  ]
+}

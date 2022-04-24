@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "folder_path": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "recursive": {
+            "type": "boolean"
+          },
+          "timestamp": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "folder_path",
+          "pattern",
+          "recursive",
+          "timestamp"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "history",
+    "total"
+  ]
+}

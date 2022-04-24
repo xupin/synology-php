@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "csp_header_option": {
+      "type": "boolean"
+    },
+    "enable_csrf_protection": {
+      "type": "boolean"
+    },
+    "restart_clean_session": {
+      "type": "boolean"
+    },
+    "skip_ip_checking": {
+      "type": "boolean"
+    },
+    "timeout": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "csp_header_option",
+    "enable_csrf_protection",
+    "restart_clean_session",
+    "skip_ip_checking",
+    "timeout"
+  ]
+}

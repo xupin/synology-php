@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default_thumbnail_size": {
+      "type": "string"
+    },
+    "display_photo_info_to_guest": {
+      "type": "boolean"
+    },
+    "enable_person": {
+      "type": "boolean"
+    },
+    "enable_user_sharing": {
+      "type": "boolean"
+    },
+    "exclude_extension": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "default_thumbnail_size",
+    "display_photo_info_to_guest",
+    "enable_person",
+    "enable_user_sharing",
+    "exclude_extension"
+  ]
+}

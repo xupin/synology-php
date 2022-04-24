@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "current_count": {
+      "type": "integer"
+    },
+    "current_package_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "total_count": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "current_count",
+    "current_package_name",
+    "status",
+    "total_count"
+  ]
+}

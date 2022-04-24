@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default_audio": {
+      "type": "string"
+    },
+    "default_document": {
+      "type": "string"
+    },
+    "default_exe": {
+      "type": "string"
+    },
+    "default_image": {
+      "type": "string"
+    },
+    "default_iso": {
+      "type": "string"
+    },
+    "default_video": {
+      "type": "string"
+    },
+    "default_web": {
+      "type": "string"
+    },
+    "default_zip": {
+      "type": "string"
+    },
+    "enable_schedule": {
+      "type": "boolean"
+    },
+    "report_location": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "default_audio",
+    "default_document",
+    "default_exe",
+    "default_image",
+    "default_iso",
+    "default_video",
+    "default_web",
+    "default_zip",
+    "enable_schedule",
+    "report_location"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "all_disk_temp_fail": {
+      "type": "string"
+    },
+    "cool_fan": {
+      "type": "string"
+    },
+    "dual_fan_speed": {
+      "type": "string"
+    },
+    "fan_support_adjust_by_ext_nic": {
+      "type": "string"
+    },
+    "fan_type": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "all_disk_temp_fail",
+    "cool_fan",
+    "dual_fan_speed",
+    "fan_support_adjust_by_ext_nic",
+    "fan_type"
+  ]
+}

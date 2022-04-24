@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "errorCount": {
+      "type": "integer"
+    },
+    "infoCount": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "descr": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "logtype": {
+            "type": "string"
+          },
+          "orginalLogType": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "who": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "descr",
+          "level",
+          "logtype",
+          "orginalLogType",
+          "time",
+          "who"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    },
+    "warnCount": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "errorCount",
+    "infoCount",
+    "items",
+    "total",
+    "warnCount"
+  ]
+}

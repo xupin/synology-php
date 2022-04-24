@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "background_color": {
+      "type": "string"
+    },
+    "background_position": {
+      "type": "string"
+    },
+    "background_seq": {
+      "type": "string"
+    },
+    "enable_background_customize": {
+      "type": "boolean"
+    },
+    "enable_footer_html": {
+      "type": "boolean"
+    },
+    "enable_logo_customize": {
+      "type": "boolean"
+    },
+    "footer_msg": {
+      "type": "string"
+    },
+    "logo_position": {
+      "type": "string"
+    },
+    "logo_seq": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "background_color",
+    "background_position",
+    "background_seq",
+    "enable_background_customize",
+    "enable_footer_html",
+    "enable_logo_customize",
+    "footer_msg",
+    "logo_position",
+    "logo_seq"
+  ]
+}

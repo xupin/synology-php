@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "basic": {
+      "type": "integer"
+    },
+    "face_extraction": {
+      "type": "integer"
+    },
+    "geo_coding": {
+      "type": "integer"
+    },
+    "metadata": {
+      "type": "integer"
+    },
+    "metadata_updating": {
+      "type": "integer"
+    },
+    "person_clustering": {
+      "type": "integer"
+    },
+    "thumbnail": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "basic",
+    "face_extraction",
+    "geo_coding",
+    "metadata",
+    "metadata_updating",
+    "person_clustering",
+    "thumbnail"
+  ]
+}

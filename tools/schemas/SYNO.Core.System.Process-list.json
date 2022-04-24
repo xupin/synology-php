@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "process": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          },
+          "cpu": {
+            "type": "integer"
+          },
+          "mem": {
+            "type": "integer"
+          },
+          "mem_shared": {
+            "type": "integer"
+          },
+          "pid": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command",
+          "cpu",
+          "mem",
+          "mem_shared",
+          "pid",
+          "status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "process"
+  ]
+}

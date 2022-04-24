@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "duration": {
+      "type": "integer"
+    },
+    "manual_action_by_user": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "start": {
+      "type": "object",
+      "properties": {
+        "hour": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "hour"
+      ]
+    },
+    "week": {
+      "type": "array",
+      "items": {
+        "type": "boolean"
+      }
+    }
+  },
+  "required": [
+    "duration",
+    "manual_action_by_user",
+    "mode",
+    "start",
+    "week"
+  ]
+}

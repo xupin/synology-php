@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "auth_type": {
+      "type": "array"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "time": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "auth_type",
+    "mode",
+    "status",
+    "time"
+  ]
+}

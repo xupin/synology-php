@@ -1,0 +1,2456 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "AudioPlayer": {
+      "type": "object",
+      "properties": {
+        "volume": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "volume"
+      ]
+    },
+    "BackgroundTask": {
+      "type": "object"
+    },
+    "Desktop": {
+      "type": "object",
+      "properties": {
+        "ShortcutItems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "className": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "className",
+              "id"
+            ]
+          }
+        },
+        "appMenuStyle": {
+          "type": "string"
+        },
+        "app_instr_showed": {
+          "type": "boolean"
+        },
+        "appview_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disableLogoutConfirm": {
+          "type": "boolean"
+        },
+        "enableDesktopNotification": {
+          "type": "boolean"
+        },
+        "enableTaskbarThumbnail": {
+          "type": "boolean"
+        },
+        "new_app_list": {
+          "type": "array"
+        },
+        "rememberWindowState": {
+          "type": "boolean"
+        },
+        "valid_appview_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "wallpaper": {
+          "type": "object",
+          "properties": {
+            "classical_desktop": {
+              "type": "string"
+            },
+            "customize_color": {
+              "type": "boolean"
+            },
+            "customize_wallpaper": {
+              "type": "boolean"
+            },
+            "index": {
+              "type": "integer"
+            },
+            "menu_style": {
+              "type": "string"
+            },
+            "newImage": {
+              "type": "boolean"
+            },
+            "version": {
+              "type": "string"
+            },
+            "wallpaper": {
+              "type": "integer"
+            },
+            "wallpaper_ext": {
+              "type": "string"
+            },
+            "wallpaper_path": {
+              "type": "string"
+            },
+            "wallpaper_position": {
+              "type": "string"
+            },
+            "wallpaper_type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "classical_desktop",
+            "customize_color",
+            "customize_wallpaper",
+            "index",
+            "menu_style",
+            "newImage",
+            "version",
+            "wallpaper",
+            "wallpaper_ext",
+            "wallpaper_path",
+            "wallpaper_position",
+            "wallpaper_type"
+          ]
+        }
+      },
+      "required": [
+        "ShortcutItems",
+        "appMenuStyle",
+        "app_instr_showed",
+        "appview_order",
+        "disableLogoutConfirm",
+        "enableDesktopNotification",
+        "enableTaskbarThumbnail",
+        "new_app_list",
+        "rememberWindowState",
+        "valid_appview_order",
+        "wallpaper"
+      ]
+    },
+    "PackageTask": {
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "tasks"
+      ]
+    },
+    "SYNO.Finder.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.Finder.Spotlight.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "pageX",
+            "pageY"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.ACEEditor.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.ActiveInsight.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.AdminCenter.Application": {
+      "type": "object",
+      "properties": {
+        "activeScreen": {
+          "type": "string"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "maximized",
+            "pageX",
+            "pageY",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "activeScreen",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.App.FileStation3.Instance": {
+      "type": "object",
+      "properties": {
+        "activeViewItemId": {
+          "type": "string"
+        },
+        "gridstates": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "hidden": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "monitor_panel": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        },
+        "treePanelWidth": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "activeViewItemId",
+        "gridstates",
+        "monitor_panel",
+        "restoreSizePos",
+        "treePanelWidth"
+      ]
+    },
+    "SYNO.SDS.App.PersonalSettings.Instance": {
+      "type": "object",
+      "properties": {
+        "enableautooverwrite": {
+          "type": "boolean"
+        },
+        "enablesmartmvcp": {
+          "type": "boolean"
+        },
+        "isfirstdd": {
+          "type": "boolean"
+        },
+        "now_user_sees_active_insight_toast": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "pageX",
+            "pageY"
+          ]
+        },
+        "search_count": {
+          "type": "integer"
+        },
+        "smartmvcpoverwrite": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "enableautooverwrite",
+        "enablesmartmvcp",
+        "isfirstdd",
+        "now_user_sees_active_insight_toast",
+        "restoreSizePos",
+        "search_count",
+        "smartmvcpoverwrite"
+      ]
+    },
+    "SYNO.SDS.App.PromotionApp": {
+      "type": "object",
+      "properties": {
+        "last_promote_patch": {
+          "type": "object",
+          "properties": {
+            "buildnumber": {
+              "type": "string"
+            },
+            "major": {
+              "type": "string"
+            },
+            "micro": {
+              "type": "string"
+            },
+            "minor": {
+              "type": "string"
+            },
+            "nano": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "buildnumber",
+            "major",
+            "micro",
+            "minor",
+            "nano"
+          ]
+        },
+        "show_quick_tour_tray": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "last_promote_patch",
+        "show_quick_tour_tray"
+      ]
+    },
+    "SYNO.SDS.App.ResetAdminApp.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.App.WelcomeApp.Instance": {
+      "type": "object",
+      "properties": {
+        "welcome_dsm50_hide": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "welcome_dsm50_hide"
+      ]
+    },
+    "SYNO.SDS.App.WelcomeTip.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "x",
+            "y"
+          ]
+        },
+        "tip_dsm50_hide": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "restoreSizePos",
+        "tip_dsm50_hide"
+      ]
+    },
+    "SYNO.SDS.AudioPlayer.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.AudioStation.Application": {
+      "type": "object",
+      "properties": {
+        "ActivedViewPanel": {
+          "type": "string"
+        },
+        "AlbumColumnSetting": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "width": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "BasicColumnSetting": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "width": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "CurrentSelectPlayer": {
+          "type": "string"
+        },
+        "MusicColumnSetting": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "width": {
+                    "type": "number"
+                  },
+                  "hidden": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "PlayingQueueColumnSetting": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "hidden": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "PlaylistColumnSetting": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "SearchAllColumnSetting": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": [
+                      "integer",
+                      "string"
+                    ]
+                  },
+                  "width": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "StreamingVolume": {
+          "type": "integer"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "ActivedViewPanel",
+        "AlbumColumnSetting",
+        "BasicColumnSetting",
+        "CurrentSelectPlayer",
+        "MusicColumnSetting",
+        "PlayingQueueColumnSetting",
+        "PlaylistColumnSetting",
+        "SearchAllColumnSetting",
+        "StreamingVolume",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.Backup.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.Backup.Client.Explore.AppInstance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.CSTN.Explore.Instance": {
+      "type": "object",
+      "properties": {
+        "tree_panel_width": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tree_panel_width"
+      ]
+    },
+    "SYNO.SDS.CSTN.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.DHCP.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.DSCloudSync.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.DSMNotify.Tray": {
+      "type": "object",
+      "properties": {
+        "lastRead": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "lastRead"
+      ]
+    },
+    "SYNO.SDS.Docker.Application": {
+      "type": "object",
+      "properties": {
+        "WelcomDialog-welcome": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "WelcomDialog-welcome",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.Docker.ContainerDetail.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.DownloadStation.Application": {
+      "type": "object",
+      "properties": {
+        "btsearchplugins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "enable": {
+                "type": "boolean"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "enable",
+              "name"
+            ]
+          }
+        },
+        "dlm_queue_grid_state_common": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            }
+          },
+          "required": [
+            "columns"
+          ]
+        },
+        "dlm_queue_grid_state_default": {
+          "type": "object",
+          "properties": {
+            "hiddenColumns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "hiddenColumns",
+            "sort"
+          ]
+        },
+        "dlm_queue_grid_state_downloading": {
+          "type": "object",
+          "properties": {
+            "hiddenColumns": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "hiddenColumns"
+          ]
+        },
+        "dlmsearchgridstates": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "id",
+                  "width"
+                ]
+              }
+            },
+            "sort": {
+              "type": "object",
+              "properties": {
+                "direction": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "direction",
+                "field"
+              ]
+            }
+          },
+          "required": [
+            "columns",
+            "sort"
+          ]
+        },
+        "downloadinfo": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        },
+        "showFileInfo": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "btsearchplugins",
+        "dlm_queue_grid_state_common",
+        "dlm_queue_grid_state_default",
+        "dlm_queue_grid_state_downloading",
+        "dlmsearchgridstates",
+        "downloadinfo",
+        "restoreSizePos",
+        "showFileInfo"
+      ]
+    },
+    "SYNO.SDS.EzInternet.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "pageX",
+            "pageY"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.HelpBrowser.Application": {
+      "type": "object",
+      "properties": {
+        "hasBeenLaunched": {
+          "type": "boolean"
+        },
+        "launchSetting": {
+          "type": "boolean"
+        },
+        "nolaunch": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "left",
+            "maximized",
+            "top",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "hasBeenLaunched",
+        "launchSetting",
+        "nolaunch",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.JAVA8.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "pageX",
+            "pageY"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.LogCenter.BuiltIn": {
+      "type": "object",
+      "properties": {
+        "nolaunch": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "maximized",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "nolaunch",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.LogCenter.Instance": {
+      "type": "object",
+      "properties": {
+        "nolaunch": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "nolaunch",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.MARIADB10.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "pageX",
+            "pageY"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.MediaServer.AppInstance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.OAuthService.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.PkgManApp.Instance": {
+      "type": "object",
+      "properties": {
+        "agreed_beta": {
+          "type": "boolean"
+        },
+        "agreed_term_version": {
+          "type": "string"
+        },
+        "agreed_top_hash_key": {
+          "type": "integer"
+        },
+        "agreed_tos_hash": {
+          "type": "string"
+        },
+        "agreed_tos_hash_key": {
+          "type": "integer"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        },
+        "termofservice": {
+          "type": "boolean"
+        },
+        "termofservice_4_2": {
+          "type": "boolean"
+        },
+        "tos_hash": {
+          "type": "string"
+        },
+        "tos_hash_timestamp": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "agreed_beta",
+        "agreed_term_version",
+        "agreed_top_hash_key",
+        "agreed_tos_hash",
+        "agreed_tos_hash_key",
+        "restoreSizePos",
+        "termofservice",
+        "termofservice_4_2",
+        "tos_hash",
+        "tos_hash_timestamp"
+      ]
+    },
+    "SYNO.SDS.ResourceMonitor.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "maximized",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.SecurityScan.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.StorageAnalyzer.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.StorageManager.Instance": {
+      "type": "object",
+      "properties": {
+        "disk_grid_hidden": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "maximized",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "disk_grid_hidden",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.StorageReport.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.SupportForm.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.SynologyApplicationService": {
+      "type": "object",
+      "properties": {
+        "app_order": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "app_order"
+      ]
+    },
+    "SYNO.SDS.UDC.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "maximized",
+            "x",
+            "y"
+          ]
+        },
+        "smartupdate_notified": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "restoreSizePos",
+        "smartupdate_notified"
+      ]
+    },
+    "SYNO.SDS.USBCopy.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.VideoStation.AppInstance": {
+      "type": "object",
+      "properties": {
+        "default_library": {
+          "type": "string"
+        },
+        "hide_vs2_wizard": {
+          "type": "boolean"
+        },
+        "hide_welcome_tip": {
+          "type": "boolean"
+        },
+        "home_videosortstate": {
+          "type": "object",
+          "properties": {
+            "sort_by": {
+              "type": "string"
+            },
+            "sort_direction": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sort_by",
+            "sort_direction"
+          ]
+        },
+        "moviesortstate": {
+          "type": "object",
+          "properties": {
+            "sort_by": {
+              "type": "string"
+            },
+            "sort_direction": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sort_by",
+            "sort_direction"
+          ]
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "width",
+            "x",
+            "y"
+          ]
+        },
+        "tvshowsortstate": {
+          "type": "object",
+          "properties": {
+            "sort_by": {
+              "type": "string"
+            },
+            "sort_direction": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sort_by",
+            "sort_direction"
+          ]
+        }
+      },
+      "required": [
+        "default_library",
+        "hide_vs2_wizard",
+        "hide_welcome_tip",
+        "home_videosortstate",
+        "moviesortstate",
+        "restoreSizePos",
+        "tvshowsortstate"
+      ]
+    },
+    "SYNO.SDS.WebStation.Application": {
+      "type": "object",
+      "properties": {
+        "nolaunch": {
+          "type": "boolean"
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "left",
+            "maximized",
+            "top",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "nolaunch",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS._ThirdParty.App.ipkgui": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS._Widget.Instance": {
+      "type": "object",
+      "properties": {
+        "modulelist": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "restoreParams": {
+          "type": "object",
+          "properties": {
+            "windowState": {
+              "type": "object",
+              "properties": {
+                "docked": {
+                  "type": "integer"
+                },
+                "widgets": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "mediumSize": {
+                        "type": "boolean"
+                      },
+                      "minimized": {
+                        "type": "boolean"
+                      },
+                      "widgetClassName": {
+                        "type": "string"
+                      },
+                      "widgetParams": {
+                        "type": "object",
+                        "properties": {
+                          "networkLastSelectedId": {
+                            "type": "string"
+                          },
+                          "networkInterfaceIdx": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "mediumSize",
+                      "minimized",
+                      "widgetClassName",
+                      "widgetParams"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "docked",
+                "widgets"
+              ]
+            }
+          },
+          "required": [
+            "windowState"
+          ]
+        },
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "left",
+            "maximized",
+            "top",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "modulelist",
+        "restoreParams",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.TextEditor.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.VideoController2.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    }
+  },
+  "required": [
+    "AudioPlayer",
+    "BackgroundTask",
+    "Desktop",
+    "PackageTask",
+    "SYNO.Finder.Application",
+    "SYNO.Finder.Spotlight.Application",
+    "SYNO.SDS.ACEEditor.Application",
+    "SYNO.SDS.ActiveInsight.Application",
+    "SYNO.SDS.AdminCenter.Application",
+    "SYNO.SDS.App.FileStation3.Instance",
+    "SYNO.SDS.App.PersonalSettings.Instance",
+    "SYNO.SDS.App.PromotionApp",
+    "SYNO.SDS.App.ResetAdminApp.Instance",
+    "SYNO.SDS.App.WelcomeApp.Instance",
+    "SYNO.SDS.App.WelcomeTip.Instance",
+    "SYNO.SDS.AudioPlayer.Application",
+    "SYNO.SDS.AudioStation.Application",
+    "SYNO.SDS.Backup.Application",
+    "SYNO.SDS.Backup.Client.Explore.AppInstance",
+    "SYNO.SDS.CSTN.Explore.Instance",
+    "SYNO.SDS.CSTN.Instance",
+    "SYNO.SDS.DHCP.Instance",
+    "SYNO.SDS.DSCloudSync.Instance",
+    "SYNO.SDS.DSMNotify.Tray",
+    "SYNO.SDS.Docker.Application",
+    "SYNO.SDS.Docker.ContainerDetail.Instance",
+    "SYNO.SDS.DownloadStation.Application",
+    "SYNO.SDS.EzInternet.Instance",
+    "SYNO.SDS.HelpBrowser.Application",
+    "SYNO.SDS.JAVA8.Instance",
+    "SYNO.SDS.LogCenter.BuiltIn",
+    "SYNO.SDS.LogCenter.Instance",
+    "SYNO.SDS.MARIADB10.Instance",
+    "SYNO.SDS.MediaServer.AppInstance",
+    "SYNO.SDS.OAuthService.Instance",
+    "SYNO.SDS.PkgManApp.Instance",
+    "SYNO.SDS.ResourceMonitor.Instance",
+    "SYNO.SDS.SecurityScan.Instance",
+    "SYNO.SDS.StorageAnalyzer.Application",
+    "SYNO.SDS.StorageManager.Instance",
+    "SYNO.SDS.StorageReport.Application",
+    "SYNO.SDS.SupportForm.Application",
+    "SYNO.SDS.SynologyApplicationService",
+    "SYNO.SDS.UDC.Instance",
+    "SYNO.SDS.USBCopy.Application",
+    "SYNO.SDS.VideoStation.AppInstance",
+    "SYNO.SDS.WebStation.Application",
+    "SYNO.SDS._ThirdParty.App.ipkgui",
+    "SYNO.SDS._Widget.Instance",
+    "SYNO.TextEditor.Application",
+    "SYNO.VideoController2.Application"
+  ]
+}

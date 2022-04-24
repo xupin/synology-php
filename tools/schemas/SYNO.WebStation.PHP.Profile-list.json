@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "backend": {
+            "type": "integer"
+          },
+          "custom_open_basedir": {
+            "type": "boolean"
+          },
+          "default_profile": {
+            "type": "null"
+          },
+          "display_errors": {
+            "type": "boolean"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "enable_cache": {
+            "type": "boolean"
+          },
+          "enable_xdebug": {
+            "type": "boolean"
+          },
+          "error": {
+            "type": "integer"
+          },
+          "extensions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fpm_settings": {
+            "type": "object",
+            "properties": {
+              "max_children": {
+                "type": "integer"
+              },
+              "max_spare_servers": {
+                "type": "integer"
+              },
+              "min_spare_servers": {
+                "type": "integer"
+              },
+              "mode": {
+                "type": "string"
+              },
+              "start_servers": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "max_children",
+              "max_spare_servers",
+              "min_spare_servers",
+              "mode",
+              "start_servers"
+            ]
+          },
+          "group": {
+            "type": "string"
+          },
+          "open_basedir": {
+            "type": "string"
+          },
+          "php_settings": {
+            "type": "object",
+            "properties": {
+              "mysqli.default_socket": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "mysqli.default_socket"
+            ]
+          },
+          "profile_desc": {
+            "type": "string"
+          },
+          "profile_name": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "backend",
+          "custom_open_basedir",
+          "default_profile",
+          "display_errors",
+          "enable",
+          "enable_cache",
+          "enable_xdebug",
+          "error",
+          "extensions",
+          "fpm_settings",
+          "group",
+          "open_basedir",
+          "php_settings",
+          "profile_desc",
+          "profile_name",
+          "user",
+          "uuid"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "profiles",
+    "total"
+  ]
+}

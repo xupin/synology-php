@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default-level": {
+      "type": "integer"
+    },
+    "services": {
+      "type": "object",
+      "properties": {
+        "dsm": {
+          "type": "object",
+          "properties": {
+            "current-level": {
+              "type": "integer"
+            },
+            "display-name": {
+              "type": "string"
+            },
+            "display-name-i18n": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "current-level",
+            "display-name",
+            "display-name-i18n"
+          ]
+        },
+        "smbftpd": {
+          "type": "object",
+          "properties": {
+            "current-level": {
+              "type": "integer"
+            },
+            "display-name": {
+              "type": "string"
+            },
+            "display-name-i18n": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "current-level",
+            "display-name",
+            "display-name-i18n"
+          ]
+        }
+      },
+      "required": [
+        "dsm",
+        "smbftpd"
+      ]
+    }
+  },
+  "required": [
+    "default-level",
+    "services"
+  ]
+}

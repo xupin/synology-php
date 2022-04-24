@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "mobile_compatibility": {
+      "type": "object",
+      "properties": {
+        "major": {
+          "type": "integer"
+        },
+        "minor": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "major",
+        "minor"
+      ]
+    }
+  },
+  "required": [
+    "mobile_compatibility"
+  ]
+}

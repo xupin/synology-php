@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_history": {
+      "type": "boolean"
+    },
+    "max_fragment_num": {
+      "type": "integer"
+    },
+    "max_history_num": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enable_history",
+    "max_fragment_num",
+    "max_history_num"
+  ]
+}

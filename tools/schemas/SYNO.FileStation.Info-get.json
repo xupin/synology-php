@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_list_usergrp": {
+      "type": "boolean"
+    },
+    "enable_send_email_attachment": {
+      "type": "boolean"
+    },
+    "enable_view_google": {
+      "type": "boolean"
+    },
+    "enable_view_microsoft": {
+      "type": "boolean"
+    },
+    "hostname": {
+      "type": "string"
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "gid"
+        ]
+      }
+    },
+    "support_file_request": {
+      "type": "boolean"
+    },
+    "support_sharing": {
+      "type": "boolean"
+    },
+    "support_vfs": {
+      "type": "boolean"
+    },
+    "support_virtual": {
+      "type": "object",
+      "properties": {
+        "enable_iso_mount": {
+          "type": "boolean"
+        },
+        "enable_remote_mount": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "enable_iso_mount",
+        "enable_remote_mount"
+      ]
+    },
+    "support_virtual_protocol": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "system_codepage": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enable_list_usergrp",
+    "enable_send_email_attachment",
+    "enable_view_google",
+    "enable_view_microsoft",
+    "hostname",
+    "is_manager",
+    "items",
+    "support_file_request",
+    "support_sharing",
+    "support_vfs",
+    "support_virtual",
+    "support_virtual_protocol",
+    "system_codepage",
+    "uid"
+  ]
+}

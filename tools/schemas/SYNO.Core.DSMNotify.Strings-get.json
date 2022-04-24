@@ -1,0 +1,8528 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "ActiveInsight_data_upload_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ActiveInsight_data_upload_failed_system_busy": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ActiveInsight_event_upload_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ActiveInsight_network_error": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ActiveInsight_reached_register_limit": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ActiveInsight_tmp_full": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyFinish": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyGetSuggestion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyLoadFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyLoadFailNoSuggestion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyLoadFailNotEnoughMem": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyTerminatedAbnormal": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyTerminatedAbnormalNoSuggestion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyTerminatedVolCacheAbnormal": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AdvisorNotifyTerminatedVolCacheAbnormalNoSuggestion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AutoBlockAdd": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "AutoBlockDatabaseRulesWarning": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupStatisticsNotify": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskAutoResumeFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskCanceled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskFinishedSingleVersion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskPartial": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BackupTaskSuspended": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "BtrfsVolumeMetadataLow": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "CMSClientConnectFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "CMSClientDetachSuccess": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "CMSClientJoinSuccess": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DDNSFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DLComplete": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMAutoUpdateCanceled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMAutoUpdateFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMAutoUpdateNotifyNewImportantVersion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMAutoUpdateNotifyNewVersion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMAutoUpdateReady": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMAutoUpdateShutdownStart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMSupportFormCustomFailure": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMSupportFormCustomMessage": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMUpdateAvailable": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DSMUpdateDownloadFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DataVolumeLowCapacity": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DeviceEjectedImproperly": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskCompatibilityIncompatible": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskCompatibilityUnverified": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskConfigCheckLifeWarn": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskConfigCheckWarn": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskErrorTimeout": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskKernelErrIcrc": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskKernelErrIdnf": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskKernelErrRetry": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskKernelErrUnc": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskStatusBadBlockWarn": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskStatusCritical": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskStatusFailing": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskStatusLowPerformance": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskStatusUnc": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskStatusWarning": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskTemperatureAbnormal": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DiskTemperatureNormal": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DownloadCaptchaNeeded": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DownloadCompleted": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DownloadFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DriveInterfaceIncompatible": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DriveSlotDisabled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "DsmProtectionCheckFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "EncModuleInstallFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "EncModuleInstallResume": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "FWUpgradeNotificationSummary": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "FWUpgradeUpdateDB": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "FWUpgradeUpdateDSM": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "FWUpgradeUpdateFirmware": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ForgetPassword": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ForgetPasswordAdmin": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "FwDisableAfterRestore": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HDEcc": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HDEccRaidDegraded": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareDiskPlugout": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareRemoveForHCL": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareRepairDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareRepairFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareRepairNoProtect": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareRepairPartialFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareRepairStart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareReplaceDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareReplaceFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareReplaceStart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "HotSpareUnavailable": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ImproperShutdown": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ImproperShutdownFrequently": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "InternalFanResume": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "InternalFanStop": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "LocalLUNBkpError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "LocalLUNBkpFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "LocalLUNRecoverError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "LocalLUNRecoverFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "LogCenterServiceFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "MemoryIllegal": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "MemorySingleChannel": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "MetadataCacheSpaceFullWarning": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "MyDSMigrated": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "NetLUNBkpError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "NetLUNBkpOK": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "NetLUNRecoverError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "NetLUNRecoverFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OOM": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OTP_emergency_mail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OTP_emergency_mail_warning": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OverheatShutdownDisk": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OverheatShutdownGPU": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OverheatShutdownNic": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OverheatShutdownSas": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OverheatShutdownSystem": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "OverheatSystemAlert": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PF_GwChangedPFDisabled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PF_GwChangedPFEnabled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PF_ReApplyError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PKGHasUpgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PKGReqUpgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PKGUpgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PasswordExpireNotification": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_Service_CPU": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_Service_Disk": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_Service_Memory": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_System_CPU": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_System_CPU_Avg_1": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_System_CPU_Avg_15": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_System_CPU_Avg_5": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_System_Memory": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_Volume": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_Volume_Memory": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_iSCSI_Disk": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PerfEvent_iSCSI_Network": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PermissionReportExportCancel": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PermissionReportExportFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PermissionReportExportSuccess": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_AutoUpdateNonSupport": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_CodesignDBCorrupted": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_DepStartFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_DownloadPkgFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_FailStartDsmVersion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_InstallPkgFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_ConflictPkgs": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_DependPkgs": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_DependUninstUnstart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_DependUnstart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_DowngradeVersion": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_NotSupportPlatform": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_PkgOsNotSupport": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_PortConflict": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_RequireNewerVer": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_RequireOlderVer": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_RequireService": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_UpgradeDepPkgs": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_OpFail_VersionLessThanlimit": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_PreRelease_Aggreement_Updated": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_Privacy_Statement_Updated": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_RenameConflictGroup": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_RenameConflictUser": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_RepairIncompatibleAfterOSUpgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_RepairIncompatibleAfterOSUpgradePlural": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_StartPkgFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_StartStoppedByDepLimit": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_StopPkgFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_TOS_Updated": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_Udc_Policy_Updated": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_UninstallPkgFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_UpgradePkg": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_UpgradePkgFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_UpgradePkgImportant": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_UpgradePkgPlural": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "PkgMgr_UpgradedPkg": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidF1ReplaceFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidGroupCrashed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidGroupDegraded": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidGroupSyncDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidGroupVolumeBadSector": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidGroupiScsiBadSector": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidSystemVolumeCrashed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RaidSystemVolumeDegrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RebootForDiskDBUpdate": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RemainLifeWarn": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RemovePushMail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RestoreTaskCanceled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RestoreTaskFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RestoreTaskFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "RestoreTaskPartial": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SASExpFWNeedUpdate": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SASExpFWRollbackError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SASExpFWUpdateFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SASHostFrmNeedUpgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SFPModuleUnsupported": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SSDBundleRemainLifeWarn": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_DB_CORRUPT": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_EPS_EXCEED": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_KEYWORD_MATCH": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_LogSend": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_SEV_EXCEED": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_ShareEncMount": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_ShareEncUnmount": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_ShareRemove": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_ShareRename": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SYNOSYSLOG_VOL_FULL": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SchedulePoweroffFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ScsiTarget_LUN_adjust_stripe_cache_size": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ScsiTarget_LUN_migration_out_of_space": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecureEraseDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecureEraseFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityAdvisorAbnormalLogin": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityAdvisorAbnormalLoginNoAgent": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityAdvisorAbnormalLoginNoLink": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityAdvisorAbnormalLoginNoLinkNoAgent": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityAdvisorAbnormalLoginSimple": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityAdvisorReport": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityScanAlarm": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityScanDSMOutOfDate": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityScanDSMPackageOutOfDate": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityScanDanger": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SecurityScanPackageOutOfDate": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ShareMoveError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ShareMoveSuccess": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ShareSyncError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ShareSyncSuccess": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SmartBlockUntrustLock": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SmartQuickTestSchedulerNote": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SpaceDiskReservationFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAssembePoolFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAutoRepairCacheDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAutoRepairCacheFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAutoRepairCacheStart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAutoRepairDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAutoRepairFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrAutoRepairStart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrChangeRaidTypeDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrChangeRaidTypeFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrConvertMultiplePoolDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrConvertMultiplePoolFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrCreateCancelFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrCreatePoolFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrCreateVolumeFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrDeleteSpaceDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrDeleteSpaceFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrDetectedDiskNotSupported": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrDetectedDiskNotSupportedGeneral": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrDetectedPoolMissing": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandPoolDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandPoolFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandUnfinishedSHRDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandUnfinishedSHRFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandVolumeDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandVolumeFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrExpandVolumeVSpaceFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrFsDefragDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrFsDefragFailNoSpace": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrManualScrubFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrMissingPoolAssembleFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrMissingPoolCanAssembleNotification": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrMountSSDROCacheFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrMountSSDRWCacheFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrOptimizePoolDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPluginDriveDetectedDuringBootup": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPluginDriveDetectedDuringBootupPassive": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPluginDriveDetectedNotification": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPluginDriveDetectedNotificationPassive": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPoolAddDiskDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPoolAddDiskFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPoolDetectedNotification": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPoolExpandUnallocSizeDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrPoolExpandUnallocSizeFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrRepairCacheDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrRepairCacheFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrRepairPoolDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrRepairPoolFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrReplacePoolDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrReplacePoolFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScheScrubFailed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScrubPoolDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScrubPoolStart": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScrubbingAbnormalShutdownNotify": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScrubbingPerformanceDegraded": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScrubbingSchePoolCrashed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrScrubbingSchePoolDegrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrUnmountSSDCacheFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StgMgrVolumeCrashedFSReadOnly": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StrMgrPoolDeactivateDone": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "StrMgrPoolDeactivateFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SynoReport": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SynoReportCustomFailure": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SynoReportFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "SystemConfigBackupFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "TPLUNReachHardLimitPW": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "TPLUNReachLowHardLimitPW": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "TPLUNReachSoftLimit": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "TaskSchedulerResult": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "TestMail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "TooManyDeletedSubvolQueue": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UPSConnected": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UPSDisconnect": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UPSOnAC": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UPSOnBattery": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UPSPowerFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBCOPYDisconnect": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBCOPYError": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBCOPYFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBCOPYNospace": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBDiskFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBDiskFull": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "USBPartitionFull": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UserChangePassword": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "UserWelcome": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "VolumeCrashedGeneral": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "VolumeInodeFull": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "VpncReconnectFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "audiostation_not_enough_space_to_upgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "audiostation_upgrade_fail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "beep_sas_link_fail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "btrfs_repair_drop_log_tree": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_c2_space_full": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_c2_space_low": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_connect_c2": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_disconnect_c2": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_exit_beta_plan": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_pin_failed_by_volume_full": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_transform_cancel_fail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_transform_cancel_success": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_transform_invalid_files": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_transform_success": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_unauth_c2": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_volume_full": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "c2share_volume_low_space": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "cache_load_fail_not_enough_memory": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "certificate_broken": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "current_ip_changed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ddsm_remove_by_share_delete": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "disk_health_monthly_report": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "disk_info_log_import_done_note": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_container_export_complete": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_container_export_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_container_unexpected_exit": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_image_export_complete": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_image_export_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_image_pull_complete": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "docker_image_pull_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "eSynoscheduler_complete_task": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "epg_changed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "exp_fw_update_finish_notification": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ext4_fs_err": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "external_size_limitation": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "file_cksum_err": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_automount_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_compress_completed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_compress_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_copy_completed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_copy_completed_skip_all": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_copy_completed_skip_some": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_copy_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_delete_completed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_delete_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_email_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_email_success": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_extract_completed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_extract_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_filerequest": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_filesharing": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_move_completed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_move_completed_skip_all": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_move_completed_skip_some": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "filestation_notify_move_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "googleoauth_mail_refresh_error": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "iSCSIDefragFinished": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "iSCSIDefragVolumeFull": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "iSCSILunScheduleSnapshotFail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "iSCSILunScheduleSnapshotFailByMaxSnapshotCount": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "iSCSILunScheduleSnapshotFailByOutOfFreeSpace": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "index_db_corrupt": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "index_no_space": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "ip_conflict": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "lack_of_memory": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "mediaserver_not_enough_space_to_upgrade": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "mediaserver_not_enough_space_to_upgrade_without_media_index_package": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "memory_cecc_event_notify": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "memory_layout_memory_detect_incompatible": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "memory_layout_memory_detect_unauthentic": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "memory_uecc_event_notify": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "myds_deletion_logout": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "myds_force_logout": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "need_metadata_plugin": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "need_reindex_after_upgrade60": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "need_reindex_improved": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_broken_task": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_copy_canceled": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_copy_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_copy_partial": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_copy_success": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_email_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_email_success": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_version_empty": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "notify_wallpaper_missing": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "perftest_interrupt_by_swtichover": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "pgsql_startup_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "pgsql_upgrade_done": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "pgsql_upgrade_fail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "pgsql_upgrade_timeout": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "rclocal_malware": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "rcpower_disable": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "remove_disk_from_schedule": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "remove_non_existent_disk_from_schedule": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "smart_quick_test_scheduler_notification": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "smarttest_interrupt_by_swtichover": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "synocodeccenter_codec_activation_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "synocodeccenter_codec_activation_need_update": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "system_partition_error": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "system_web_server_failed": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "taskscheduler_notify_user_share_volume_error": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "usage_detail_notify_internal_error": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "usage_detail_notify_out_of_space": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "usb_mount_fail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "vdsm_software_spec_not_match": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "volume_disk_bad_sector": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "volume_disk_power_abnormal": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "volume_freesize_move_pgsql": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "volume_fsck_skip_once": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "volume_transfer_rw_notify_fail": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "volume_transfer_rw_notify_success": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    },
+    "wedjat_notify_piracy": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "level",
+        "msg",
+        "title"
+      ]
+    }
+  },
+  "required": [
+    "ActiveInsight_data_upload_failed",
+    "ActiveInsight_data_upload_failed_system_busy",
+    "ActiveInsight_event_upload_failed",
+    "ActiveInsight_network_error",
+    "ActiveInsight_reached_register_limit",
+    "ActiveInsight_tmp_full",
+    "AdvisorNotifyFinish",
+    "AdvisorNotifyGetSuggestion",
+    "AdvisorNotifyLoadFail",
+    "AdvisorNotifyLoadFailNoSuggestion",
+    "AdvisorNotifyLoadFailNotEnoughMem",
+    "AdvisorNotifyTerminatedAbnormal",
+    "AdvisorNotifyTerminatedAbnormalNoSuggestion",
+    "AdvisorNotifyTerminatedVolCacheAbnormal",
+    "AdvisorNotifyTerminatedVolCacheAbnormalNoSuggestion",
+    "AutoBlockAdd",
+    "AutoBlockDatabaseRulesWarning",
+    "BackupStatisticsNotify",
+    "BackupTaskAutoResumeFinished",
+    "BackupTaskCanceled",
+    "BackupTaskFailed",
+    "BackupTaskFinished",
+    "BackupTaskFinishedSingleVersion",
+    "BackupTaskPartial",
+    "BackupTaskSuspended",
+    "BtrfsVolumeMetadataLow",
+    "CMSClientConnectFailed",
+    "CMSClientDetachSuccess",
+    "CMSClientJoinSuccess",
+    "DDNSFail",
+    "DLComplete",
+    "DSMAutoUpdateCanceled",
+    "DSMAutoUpdateFailed",
+    "DSMAutoUpdateNotifyNewImportantVersion",
+    "DSMAutoUpdateNotifyNewVersion",
+    "DSMAutoUpdateReady",
+    "DSMAutoUpdateShutdownStart",
+    "DSMSupportFormCustomFailure",
+    "DSMSupportFormCustomMessage",
+    "DSMUpdateAvailable",
+    "DSMUpdateDownloadFailed",
+    "DataVolumeLowCapacity",
+    "DeviceEjectedImproperly",
+    "DiskCompatibilityIncompatible",
+    "DiskCompatibilityUnverified",
+    "DiskConfigCheckLifeWarn",
+    "DiskConfigCheckWarn",
+    "DiskErrorTimeout",
+    "DiskKernelErrIcrc",
+    "DiskKernelErrIdnf",
+    "DiskKernelErrRetry",
+    "DiskKernelErrUnc",
+    "DiskStatusBadBlockWarn",
+    "DiskStatusCritical",
+    "DiskStatusFailing",
+    "DiskStatusLowPerformance",
+    "DiskStatusUnc",
+    "DiskStatusWarning",
+    "DiskTemperatureAbnormal",
+    "DiskTemperatureNormal",
+    "DownloadCaptchaNeeded",
+    "DownloadCompleted",
+    "DownloadFailed",
+    "DriveInterfaceIncompatible",
+    "DriveSlotDisabled",
+    "DsmProtectionCheckFailed",
+    "EncModuleInstallFail",
+    "EncModuleInstallResume",
+    "FWUpgradeNotificationSummary",
+    "FWUpgradeUpdateDB",
+    "FWUpgradeUpdateDSM",
+    "FWUpgradeUpdateFirmware",
+    "ForgetPassword",
+    "ForgetPasswordAdmin",
+    "FwDisableAfterRestore",
+    "HDEcc",
+    "HDEccRaidDegraded",
+    "HotSpareDiskPlugout",
+    "HotSpareRemoveForHCL",
+    "HotSpareRepairDone",
+    "HotSpareRepairFailed",
+    "HotSpareRepairNoProtect",
+    "HotSpareRepairPartialFailed",
+    "HotSpareRepairStart",
+    "HotSpareReplaceDone",
+    "HotSpareReplaceFailed",
+    "HotSpareReplaceStart",
+    "HotSpareUnavailable",
+    "ImproperShutdown",
+    "ImproperShutdownFrequently",
+    "InternalFanResume",
+    "InternalFanStop",
+    "LocalLUNBkpError",
+    "LocalLUNBkpFinished",
+    "LocalLUNRecoverError",
+    "LocalLUNRecoverFinished",
+    "LogCenterServiceFailed",
+    "MemoryIllegal",
+    "MemorySingleChannel",
+    "MetadataCacheSpaceFullWarning",
+    "MyDSMigrated",
+    "NetLUNBkpError",
+    "NetLUNBkpOK",
+    "NetLUNRecoverError",
+    "NetLUNRecoverFinished",
+    "OOM",
+    "OTP_emergency_mail",
+    "OTP_emergency_mail_warning",
+    "OverheatShutdownDisk",
+    "OverheatShutdownGPU",
+    "OverheatShutdownNic",
+    "OverheatShutdownSas",
+    "OverheatShutdownSystem",
+    "OverheatSystemAlert",
+    "PF_GwChangedPFDisabled",
+    "PF_GwChangedPFEnabled",
+    "PF_ReApplyError",
+    "PKGHasUpgrade",
+    "PKGReqUpgrade",
+    "PKGUpgrade",
+    "PasswordExpireNotification",
+    "PerfEvent_Service_CPU",
+    "PerfEvent_Service_Disk",
+    "PerfEvent_Service_Memory",
+    "PerfEvent_System_CPU",
+    "PerfEvent_System_CPU_Avg_1",
+    "PerfEvent_System_CPU_Avg_15",
+    "PerfEvent_System_CPU_Avg_5",
+    "PerfEvent_System_Memory",
+    "PerfEvent_Volume",
+    "PerfEvent_Volume_Memory",
+    "PerfEvent_iSCSI_Disk",
+    "PerfEvent_iSCSI_Network",
+    "PermissionReportExportCancel",
+    "PermissionReportExportFail",
+    "PermissionReportExportSuccess",
+    "PkgMgr_AutoUpdateNonSupport",
+    "PkgMgr_CodesignDBCorrupted",
+    "PkgMgr_DepStartFailed",
+    "PkgMgr_DownloadPkgFail",
+    "PkgMgr_FailStartDsmVersion",
+    "PkgMgr_InstallPkgFail",
+    "PkgMgr_OpFail_ConflictPkgs",
+    "PkgMgr_OpFail_DependPkgs",
+    "PkgMgr_OpFail_DependUninstUnstart",
+    "PkgMgr_OpFail_DependUnstart",
+    "PkgMgr_OpFail_DowngradeVersion",
+    "PkgMgr_OpFail_NotSupportPlatform",
+    "PkgMgr_OpFail_PkgOsNotSupport",
+    "PkgMgr_OpFail_PortConflict",
+    "PkgMgr_OpFail_RequireNewerVer",
+    "PkgMgr_OpFail_RequireOlderVer",
+    "PkgMgr_OpFail_RequireService",
+    "PkgMgr_OpFail_UpgradeDepPkgs",
+    "PkgMgr_OpFail_VersionLessThanlimit",
+    "PkgMgr_PreRelease_Aggreement_Updated",
+    "PkgMgr_Privacy_Statement_Updated",
+    "PkgMgr_RenameConflictGroup",
+    "PkgMgr_RenameConflictUser",
+    "PkgMgr_RepairIncompatibleAfterOSUpgrade",
+    "PkgMgr_RepairIncompatibleAfterOSUpgradePlural",
+    "PkgMgr_StartPkgFail",
+    "PkgMgr_StartStoppedByDepLimit",
+    "PkgMgr_StopPkgFail",
+    "PkgMgr_TOS_Updated",
+    "PkgMgr_Udc_Policy_Updated",
+    "PkgMgr_UninstallPkgFail",
+    "PkgMgr_UpgradePkg",
+    "PkgMgr_UpgradePkgFail",
+    "PkgMgr_UpgradePkgImportant",
+    "PkgMgr_UpgradePkgPlural",
+    "PkgMgr_UpgradedPkg",
+    "RaidF1ReplaceFailed",
+    "RaidGroupCrashed",
+    "RaidGroupDegraded",
+    "RaidGroupSyncDone",
+    "RaidGroupVolumeBadSector",
+    "RaidGroupiScsiBadSector",
+    "RaidSystemVolumeCrashed",
+    "RaidSystemVolumeDegrade",
+    "RebootForDiskDBUpdate",
+    "RemainLifeWarn",
+    "RemovePushMail",
+    "RestoreTaskCanceled",
+    "RestoreTaskFailed",
+    "RestoreTaskFinished",
+    "RestoreTaskPartial",
+    "SASExpFWNeedUpdate",
+    "SASExpFWRollbackError",
+    "SASExpFWUpdateFail",
+    "SASHostFrmNeedUpgrade",
+    "SFPModuleUnsupported",
+    "SSDBundleRemainLifeWarn",
+    "SYNOSYSLOG_DB_CORRUPT",
+    "SYNOSYSLOG_EPS_EXCEED",
+    "SYNOSYSLOG_KEYWORD_MATCH",
+    "SYNOSYSLOG_LogSend",
+    "SYNOSYSLOG_SEV_EXCEED",
+    "SYNOSYSLOG_ShareEncMount",
+    "SYNOSYSLOG_ShareEncUnmount",
+    "SYNOSYSLOG_ShareRemove",
+    "SYNOSYSLOG_ShareRename",
+    "SYNOSYSLOG_VOL_FULL",
+    "SchedulePoweroffFail",
+    "ScsiTarget_LUN_adjust_stripe_cache_size",
+    "ScsiTarget_LUN_migration_out_of_space",
+    "SecureEraseDone",
+    "SecureEraseFail",
+    "SecurityAdvisorAbnormalLogin",
+    "SecurityAdvisorAbnormalLoginNoAgent",
+    "SecurityAdvisorAbnormalLoginNoLink",
+    "SecurityAdvisorAbnormalLoginNoLinkNoAgent",
+    "SecurityAdvisorAbnormalLoginSimple",
+    "SecurityAdvisorReport",
+    "SecurityScanAlarm",
+    "SecurityScanDSMOutOfDate",
+    "SecurityScanDSMPackageOutOfDate",
+    "SecurityScanDanger",
+    "SecurityScanPackageOutOfDate",
+    "ShareMoveError",
+    "ShareMoveSuccess",
+    "ShareSyncError",
+    "ShareSyncSuccess",
+    "SmartBlockUntrustLock",
+    "SmartQuickTestSchedulerNote",
+    "SpaceDiskReservationFail",
+    "StgMgrAssembePoolFail",
+    "StgMgrAutoRepairCacheDone",
+    "StgMgrAutoRepairCacheFail",
+    "StgMgrAutoRepairCacheStart",
+    "StgMgrAutoRepairDone",
+    "StgMgrAutoRepairFail",
+    "StgMgrAutoRepairStart",
+    "StgMgrChangeRaidTypeDone",
+    "StgMgrChangeRaidTypeFail",
+    "StgMgrConvertMultiplePoolDone",
+    "StgMgrConvertMultiplePoolFail",
+    "StgMgrCreateCancelFail",
+    "StgMgrCreatePoolFail",
+    "StgMgrCreateVolumeFail",
+    "StgMgrDeleteSpaceDone",
+    "StgMgrDeleteSpaceFail",
+    "StgMgrDetectedDiskNotSupported",
+    "StgMgrDetectedDiskNotSupportedGeneral",
+    "StgMgrDetectedPoolMissing",
+    "StgMgrExpandPoolDone",
+    "StgMgrExpandPoolFail",
+    "StgMgrExpandUnfinishedSHRDone",
+    "StgMgrExpandUnfinishedSHRFail",
+    "StgMgrExpandVolumeDone",
+    "StgMgrExpandVolumeFail",
+    "StgMgrExpandVolumeVSpaceFail",
+    "StgMgrFsDefragDone",
+    "StgMgrFsDefragFailNoSpace",
+    "StgMgrManualScrubFailed",
+    "StgMgrMissingPoolAssembleFail",
+    "StgMgrMissingPoolCanAssembleNotification",
+    "StgMgrMountSSDROCacheFail",
+    "StgMgrMountSSDRWCacheFail",
+    "StgMgrOptimizePoolDone",
+    "StgMgrPluginDriveDetectedDuringBootup",
+    "StgMgrPluginDriveDetectedDuringBootupPassive",
+    "StgMgrPluginDriveDetectedNotification",
+    "StgMgrPluginDriveDetectedNotificationPassive",
+    "StgMgrPoolAddDiskDone",
+    "StgMgrPoolAddDiskFail",
+    "StgMgrPoolDetectedNotification",
+    "StgMgrPoolExpandUnallocSizeDone",
+    "StgMgrPoolExpandUnallocSizeFail",
+    "StgMgrRepairCacheDone",
+    "StgMgrRepairCacheFail",
+    "StgMgrRepairPoolDone",
+    "StgMgrRepairPoolFail",
+    "StgMgrReplacePoolDone",
+    "StgMgrReplacePoolFail",
+    "StgMgrScheScrubFailed",
+    "StgMgrScrubPoolDone",
+    "StgMgrScrubPoolStart",
+    "StgMgrScrubbingAbnormalShutdownNotify",
+    "StgMgrScrubbingPerformanceDegraded",
+    "StgMgrScrubbingSchePoolCrashed",
+    "StgMgrScrubbingSchePoolDegrade",
+    "StgMgrUnmountSSDCacheFail",
+    "StgMgrVolumeCrashedFSReadOnly",
+    "StrMgrPoolDeactivateDone",
+    "StrMgrPoolDeactivateFail",
+    "SynoReport",
+    "SynoReportCustomFailure",
+    "SynoReportFail",
+    "SystemConfigBackupFail",
+    "TPLUNReachHardLimitPW",
+    "TPLUNReachLowHardLimitPW",
+    "TPLUNReachSoftLimit",
+    "TaskSchedulerResult",
+    "TestMail",
+    "TooManyDeletedSubvolQueue",
+    "UPSConnected",
+    "UPSDisconnect",
+    "UPSOnAC",
+    "UPSOnBattery",
+    "UPSPowerFail",
+    "USBCOPYDisconnect",
+    "USBCOPYError",
+    "USBCOPYFinished",
+    "USBCOPYNospace",
+    "USBDiskFail",
+    "USBDiskFull",
+    "USBPartitionFull",
+    "UserChangePassword",
+    "UserWelcome",
+    "VolumeCrashedGeneral",
+    "VolumeInodeFull",
+    "VpncReconnectFail",
+    "audiostation_not_enough_space_to_upgrade",
+    "audiostation_upgrade_fail",
+    "beep_sas_link_fail",
+    "btrfs_repair_drop_log_tree",
+    "c2share_c2_space_full",
+    "c2share_c2_space_low",
+    "c2share_connect_c2",
+    "c2share_disconnect_c2",
+    "c2share_exit_beta_plan",
+    "c2share_pin_failed_by_volume_full",
+    "c2share_transform_cancel_fail",
+    "c2share_transform_cancel_success",
+    "c2share_transform_invalid_files",
+    "c2share_transform_success",
+    "c2share_unauth_c2",
+    "c2share_volume_full",
+    "c2share_volume_low_space",
+    "cache_load_fail_not_enough_memory",
+    "category",
+    "certificate_broken",
+    "current_ip_changed",
+    "ddsm_remove_by_share_delete",
+    "disk_health_monthly_report",
+    "disk_info_log_import_done_note",
+    "docker_container_export_complete",
+    "docker_container_export_failed",
+    "docker_container_unexpected_exit",
+    "docker_image_export_complete",
+    "docker_image_export_failed",
+    "docker_image_pull_complete",
+    "docker_image_pull_failed",
+    "eSynoscheduler_complete_task",
+    "epg_changed",
+    "exp_fw_update_finish_notification",
+    "ext4_fs_err",
+    "external_size_limitation",
+    "file_cksum_err",
+    "filestation_notify_automount_failed",
+    "filestation_notify_compress_completed",
+    "filestation_notify_compress_failed",
+    "filestation_notify_copy_completed",
+    "filestation_notify_copy_completed_skip_all",
+    "filestation_notify_copy_completed_skip_some",
+    "filestation_notify_copy_failed",
+    "filestation_notify_delete_completed",
+    "filestation_notify_delete_failed",
+    "filestation_notify_email_failed",
+    "filestation_notify_email_success",
+    "filestation_notify_extract_completed",
+    "filestation_notify_extract_failed",
+    "filestation_notify_filerequest",
+    "filestation_notify_filesharing",
+    "filestation_notify_move_completed",
+    "filestation_notify_move_completed_skip_all",
+    "filestation_notify_move_completed_skip_some",
+    "filestation_notify_move_failed",
+    "googleoauth_mail_refresh_error",
+    "iSCSIDefragFinished",
+    "iSCSIDefragVolumeFull",
+    "iSCSILunScheduleSnapshotFail",
+    "iSCSILunScheduleSnapshotFailByMaxSnapshotCount",
+    "iSCSILunScheduleSnapshotFailByOutOfFreeSpace",
+    "index_db_corrupt",
+    "index_no_space",
+    "ip_conflict",
+    "lack_of_memory",
+    "mediaserver_not_enough_space_to_upgrade",
+    "mediaserver_not_enough_space_to_upgrade_without_media_index_package",
+    "memory_cecc_event_notify",
+    "memory_layout_memory_detect_incompatible",
+    "memory_layout_memory_detect_unauthentic",
+    "memory_uecc_event_notify",
+    "myds_deletion_logout",
+    "myds_force_logout",
+    "need_metadata_plugin",
+    "need_reindex_after_upgrade60",
+    "need_reindex_improved",
+    "notify_broken_task",
+    "notify_copy_canceled",
+    "notify_copy_failed",
+    "notify_copy_partial",
+    "notify_copy_success",
+    "notify_email_failed",
+    "notify_email_success",
+    "notify_version_empty",
+    "notify_wallpaper_missing",
+    "perftest_interrupt_by_swtichover",
+    "pgsql_startup_failed",
+    "pgsql_upgrade_done",
+    "pgsql_upgrade_fail",
+    "pgsql_upgrade_timeout",
+    "rclocal_malware",
+    "rcpower_disable",
+    "remove_disk_from_schedule",
+    "remove_non_existent_disk_from_schedule",
+    "smart_quick_test_scheduler_notification",
+    "smarttest_interrupt_by_swtichover",
+    "synocodeccenter_codec_activation_failed",
+    "synocodeccenter_codec_activation_need_update",
+    "system_partition_error",
+    "system_web_server_failed",
+    "taskscheduler_notify_user_share_volume_error",
+    "usage_detail_notify_internal_error",
+    "usage_detail_notify_out_of_space",
+    "usb_mount_fail",
+    "vdsm_software_spec_not_match",
+    "volume_disk_bad_sector",
+    "volume_disk_power_abnormal",
+    "volume_freesize_move_pgsql",
+    "volume_fsck_skip_once",
+    "volume_transfer_rw_notify_fail",
+    "volume_transfer_rw_notify_success",
+    "wedjat_notify_piracy"
+  ]
+}

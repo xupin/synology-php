@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "auth_key": {
+      "type": "string"
+    },
+    "ds_build": {
+      "type": "string"
+    },
+    "ds_major": {
+      "type": "string"
+    },
+    "ds_minor": {
+      "type": "string"
+    },
+    "ds_timezone": {
+      "type": "string"
+    },
+    "ds_unique": {
+      "type": "string"
+    },
+    "myPayBaseURL": {
+      "type": "string"
+    },
+    "myds_id": {
+      "type": "string"
+    },
+    "serial": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "auth_key",
+    "ds_build",
+    "ds_major",
+    "ds_minor",
+    "ds_timezone",
+    "ds_unique",
+    "myPayBaseURL",
+    "myds_id",
+    "serial"
+  ]
+}

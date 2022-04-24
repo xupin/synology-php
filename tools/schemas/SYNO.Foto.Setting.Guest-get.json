@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "alias": {
+      "type": "string"
+    },
+    "default_thumbnail_size": {
+      "type": "string"
+    },
+    "display_photo_info_to_guest": {
+      "type": "boolean"
+    },
+    "enable_home_service": {
+      "type": "boolean"
+    },
+    "enable_team_space": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "alias",
+    "default_thumbnail_size",
+    "display_photo_info_to_guest",
+    "enable_home_service",
+    "enable_team_space"
+  ]
+}

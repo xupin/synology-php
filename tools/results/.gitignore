@@ -1,0 +1,5 @@
+# Ignore everything in this directory
+*
+# Except these files and directories
+!.gitignore
+!SYNO.DSM.Info-getinfo.json

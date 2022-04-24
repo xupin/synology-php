@@ -1,0 +1,16 @@
+{
+    "base_dn": "",
+    "enable_cifs": false,
+    "enable_cifs_pam": false,
+    "enable_client": false,
+    "enable_client_certificate": false,
+    "enable_idmap": false,
+    "encryption": "no",
+    "error": 2703,
+    "expand_nested_groups": false,
+    "is_syno_server": false,
+    "nested_group_level": 0,
+    "profile": "standard",
+    "server_address": "",
+    "update_min": 1440
+}

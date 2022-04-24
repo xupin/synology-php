@@ -1,0 +1,9 @@
+{
+    "error": {
+        "code": 4900,
+        "errors": {
+            "msg": "lack of id parameter"
+        }
+    },
+    "success": false
+}

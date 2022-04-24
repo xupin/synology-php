@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "eps_enable": {
+      "type": "boolean"
+    },
+    "eps_number": {
+      "type": "integer"
+    },
+    "keyword_1": {
+      "type": "string"
+    },
+    "keyword_2": {
+      "type": "string"
+    },
+    "keyword_3": {
+      "type": "string"
+    },
+    "keyword_enable": {
+      "type": "boolean"
+    },
+    "severity_enable": {
+      "type": "boolean"
+    },
+    "severity_threshold": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "eps_enable",
+    "eps_number",
+    "keyword_1",
+    "keyword_2",
+    "keyword_3",
+    "keyword_enable",
+    "severity_enable",
+    "severity_threshold"
+  ]
+}

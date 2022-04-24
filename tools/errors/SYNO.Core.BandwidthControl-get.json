@@ -1,0 +1,9 @@
+{
+    "error": {
+        "code": 5300,
+        "errors": {
+            "msg": "invalid parameter"
+        }
+    },
+    "success": false
+}

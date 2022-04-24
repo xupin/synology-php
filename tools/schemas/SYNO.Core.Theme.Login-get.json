@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "background_color": {
+      "type": "string"
+    },
+    "background_position": {
+      "type": "string"
+    },
+    "background_seq": {
+      "type": "integer"
+    },
+    "enable_background_customize": {
+      "type": "boolean"
+    },
+    "enable_logo_customize": {
+      "type": "boolean"
+    },
+    "login_footer_enable_html": {
+      "type": "boolean"
+    },
+    "login_title": {
+      "type": "string"
+    },
+    "login_version_logo": {
+      "type": "boolean"
+    },
+    "login_welcome_msg": {
+      "type": "string"
+    },
+    "login_welcome_title": {
+      "type": "string"
+    },
+    "logo_position": {
+      "type": "string"
+    },
+    "logo_seq": {
+      "type": "integer"
+    },
+    "only_background_color": {
+      "type": "boolean"
+    },
+    "weather_info": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "background_color",
+    "background_position",
+    "background_seq",
+    "enable_background_customize",
+    "enable_logo_customize",
+    "login_footer_enable_html",
+    "login_title",
+    "login_version_logo",
+    "login_welcome_msg",
+    "login_welcome_title",
+    "logo_position",
+    "logo_seq",
+    "only_background_color",
+    "weather_info"
+  ]
+}

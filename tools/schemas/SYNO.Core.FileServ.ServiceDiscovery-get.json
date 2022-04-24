@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_afp_time_machine": {
+      "type": "boolean"
+    },
+    "enable_smb_time_machine": {
+      "type": "boolean"
+    },
+    "time_machine_disable_shares": {
+      "type": "array"
+    },
+    "time_machine_shares": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "enable_afp_time_machine",
+    "enable_smb_time_machine",
+    "time_machine_disable_shares",
+    "time_machine_shares"
+  ]
+}

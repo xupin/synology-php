@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "otherDeviceUsed": {
+      "type": "integer"
+    },
+    "otherDeviceUsedTCPPorts": {
+      "type": "array"
+    },
+    "otherDeviceUsedUDPPorts": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "otherDeviceUsed",
+    "otherDeviceUsedTCPPorts",
+    "otherDeviceUsedUDPPorts"
+  ]
+}

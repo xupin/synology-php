@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "db_reading_method": {
+      "type": "string"
+    },
+    "display_vmtouch_option": {
+      "type": "boolean"
+    },
+    "enable_cppjieba_dict": {
+      "type": "boolean"
+    },
+    "enable_keyword_filter": {
+      "type": "boolean"
+    },
+    "enable_mlock": {
+      "type": "boolean"
+    },
+    "enable_preload_indices": {
+      "type": "boolean"
+    },
+    "enable_vmtouch": {
+      "type": "boolean"
+    },
+    "max_alive_db_count": {
+      "type": "integer"
+    },
+    "max_search_hit_count": {
+      "type": "integer"
+    },
+    "reader_alive_timeout": {
+      "type": "integer"
+    },
+    "synotifyd_event_mask": {
+      "type": "integer"
+    },
+    "vmtouch_reserve_mem": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "db_reading_method",
+    "display_vmtouch_option",
+    "enable_cppjieba_dict",
+    "enable_keyword_filter",
+    "enable_mlock",
+    "enable_preload_indices",
+    "enable_vmtouch",
+    "max_alive_db_count",
+    "max_search_hit_count",
+    "reader_alive_timeout",
+    "synotifyd_event_mask",
+    "vmtouch_reserve_mem"
+  ]
+}

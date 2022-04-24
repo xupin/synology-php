@@ -1,0 +1,9 @@
+{
+    "error": {
+        "code": 4302,
+        "errors": {
+            "desc": "no type parameter"
+        }
+    },
+    "success": false
+}

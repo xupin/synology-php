@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_bonjour_support": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable_bonjour_support"
+  ]
+}

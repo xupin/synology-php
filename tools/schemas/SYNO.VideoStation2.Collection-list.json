@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "collection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "additional": {
+            "type": "object",
+            "properties": {
+              "sharing_info": {
+                "type": "object",
+                "properties": {
+                  "date_available": {
+                    "type": "string"
+                  },
+                  "date_expired": {
+                    "type": "string"
+                  },
+                  "enable_sharing": {
+                    "type": "boolean"
+                  },
+                  "sharing_id": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "date_available",
+                  "date_expired",
+                  "enable_sharing",
+                  "sharing_id",
+                  "status",
+                  "url"
+                ]
+              }
+            }
+          },
+          "id": {
+            "type": "integer"
+          },
+          "preview_video": {
+            "type": "array"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "additional",
+          "id",
+          "preview_video",
+          "title",
+          "type"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "collection",
+    "offset",
+    "total"
+  ]
+}

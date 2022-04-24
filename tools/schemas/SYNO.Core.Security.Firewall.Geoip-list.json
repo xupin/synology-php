@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "country_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "country_code"
+        ]
+      }
+    }
+  },
+  "required": [
+    "countries"
+  ]
+}

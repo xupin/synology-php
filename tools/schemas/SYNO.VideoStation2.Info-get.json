@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_dtv_enabled": {
+      "type": "boolean"
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "is_subtitle_search_enabled": {
+      "type": "boolean"
+    },
+    "privilege": {
+      "type": "object",
+      "properties": {
+        "dtv": {
+          "type": "boolean"
+        },
+        "offline_conversion": {
+          "type": "boolean"
+        },
+        "renderer": {
+          "type": "boolean"
+        },
+        "sharing": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dtv",
+        "offline_conversion",
+        "renderer",
+        "sharing"
+      ]
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "timezone_offset": {
+      "type": "integer"
+    },
+    "transcoding_capability": {
+      "type": "object",
+      "properties": {
+        "dtv_transcode": {
+          "type": "boolean"
+        },
+        "fhd_hardware_transcode": {
+          "type": "boolean"
+        },
+        "hardware_transcode": {
+          "type": "boolean"
+        },
+        "remux": {
+          "type": "boolean"
+        },
+        "software_transcode": {
+          "type": "boolean"
+        },
+        "transcode": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dtv_transcode",
+        "fhd_hardware_transcode",
+        "hardware_transcode",
+        "remux",
+        "software_transcode",
+        "transcode"
+      ]
+    },
+    "version": {
+      "type": "string"
+    },
+    "version_string": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_dtv_enabled",
+    "is_manager",
+    "is_subtitle_search_enabled",
+    "privilege",
+    "timezone",
+    "timezone_offset",
+    "transcoding_capability",
+    "version",
+    "version_string"
+  ]
+}

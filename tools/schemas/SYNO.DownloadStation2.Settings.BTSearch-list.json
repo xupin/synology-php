@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "accountsupport": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "displayname": {
+            "type": "string"
+          },
+          "is_enable": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "user": {
+            "type": "boolean"
+          },
+          "version": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "accountsupport",
+          "description",
+          "displayname",
+          "is_enable",
+          "name",
+          "user",
+          "version"
+        ]
+      }
+    }
+  },
+  "required": [
+    "plugins"
+  ]
+}

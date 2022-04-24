@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "auth_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "auth_key"
+  ]
+}

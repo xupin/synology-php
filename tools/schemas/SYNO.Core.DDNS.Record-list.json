@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "next_update_time": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enable": {
+            "type": "boolean"
+          },
+          "heartbeat": {
+            "type": "boolean"
+          },
+          "hostname": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "ip": {
+            "type": "string"
+          },
+          "ipv6": {
+            "type": "string"
+          },
+          "lastupdated": {
+            "type": "string"
+          },
+          "net": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "enable",
+          "heartbeat",
+          "hostname",
+          "id",
+          "ip",
+          "ipv6",
+          "lastupdated",
+          "net",
+          "provider",
+          "status",
+          "username"
+        ]
+      }
+    }
+  },
+  "required": [
+    "next_update_time",
+    "records"
+  ]
+}

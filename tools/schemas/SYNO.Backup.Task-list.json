@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_data_restoring": {
+      "type": "boolean"
+    },
+    "is_downloading": {
+      "type": "boolean"
+    },
+    "is_lun_restoring": {
+      "type": "boolean"
+    },
+    "is_restoring": {
+      "type": "boolean"
+    },
+    "is_snapshot_restoring": {
+      "type": "boolean"
+    },
+    "task_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "data_enc": {
+            "type": "boolean"
+          },
+          "data_type": {
+            "type": "string"
+          },
+          "ext3ShareList": {
+            "type": "array"
+          },
+          "name": {
+            "type": "string"
+          },
+          "repo_id": {
+            "type": "integer"
+          },
+          "state": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "string"
+          },
+          "target_type": {
+            "type": "string"
+          },
+          "task_id": {
+            "type": "integer"
+          },
+          "transfer_type": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "data_enc",
+          "data_type",
+          "ext3ShareList",
+          "name",
+          "repo_id",
+          "state",
+          "status",
+          "target_id",
+          "target_type",
+          "task_id",
+          "transfer_type",
+          "type"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "is_data_restoring",
+    "is_downloading",
+    "is_lun_restoring",
+    "is_restoring",
+    "is_snapshot_restoring",
+    "task_list",
+    "total"
+  ]
+}

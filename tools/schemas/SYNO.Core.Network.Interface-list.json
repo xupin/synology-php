@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ifname": {
+        "type": "string"
+      },
+      "ip": {
+        "type": "string"
+      },
+      "mask": {
+        "type": "string"
+      },
+      "speed": {
+        "type": "integer"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "use_dhcp": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "ifname",
+      "ip",
+      "mask",
+      "speed",
+      "status",
+      "type",
+      "use_dhcp"
+    ]
+  }
+}

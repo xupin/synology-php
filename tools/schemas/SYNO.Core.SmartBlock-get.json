@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean"
+    },
+    "trust_lock": {
+      "type": "integer"
+    },
+    "trust_minute": {
+      "type": "integer"
+    },
+    "trust_try": {
+      "type": "integer"
+    },
+    "untrust_lock": {
+      "type": "integer"
+    },
+    "untrust_minute": {
+      "type": "integer"
+    },
+    "untrust_try": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enabled",
+    "trust_lock",
+    "trust_minute",
+    "trust_try",
+    "untrust_lock",
+    "untrust_minute",
+    "untrust_try"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "cipherkey": {
+      "type": "string"
+    },
+    "ciphertoken": {
+      "type": "string"
+    },
+    "public_key": {
+      "type": "string"
+    },
+    "server_time": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "cipherkey",
+    "ciphertoken",
+    "public_key",
+    "server_time"
+  ]
+}

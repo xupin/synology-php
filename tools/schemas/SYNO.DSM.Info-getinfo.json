@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "codepage": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "ram": {
+      "type": "integer"
+    },
+    "serial": {
+      "type": "string"
+    },
+    "temperature": {
+      "type": "integer"
+    },
+    "temperature_warn": {
+      "type": "boolean"
+    },
+    "time": {
+      "type": "string"
+    },
+    "uptime": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    },
+    "version_string": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "codepage",
+    "model",
+    "ram",
+    "serial",
+    "temperature",
+    "temperature_warn",
+    "time",
+    "uptime",
+    "version",
+    "version_string"
+  ]
+}

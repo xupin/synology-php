@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "compress": {
+        "type": "boolean"
+      },
+      "confname": {
+        "type": "string"
+      },
+      "defgw": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "string"
+      },
+      "nat": {
+        "type": "boolean"
+      },
+      "pass": {
+        "type": "string"
+      },
+      "port": {
+        "type": "string"
+      },
+      "protocol": {
+        "type": "string"
+      },
+      "prtl": {
+        "type": "string"
+      },
+      "reconnect": {
+        "type": "boolean"
+      },
+      "server": {
+        "type": "string"
+      },
+      "user": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "compress",
+      "confname",
+      "defgw",
+      "id",
+      "nat",
+      "pass",
+      "port",
+      "protocol",
+      "prtl",
+      "reconnect",
+      "server",
+      "user"
+    ]
+  }
+}

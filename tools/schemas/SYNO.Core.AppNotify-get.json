@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "SYNO.SDS.AdminCenter.Application": {
+      "type": "object",
+      "properties": {
+        "customized": {
+          "type": "boolean"
+        },
+        "fn": {
+          "type": "object",
+          "properties": {
+            "SYNO.SDS.AdminCenter.Update_Reset.Main": {
+              "type": "object",
+              "properties": {
+                "unread": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "unread"
+              ]
+            }
+          },
+          "required": [
+            "SYNO.SDS.AdminCenter.Update_Reset.Main"
+          ]
+        },
+        "lastView": {
+          "type": "integer"
+        },
+        "time": {
+          "type": "integer"
+        },
+        "unread": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "customized",
+        "fn",
+        "lastView",
+        "time",
+        "unread"
+      ]
+    },
+    "SYNO.SDS.PkgManApp.Instance": {
+      "type": "object",
+      "properties": {
+        "customized": {
+          "type": "boolean"
+        },
+        "fn": {
+          "type": "object",
+          "properties": {
+            "generalFn": {
+              "type": "object",
+              "properties": {
+                "unread": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "unread"
+              ]
+            }
+          },
+          "required": [
+            "generalFn"
+          ]
+        },
+        "lastView": {
+          "type": "integer"
+        },
+        "time": {
+          "type": "integer"
+        },
+        "unread": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "customized",
+        "fn",
+        "lastView",
+        "time",
+        "unread"
+      ]
+    },
+    "SYNO.SDS.SecurityScan.Instance": {
+      "type": "object",
+      "properties": {
+        "customized": {
+          "type": "boolean"
+        },
+        "fn": {
+          "type": "object",
+          "properties": {
+            "generalFn": {
+              "type": "object",
+              "properties": {
+                "unread": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "unread"
+              ]
+            }
+          },
+          "required": [
+            "generalFn"
+          ]
+        },
+        "lastView": {
+          "type": "integer"
+        },
+        "time": {
+          "type": "integer"
+        },
+        "unread": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "customized",
+        "fn",
+        "lastView",
+        "time",
+        "unread"
+      ]
+    },
+    "SYNO.SDS._ThirdParty.App.ipkgui": {
+      "type": "object",
+      "properties": {
+        "customized": {
+          "type": "boolean"
+        },
+        "fn": {
+          "type": "object",
+          "properties": {
+            "generalFn": {
+              "type": "object",
+              "properties": {
+                "unread": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "unread"
+              ]
+            }
+          },
+          "required": [
+            "generalFn"
+          ]
+        },
+        "lastView": {
+          "type": "integer"
+        },
+        "time": {
+          "type": "integer"
+        },
+        "unread": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "customized",
+        "fn",
+        "lastView",
+        "time",
+        "unread"
+      ]
+    }
+  },
+  "required": [
+    "SYNO.SDS.AdminCenter.Application",
+    "SYNO.SDS.PkgManApp.Instance",
+    "SYNO.SDS.SecurityScan.Instance",
+    "SYNO.SDS._ThirdParty.App.ipkgui"
+  ]
+}

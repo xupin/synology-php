@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ip": {
+        "type": "string"
+      },
+      "ipv6": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "ip",
+      "ipv6",
+      "type"
+    ]
+  }
+}

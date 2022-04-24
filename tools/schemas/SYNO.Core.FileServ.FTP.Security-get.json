@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "anonymous": {
+      "type": "boolean"
+    },
+    "anonymous_chroot": {
+      "type": "boolean"
+    },
+    "anonymous_chroot_share": {
+      "type": "string"
+    },
+    "enable_umask": {
+      "type": "boolean"
+    },
+    "user_chroot": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "anonymous",
+    "anonymous_chroot",
+    "anonymous_chroot_share",
+    "enable_umask",
+    "user_chroot"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "cred_id": {
+            "type": "string"
+          },
+          "hostname": {
+            "type": "string"
+          },
+          "is_local_node": {
+            "type": "boolean"
+          },
+          "port": {
+            "type": "integer"
+          },
+          "protocol": {
+            "type": "string"
+          },
+          "rod_key": {
+            "type": "string"
+          },
+          "session_id": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "account",
+          "cred_id",
+          "hostname",
+          "is_local_node",
+          "port",
+          "protocol",
+          "rod_key",
+          "session_id",
+          "uuid"
+        ]
+      }
+    }
+  },
+  "required": [
+    "nodes"
+  ]
+}

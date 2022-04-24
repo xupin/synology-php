@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_nfs": {
+      "type": "boolean"
+    },
+    "enable_nfs_v4": {
+      "type": "boolean"
+    },
+    "enabled_minor_ver": {
+      "type": "integer"
+    },
+    "nfs_v4_domain": {
+      "type": "string"
+    },
+    "read_size": {
+      "type": "integer"
+    },
+    "support_encrypt_share": {
+      "type": "integer"
+    },
+    "support_major_ver": {
+      "type": "integer"
+    },
+    "support_minor_ver": {
+      "type": "integer"
+    },
+    "unix_pri_enable": {
+      "type": "boolean"
+    },
+    "write_size": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enable_nfs",
+    "enable_nfs_v4",
+    "enabled_minor_ver",
+    "nfs_v4_domain",
+    "read_size",
+    "support_encrypt_share",
+    "support_major_ver",
+    "support_minor_ver",
+    "unix_pri_enable",
+    "write_size"
+  ]
+}

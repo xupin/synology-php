@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_bt_preview": {
+      "type": "boolean"
+    },
+    "enable_emule": {
+      "type": "boolean"
+    },
+    "enable_unzip": {
+      "type": "boolean"
+    },
+    "is_unzip_service_enable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable_bt_preview",
+    "enable_emule",
+    "enable_unzip",
+    "is_unzip_service_enable"
+  ]
+}

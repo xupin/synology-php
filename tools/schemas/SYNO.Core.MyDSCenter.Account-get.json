@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "country": {
+      "type": "string"
+    },
+    "critical_release": {
+      "type": "boolean"
+    },
+    "critical_version_domain": {
+      "type": "null"
+    },
+    "critical_version_list": {
+      "type": "null"
+    },
+    "email": {
+      "type": "string"
+    },
+    "enews": {
+      "type": "boolean"
+    },
+    "enews_local_promotion": {
+      "type": "boolean"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "notify_language": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "country",
+    "critical_release",
+    "critical_version_domain",
+    "critical_version_list",
+    "email",
+    "enews",
+    "enews_local_promotion",
+    "full_name",
+    "notify_language"
+  ]
+}

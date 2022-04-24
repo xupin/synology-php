@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_dtv_enabled": {
+      "type": "boolean"
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "is_subtitle_search_enabled": {
+      "type": "boolean"
+    },
+    "privilege": {
+      "type": "object",
+      "properties": {
+        "dtv": {
+          "type": "boolean"
+        },
+        "offline_conversion": {
+          "type": "boolean"
+        },
+        "renderer": {
+          "type": "boolean"
+        },
+        "sharing": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dtv",
+        "offline_conversion",
+        "renderer",
+        "sharing"
+      ]
+    },
+    "support_appletv_os": {
+      "type": "boolean"
+    },
+    "support_dtv_transcode": {
+      "type": "boolean"
+    },
+    "support_fhd_hardware_transcode": {
+      "type": "boolean"
+    },
+    "support_hardware_transcode": {
+      "type": "boolean"
+    },
+    "support_remux": {
+      "type": "boolean"
+    },
+    "support_software_transcode": {
+      "type": "boolean"
+    },
+    "support_transcode": {
+      "type": "boolean"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "timezone_offset": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    },
+    "version_string": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_dtv_enabled",
+    "is_manager",
+    "is_subtitle_search_enabled",
+    "privilege",
+    "support_appletv_os",
+    "support_dtv_transcode",
+    "support_fhd_hardware_transcode",
+    "support_hardware_transcode",
+    "support_remux",
+    "support_software_transcode",
+    "support_transcode",
+    "timezone",
+    "timezone_offset",
+    "version",
+    "version_string"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "movie": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "default": {
+            "type": "boolean"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "default",
+          "enable",
+          "id",
+          "name"
+        ]
+      }
+    },
+    "tvshow": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "default": {
+            "type": "boolean"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "default",
+          "enable",
+          "id",
+          "name"
+        ]
+      }
+    }
+  },
+  "required": [
+    "movie",
+    "tvshow"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "depend": {
+        "type": "object",
+        "properties": {
+          "folder_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "folder": {
+                  "type": "string"
+                },
+                "whitelist": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "folder",
+                "whitelist"
+              ]
+            }
+          }
+        },
+        "required": [
+          "folder_list"
+        ]
+      },
+      "id": {
+        "type": "string"
+      },
+      "is_beta": {
+        "type": "boolean"
+      },
+      "is_running": {
+        "type": "boolean"
+      },
+      "name": {
+        "type": "string"
+      },
+      "online_backup": {
+        "type": "boolean"
+      },
+      "summary_disp": {
+        "type": "string"
+      },
+      "summary_disp_tip": {
+        "type": "string"
+      },
+      "summary_edit_window": {
+        "type": "string"
+      },
+      "version": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "depend",
+      "id",
+      "is_beta",
+      "is_running",
+      "name",
+      "online_backup",
+      "summary_disp",
+      "summary_disp_tip",
+      "summary_edit_window",
+      "version"
+    ]
+  }
+}

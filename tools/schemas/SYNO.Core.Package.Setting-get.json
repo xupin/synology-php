@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "autoupdateall": {
+      "type": "boolean"
+    },
+    "autoupdateimportant": {
+      "type": "boolean"
+    },
+    "enable_autoupdate": {
+      "type": "boolean"
+    },
+    "enable_dsm": {
+      "type": "boolean"
+    },
+    "enable_email": {
+      "type": "boolean"
+    },
+    "mailset": {
+      "type": "boolean"
+    },
+    "trust_level": {
+      "type": "integer"
+    },
+    "update_channel": {
+      "type": "boolean"
+    },
+    "volume_count": {
+      "type": "integer"
+    },
+    "volume_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "desc": {
+            "type": "string"
+          },
+          "display": {
+            "type": "string"
+          },
+          "mount_point": {
+            "type": "string"
+          },
+          "size_free": {
+            "type": "string"
+          },
+          "size_total": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "desc",
+          "display",
+          "mount_point",
+          "size_free",
+          "size_total"
+        ]
+      }
+    },
+    "volume_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "autoupdateall",
+    "autoupdateimportant",
+    "enable_autoupdate",
+    "enable_dsm",
+    "enable_email",
+    "mailset",
+    "trust_level",
+    "update_channel",
+    "volume_count",
+    "volume_list",
+    "volume_status"
+  ]
+}

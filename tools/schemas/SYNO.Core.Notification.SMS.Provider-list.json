@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "provider_info": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "api_id": {
+            "type": "string"
+          },
+          "api_key": {
+            "type": "string"
+          },
+          "param_used": {
+            "type": "object",
+            "properties": {
+              "api_id": {
+                "type": "boolean"
+              },
+              "api_key": {
+                "type": "boolean"
+              },
+              "sender": {
+                "type": "boolean"
+              },
+              "user": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "api_id",
+              "api_key",
+              "sender",
+              "user"
+            ]
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "req_header": {
+            "type": "string"
+          },
+          "req_method": {
+            "type": "string"
+          },
+          "req_param": {
+            "type": "string"
+          },
+          "sep_char": {
+            "type": "string"
+          },
+          "template": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "api_id",
+          "api_key",
+          "param_used",
+          "provider_id",
+          "provider_name",
+          "req_header",
+          "req_method",
+          "req_param",
+          "sep_char",
+          "template"
+        ]
+      }
+    }
+  },
+  "required": [
+    "provider_info"
+  ]
+}

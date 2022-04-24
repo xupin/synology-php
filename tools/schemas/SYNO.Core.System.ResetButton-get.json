@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "retain_admin_pwd": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "retain_admin_pwd"
+  ]
+}

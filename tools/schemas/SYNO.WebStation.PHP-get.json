@@ -1,0 +1,1428 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default_settings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "backend": {
+            "type": "integer"
+          },
+          "core": {
+            "type": "object",
+            "properties": {
+              "SMTP": {
+                "type": "string"
+              },
+              "allow_url_fopen": {
+                "type": "string"
+              },
+              "allow_url_include": {
+                "type": "string"
+              },
+              "auto_append_file": {
+                "type": "null"
+              },
+              "auto_detect_line_endings": {
+                "type": "string"
+              },
+              "auto_globals_jit": {
+                "type": "string"
+              },
+              "auto_prepend_file": {
+                "type": "null"
+              },
+              "browscap": {
+                "type": "null"
+              },
+              "default_charset": {
+                "type": "string"
+              },
+              "default_mimetype": {
+                "type": "string"
+              },
+              "default_socket_timeout": {
+                "type": "string"
+              },
+              "disable_classes": {
+                "type": "string"
+              },
+              "disable_functions": {
+                "type": "string"
+              },
+              "display_startup_errors": {
+                "type": "string"
+              },
+              "doc_root": {
+                "type": "null"
+              },
+              "docref_ext": {
+                "type": "string"
+              },
+              "docref_root": {
+                "type": "string"
+              },
+              "enable_dl": {
+                "type": "string"
+              },
+              "enable_post_data_reading": {
+                "type": "string"
+              },
+              "error_append_string": {
+                "type": "null"
+              },
+              "error_log": {
+                "type": "null"
+              },
+              "error_prepend_string": {
+                "type": "null"
+              },
+              "error_reporting": {
+                "type": "string"
+              },
+              "expose_php": {
+                "type": "string"
+              },
+              "extension_dir": {
+                "type": "string"
+              },
+              "file_uploads": {
+                "type": "string"
+              },
+              "from": {
+                "type": "null"
+              },
+              "hard_timeout": {
+                "type": "string"
+              },
+              "html_errors": {
+                "type": "string"
+              },
+              "ignore_repeated_errors": {
+                "type": "string"
+              },
+              "ignore_repeated_source": {
+                "type": "string"
+              },
+              "ignore_user_abort": {
+                "type": "string"
+              },
+              "implicit_flush": {
+                "type": "string"
+              },
+              "include_path": {
+                "type": "string"
+              },
+              "input_encoding": {
+                "type": "null"
+              },
+              "internal_encoding": {
+                "type": "null"
+              },
+              "log_errors": {
+                "type": "string"
+              },
+              "log_errors_max_len": {
+                "type": "string"
+              },
+              "max_execution_time": {
+                "type": "string"
+              },
+              "max_file_uploads": {
+                "type": "string"
+              },
+              "max_input_nesting_level": {
+                "type": "string"
+              },
+              "max_input_time": {
+                "type": "string"
+              },
+              "max_input_vars": {
+                "type": "string"
+              },
+              "memory_limit": {
+                "type": "string"
+              },
+              "output_buffering": {
+                "type": "string"
+              },
+              "output_encoding": {
+                "type": "null"
+              },
+              "output_handler": {
+                "type": "null"
+              },
+              "post_max_size": {
+                "type": "string"
+              },
+              "precision": {
+                "type": "string"
+              },
+              "realpath_cache_size": {
+                "type": "string"
+              },
+              "realpath_cache_ttl": {
+                "type": "string"
+              },
+              "register_argc_argv": {
+                "type": "string"
+              },
+              "report_memleaks": {
+                "type": "string"
+              },
+              "report_zend_debug": {
+                "type": "string"
+              },
+              "request_order": {
+                "type": "string"
+              },
+              "sendmail_from": {
+                "type": "null"
+              },
+              "sendmail_path": {
+                "type": "string"
+              },
+              "serialize_precision": {
+                "type": "string"
+              },
+              "short_open_tag": {
+                "type": "string"
+              },
+              "smtp_port": {
+                "type": "string"
+              },
+              "sys_temp_dir": {
+                "type": "string"
+              },
+              "track_errors": {
+                "type": "string"
+              },
+              "unserialize_callback_func": {
+                "type": "null"
+              },
+              "unserialize_max_depth": {
+                "type": "string"
+              },
+              "upload_max_filesize": {
+                "type": "string"
+              },
+              "upload_tmp_dir": {
+                "type": "string"
+              },
+              "user_agent": {
+                "type": "null"
+              },
+              "user_dir": {
+                "type": "null"
+              },
+              "variables_order": {
+                "type": "string"
+              },
+              "xmlrpc_error_number": {
+                "type": "string"
+              },
+              "xmlrpc_errors": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "SMTP",
+              "allow_url_fopen",
+              "allow_url_include",
+              "auto_append_file",
+              "auto_detect_line_endings",
+              "auto_globals_jit",
+              "auto_prepend_file",
+              "browscap",
+              "default_charset",
+              "default_mimetype",
+              "default_socket_timeout",
+              "disable_classes",
+              "disable_functions",
+              "display_startup_errors",
+              "doc_root",
+              "docref_ext",
+              "docref_root",
+              "enable_dl",
+              "enable_post_data_reading",
+              "error_append_string",
+              "error_log",
+              "error_prepend_string",
+              "error_reporting",
+              "expose_php",
+              "extension_dir",
+              "file_uploads",
+              "from",
+              "hard_timeout",
+              "html_errors",
+              "ignore_repeated_errors",
+              "ignore_repeated_source",
+              "ignore_user_abort",
+              "implicit_flush",
+              "include_path",
+              "input_encoding",
+              "internal_encoding",
+              "log_errors",
+              "log_errors_max_len",
+              "max_execution_time",
+              "max_file_uploads",
+              "max_input_nesting_level",
+              "max_input_time",
+              "max_input_vars",
+              "memory_limit",
+              "output_buffering",
+              "output_encoding",
+              "output_handler",
+              "post_max_size",
+              "precision",
+              "realpath_cache_size",
+              "realpath_cache_ttl",
+              "register_argc_argv",
+              "report_memleaks",
+              "report_zend_debug",
+              "request_order",
+              "sendmail_from",
+              "sendmail_path",
+              "serialize_precision",
+              "short_open_tag",
+              "smtp_port",
+              "sys_temp_dir",
+              "track_errors",
+              "unserialize_callback_func",
+              "unserialize_max_depth",
+              "upload_max_filesize",
+              "upload_tmp_dir",
+              "user_agent",
+              "user_dir",
+              "variables_order",
+              "xmlrpc_error_number",
+              "xmlrpc_errors"
+            ]
+          },
+          "extensions": {
+            "type": "object",
+            "properties": {
+              "apc.coredump_unmap": {
+                "type": "string"
+              },
+              "apc.enable_cli": {
+                "type": "string"
+              },
+              "apc.enabled": {
+                "type": "string"
+              },
+              "apc.entries_hint": {
+                "type": "string"
+              },
+              "apc.gc_ttl": {
+                "type": "string"
+              },
+              "apc.mmap_file_mask": {
+                "type": "string"
+              },
+              "apc.preload_path": {
+                "type": "null"
+              },
+              "apc.serializer": {
+                "type": "string"
+              },
+              "apc.shm_segments": {
+                "type": "string"
+              },
+              "apc.shm_size": {
+                "type": "string"
+              },
+              "apc.slam_defense": {
+                "type": "string"
+              },
+              "apc.smart": {
+                "type": "string"
+              },
+              "apc.ttl": {
+                "type": "string"
+              },
+              "apc.use_request_time": {
+                "type": "string"
+              },
+              "arg_separator.input": {
+                "type": "string"
+              },
+              "arg_separator.output": {
+                "type": "string"
+              },
+              "assert.active": {
+                "type": "string"
+              },
+              "assert.bail": {
+                "type": "string"
+              },
+              "assert.callback": {
+                "type": "null"
+              },
+              "assert.exception": {
+                "type": "string"
+              },
+              "assert.quiet_eval": {
+                "type": "string"
+              },
+              "assert.warning": {
+                "type": "string"
+              },
+              "bcmath.scale": {
+                "type": "string"
+              },
+              "cli.pager": {
+                "type": "string"
+              },
+              "cli.prompt": {
+                "type": "string"
+              },
+              "curl.cainfo": {
+                "type": "string"
+              },
+              "date.default_latitude": {
+                "type": "string"
+              },
+              "date.default_longitude": {
+                "type": "string"
+              },
+              "date.sunrise_zenith": {
+                "type": "string"
+              },
+              "date.sunset_zenith": {
+                "type": "string"
+              },
+              "dba.default_handler": {
+                "type": "string"
+              },
+              "exif.decode_jis_intel": {
+                "type": "string"
+              },
+              "exif.decode_jis_motorola": {
+                "type": "string"
+              },
+              "exif.decode_unicode_intel": {
+                "type": "string"
+              },
+              "exif.decode_unicode_motorola": {
+                "type": "string"
+              },
+              "exif.encode_jis": {
+                "type": "string"
+              },
+              "exif.encode_unicode": {
+                "type": "string"
+              },
+              "filter.default": {
+                "type": "string"
+              },
+              "filter.default_flags": {
+                "type": "null"
+              },
+              "gd.jpeg_ignore_warning": {
+                "type": "string"
+              },
+              "highlight.comment": {
+                "type": "string"
+              },
+              "highlight.default": {
+                "type": "string"
+              },
+              "highlight.html": {
+                "type": "string"
+              },
+              "highlight.keyword": {
+                "type": "string"
+              },
+              "highlight.string": {
+                "type": "string"
+              },
+              "iconv.input_encoding": {
+                "type": "string"
+              },
+              "iconv.internal_encoding": {
+                "type": "string"
+              },
+              "iconv.output_encoding": {
+                "type": "string"
+              },
+              "imagick.locale_fix": {
+                "type": "string"
+              },
+              "imagick.progress_monitor": {
+                "type": "string"
+              },
+              "imagick.skip_version_check": {
+                "type": "string"
+              },
+              "imap.enable_insecure_rsh": {
+                "type": "string"
+              },
+              "intl.default_locale": {
+                "type": "null"
+              },
+              "intl.error_level": {
+                "type": "string"
+              },
+              "intl.use_exceptions": {
+                "type": "string"
+              },
+              "ldap.max_links": {
+                "type": "string"
+              },
+              "mail.add_x_header": {
+                "type": "string"
+              },
+              "mail.force_extra_parameters": {
+                "type": "null"
+              },
+              "mail.log": {
+                "type": "null"
+              },
+              "mailparse.def_charset": {
+                "type": "string"
+              },
+              "mbstring.detect_order": {
+                "type": "null"
+              },
+              "mbstring.encoding_translation": {
+                "type": "string"
+              },
+              "mbstring.func_overload": {
+                "type": "string"
+              },
+              "mbstring.http_input": {
+                "type": "null"
+              },
+              "mbstring.http_output": {
+                "type": "null"
+              },
+              "mbstring.http_output_conv_mimetypes": {
+                "type": "string"
+              },
+              "mbstring.internal_encoding": {
+                "type": "null"
+              },
+              "mbstring.language": {
+                "type": "string"
+              },
+              "mbstring.regex_retry_limit": {
+                "type": "string"
+              },
+              "mbstring.regex_stack_limit": {
+                "type": "string"
+              },
+              "mbstring.strict_detection": {
+                "type": "string"
+              },
+              "mbstring.substitute_character": {
+                "type": "null"
+              },
+              "mysqli.allow_local_infile": {
+                "type": "string"
+              },
+              "mysqli.allow_persistent": {
+                "type": "string"
+              },
+              "mysqli.default_host": {
+                "type": "null"
+              },
+              "mysqli.default_port": {
+                "type": "string"
+              },
+              "mysqli.default_pw": {
+                "type": "null"
+              },
+              "mysqli.default_socket": {
+                "type": "string"
+              },
+              "mysqli.default_user": {
+                "type": "null"
+              },
+              "mysqli.max_links": {
+                "type": "string"
+              },
+              "mysqli.max_persistent": {
+                "type": "string"
+              },
+              "mysqli.reconnect": {
+                "type": "string"
+              },
+              "mysqli.rollback_on_cached_plink": {
+                "type": "string"
+              },
+              "mysqlnd.collect_memory_statistics": {
+                "type": "string"
+              },
+              "mysqlnd.collect_statistics": {
+                "type": "string"
+              },
+              "mysqlnd.debug": {
+                "type": "null"
+              },
+              "mysqlnd.fetch_data_copy": {
+                "type": "string"
+              },
+              "mysqlnd.log_mask": {
+                "type": "string"
+              },
+              "mysqlnd.mempool_default_size": {
+                "type": "string"
+              },
+              "mysqlnd.net_cmd_buffer_size": {
+                "type": "string"
+              },
+              "mysqlnd.net_read_buffer_size": {
+                "type": "string"
+              },
+              "mysqlnd.net_read_timeout": {
+                "type": "string"
+              },
+              "mysqlnd.sha256_server_public_key": {
+                "type": "null"
+              },
+              "mysqlnd.trace_alloc": {
+                "type": "null"
+              },
+              "opcache.blacklist_filename": {
+                "type": "string"
+              },
+              "opcache.consistency_checks": {
+                "type": "string"
+              },
+              "opcache.dups_fix": {
+                "type": "string"
+              },
+              "opcache.enable": {
+                "type": "string"
+              },
+              "opcache.enable_cli": {
+                "type": "string"
+              },
+              "opcache.enable_file_override": {
+                "type": "string"
+              },
+              "opcache.error_log": {
+                "type": "string"
+              },
+              "opcache.file_cache": {
+                "type": "null"
+              },
+              "opcache.file_cache_consistency_checks": {
+                "type": "string"
+              },
+              "opcache.file_cache_only": {
+                "type": "string"
+              },
+              "opcache.file_update_protection": {
+                "type": "string"
+              },
+              "opcache.force_restart_timeout": {
+                "type": "string"
+              },
+              "opcache.huge_code_pages": {
+                "type": "string"
+              },
+              "opcache.interned_strings_buffer": {
+                "type": "string"
+              },
+              "opcache.lockfile_path": {
+                "type": "string"
+              },
+              "opcache.log_verbosity_level": {
+                "type": "string"
+              },
+              "opcache.max_accelerated_files": {
+                "type": "string"
+              },
+              "opcache.max_file_size": {
+                "type": "string"
+              },
+              "opcache.max_wasted_percentage": {
+                "type": "string"
+              },
+              "opcache.memory_consumption": {
+                "type": "string"
+              },
+              "opcache.opt_debug_level": {
+                "type": "string"
+              },
+              "opcache.optimization_level": {
+                "type": "string"
+              },
+              "opcache.preferred_memory_model": {
+                "type": "string"
+              },
+              "opcache.preload": {
+                "type": "string"
+              },
+              "opcache.preload_user": {
+                "type": "string"
+              },
+              "opcache.protect_memory": {
+                "type": "string"
+              },
+              "opcache.restrict_api": {
+                "type": "string"
+              },
+              "opcache.revalidate_freq": {
+                "type": "string"
+              },
+              "opcache.revalidate_path": {
+                "type": "string"
+              },
+              "opcache.save_comments": {
+                "type": "string"
+              },
+              "opcache.use_cwd": {
+                "type": "string"
+              },
+              "opcache.validate_permission": {
+                "type": "string"
+              },
+              "opcache.validate_root": {
+                "type": "string"
+              },
+              "opcache.validate_timestamps": {
+                "type": "string"
+              },
+              "openssl.cafile": {
+                "type": "null"
+              },
+              "openssl.capath": {
+                "type": "null"
+              },
+              "pcre.backtrack_limit": {
+                "type": "string"
+              },
+              "pcre.jit": {
+                "type": "string"
+              },
+              "pcre.recursion_limit": {
+                "type": "string"
+              },
+              "pdo_mysql.default_socket": {
+                "type": "string"
+              },
+              "pgsql.allow_persistent": {
+                "type": "string"
+              },
+              "pgsql.auto_reset_persistent": {
+                "type": "string"
+              },
+              "pgsql.ignore_notice": {
+                "type": "string"
+              },
+              "pgsql.log_notice": {
+                "type": "string"
+              },
+              "pgsql.max_links": {
+                "type": "string"
+              },
+              "pgsql.max_persistent": {
+                "type": "string"
+              },
+              "phar.cache_list": {
+                "type": "string"
+              },
+              "phar.readonly": {
+                "type": "string"
+              },
+              "phar.require_hash": {
+                "type": "string"
+              },
+              "session.auto_start": {
+                "type": "string"
+              },
+              "session.cache_expire": {
+                "type": "string"
+              },
+              "session.cache_limiter": {
+                "type": "string"
+              },
+              "session.cookie_domain": {
+                "type": "string"
+              },
+              "session.cookie_httponly": {
+                "type": "string"
+              },
+              "session.cookie_lifetime": {
+                "type": "string"
+              },
+              "session.cookie_path": {
+                "type": "string"
+              },
+              "session.cookie_samesite": {
+                "type": "string"
+              },
+              "session.cookie_secure": {
+                "type": "string"
+              },
+              "session.gc_divisor": {
+                "type": "string"
+              },
+              "session.gc_maxlifetime": {
+                "type": "string"
+              },
+              "session.gc_probability": {
+                "type": "string"
+              },
+              "session.lazy_write": {
+                "type": "string"
+              },
+              "session.name": {
+                "type": "string"
+              },
+              "session.referer_check": {
+                "type": "string"
+              },
+              "session.save_handler": {
+                "type": "string"
+              },
+              "session.save_path": {
+                "type": "string"
+              },
+              "session.serialize_handler": {
+                "type": "string"
+              },
+              "session.sid_bits_per_character": {
+                "type": "string"
+              },
+              "session.sid_length": {
+                "type": "string"
+              },
+              "session.trans_sid_hosts": {
+                "type": "string"
+              },
+              "session.trans_sid_tags": {
+                "type": "string"
+              },
+              "session.upload_progress.cleanup": {
+                "type": "string"
+              },
+              "session.upload_progress.enabled": {
+                "type": "string"
+              },
+              "session.upload_progress.freq": {
+                "type": "string"
+              },
+              "session.upload_progress.min_freq": {
+                "type": "string"
+              },
+              "session.upload_progress.name": {
+                "type": "string"
+              },
+              "session.upload_progress.prefix": {
+                "type": "string"
+              },
+              "session.use_cookies": {
+                "type": "string"
+              },
+              "session.use_only_cookies": {
+                "type": "string"
+              },
+              "session.use_strict_mode": {
+                "type": "string"
+              },
+              "session.use_trans_sid": {
+                "type": "string"
+              },
+              "soap.wsdl_cache": {
+                "type": "string"
+              },
+              "soap.wsdl_cache_dir": {
+                "type": "string"
+              },
+              "soap.wsdl_cache_enabled": {
+                "type": "string"
+              },
+              "soap.wsdl_cache_limit": {
+                "type": "string"
+              },
+              "soap.wsdl_cache_ttl": {
+                "type": "string"
+              },
+              "sqlite3.defensive": {
+                "type": "string"
+              },
+              "sqlite3.extension_dir": {
+                "type": "null"
+              },
+              "syslog.facility": {
+                "type": "string"
+              },
+              "syslog.filter": {
+                "type": "string"
+              },
+              "syslog.ident": {
+                "type": "string"
+              },
+              "url_rewriter.hosts": {
+                "type": "string"
+              },
+              "url_rewriter.tags": {
+                "type": "string"
+              },
+              "user_ini.cache_ttl": {
+                "type": "string"
+              },
+              "user_ini.filename": {
+                "type": "string"
+              },
+              "xdebug.auto_trace": {
+                "type": "string"
+              },
+              "xdebug.cli_color": {
+                "type": "string"
+              },
+              "xdebug.collect_assignments": {
+                "type": "string"
+              },
+              "xdebug.collect_includes": {
+                "type": "string"
+              },
+              "xdebug.collect_params": {
+                "type": "string"
+              },
+              "xdebug.collect_return": {
+                "type": "string"
+              },
+              "xdebug.collect_vars": {
+                "type": "string"
+              },
+              "xdebug.coverage_enable": {
+                "type": "string"
+              },
+              "xdebug.default_enable": {
+                "type": "string"
+              },
+              "xdebug.dump.COOKIE": {
+                "type": "null"
+              },
+              "xdebug.dump.ENV": {
+                "type": "null"
+              },
+              "xdebug.dump.FILES": {
+                "type": "null"
+              },
+              "xdebug.dump.GET": {
+                "type": "null"
+              },
+              "xdebug.dump.POST": {
+                "type": "null"
+              },
+              "xdebug.dump.REQUEST": {
+                "type": "null"
+              },
+              "xdebug.dump.SERVER": {
+                "type": "null"
+              },
+              "xdebug.dump.SESSION": {
+                "type": "null"
+              },
+              "xdebug.dump_globals": {
+                "type": "string"
+              },
+              "xdebug.dump_once": {
+                "type": "string"
+              },
+              "xdebug.dump_undefined": {
+                "type": "string"
+              },
+              "xdebug.file_link_format": {
+                "type": "string"
+              },
+              "xdebug.filename_format": {
+                "type": "string"
+              },
+              "xdebug.force_display_errors": {
+                "type": "string"
+              },
+              "xdebug.force_error_reporting": {
+                "type": "string"
+              },
+              "xdebug.gc_stats_enable": {
+                "type": "string"
+              },
+              "xdebug.gc_stats_output_dir": {
+                "type": "string"
+              },
+              "xdebug.gc_stats_output_name": {
+                "type": "string"
+              },
+              "xdebug.halt_level": {
+                "type": "string"
+              },
+              "xdebug.idekey": {
+                "type": "string"
+              },
+              "xdebug.max_nesting_level": {
+                "type": "string"
+              },
+              "xdebug.max_stack_frames": {
+                "type": "string"
+              },
+              "xdebug.overload_var_dump": {
+                "type": "string"
+              },
+              "xdebug.profiler_append": {
+                "type": "string"
+              },
+              "xdebug.profiler_enable": {
+                "type": "string"
+              },
+              "xdebug.profiler_enable_trigger": {
+                "type": "string"
+              },
+              "xdebug.profiler_enable_trigger_value": {
+                "type": "string"
+              },
+              "xdebug.profiler_output_dir": {
+                "type": "string"
+              },
+              "xdebug.profiler_output_name": {
+                "type": "string"
+              },
+              "xdebug.remote_addr_header": {
+                "type": "string"
+              },
+              "xdebug.remote_autostart": {
+                "type": "string"
+              },
+              "xdebug.remote_connect_back": {
+                "type": "string"
+              },
+              "xdebug.remote_cookie_expire_time": {
+                "type": "string"
+              },
+              "xdebug.remote_enable": {
+                "type": "string"
+              },
+              "xdebug.remote_host": {
+                "type": "string"
+              },
+              "xdebug.remote_log": {
+                "type": "string"
+              },
+              "xdebug.remote_log_level": {
+                "type": "string"
+              },
+              "xdebug.remote_mode": {
+                "type": "string"
+              },
+              "xdebug.remote_port": {
+                "type": "string"
+              },
+              "xdebug.remote_timeout": {
+                "type": "string"
+              },
+              "xdebug.scream": {
+                "type": "string"
+              },
+              "xdebug.show_error_trace": {
+                "type": "string"
+              },
+              "xdebug.show_exception_trace": {
+                "type": "string"
+              },
+              "xdebug.show_local_vars": {
+                "type": "string"
+              },
+              "xdebug.show_mem_delta": {
+                "type": "string"
+              },
+              "xdebug.trace_enable_trigger": {
+                "type": "string"
+              },
+              "xdebug.trace_enable_trigger_value": {
+                "type": "string"
+              },
+              "xdebug.trace_format": {
+                "type": "string"
+              },
+              "xdebug.trace_options": {
+                "type": "string"
+              },
+              "xdebug.trace_output_dir": {
+                "type": "string"
+              },
+              "xdebug.trace_output_name": {
+                "type": "string"
+              },
+              "xdebug.var_display_max_children": {
+                "type": "string"
+              },
+              "xdebug.var_display_max_data": {
+                "type": "string"
+              },
+              "xdebug.var_display_max_depth": {
+                "type": "string"
+              },
+              "zend.assertions": {
+                "type": "string"
+              },
+              "zend.detect_unicode": {
+                "type": "string"
+              },
+              "zend.enable_gc": {
+                "type": "string"
+              },
+              "zend.exception_ignore_args": {
+                "type": "string"
+              },
+              "zend.multibyte": {
+                "type": "string"
+              },
+              "zend.script_encoding": {
+                "type": "null"
+              },
+              "zend.signal_check": {
+                "type": "string"
+              },
+              "zlib.output_compression": {
+                "type": "string"
+              },
+              "zlib.output_compression_level": {
+                "type": "string"
+              },
+              "zlib.output_handler": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "apc.coredump_unmap",
+              "apc.enable_cli",
+              "apc.enabled",
+              "apc.entries_hint",
+              "apc.gc_ttl",
+              "apc.mmap_file_mask",
+              "apc.preload_path",
+              "apc.serializer",
+              "apc.shm_segments",
+              "apc.shm_size",
+              "apc.slam_defense",
+              "apc.smart",
+              "apc.ttl",
+              "apc.use_request_time",
+              "arg_separator.input",
+              "arg_separator.output",
+              "assert.active",
+              "assert.bail",
+              "assert.callback",
+              "assert.exception",
+              "assert.quiet_eval",
+              "assert.warning",
+              "bcmath.scale",
+              "cli.pager",
+              "cli.prompt",
+              "curl.cainfo",
+              "date.default_latitude",
+              "date.default_longitude",
+              "date.sunrise_zenith",
+              "date.sunset_zenith",
+              "dba.default_handler",
+              "exif.decode_jis_intel",
+              "exif.decode_jis_motorola",
+              "exif.decode_unicode_intel",
+              "exif.decode_unicode_motorola",
+              "exif.encode_jis",
+              "exif.encode_unicode",
+              "filter.default",
+              "filter.default_flags",
+              "gd.jpeg_ignore_warning",
+              "highlight.comment",
+              "highlight.default",
+              "highlight.html",
+              "highlight.keyword",
+              "highlight.string",
+              "iconv.input_encoding",
+              "iconv.internal_encoding",
+              "iconv.output_encoding",
+              "imagick.locale_fix",
+              "imagick.progress_monitor",
+              "imagick.skip_version_check",
+              "imap.enable_insecure_rsh",
+              "intl.default_locale",
+              "intl.error_level",
+              "intl.use_exceptions",
+              "ldap.max_links",
+              "mail.add_x_header",
+              "mail.force_extra_parameters",
+              "mail.log",
+              "mailparse.def_charset",
+              "mbstring.detect_order",
+              "mbstring.encoding_translation",
+              "mbstring.func_overload",
+              "mbstring.http_input",
+              "mbstring.http_output",
+              "mbstring.http_output_conv_mimetypes",
+              "mbstring.internal_encoding",
+              "mbstring.language",
+              "mbstring.regex_retry_limit",
+              "mbstring.regex_stack_limit",
+              "mbstring.strict_detection",
+              "mbstring.substitute_character",
+              "mysqli.allow_local_infile",
+              "mysqli.allow_persistent",
+              "mysqli.default_host",
+              "mysqli.default_port",
+              "mysqli.default_pw",
+              "mysqli.default_socket",
+              "mysqli.default_user",
+              "mysqli.max_links",
+              "mysqli.max_persistent",
+              "mysqli.reconnect",
+              "mysqli.rollback_on_cached_plink",
+              "mysqlnd.collect_memory_statistics",
+              "mysqlnd.collect_statistics",
+              "mysqlnd.debug",
+              "mysqlnd.fetch_data_copy",
+              "mysqlnd.log_mask",
+              "mysqlnd.mempool_default_size",
+              "mysqlnd.net_cmd_buffer_size",
+              "mysqlnd.net_read_buffer_size",
+              "mysqlnd.net_read_timeout",
+              "mysqlnd.sha256_server_public_key",
+              "mysqlnd.trace_alloc",
+              "opcache.blacklist_filename",
+              "opcache.consistency_checks",
+              "opcache.dups_fix",
+              "opcache.enable",
+              "opcache.enable_cli",
+              "opcache.enable_file_override",
+              "opcache.error_log",
+              "opcache.file_cache",
+              "opcache.file_cache_consistency_checks",
+              "opcache.file_cache_only",
+              "opcache.file_update_protection",
+              "opcache.force_restart_timeout",
+              "opcache.huge_code_pages",
+              "opcache.interned_strings_buffer",
+              "opcache.lockfile_path",
+              "opcache.log_verbosity_level",
+              "opcache.max_accelerated_files",
+              "opcache.max_file_size",
+              "opcache.max_wasted_percentage",
+              "opcache.memory_consumption",
+              "opcache.opt_debug_level",
+              "opcache.optimization_level",
+              "opcache.preferred_memory_model",
+              "opcache.preload",
+              "opcache.preload_user",
+              "opcache.protect_memory",
+              "opcache.restrict_api",
+              "opcache.revalidate_freq",
+              "opcache.revalidate_path",
+              "opcache.save_comments",
+              "opcache.use_cwd",
+              "opcache.validate_permission",
+              "opcache.validate_root",
+              "opcache.validate_timestamps",
+              "openssl.cafile",
+              "openssl.capath",
+              "pcre.backtrack_limit",
+              "pcre.jit",
+              "pcre.recursion_limit",
+              "pdo_mysql.default_socket",
+              "pgsql.allow_persistent",
+              "pgsql.auto_reset_persistent",
+              "pgsql.ignore_notice",
+              "pgsql.log_notice",
+              "pgsql.max_links",
+              "pgsql.max_persistent",
+              "phar.cache_list",
+              "phar.readonly",
+              "phar.require_hash",
+              "session.auto_start",
+              "session.cache_expire",
+              "session.cache_limiter",
+              "session.cookie_domain",
+              "session.cookie_httponly",
+              "session.cookie_lifetime",
+              "session.cookie_path",
+              "session.cookie_samesite",
+              "session.cookie_secure",
+              "session.gc_divisor",
+              "session.gc_maxlifetime",
+              "session.gc_probability",
+              "session.lazy_write",
+              "session.name",
+              "session.referer_check",
+              "session.save_handler",
+              "session.save_path",
+              "session.serialize_handler",
+              "session.sid_bits_per_character",
+              "session.sid_length",
+              "session.trans_sid_hosts",
+              "session.trans_sid_tags",
+              "session.upload_progress.cleanup",
+              "session.upload_progress.enabled",
+              "session.upload_progress.freq",
+              "session.upload_progress.min_freq",
+              "session.upload_progress.name",
+              "session.upload_progress.prefix",
+              "session.use_cookies",
+              "session.use_only_cookies",
+              "session.use_strict_mode",
+              "session.use_trans_sid",
+              "soap.wsdl_cache",
+              "soap.wsdl_cache_dir",
+              "soap.wsdl_cache_enabled",
+              "soap.wsdl_cache_limit",
+              "soap.wsdl_cache_ttl",
+              "sqlite3.defensive",
+              "sqlite3.extension_dir",
+              "syslog.facility",
+              "syslog.filter",
+              "syslog.ident",
+              "url_rewriter.hosts",
+              "url_rewriter.tags",
+              "user_ini.cache_ttl",
+              "user_ini.filename",
+              "xdebug.auto_trace",
+              "xdebug.cli_color",
+              "xdebug.collect_assignments",
+              "xdebug.collect_includes",
+              "xdebug.collect_params",
+              "xdebug.collect_return",
+              "xdebug.collect_vars",
+              "xdebug.coverage_enable",
+              "xdebug.default_enable",
+              "xdebug.dump.COOKIE",
+              "xdebug.dump.ENV",
+              "xdebug.dump.FILES",
+              "xdebug.dump.GET",
+              "xdebug.dump.POST",
+              "xdebug.dump.REQUEST",
+              "xdebug.dump.SERVER",
+              "xdebug.dump.SESSION",
+              "xdebug.dump_globals",
+              "xdebug.dump_once",
+              "xdebug.dump_undefined",
+              "xdebug.file_link_format",
+              "xdebug.filename_format",
+              "xdebug.force_display_errors",
+              "xdebug.force_error_reporting",
+              "xdebug.gc_stats_enable",
+              "xdebug.gc_stats_output_dir",
+              "xdebug.gc_stats_output_name",
+              "xdebug.halt_level",
+              "xdebug.idekey",
+              "xdebug.max_nesting_level",
+              "xdebug.max_stack_frames",
+              "xdebug.overload_var_dump",
+              "xdebug.profiler_append",
+              "xdebug.profiler_enable",
+              "xdebug.profiler_enable_trigger",
+              "xdebug.profiler_enable_trigger_value",
+              "xdebug.profiler_output_dir",
+              "xdebug.profiler_output_name",
+              "xdebug.remote_addr_header",
+              "xdebug.remote_autostart",
+              "xdebug.remote_connect_back",
+              "xdebug.remote_cookie_expire_time",
+              "xdebug.remote_enable",
+              "xdebug.remote_host",
+              "xdebug.remote_log",
+              "xdebug.remote_log_level",
+              "xdebug.remote_mode",
+              "xdebug.remote_port",
+              "xdebug.remote_timeout",
+              "xdebug.scream",
+              "xdebug.show_error_trace",
+              "xdebug.show_exception_trace",
+              "xdebug.show_local_vars",
+              "xdebug.show_mem_delta",
+              "xdebug.trace_enable_trigger",
+              "xdebug.trace_enable_trigger_value",
+              "xdebug.trace_format",
+              "xdebug.trace_options",
+              "xdebug.trace_output_dir",
+              "xdebug.trace_output_name",
+              "xdebug.var_display_max_children",
+              "xdebug.var_display_max_data",
+              "xdebug.var_display_max_depth",
+              "zend.assertions",
+              "zend.detect_unicode",
+              "zend.enable_gc",
+              "zend.exception_ignore_args",
+              "zend.multibyte",
+              "zend.script_encoding",
+              "zend.signal_check",
+              "zlib.output_compression",
+              "zlib.output_compression_level",
+              "zlib.output_handler"
+            ]
+          }
+        },
+        "required": [
+          "backend",
+          "core",
+          "extensions"
+        ]
+      }
+    },
+    "extensions_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "backend": {
+            "type": "integer"
+          },
+          "extensions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "enable": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "description",
+                "enable",
+                "name"
+              ]
+            }
+          }
+        },
+        "required": [
+          "backend",
+          "extensions"
+        ]
+      }
+    },
+    "meta_data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ]
+      }
+    }
+  },
+  "required": [
+    "default_settings",
+    "extensions_list",
+    "meta_data"
+  ]
+}

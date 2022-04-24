@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "portal": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "acl": {
+            "type": "null"
+          },
+          "alias": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "enable_redirect": {
+            "type": "boolean"
+          },
+          "fqdn": {
+            "type": "null"
+          },
+          "hsts": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "display_name",
+          "enable_redirect",
+          "id"
+        ]
+      }
+    }
+  },
+  "required": [
+    "portal"
+  ]
+}

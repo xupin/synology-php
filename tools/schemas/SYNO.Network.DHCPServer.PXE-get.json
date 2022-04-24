@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "is_remote_tftp": {
+      "type": "string"
+    },
+    "local_bootloader": {
+      "type": "string"
+    },
+    "remote_bootloader": {
+      "type": "string"
+    },
+    "remote_tftp_server_ip": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enable",
+    "is_remote_tftp",
+    "local_bootloader",
+    "remote_bootloader",
+    "remote_tftp_server_ip"
+  ]
+}

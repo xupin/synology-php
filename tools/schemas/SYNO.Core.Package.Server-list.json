@@ -1,0 +1,1201 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "banners": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "background": {
+            "type": "string"
+          },
+          "beta": {
+            "type": "boolean"
+          },
+          "css": {
+            "type": "object",
+            "properties": {
+              "desc": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "string": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "triangle": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "desc",
+              "icon",
+              "string",
+              "title",
+              "triangle"
+            ]
+          },
+          "descr": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "keyword": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "background",
+          "beta",
+          "css",
+          "descr",
+          "icon",
+          "keyword",
+          "link",
+          "sort",
+          "title",
+          "type"
+        ]
+      }
+    },
+    "beta_packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "beta": {
+            "type": "boolean"
+          },
+          "breakpkgs": {
+            "type": "null"
+          },
+          "category": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "changelog": {
+            "type": "string"
+          },
+          "conflictpkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "Plex Media Server": {
+                    "type": "string"
+                  },
+                  "SiteRecovery": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "ctl_stop": {
+            "type": "string"
+          },
+          "ctl_uninstall": {
+            "type": "string"
+          },
+          "deppkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "PHP7.3": {
+                    "type": "string"
+                  },
+                  "WebStation": {
+                    "type": "string"
+                  },
+                  "CodecPack": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "desc": {
+            "type": "string"
+          },
+          "dname": {
+            "type": "string"
+          },
+          "download_count": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "ignore_rolling": {
+            "type": "boolean"
+          },
+          "install_type": {
+            "type": "string"
+          },
+          "is_security_version": {
+            "type": "boolean"
+          },
+          "link": {
+            "type": "string"
+          },
+          "maintainer": {
+            "type": "string"
+          },
+          "md5": {
+            "type": "string"
+          },
+          "package": {
+            "type": "string"
+          },
+          "price": {
+            "type": "null"
+          },
+          "qinst": {
+            "type": "boolean"
+          },
+          "qupgrade": {
+            "type": "boolean"
+          },
+          "recent_download_count": {
+            "type": "integer"
+          },
+          "replace_message": {
+            "type": "string"
+          },
+          "replaceforcepkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "Plex Media Server": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "Plex Media Server"
+                ]
+              }
+            ]
+          },
+          "replacepkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "Plex Media Server": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "Plex Media Server"
+                ]
+              }
+            ]
+          },
+          "silent_upgrade": {
+            "type": "boolean"
+          },
+          "size": {
+            "type": "integer"
+          },
+          "snapshot": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "thumbnail_retina": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "string"
+          },
+          "qstart": {
+            "type": "boolean"
+          },
+          "start": {
+            "type": "boolean"
+          },
+          "silent_install": {
+            "type": "boolean"
+          },
+          "silent_uninstall": {
+            "type": "boolean"
+          },
+          "depsers": {
+            "type": "string"
+          },
+          "distributor": {
+            "type": "string"
+          },
+          "distributor_url": {
+            "type": "string"
+          },
+          "maintainer_url": {
+            "type": "string"
+          },
+          "provides": {
+            "type": "string"
+          },
+          "support_url": {
+            "type": "string"
+          },
+          "thirdparty": {
+            "type": "boolean"
+          },
+          "auto_upgrade_from": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "beta",
+          "breakpkgs",
+          "category",
+          "changelog",
+          "conflictpkgs",
+          "deppkgs",
+          "desc",
+          "dname",
+          "download_count",
+          "id",
+          "ignore_rolling",
+          "is_security_version",
+          "link",
+          "maintainer",
+          "md5",
+          "package",
+          "price",
+          "recent_download_count",
+          "replaceforcepkgs",
+          "replacepkgs",
+          "size",
+          "snapshot",
+          "source",
+          "thumbnail",
+          "thumbnail_retina",
+          "type",
+          "version"
+        ]
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "descr": {
+            "type": "string"
+          },
+          "dname": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "isCompilation": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "descr",
+          "dname",
+          "id",
+          "isCompilation"
+        ]
+      }
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "beta": {
+            "type": "boolean"
+          },
+          "breakpkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "Docker-Discourse": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Docker-GitLab": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Docker-LXQt": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Docker-Redmine": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Docker-Spree": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "DocumentViewer": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "BitDefenderForMailPlus": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "MailClient": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "MailStation": {
+                    "type": "object",
+                    "properties": {
+                      "<=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<="
+                    ]
+                  },
+                  "SnapshotReplication": {
+                    "type": "object",
+                    "properties": {
+                      "<=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<="
+                    ]
+                  },
+                  "Spreadsheet": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Apache2.2": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Apache2.4": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "PHP5.6": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "PHP7.0": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "PHP7.1": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "PHP7.2": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "PHP7.3": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "category": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "changelog": {
+            "type": "string"
+          },
+          "conflictpkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "AntiVirus-McAfee": {
+                    "type": "string"
+                  },
+                  "AntiVirus": {
+                    "type": "string"
+                  },
+                  "ActiveDirectoryServer": {
+                    "type": "string"
+                  },
+                  "SiteRecovery": {
+                    "type": "string"
+                  },
+                  "PDFViewer": {
+                    "type": "string"
+                  },
+                  "GoodSync Server": {
+                    "type": "string"
+                  },
+                  "DisasterRecovery": {
+                    "type": "string"
+                  },
+                  "MigrationAssistant": {
+                    "type": "string"
+                  },
+                  "PetaSpace": {
+                    "type": "string"
+                  },
+                  "HighAvailability": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "Zarafa": {
+                    "type": "string"
+                  },
+                  "NBR-Transporter": {
+                    "type": "string"
+                  },
+                  "NBR": {
+                    "type": "string"
+                  },
+                  "DocumentViewer": {
+                    "type": "string"
+                  },
+                  "SnapshotReplication": {
+                    "type": "object",
+                    "properties": {
+                      "<=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<="
+                    ]
+                  },
+                  "CloudStation": {
+                    "type": "string"
+                  },
+                  "CloudStationClient": {
+                    "type": "string"
+                  },
+                  "Spreadsheet": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  },
+                  "PhotoStation": {
+                    "type": "string"
+                  },
+                  "SynologyMoments": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "deppkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "SMBService": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "SynoFinder": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "WebStation": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "Docker": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "Node.js_v12": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "PHP7.3": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "SynologyApplicationService": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "DNSServer": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "Python2": {
+                    "type": "string"
+                  },
+                  "Apache2.2": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "MariaDB10": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "Contacts": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "MailPlus-Server": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "Node.js_v14": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "Perl": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "MailServer": {
+                    "type": "string"
+                  },
+                  "PHP7.4": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "CodecPack": {
+                    "type": "string"
+                  },
+                  "ReplicationService": {
+                    "type": "string"
+                  },
+                  "ScsiTarget": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
+                  },
+                  "SynologyDrive": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "UniversalViewer": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "desc": {
+            "type": "string"
+          },
+          "distributor_url": {
+            "type": "string"
+          },
+          "dname": {
+            "type": "string"
+          },
+          "download_count": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "string"
+          },
+          "ignore_rolling": {
+            "type": "boolean"
+          },
+          "install_on_cold_storage": {
+            "type": "boolean"
+          },
+          "is_security_version": {
+            "type": "boolean"
+          },
+          "link": {
+            "type": "string"
+          },
+          "maintainer": {
+            "type": "string"
+          },
+          "maintainer_url": {
+            "type": "string"
+          },
+          "md5": {
+            "type": "string"
+          },
+          "package": {
+            "type": "string"
+          },
+          "price": {
+            "type": "null"
+          },
+          "qinst": {
+            "type": "boolean"
+          },
+          "qstart": {
+            "type": "boolean"
+          },
+          "qupgrade": {
+            "type": "boolean"
+          },
+          "recent_download_count": {
+            "type": "integer"
+          },
+          "replace_message": {
+            "type": "string"
+          },
+          "replaceforcepkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "ActiveDirectoryServer": {
+                    "type": "string"
+                  },
+                  "GoodSync Server": {
+                    "type": "string"
+                  },
+                  "CloudStation": {
+                    "type": "string"
+                  },
+                  "CloudStationClient": {
+                    "type": "string"
+                  },
+                  "PhotoStation": {
+                    "type": "string"
+                  },
+                  "SynologyMoments": {
+                    "type": "string"
+                  },
+                  "exFAT": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "replacepkgs": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "ActiveDirectoryServer": {
+                    "type": "string"
+                  },
+                  "GoodSync Server": {
+                    "type": "string"
+                  },
+                  "CloudStation": {
+                    "type": "string"
+                  },
+                  "CloudStationClient": {
+                    "type": "string"
+                  },
+                  "PhotoStation": {
+                    "type": "string"
+                  },
+                  "SynologyMoments": {
+                    "type": "string"
+                  },
+                  "exFAT": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "silent_install": {
+            "type": "boolean"
+          },
+          "silent_uninstall": {
+            "type": "boolean"
+          },
+          "silent_upgrade": {
+            "type": "boolean"
+          },
+          "size": {
+            "type": "integer"
+          },
+          "snapshot": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source": {
+            "type": "string"
+          },
+          "start": {
+            "type": "boolean"
+          },
+          "thumbnail": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "thumbnail_retina": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "string"
+          },
+          "ctl_stop": {
+            "type": "string"
+          },
+          "ctl_uninstall": {
+            "type": "string"
+          },
+          "install_type": {
+            "type": "string"
+          },
+          "distributor": {
+            "type": "string"
+          },
+          "startable": {
+            "type": "string"
+          },
+          "thirdparty": {
+            "type": "boolean"
+          },
+          "support_url": {
+            "type": "string"
+          },
+          "depsers": {
+            "type": "string"
+          },
+          "support_conf_folder": {
+            "type": "boolean"
+          },
+          "provides": {
+            "type": "string"
+          },
+          "auto_upgrade_from": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "beta",
+          "breakpkgs",
+          "category",
+          "changelog",
+          "conflictpkgs",
+          "deppkgs",
+          "desc",
+          "dname",
+          "download_count",
+          "id",
+          "ignore_rolling",
+          "is_security_version",
+          "link",
+          "maintainer",
+          "md5",
+          "package",
+          "price",
+          "recent_download_count",
+          "replaceforcepkgs",
+          "replacepkgs",
+          "size",
+          "snapshot",
+          "source",
+          "thumbnail",
+          "thumbnail_retina",
+          "type",
+          "version"
+        ]
+      }
+    }
+  },
+  "required": [
+    "banners",
+    "beta_packages",
+    "categories",
+    "packages"
+  ]
+}

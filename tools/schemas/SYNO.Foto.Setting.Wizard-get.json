@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "info": {
+      "type": "object",
+      "properties": {
+        "enable_home_service": {
+          "type": "boolean"
+        },
+        "first_install": {
+          "type": "boolean"
+        },
+        "migrate_from_personal_photo": {
+          "type": "boolean"
+        },
+        "migrate_from_photo_station": {
+          "type": "boolean"
+        },
+        "person_performance_note": {
+          "type": "boolean"
+        },
+        "support_home_service": {
+          "type": "boolean"
+        },
+        "team_space_permission": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "enable_home_service",
+        "first_install",
+        "migrate_from_personal_photo",
+        "migrate_from_photo_station",
+        "person_performance_note",
+        "support_home_service",
+        "team_space_permission"
+      ]
+    },
+    "prompt": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "show": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "show"
+        ]
+      }
+    },
+    "tip": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "show": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "show"
+        ]
+      }
+    },
+    "wizard": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "show": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "show"
+        ]
+      }
+    }
+  },
+  "required": [
+    "info",
+    "prompt",
+    "tip",
+    "wizard"
+  ]
+}

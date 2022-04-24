@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "is_multi_client": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "enable",
+    "is_multi_client"
+  ]
+}

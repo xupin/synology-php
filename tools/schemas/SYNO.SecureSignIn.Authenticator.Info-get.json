@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "app_android_support_version": {
+      "type": "string"
+    },
+    "app_ios_support_version": {
+      "type": "string"
+    },
+    "dsm_hw_id": {
+      "type": "string"
+    },
+    "hostname": {
+      "type": "string"
+    },
+    "pkg_enable": {
+      "type": "boolean"
+    },
+    "sa_enable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "app_android_support_version",
+    "app_ios_support_version",
+    "dsm_hw_id",
+    "hostname",
+    "pkg_enable",
+    "sa_enable"
+  ]
+}

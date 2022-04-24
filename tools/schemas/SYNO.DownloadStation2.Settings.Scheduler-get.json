@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "download_rate": {
+      "type": "integer"
+    },
+    "enable_schedule": {
+      "type": "boolean"
+    },
+    "max_tasks": {
+      "type": "integer"
+    },
+    "max_tasks_limit": {
+      "type": "integer"
+    },
+    "order": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "string"
+    },
+    "upload_rate": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "download_rate",
+    "enable_schedule",
+    "max_tasks",
+    "max_tasks_limit",
+    "order",
+    "schedule",
+    "upload_rate"
+  ]
+}

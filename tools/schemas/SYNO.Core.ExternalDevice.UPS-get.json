@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "ACL_enable": {
+      "type": "boolean"
+    },
+    "ACL_list": {
+      "type": "array"
+    },
+    "charge": {
+      "type": "integer"
+    },
+    "delay_time": {
+      "type": "integer"
+    },
+    "enable": {
+      "type": "boolean"
+    },
+    "manufacture": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "net_server_ip": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "integer"
+    },
+    "shutdown_device": {
+      "type": "boolean"
+    },
+    "snmp_auth": {
+      "type": "boolean"
+    },
+    "snmp_auth_key": {
+      "type": "boolean"
+    },
+    "snmp_auth_type": {
+      "type": "string"
+    },
+    "snmp_community": {
+      "type": "string"
+    },
+    "snmp_mib": {
+      "type": "string"
+    },
+    "snmp_privacy": {
+      "type": "boolean"
+    },
+    "snmp_privacy_key": {
+      "type": "boolean"
+    },
+    "snmp_privacy_type": {
+      "type": "string"
+    },
+    "snmp_server_ip": {
+      "type": "string"
+    },
+    "snmp_user": {
+      "type": "string"
+    },
+    "snmp_version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "usb_ups_connect": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "ACL_enable",
+    "ACL_list",
+    "charge",
+    "delay_time",
+    "enable",
+    "manufacture",
+    "mode",
+    "model",
+    "net_server_ip",
+    "runtime",
+    "shutdown_device",
+    "snmp_auth",
+    "snmp_auth_key",
+    "snmp_auth_type",
+    "snmp_community",
+    "snmp_mib",
+    "snmp_privacy",
+    "snmp_privacy_key",
+    "snmp_privacy_type",
+    "snmp_server_ip",
+    "snmp_user",
+    "snmp_version",
+    "status",
+    "usb_ups_connect"
+  ]
+}

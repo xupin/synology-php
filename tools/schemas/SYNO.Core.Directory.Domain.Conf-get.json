@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "direct_connect_trust": {
+      "type": "boolean"
+    },
+    "disable_domain_admins": {
+      "type": "boolean"
+    },
+    "domain_nested_group": {
+      "type": "integer"
+    },
+    "enable_rpc_enum_usergroup": {
+      "type": "boolean"
+    },
+    "enable_sync_time": {
+      "type": "boolean"
+    },
+    "encrypt_ad_ldap": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "direct_connect_trust",
+    "disable_domain_admins",
+    "domain_nested_group",
+    "enable_rpc_enum_usergroup",
+    "enable_sync_time",
+    "encrypt_ad_ldap"
+  ]
+}

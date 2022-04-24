@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "folder": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "path": {
+            "type": "string"
+          },
+          "preferlang": {
+            "type": "string"
+          },
+          "search_metadata": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "preferlang",
+          "search_metadata",
+          "status",
+          "type"
+        ]
+      }
+    }
+  },
+  "required": [
+    "folder"
+  ]
+}

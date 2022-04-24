@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "cpu": {
+      "type": "object",
+      "properties": {
+        "15min_load": {
+          "type": "integer"
+        },
+        "1min_load": {
+          "type": "integer"
+        },
+        "5min_load": {
+          "type": "integer"
+        },
+        "device": {
+          "type": "string"
+        },
+        "other_load": {
+          "type": "integer"
+        },
+        "system_load": {
+          "type": "integer"
+        },
+        "user_load": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "15min_load",
+        "1min_load",
+        "5min_load",
+        "device",
+        "other_load",
+        "system_load",
+        "user_load"
+      ]
+    },
+    "disk": {
+      "type": "object",
+      "properties": {
+        "disk": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "device": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "read_access": {
+                "type": "integer"
+              },
+              "read_byte": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              },
+              "utilization": {
+                "type": "integer"
+              },
+              "write_access": {
+                "type": "integer"
+              },
+              "write_byte": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "device",
+              "display_name",
+              "read_access",
+              "read_byte",
+              "type",
+              "utilization",
+              "write_access",
+              "write_byte"
+            ]
+          }
+        },
+        "total": {
+          "type": "object",
+          "properties": {
+            "device": {
+              "type": "string"
+            },
+            "read_access": {
+              "type": "integer"
+            },
+            "read_byte": {
+              "type": "integer"
+            },
+            "utilization": {
+              "type": "integer"
+            },
+            "write_access": {
+              "type": "integer"
+            },
+            "write_byte": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "device",
+            "read_access",
+            "read_byte",
+            "utilization",
+            "write_access",
+            "write_byte"
+          ]
+        }
+      },
+      "required": [
+        "disk",
+        "total"
+      ]
+    },
+    "lun": {
+      "type": "array"
+    },
+    "memory": {
+      "type": "object",
+      "properties": {
+        "avail_real": {
+          "type": "integer"
+        },
+        "avail_swap": {
+          "type": "integer"
+        },
+        "buffer": {
+          "type": "integer"
+        },
+        "cached": {
+          "type": "integer"
+        },
+        "device": {
+          "type": "string"
+        },
+        "memory_size": {
+          "type": "integer"
+        },
+        "real_usage": {
+          "type": "integer"
+        },
+        "si_disk": {
+          "type": "integer"
+        },
+        "so_disk": {
+          "type": "integer"
+        },
+        "swap_usage": {
+          "type": "integer"
+        },
+        "total_real": {
+          "type": "integer"
+        },
+        "total_swap": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "avail_real",
+        "avail_swap",
+        "buffer",
+        "cached",
+        "device",
+        "memory_size",
+        "real_usage",
+        "si_disk",
+        "so_disk",
+        "swap_usage",
+        "total_real",
+        "total_swap"
+      ]
+    },
+    "network": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "device": {
+            "type": "string"
+          },
+          "rx": {
+            "type": "integer"
+          },
+          "tx": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "device",
+          "rx",
+          "tx"
+        ]
+      }
+    },
+    "nfs": {
+      "type": "array"
+    },
+    "space": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "object",
+          "properties": {
+            "device": {
+              "type": "string"
+            },
+            "read_access": {
+              "type": "integer"
+            },
+            "read_byte": {
+              "type": "integer"
+            },
+            "utilization": {
+              "type": "integer"
+            },
+            "write_access": {
+              "type": "integer"
+            },
+            "write_byte": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "device",
+            "read_access",
+            "read_byte",
+            "utilization",
+            "write_access",
+            "write_byte"
+          ]
+        },
+        "volume": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "device": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "read_access": {
+                "type": "integer"
+              },
+              "read_byte": {
+                "type": "integer"
+              },
+              "utilization": {
+                "type": "integer"
+              },
+              "write_access": {
+                "type": "integer"
+              },
+              "write_byte": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "device",
+              "display_name",
+              "read_access",
+              "read_byte",
+              "utilization",
+              "write_access",
+              "write_byte"
+            ]
+          }
+        }
+      },
+      "required": [
+        "total",
+        "volume"
+      ]
+    },
+    "time": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "cpu",
+    "disk",
+    "lun",
+    "memory",
+    "network",
+    "nfs",
+    "space",
+    "time"
+  ]
+}

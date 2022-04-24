@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "offset": {
+      "type": "integer"
+    },
+    "registries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enable_registry_mirror": {
+            "type": "boolean"
+          },
+          "enable_trust_SSC": {
+            "type": "boolean"
+          },
+          "mirror_url": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "syno": {
+            "type": "boolean"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "enable_trust_SSC",
+          "name",
+          "syno",
+          "url"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    },
+    "using": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "offset",
+    "registries",
+    "total",
+    "using"
+  ]
+}

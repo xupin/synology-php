@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "default_destination": {
+      "type": "string"
+    },
+    "enable_delete_torrent_nzb_watch": {
+      "type": "boolean"
+    },
+    "enable_torrent_nzb_watch": {
+      "type": "boolean"
+    },
+    "torrent_nzb_watch_folder": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "default_destination",
+    "enable_delete_torrent_nzb_watch",
+    "enable_torrent_nzb_watch",
+    "torrent_nzb_watch_folder"
+  ]
+}

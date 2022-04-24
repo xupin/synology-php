@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "buildphase": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "server_baseurl": {
+      "type": "string"
+    },
+    "sn": {
+      "type": "string"
+    },
+    "tid": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "buildphase",
+    "model",
+    "server_baseurl",
+    "sn",
+    "tid",
+    "timestamp",
+    "version"
+  ]
+}

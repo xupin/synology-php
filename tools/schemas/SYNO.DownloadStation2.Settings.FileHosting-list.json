@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "auth_needed": {
+        "type": "boolean"
+      },
+      "description": {
+        "type": "string"
+      },
+      "displayname": {
+        "type": "string"
+      },
+      "enabled": {
+        "type": "boolean"
+      },
+      "experimental": {
+        "type": "boolean"
+      },
+      "name": {
+        "type": "string"
+      },
+      "removable": {
+        "type": "boolean"
+      },
+      "type": {
+        "type": "string"
+      },
+      "version": {
+        "type": "string"
+      },
+      "can_be_disabled": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "auth_needed",
+      "description",
+      "displayname",
+      "enabled",
+      "name",
+      "removable",
+      "type",
+      "version"
+    ]
+  }
+}

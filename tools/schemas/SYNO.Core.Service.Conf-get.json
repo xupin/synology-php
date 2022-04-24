@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "service_fw_target_interface": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "service_fw_target_interface"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "is_manager": {
+      "type": "boolean"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "version_string": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "is_manager",
+    "version",
+    "version_string"
+  ]
+}

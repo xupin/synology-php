@@ -1,0 +1,2714 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "cssPath": {
+        "type": "string"
+      },
+      "jsPath": {
+        "type": "string"
+      },
+      "texts": {
+        "type": "object",
+        "properties": {
+          "authenticator": {
+            "type": "object",
+            "properties": {
+              "app": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "displayname": {
+                    "type": "string"
+                  },
+                  "warning_remove_2fa_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_2step_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_the_last_2fa_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_the_last_2step_device": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "description",
+                  "displayname",
+                  "warning_remove_2fa_device",
+                  "warning_remove_2step_device",
+                  "warning_remove_the_last_2fa_device",
+                  "warning_remove_the_last_2step_device"
+                ]
+              },
+              "authenticator": {
+                "type": "object",
+                "properties": {
+                  "2fa_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_login_flow": {
+                    "type": "string"
+                  },
+                  "2fa_note_scan_qr_code": {
+                    "type": "string"
+                  },
+                  "2fa_setup_finish_desc": {
+                    "type": "string"
+                  },
+                  "2fa_with_authenticator": {
+                    "type": "string"
+                  },
+                  "app_version": {
+                    "type": "string"
+                  },
+                  "approve_sign_in": {
+                    "type": "string"
+                  },
+                  "authenticator_desc": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "install_authenticator": {
+                    "type": "string"
+                  },
+                  "install_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "login_desc": {
+                    "type": "string"
+                  },
+                  "login_flow": {
+                    "type": "string"
+                  },
+                  "login_page_desc": {
+                    "type": "string"
+                  },
+                  "login_request_resend": {
+                    "type": "string"
+                  },
+                  "login_request_resend_button": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "mobile_wait_too_long_info": {
+                    "type": "string"
+                  },
+                  "model": {
+                    "type": "string"
+                  },
+                  "note_scan_qr_code": {
+                    "type": "string"
+                  },
+                  "os_version": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_admin": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_admin_with_params": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_user": {
+                    "type": "string"
+                  },
+                  "receive_sign_in_request": {
+                    "type": "string"
+                  },
+                  "recv_sign_in_requests": {
+                    "type": "string"
+                  },
+                  "register_unavailable_title": {
+                    "type": "string"
+                  },
+                  "request_denied": {
+                    "type": "string"
+                  },
+                  "request_denied_desc": {
+                    "type": "string"
+                  },
+                  "request_sent_desc": {
+                    "type": "string"
+                  },
+                  "request_sent_num_desc": {
+                    "type": "string"
+                  },
+                  "request_timeout": {
+                    "type": "string"
+                  },
+                  "request_timeout_desc": {
+                    "type": "string"
+                  },
+                  "scan_qr_code": {
+                    "type": "string"
+                  },
+                  "setup_authenticator": {
+                    "type": "string"
+                  },
+                  "setup_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "sign_in_method": {
+                    "type": "string"
+                  },
+                  "sign_in_with_authenticator": {
+                    "type": "string"
+                  },
+                  "tap_to_continue": {
+                    "type": "string"
+                  },
+                  "try_again": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_authenticator_desc",
+                  "2fa_desc",
+                  "2fa_login_flow",
+                  "2fa_note_scan_qr_code",
+                  "2fa_setup_finish_desc",
+                  "2fa_with_authenticator",
+                  "app_version",
+                  "approve_sign_in",
+                  "authenticator_desc",
+                  "enforce_2fa_authenticator_desc",
+                  "install_authenticator",
+                  "install_authenticator_desc",
+                  "login_desc",
+                  "login_flow",
+                  "login_page_desc",
+                  "login_request_resend",
+                  "login_request_resend_button",
+                  "management_empty_text",
+                  "mobile_wait_too_long_info",
+                  "model",
+                  "note_scan_qr_code",
+                  "os_version",
+                  "private_ip_error_msg_admin",
+                  "private_ip_error_msg_admin_with_params",
+                  "private_ip_error_msg_user",
+                  "receive_sign_in_request",
+                  "recv_sign_in_requests",
+                  "register_unavailable_title",
+                  "request_denied",
+                  "request_denied_desc",
+                  "request_sent_desc",
+                  "request_sent_num_desc",
+                  "request_timeout",
+                  "request_timeout_desc",
+                  "scan_qr_code",
+                  "setup_authenticator",
+                  "setup_authenticator_desc",
+                  "sign_in_method",
+                  "sign_in_with_authenticator",
+                  "tap_to_continue",
+                  "try_again"
+                ]
+              },
+              "common": {
+                "type": "object",
+                "properties": {
+                  "2fa_off": {
+                    "type": "string"
+                  },
+                  "2fa_on": {
+                    "type": "string"
+                  },
+                  "2fa_package_broken_msg": {
+                    "type": "string"
+                  },
+                  "add_time": {
+                    "type": "string"
+                  },
+                  "continue": {
+                    "type": "string"
+                  },
+                  "last_used_time": {
+                    "type": "string"
+                  },
+                  "package_broken_msg": {
+                    "type": "string"
+                  },
+                  "passwordless_off": {
+                    "type": "string"
+                  },
+                  "passwordless_on": {
+                    "type": "string"
+                  },
+                  "passwordless_signin": {
+                    "type": "string"
+                  },
+                  "setup_success": {
+                    "type": "string"
+                  },
+                  "turn_off": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_off",
+                  "2fa_on",
+                  "2fa_package_broken_msg",
+                  "add_time",
+                  "continue",
+                  "last_used_time",
+                  "package_broken_msg",
+                  "passwordless_off",
+                  "passwordless_on",
+                  "passwordless_signin",
+                  "setup_success",
+                  "turn_off"
+                ]
+              },
+              "error": {
+                "type": "object",
+                "properties": {
+                  "invalid_device_name": {
+                    "type": "string"
+                  },
+                  "invalid_domain": {
+                    "type": "string"
+                  },
+                  "invalid_domain_user": {
+                    "type": "string"
+                  },
+                  "other_ways_desc": {
+                    "type": "string"
+                  },
+                  "register_again": {
+                    "type": "string"
+                  },
+                  "something_wrong": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "invalid_device_name",
+                  "invalid_domain",
+                  "invalid_domain_user",
+                  "other_ways_desc",
+                  "register_again",
+                  "something_wrong"
+                ]
+              },
+              "fido": {
+                "type": "object",
+                "properties": {
+                  "complete_login": {
+                    "type": "string"
+                  },
+                  "follow_steps": {
+                    "type": "string"
+                  },
+                  "hardware_security_key": {
+                    "type": "string"
+                  },
+                  "keyname_collision": {
+                    "type": "string"
+                  },
+                  "login_page_desc": {
+                    "type": "string"
+                  },
+                  "mac_touch_id_setup_desc": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "method_touch_id": {
+                    "type": "string"
+                  },
+                  "method_usb_key": {
+                    "type": "string"
+                  },
+                  "method_windows_hello": {
+                    "type": "string"
+                  },
+                  "name_your_key": {
+                    "type": "string"
+                  },
+                  "platform_key_not_setup_desc": {
+                    "type": "string"
+                  },
+                  "reg_wizard_usb_key_title": {
+                    "type": "string"
+                  },
+                  "register_duplicate_key": {
+                    "type": "string"
+                  },
+                  "security_key_registered": {
+                    "type": "string"
+                  },
+                  "security_key_registered_desc": {
+                    "type": "string"
+                  },
+                  "securiy_key_registered": {
+                    "type": "string"
+                  },
+                  "select_type": {
+                    "type": "string"
+                  },
+                  "set_up_ddns": {
+                    "type": "string"
+                  },
+                  "set_up_ddns_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_2fa_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_disabled": {
+                    "type": "string"
+                  },
+                  "touch_id_login_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "touch_id_not_set_up_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_not_set_up_title": {
+                    "type": "string"
+                  },
+                  "touch_id_reg": {
+                    "type": "string"
+                  },
+                  "touch_id_setup_desc": {
+                    "type": "string"
+                  },
+                  "type_touch_id": {
+                    "type": "string"
+                  },
+                  "type_usb_key": {
+                    "type": "string"
+                  },
+                  "type_windows_hello": {
+                    "type": "string"
+                  },
+                  "usb_key_2fa_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_login_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "usb_key_name": {
+                    "type": "string"
+                  },
+                  "usb_key_name_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_reg": {
+                    "type": "string"
+                  },
+                  "usb_key_reg_desc": {
+                    "type": "string"
+                  },
+                  "use_registered_hostname_desc": {
+                    "type": "string"
+                  },
+                  "use_registered_hostname_desc_with_params": {
+                    "type": "string"
+                  },
+                  "use_valid_domain_title": {
+                    "type": "string"
+                  },
+                  "verifying": {
+                    "type": "string"
+                  },
+                  "windows_hello_2fa_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_disabled": {
+                    "type": "string"
+                  },
+                  "windows_hello_login_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "windows_hello_not_set_up_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_not_set_up_title": {
+                    "type": "string"
+                  },
+                  "windows_hello_reg": {
+                    "type": "string"
+                  },
+                  "windows_hello_setup_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "complete_login",
+                  "follow_steps",
+                  "hardware_security_key",
+                  "keyname_collision",
+                  "login_page_desc",
+                  "mac_touch_id_setup_desc",
+                  "management_empty_text",
+                  "method_touch_id",
+                  "method_usb_key",
+                  "method_windows_hello",
+                  "name_your_key",
+                  "platform_key_not_setup_desc",
+                  "reg_wizard_usb_key_title",
+                  "register_duplicate_key",
+                  "security_key_registered",
+                  "security_key_registered_desc",
+                  "securiy_key_registered",
+                  "select_type",
+                  "set_up_ddns",
+                  "set_up_ddns_desc",
+                  "touch_id_2fa_desc",
+                  "touch_id_desc",
+                  "touch_id_disabled",
+                  "touch_id_login_desc",
+                  "touch_id_login_desc_with_otp",
+                  "touch_id_not_set_up_desc",
+                  "touch_id_not_set_up_title",
+                  "touch_id_reg",
+                  "touch_id_setup_desc",
+                  "type_touch_id",
+                  "type_usb_key",
+                  "type_windows_hello",
+                  "usb_key_2fa_desc",
+                  "usb_key_desc",
+                  "usb_key_login_desc",
+                  "usb_key_login_desc_with_otp",
+                  "usb_key_name",
+                  "usb_key_name_desc",
+                  "usb_key_reg",
+                  "usb_key_reg_desc",
+                  "use_registered_hostname_desc",
+                  "use_registered_hostname_desc_with_params",
+                  "use_valid_domain_title",
+                  "verifying",
+                  "windows_hello_2fa_desc",
+                  "windows_hello_desc",
+                  "windows_hello_disabled",
+                  "windows_hello_login_desc",
+                  "windows_hello_login_desc_with_otp",
+                  "windows_hello_not_set_up_desc",
+                  "windows_hello_not_set_up_title",
+                  "windows_hello_reg",
+                  "windows_hello_setup_desc"
+                ]
+              },
+              "inherit": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_no": {
+                    "type": "string"
+                  },
+                  "2fa_note": {
+                    "type": "string"
+                  },
+                  "2fa_title": {
+                    "type": "string"
+                  },
+                  "2fa_yes": {
+                    "type": "string"
+                  },
+                  "inherit_to_2fa_desc": {
+                    "type": "string"
+                  },
+                  "inherit_to_2fa_title": {
+                    "type": "string"
+                  },
+                  "inherit_to_passwordless_desc": {
+                    "type": "string"
+                  },
+                  "inherit_to_passwordless_title": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_no": {
+                    "type": "string"
+                  },
+                  "passwordless_note": {
+                    "type": "string"
+                  },
+                  "passwordless_title": {
+                    "type": "string"
+                  },
+                  "passwordless_yes": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_no",
+                  "2fa_note",
+                  "2fa_title",
+                  "2fa_yes",
+                  "inherit_to_2fa_desc",
+                  "inherit_to_2fa_title",
+                  "inherit_to_passwordless_desc",
+                  "inherit_to_passwordless_title",
+                  "passwordless_desc",
+                  "passwordless_no",
+                  "passwordless_note",
+                  "passwordless_title",
+                  "passwordless_yes"
+                ]
+              },
+              "management": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_settings_activated_time": {
+                    "type": "string"
+                  },
+                  "2fa_settings_general_desc": {
+                    "type": "string"
+                  },
+                  "alert_disable_2fa": {
+                    "type": "string"
+                  },
+                  "alert_disable_2fa_title": {
+                    "type": "string"
+                  },
+                  "alert_disable_passwordless": {
+                    "type": "string"
+                  },
+                  "alert_disable_passwordless_title": {
+                    "type": "string"
+                  },
+                  "chagne_mobile_device_title": {
+                    "type": "string"
+                  },
+                  "change_mobile_device_desc": {
+                    "type": "string"
+                  },
+                  "change_mobile_device_title": {
+                    "type": "string"
+                  },
+                  "device_name": {
+                    "type": "string"
+                  },
+                  "edit_device_name": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_by_admin": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_remove_last_signin": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_settings_activated_time": {
+                    "type": "string"
+                  },
+                  "passwordless_settings_general_desc": {
+                    "type": "string"
+                  },
+                  "remove_a_2fa_signin": {
+                    "type": "string"
+                  },
+                  "remove_a_passwordless_signin": {
+                    "type": "string"
+                  },
+                  "remove_last_2fa_signin": {
+                    "type": "string"
+                  },
+                  "remove_last_2fa_signin_and_otp_disabled": {
+                    "type": "string"
+                  },
+                  "remove_last_passwordless_signin": {
+                    "type": "string"
+                  },
+                  "reset_current_mobile_device": {
+                    "type": "string"
+                  },
+                  "trusted_device_desc": {
+                    "type": "string"
+                  },
+                  "unavailable_sa_desc_admin": {
+                    "type": "string"
+                  },
+                  "unavailable_sa_desc_user": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_settings_activated_time",
+                  "2fa_settings_general_desc",
+                  "alert_disable_2fa",
+                  "alert_disable_2fa_title",
+                  "alert_disable_passwordless",
+                  "alert_disable_passwordless_title",
+                  "chagne_mobile_device_title",
+                  "change_mobile_device_desc",
+                  "change_mobile_device_title",
+                  "device_name",
+                  "edit_device_name",
+                  "enforce_2fa_by_admin",
+                  "enforce_2fa_remove_last_signin",
+                  "passwordless_desc",
+                  "passwordless_settings_activated_time",
+                  "passwordless_settings_general_desc",
+                  "remove_a_2fa_signin",
+                  "remove_a_passwordless_signin",
+                  "remove_last_2fa_signin",
+                  "remove_last_2fa_signin_and_otp_disabled",
+                  "remove_last_passwordless_signin",
+                  "reset_current_mobile_device",
+                  "trusted_device_desc",
+                  "unavailable_sa_desc_admin",
+                  "unavailable_sa_desc_user"
+                ]
+              },
+              "otp": {
+                "type": "object",
+                "properties": {
+                  "2fa_summary_desc": {
+                    "type": "string"
+                  },
+                  "2fa_summary_note": {
+                    "type": "string"
+                  },
+                  "backup_email_admin_tip": {
+                    "type": "string"
+                  },
+                  "backup_email_desc": {
+                    "type": "string"
+                  },
+                  "backup_email_note_desc": {
+                    "type": "string"
+                  },
+                  "backup_email_user_tip": {
+                    "type": "string"
+                  },
+                  "download_qrcode_note": {
+                    "type": "string"
+                  },
+                  "email_service_provider": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "no_service_provider_or_backup_email": {
+                    "type": "string"
+                  },
+                  "note_desc": {
+                    "type": "string"
+                  },
+                  "otp_backup_mail_settings_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_backup_method_welcome_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_backup_method_welcome_note": {
+                    "type": "string"
+                  },
+                  "otp_wizard_welcome_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_welcome_note": {
+                    "type": "string"
+                  },
+                  "reomte_admin_email_update_info": {
+                    "type": "string"
+                  },
+                  "reomte_user_email_update_info": {
+                    "type": "string"
+                  },
+                  "skip_backup_email_warning_msg": {
+                    "type": "string"
+                  },
+                  "skip_warning_msg": {
+                    "type": "string"
+                  },
+                  "wizard_mail_step_no_sender_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_summary_desc",
+                  "2fa_summary_note",
+                  "backup_email_admin_tip",
+                  "backup_email_desc",
+                  "backup_email_note_desc",
+                  "backup_email_user_tip",
+                  "download_qrcode_note",
+                  "email_service_provider",
+                  "management_empty_text",
+                  "no_service_provider_or_backup_email",
+                  "note_desc",
+                  "otp_backup_mail_settings_desc",
+                  "otp_wizard_backup_method_welcome_desc",
+                  "otp_wizard_backup_method_welcome_note",
+                  "otp_wizard_welcome_desc",
+                  "otp_wizard_welcome_note",
+                  "reomte_admin_email_update_info",
+                  "reomte_user_email_update_info",
+                  "skip_backup_email_warning_msg",
+                  "skip_warning_msg",
+                  "wizard_mail_step_no_sender_desc"
+                ]
+              },
+              "personal_setting": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "first_signin_step": {
+                    "type": "string"
+                  },
+                  "first_signin_step_desc": {
+                    "type": "string"
+                  },
+                  "no_sa_signin_method_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_signin_desc": {
+                    "type": "string"
+                  },
+                  "second_signin_step": {
+                    "type": "string"
+                  },
+                  "signin_method_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "first_signin_step",
+                  "first_signin_step_desc",
+                  "no_sa_signin_method_desc",
+                  "passwordless_signin_desc",
+                  "second_signin_step",
+                  "signin_method_desc"
+                ]
+              },
+              "wizard": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_has_been_turned_on": {
+                    "type": "string"
+                  },
+                  "2fa_title": {
+                    "type": "string"
+                  },
+                  "add_alternative_signin_method": {
+                    "type": "string"
+                  },
+                  "add_new_signin_methods": {
+                    "type": "string"
+                  },
+                  "confirm_rollback": {
+                    "type": "string"
+                  },
+                  "confirm_rollback_title": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_headline": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_welcome_desc1": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_welcome_desc2": {
+                    "type": "string"
+                  },
+                  "hardware_security_key_desc": {
+                    "type": "string"
+                  },
+                  "leave_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_title": {
+                    "type": "string"
+                  },
+                  "set_backup_2fa_content": {
+                    "type": "string"
+                  },
+                  "set_backup_2fa_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_has_been_turned_on",
+                  "2fa_title",
+                  "add_alternative_signin_method",
+                  "add_new_signin_methods",
+                  "confirm_rollback",
+                  "confirm_rollback_title",
+                  "enforce_2fa_headline",
+                  "enforce_2fa_welcome_desc1",
+                  "enforce_2fa_welcome_desc2",
+                  "hardware_security_key_desc",
+                  "leave_desc",
+                  "passwordless_desc",
+                  "passwordless_title",
+                  "set_backup_2fa_content",
+                  "set_backup_2fa_desc"
+                ]
+              }
+            },
+            "required": [
+              "app",
+              "authenticator",
+              "common",
+              "error",
+              "fido",
+              "inherit",
+              "management",
+              "otp",
+              "personal_setting",
+              "wizard"
+            ]
+          },
+          "fido": {
+            "type": "object",
+            "properties": {
+              "app": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "displayname": {
+                    "type": "string"
+                  },
+                  "warning_remove_2fa_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_2step_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_the_last_2fa_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_the_last_2step_device": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "description",
+                  "displayname",
+                  "warning_remove_2fa_device",
+                  "warning_remove_2step_device",
+                  "warning_remove_the_last_2fa_device",
+                  "warning_remove_the_last_2step_device"
+                ]
+              },
+              "authenticator": {
+                "type": "object",
+                "properties": {
+                  "2fa_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_login_flow": {
+                    "type": "string"
+                  },
+                  "2fa_note_scan_qr_code": {
+                    "type": "string"
+                  },
+                  "2fa_setup_finish_desc": {
+                    "type": "string"
+                  },
+                  "2fa_with_authenticator": {
+                    "type": "string"
+                  },
+                  "app_version": {
+                    "type": "string"
+                  },
+                  "approve_sign_in": {
+                    "type": "string"
+                  },
+                  "authenticator_desc": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "install_authenticator": {
+                    "type": "string"
+                  },
+                  "install_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "login_desc": {
+                    "type": "string"
+                  },
+                  "login_flow": {
+                    "type": "string"
+                  },
+                  "login_page_desc": {
+                    "type": "string"
+                  },
+                  "login_request_resend": {
+                    "type": "string"
+                  },
+                  "login_request_resend_button": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "mobile_wait_too_long_info": {
+                    "type": "string"
+                  },
+                  "model": {
+                    "type": "string"
+                  },
+                  "note_scan_qr_code": {
+                    "type": "string"
+                  },
+                  "os_version": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_admin": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_admin_with_params": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_user": {
+                    "type": "string"
+                  },
+                  "receive_sign_in_request": {
+                    "type": "string"
+                  },
+                  "recv_sign_in_requests": {
+                    "type": "string"
+                  },
+                  "register_unavailable_title": {
+                    "type": "string"
+                  },
+                  "request_denied": {
+                    "type": "string"
+                  },
+                  "request_denied_desc": {
+                    "type": "string"
+                  },
+                  "request_sent_desc": {
+                    "type": "string"
+                  },
+                  "request_sent_num_desc": {
+                    "type": "string"
+                  },
+                  "request_timeout": {
+                    "type": "string"
+                  },
+                  "request_timeout_desc": {
+                    "type": "string"
+                  },
+                  "scan_qr_code": {
+                    "type": "string"
+                  },
+                  "setup_authenticator": {
+                    "type": "string"
+                  },
+                  "setup_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "sign_in_method": {
+                    "type": "string"
+                  },
+                  "sign_in_with_authenticator": {
+                    "type": "string"
+                  },
+                  "tap_to_continue": {
+                    "type": "string"
+                  },
+                  "try_again": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_authenticator_desc",
+                  "2fa_desc",
+                  "2fa_login_flow",
+                  "2fa_note_scan_qr_code",
+                  "2fa_setup_finish_desc",
+                  "2fa_with_authenticator",
+                  "app_version",
+                  "approve_sign_in",
+                  "authenticator_desc",
+                  "enforce_2fa_authenticator_desc",
+                  "install_authenticator",
+                  "install_authenticator_desc",
+                  "login_desc",
+                  "login_flow",
+                  "login_page_desc",
+                  "login_request_resend",
+                  "login_request_resend_button",
+                  "management_empty_text",
+                  "mobile_wait_too_long_info",
+                  "model",
+                  "note_scan_qr_code",
+                  "os_version",
+                  "private_ip_error_msg_admin",
+                  "private_ip_error_msg_admin_with_params",
+                  "private_ip_error_msg_user",
+                  "receive_sign_in_request",
+                  "recv_sign_in_requests",
+                  "register_unavailable_title",
+                  "request_denied",
+                  "request_denied_desc",
+                  "request_sent_desc",
+                  "request_sent_num_desc",
+                  "request_timeout",
+                  "request_timeout_desc",
+                  "scan_qr_code",
+                  "setup_authenticator",
+                  "setup_authenticator_desc",
+                  "sign_in_method",
+                  "sign_in_with_authenticator",
+                  "tap_to_continue",
+                  "try_again"
+                ]
+              },
+              "common": {
+                "type": "object",
+                "properties": {
+                  "2fa_off": {
+                    "type": "string"
+                  },
+                  "2fa_on": {
+                    "type": "string"
+                  },
+                  "2fa_package_broken_msg": {
+                    "type": "string"
+                  },
+                  "add_time": {
+                    "type": "string"
+                  },
+                  "continue": {
+                    "type": "string"
+                  },
+                  "last_used_time": {
+                    "type": "string"
+                  },
+                  "package_broken_msg": {
+                    "type": "string"
+                  },
+                  "passwordless_off": {
+                    "type": "string"
+                  },
+                  "passwordless_on": {
+                    "type": "string"
+                  },
+                  "passwordless_signin": {
+                    "type": "string"
+                  },
+                  "setup_success": {
+                    "type": "string"
+                  },
+                  "turn_off": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_off",
+                  "2fa_on",
+                  "2fa_package_broken_msg",
+                  "add_time",
+                  "continue",
+                  "last_used_time",
+                  "package_broken_msg",
+                  "passwordless_off",
+                  "passwordless_on",
+                  "passwordless_signin",
+                  "setup_success",
+                  "turn_off"
+                ]
+              },
+              "error": {
+                "type": "object",
+                "properties": {
+                  "invalid_device_name": {
+                    "type": "string"
+                  },
+                  "invalid_domain": {
+                    "type": "string"
+                  },
+                  "invalid_domain_user": {
+                    "type": "string"
+                  },
+                  "other_ways_desc": {
+                    "type": "string"
+                  },
+                  "register_again": {
+                    "type": "string"
+                  },
+                  "something_wrong": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "invalid_device_name",
+                  "invalid_domain",
+                  "invalid_domain_user",
+                  "other_ways_desc",
+                  "register_again",
+                  "something_wrong"
+                ]
+              },
+              "fido": {
+                "type": "object",
+                "properties": {
+                  "complete_login": {
+                    "type": "string"
+                  },
+                  "follow_steps": {
+                    "type": "string"
+                  },
+                  "hardware_security_key": {
+                    "type": "string"
+                  },
+                  "keyname_collision": {
+                    "type": "string"
+                  },
+                  "login_page_desc": {
+                    "type": "string"
+                  },
+                  "mac_touch_id_setup_desc": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "method_touch_id": {
+                    "type": "string"
+                  },
+                  "method_usb_key": {
+                    "type": "string"
+                  },
+                  "method_windows_hello": {
+                    "type": "string"
+                  },
+                  "name_your_key": {
+                    "type": "string"
+                  },
+                  "platform_key_not_setup_desc": {
+                    "type": "string"
+                  },
+                  "reg_wizard_usb_key_title": {
+                    "type": "string"
+                  },
+                  "register_duplicate_key": {
+                    "type": "string"
+                  },
+                  "security_key_registered": {
+                    "type": "string"
+                  },
+                  "security_key_registered_desc": {
+                    "type": "string"
+                  },
+                  "securiy_key_registered": {
+                    "type": "string"
+                  },
+                  "select_type": {
+                    "type": "string"
+                  },
+                  "set_up_ddns": {
+                    "type": "string"
+                  },
+                  "set_up_ddns_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_2fa_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_disabled": {
+                    "type": "string"
+                  },
+                  "touch_id_login_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "touch_id_not_set_up_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_not_set_up_title": {
+                    "type": "string"
+                  },
+                  "touch_id_reg": {
+                    "type": "string"
+                  },
+                  "touch_id_setup_desc": {
+                    "type": "string"
+                  },
+                  "type_touch_id": {
+                    "type": "string"
+                  },
+                  "type_usb_key": {
+                    "type": "string"
+                  },
+                  "type_windows_hello": {
+                    "type": "string"
+                  },
+                  "usb_key_2fa_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_login_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "usb_key_name": {
+                    "type": "string"
+                  },
+                  "usb_key_name_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_reg": {
+                    "type": "string"
+                  },
+                  "usb_key_reg_desc": {
+                    "type": "string"
+                  },
+                  "use_registered_hostname_desc": {
+                    "type": "string"
+                  },
+                  "use_registered_hostname_desc_with_params": {
+                    "type": "string"
+                  },
+                  "use_valid_domain_title": {
+                    "type": "string"
+                  },
+                  "verifying": {
+                    "type": "string"
+                  },
+                  "windows_hello_2fa_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_disabled": {
+                    "type": "string"
+                  },
+                  "windows_hello_login_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "windows_hello_not_set_up_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_not_set_up_title": {
+                    "type": "string"
+                  },
+                  "windows_hello_reg": {
+                    "type": "string"
+                  },
+                  "windows_hello_setup_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "complete_login",
+                  "follow_steps",
+                  "hardware_security_key",
+                  "keyname_collision",
+                  "login_page_desc",
+                  "mac_touch_id_setup_desc",
+                  "management_empty_text",
+                  "method_touch_id",
+                  "method_usb_key",
+                  "method_windows_hello",
+                  "name_your_key",
+                  "platform_key_not_setup_desc",
+                  "reg_wizard_usb_key_title",
+                  "register_duplicate_key",
+                  "security_key_registered",
+                  "security_key_registered_desc",
+                  "securiy_key_registered",
+                  "select_type",
+                  "set_up_ddns",
+                  "set_up_ddns_desc",
+                  "touch_id_2fa_desc",
+                  "touch_id_desc",
+                  "touch_id_disabled",
+                  "touch_id_login_desc",
+                  "touch_id_login_desc_with_otp",
+                  "touch_id_not_set_up_desc",
+                  "touch_id_not_set_up_title",
+                  "touch_id_reg",
+                  "touch_id_setup_desc",
+                  "type_touch_id",
+                  "type_usb_key",
+                  "type_windows_hello",
+                  "usb_key_2fa_desc",
+                  "usb_key_desc",
+                  "usb_key_login_desc",
+                  "usb_key_login_desc_with_otp",
+                  "usb_key_name",
+                  "usb_key_name_desc",
+                  "usb_key_reg",
+                  "usb_key_reg_desc",
+                  "use_registered_hostname_desc",
+                  "use_registered_hostname_desc_with_params",
+                  "use_valid_domain_title",
+                  "verifying",
+                  "windows_hello_2fa_desc",
+                  "windows_hello_desc",
+                  "windows_hello_disabled",
+                  "windows_hello_login_desc",
+                  "windows_hello_login_desc_with_otp",
+                  "windows_hello_not_set_up_desc",
+                  "windows_hello_not_set_up_title",
+                  "windows_hello_reg",
+                  "windows_hello_setup_desc"
+                ]
+              },
+              "inherit": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_no": {
+                    "type": "string"
+                  },
+                  "2fa_note": {
+                    "type": "string"
+                  },
+                  "2fa_title": {
+                    "type": "string"
+                  },
+                  "2fa_yes": {
+                    "type": "string"
+                  },
+                  "inherit_to_2fa_desc": {
+                    "type": "string"
+                  },
+                  "inherit_to_2fa_title": {
+                    "type": "string"
+                  },
+                  "inherit_to_passwordless_desc": {
+                    "type": "string"
+                  },
+                  "inherit_to_passwordless_title": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_no": {
+                    "type": "string"
+                  },
+                  "passwordless_note": {
+                    "type": "string"
+                  },
+                  "passwordless_title": {
+                    "type": "string"
+                  },
+                  "passwordless_yes": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_no",
+                  "2fa_note",
+                  "2fa_title",
+                  "2fa_yes",
+                  "inherit_to_2fa_desc",
+                  "inherit_to_2fa_title",
+                  "inherit_to_passwordless_desc",
+                  "inherit_to_passwordless_title",
+                  "passwordless_desc",
+                  "passwordless_no",
+                  "passwordless_note",
+                  "passwordless_title",
+                  "passwordless_yes"
+                ]
+              },
+              "management": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_settings_activated_time": {
+                    "type": "string"
+                  },
+                  "2fa_settings_general_desc": {
+                    "type": "string"
+                  },
+                  "alert_disable_2fa": {
+                    "type": "string"
+                  },
+                  "alert_disable_2fa_title": {
+                    "type": "string"
+                  },
+                  "alert_disable_passwordless": {
+                    "type": "string"
+                  },
+                  "alert_disable_passwordless_title": {
+                    "type": "string"
+                  },
+                  "chagne_mobile_device_title": {
+                    "type": "string"
+                  },
+                  "change_mobile_device_desc": {
+                    "type": "string"
+                  },
+                  "change_mobile_device_title": {
+                    "type": "string"
+                  },
+                  "device_name": {
+                    "type": "string"
+                  },
+                  "edit_device_name": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_by_admin": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_remove_last_signin": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_settings_activated_time": {
+                    "type": "string"
+                  },
+                  "passwordless_settings_general_desc": {
+                    "type": "string"
+                  },
+                  "remove_a_2fa_signin": {
+                    "type": "string"
+                  },
+                  "remove_a_passwordless_signin": {
+                    "type": "string"
+                  },
+                  "remove_last_2fa_signin": {
+                    "type": "string"
+                  },
+                  "remove_last_2fa_signin_and_otp_disabled": {
+                    "type": "string"
+                  },
+                  "remove_last_passwordless_signin": {
+                    "type": "string"
+                  },
+                  "reset_current_mobile_device": {
+                    "type": "string"
+                  },
+                  "trusted_device_desc": {
+                    "type": "string"
+                  },
+                  "unavailable_sa_desc_admin": {
+                    "type": "string"
+                  },
+                  "unavailable_sa_desc_user": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_settings_activated_time",
+                  "2fa_settings_general_desc",
+                  "alert_disable_2fa",
+                  "alert_disable_2fa_title",
+                  "alert_disable_passwordless",
+                  "alert_disable_passwordless_title",
+                  "chagne_mobile_device_title",
+                  "change_mobile_device_desc",
+                  "change_mobile_device_title",
+                  "device_name",
+                  "edit_device_name",
+                  "enforce_2fa_by_admin",
+                  "enforce_2fa_remove_last_signin",
+                  "passwordless_desc",
+                  "passwordless_settings_activated_time",
+                  "passwordless_settings_general_desc",
+                  "remove_a_2fa_signin",
+                  "remove_a_passwordless_signin",
+                  "remove_last_2fa_signin",
+                  "remove_last_2fa_signin_and_otp_disabled",
+                  "remove_last_passwordless_signin",
+                  "reset_current_mobile_device",
+                  "trusted_device_desc",
+                  "unavailable_sa_desc_admin",
+                  "unavailable_sa_desc_user"
+                ]
+              },
+              "otp": {
+                "type": "object",
+                "properties": {
+                  "2fa_summary_desc": {
+                    "type": "string"
+                  },
+                  "2fa_summary_note": {
+                    "type": "string"
+                  },
+                  "backup_email_admin_tip": {
+                    "type": "string"
+                  },
+                  "backup_email_desc": {
+                    "type": "string"
+                  },
+                  "backup_email_note_desc": {
+                    "type": "string"
+                  },
+                  "backup_email_user_tip": {
+                    "type": "string"
+                  },
+                  "download_qrcode_note": {
+                    "type": "string"
+                  },
+                  "email_service_provider": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "no_service_provider_or_backup_email": {
+                    "type": "string"
+                  },
+                  "note_desc": {
+                    "type": "string"
+                  },
+                  "otp_backup_mail_settings_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_backup_method_welcome_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_backup_method_welcome_note": {
+                    "type": "string"
+                  },
+                  "otp_wizard_welcome_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_welcome_note": {
+                    "type": "string"
+                  },
+                  "reomte_admin_email_update_info": {
+                    "type": "string"
+                  },
+                  "reomte_user_email_update_info": {
+                    "type": "string"
+                  },
+                  "skip_backup_email_warning_msg": {
+                    "type": "string"
+                  },
+                  "skip_warning_msg": {
+                    "type": "string"
+                  },
+                  "wizard_mail_step_no_sender_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_summary_desc",
+                  "2fa_summary_note",
+                  "backup_email_admin_tip",
+                  "backup_email_desc",
+                  "backup_email_note_desc",
+                  "backup_email_user_tip",
+                  "download_qrcode_note",
+                  "email_service_provider",
+                  "management_empty_text",
+                  "no_service_provider_or_backup_email",
+                  "note_desc",
+                  "otp_backup_mail_settings_desc",
+                  "otp_wizard_backup_method_welcome_desc",
+                  "otp_wizard_backup_method_welcome_note",
+                  "otp_wizard_welcome_desc",
+                  "otp_wizard_welcome_note",
+                  "reomte_admin_email_update_info",
+                  "reomte_user_email_update_info",
+                  "skip_backup_email_warning_msg",
+                  "skip_warning_msg",
+                  "wizard_mail_step_no_sender_desc"
+                ]
+              },
+              "personal_setting": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "first_signin_step": {
+                    "type": "string"
+                  },
+                  "first_signin_step_desc": {
+                    "type": "string"
+                  },
+                  "no_sa_signin_method_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_signin_desc": {
+                    "type": "string"
+                  },
+                  "second_signin_step": {
+                    "type": "string"
+                  },
+                  "signin_method_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "first_signin_step",
+                  "first_signin_step_desc",
+                  "no_sa_signin_method_desc",
+                  "passwordless_signin_desc",
+                  "second_signin_step",
+                  "signin_method_desc"
+                ]
+              },
+              "wizard": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_has_been_turned_on": {
+                    "type": "string"
+                  },
+                  "2fa_title": {
+                    "type": "string"
+                  },
+                  "add_alternative_signin_method": {
+                    "type": "string"
+                  },
+                  "add_new_signin_methods": {
+                    "type": "string"
+                  },
+                  "confirm_rollback": {
+                    "type": "string"
+                  },
+                  "confirm_rollback_title": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_headline": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_welcome_desc1": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_welcome_desc2": {
+                    "type": "string"
+                  },
+                  "hardware_security_key_desc": {
+                    "type": "string"
+                  },
+                  "leave_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_title": {
+                    "type": "string"
+                  },
+                  "set_backup_2fa_content": {
+                    "type": "string"
+                  },
+                  "set_backup_2fa_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_has_been_turned_on",
+                  "2fa_title",
+                  "add_alternative_signin_method",
+                  "add_new_signin_methods",
+                  "confirm_rollback",
+                  "confirm_rollback_title",
+                  "enforce_2fa_headline",
+                  "enforce_2fa_welcome_desc1",
+                  "enforce_2fa_welcome_desc2",
+                  "hardware_security_key_desc",
+                  "leave_desc",
+                  "passwordless_desc",
+                  "passwordless_title",
+                  "set_backup_2fa_content",
+                  "set_backup_2fa_desc"
+                ]
+              }
+            },
+            "required": [
+              "app",
+              "authenticator",
+              "common",
+              "error",
+              "fido",
+              "inherit",
+              "management",
+              "otp",
+              "personal_setting",
+              "wizard"
+            ]
+          },
+          "enforce-2fa-wizard": {
+            "type": "object",
+            "properties": {
+              "app": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "displayname": {
+                    "type": "string"
+                  },
+                  "warning_remove_2fa_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_2step_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_the_last_2fa_device": {
+                    "type": "string"
+                  },
+                  "warning_remove_the_last_2step_device": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "description",
+                  "displayname",
+                  "warning_remove_2fa_device",
+                  "warning_remove_2step_device",
+                  "warning_remove_the_last_2fa_device",
+                  "warning_remove_the_last_2step_device"
+                ]
+              },
+              "authenticator": {
+                "type": "object",
+                "properties": {
+                  "2fa_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_login_flow": {
+                    "type": "string"
+                  },
+                  "2fa_note_scan_qr_code": {
+                    "type": "string"
+                  },
+                  "2fa_setup_finish_desc": {
+                    "type": "string"
+                  },
+                  "2fa_with_authenticator": {
+                    "type": "string"
+                  },
+                  "app_version": {
+                    "type": "string"
+                  },
+                  "approve_sign_in": {
+                    "type": "string"
+                  },
+                  "authenticator_desc": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "install_authenticator": {
+                    "type": "string"
+                  },
+                  "install_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "login_desc": {
+                    "type": "string"
+                  },
+                  "login_flow": {
+                    "type": "string"
+                  },
+                  "login_page_desc": {
+                    "type": "string"
+                  },
+                  "login_request_resend": {
+                    "type": "string"
+                  },
+                  "login_request_resend_button": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "mobile_wait_too_long_info": {
+                    "type": "string"
+                  },
+                  "model": {
+                    "type": "string"
+                  },
+                  "note_scan_qr_code": {
+                    "type": "string"
+                  },
+                  "os_version": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_admin": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_admin_with_params": {
+                    "type": "string"
+                  },
+                  "private_ip_error_msg_user": {
+                    "type": "string"
+                  },
+                  "receive_sign_in_request": {
+                    "type": "string"
+                  },
+                  "recv_sign_in_requests": {
+                    "type": "string"
+                  },
+                  "register_unavailable_title": {
+                    "type": "string"
+                  },
+                  "request_denied": {
+                    "type": "string"
+                  },
+                  "request_denied_desc": {
+                    "type": "string"
+                  },
+                  "request_sent_desc": {
+                    "type": "string"
+                  },
+                  "request_sent_num_desc": {
+                    "type": "string"
+                  },
+                  "request_timeout": {
+                    "type": "string"
+                  },
+                  "request_timeout_desc": {
+                    "type": "string"
+                  },
+                  "scan_qr_code": {
+                    "type": "string"
+                  },
+                  "setup_authenticator": {
+                    "type": "string"
+                  },
+                  "setup_authenticator_desc": {
+                    "type": "string"
+                  },
+                  "sign_in_method": {
+                    "type": "string"
+                  },
+                  "sign_in_with_authenticator": {
+                    "type": "string"
+                  },
+                  "tap_to_continue": {
+                    "type": "string"
+                  },
+                  "try_again": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_authenticator_desc",
+                  "2fa_desc",
+                  "2fa_login_flow",
+                  "2fa_note_scan_qr_code",
+                  "2fa_setup_finish_desc",
+                  "2fa_with_authenticator",
+                  "app_version",
+                  "approve_sign_in",
+                  "authenticator_desc",
+                  "enforce_2fa_authenticator_desc",
+                  "install_authenticator",
+                  "install_authenticator_desc",
+                  "login_desc",
+                  "login_flow",
+                  "login_page_desc",
+                  "login_request_resend",
+                  "login_request_resend_button",
+                  "management_empty_text",
+                  "mobile_wait_too_long_info",
+                  "model",
+                  "note_scan_qr_code",
+                  "os_version",
+                  "private_ip_error_msg_admin",
+                  "private_ip_error_msg_admin_with_params",
+                  "private_ip_error_msg_user",
+                  "receive_sign_in_request",
+                  "recv_sign_in_requests",
+                  "register_unavailable_title",
+                  "request_denied",
+                  "request_denied_desc",
+                  "request_sent_desc",
+                  "request_sent_num_desc",
+                  "request_timeout",
+                  "request_timeout_desc",
+                  "scan_qr_code",
+                  "setup_authenticator",
+                  "setup_authenticator_desc",
+                  "sign_in_method",
+                  "sign_in_with_authenticator",
+                  "tap_to_continue",
+                  "try_again"
+                ]
+              },
+              "common": {
+                "type": "object",
+                "properties": {
+                  "2fa_off": {
+                    "type": "string"
+                  },
+                  "2fa_on": {
+                    "type": "string"
+                  },
+                  "2fa_package_broken_msg": {
+                    "type": "string"
+                  },
+                  "add_time": {
+                    "type": "string"
+                  },
+                  "continue": {
+                    "type": "string"
+                  },
+                  "last_used_time": {
+                    "type": "string"
+                  },
+                  "package_broken_msg": {
+                    "type": "string"
+                  },
+                  "passwordless_off": {
+                    "type": "string"
+                  },
+                  "passwordless_on": {
+                    "type": "string"
+                  },
+                  "passwordless_signin": {
+                    "type": "string"
+                  },
+                  "setup_success": {
+                    "type": "string"
+                  },
+                  "turn_off": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_off",
+                  "2fa_on",
+                  "2fa_package_broken_msg",
+                  "add_time",
+                  "continue",
+                  "last_used_time",
+                  "package_broken_msg",
+                  "passwordless_off",
+                  "passwordless_on",
+                  "passwordless_signin",
+                  "setup_success",
+                  "turn_off"
+                ]
+              },
+              "error": {
+                "type": "object",
+                "properties": {
+                  "invalid_device_name": {
+                    "type": "string"
+                  },
+                  "invalid_domain": {
+                    "type": "string"
+                  },
+                  "invalid_domain_user": {
+                    "type": "string"
+                  },
+                  "other_ways_desc": {
+                    "type": "string"
+                  },
+                  "register_again": {
+                    "type": "string"
+                  },
+                  "something_wrong": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "invalid_device_name",
+                  "invalid_domain",
+                  "invalid_domain_user",
+                  "other_ways_desc",
+                  "register_again",
+                  "something_wrong"
+                ]
+              },
+              "fido": {
+                "type": "object",
+                "properties": {
+                  "complete_login": {
+                    "type": "string"
+                  },
+                  "follow_steps": {
+                    "type": "string"
+                  },
+                  "hardware_security_key": {
+                    "type": "string"
+                  },
+                  "keyname_collision": {
+                    "type": "string"
+                  },
+                  "login_page_desc": {
+                    "type": "string"
+                  },
+                  "mac_touch_id_setup_desc": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "method_touch_id": {
+                    "type": "string"
+                  },
+                  "method_usb_key": {
+                    "type": "string"
+                  },
+                  "method_windows_hello": {
+                    "type": "string"
+                  },
+                  "name_your_key": {
+                    "type": "string"
+                  },
+                  "platform_key_not_setup_desc": {
+                    "type": "string"
+                  },
+                  "reg_wizard_usb_key_title": {
+                    "type": "string"
+                  },
+                  "register_duplicate_key": {
+                    "type": "string"
+                  },
+                  "security_key_registered": {
+                    "type": "string"
+                  },
+                  "security_key_registered_desc": {
+                    "type": "string"
+                  },
+                  "securiy_key_registered": {
+                    "type": "string"
+                  },
+                  "select_type": {
+                    "type": "string"
+                  },
+                  "set_up_ddns": {
+                    "type": "string"
+                  },
+                  "set_up_ddns_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_2fa_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_disabled": {
+                    "type": "string"
+                  },
+                  "touch_id_login_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "touch_id_not_set_up_desc": {
+                    "type": "string"
+                  },
+                  "touch_id_not_set_up_title": {
+                    "type": "string"
+                  },
+                  "touch_id_reg": {
+                    "type": "string"
+                  },
+                  "touch_id_setup_desc": {
+                    "type": "string"
+                  },
+                  "type_touch_id": {
+                    "type": "string"
+                  },
+                  "type_usb_key": {
+                    "type": "string"
+                  },
+                  "type_windows_hello": {
+                    "type": "string"
+                  },
+                  "usb_key_2fa_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_login_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "usb_key_name": {
+                    "type": "string"
+                  },
+                  "usb_key_name_desc": {
+                    "type": "string"
+                  },
+                  "usb_key_reg": {
+                    "type": "string"
+                  },
+                  "usb_key_reg_desc": {
+                    "type": "string"
+                  },
+                  "use_registered_hostname_desc": {
+                    "type": "string"
+                  },
+                  "use_registered_hostname_desc_with_params": {
+                    "type": "string"
+                  },
+                  "use_valid_domain_title": {
+                    "type": "string"
+                  },
+                  "verifying": {
+                    "type": "string"
+                  },
+                  "windows_hello_2fa_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_disabled": {
+                    "type": "string"
+                  },
+                  "windows_hello_login_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_login_desc_with_otp": {
+                    "type": "string"
+                  },
+                  "windows_hello_not_set_up_desc": {
+                    "type": "string"
+                  },
+                  "windows_hello_not_set_up_title": {
+                    "type": "string"
+                  },
+                  "windows_hello_reg": {
+                    "type": "string"
+                  },
+                  "windows_hello_setup_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "complete_login",
+                  "follow_steps",
+                  "hardware_security_key",
+                  "keyname_collision",
+                  "login_page_desc",
+                  "mac_touch_id_setup_desc",
+                  "management_empty_text",
+                  "method_touch_id",
+                  "method_usb_key",
+                  "method_windows_hello",
+                  "name_your_key",
+                  "platform_key_not_setup_desc",
+                  "reg_wizard_usb_key_title",
+                  "register_duplicate_key",
+                  "security_key_registered",
+                  "security_key_registered_desc",
+                  "securiy_key_registered",
+                  "select_type",
+                  "set_up_ddns",
+                  "set_up_ddns_desc",
+                  "touch_id_2fa_desc",
+                  "touch_id_desc",
+                  "touch_id_disabled",
+                  "touch_id_login_desc",
+                  "touch_id_login_desc_with_otp",
+                  "touch_id_not_set_up_desc",
+                  "touch_id_not_set_up_title",
+                  "touch_id_reg",
+                  "touch_id_setup_desc",
+                  "type_touch_id",
+                  "type_usb_key",
+                  "type_windows_hello",
+                  "usb_key_2fa_desc",
+                  "usb_key_desc",
+                  "usb_key_login_desc",
+                  "usb_key_login_desc_with_otp",
+                  "usb_key_name",
+                  "usb_key_name_desc",
+                  "usb_key_reg",
+                  "usb_key_reg_desc",
+                  "use_registered_hostname_desc",
+                  "use_registered_hostname_desc_with_params",
+                  "use_valid_domain_title",
+                  "verifying",
+                  "windows_hello_2fa_desc",
+                  "windows_hello_desc",
+                  "windows_hello_disabled",
+                  "windows_hello_login_desc",
+                  "windows_hello_login_desc_with_otp",
+                  "windows_hello_not_set_up_desc",
+                  "windows_hello_not_set_up_title",
+                  "windows_hello_reg",
+                  "windows_hello_setup_desc"
+                ]
+              },
+              "inherit": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_no": {
+                    "type": "string"
+                  },
+                  "2fa_note": {
+                    "type": "string"
+                  },
+                  "2fa_title": {
+                    "type": "string"
+                  },
+                  "2fa_yes": {
+                    "type": "string"
+                  },
+                  "inherit_to_2fa_desc": {
+                    "type": "string"
+                  },
+                  "inherit_to_2fa_title": {
+                    "type": "string"
+                  },
+                  "inherit_to_passwordless_desc": {
+                    "type": "string"
+                  },
+                  "inherit_to_passwordless_title": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_no": {
+                    "type": "string"
+                  },
+                  "passwordless_note": {
+                    "type": "string"
+                  },
+                  "passwordless_title": {
+                    "type": "string"
+                  },
+                  "passwordless_yes": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_no",
+                  "2fa_note",
+                  "2fa_title",
+                  "2fa_yes",
+                  "inherit_to_2fa_desc",
+                  "inherit_to_2fa_title",
+                  "inherit_to_passwordless_desc",
+                  "inherit_to_passwordless_title",
+                  "passwordless_desc",
+                  "passwordless_no",
+                  "passwordless_note",
+                  "passwordless_title",
+                  "passwordless_yes"
+                ]
+              },
+              "management": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_settings_activated_time": {
+                    "type": "string"
+                  },
+                  "2fa_settings_general_desc": {
+                    "type": "string"
+                  },
+                  "alert_disable_2fa": {
+                    "type": "string"
+                  },
+                  "alert_disable_2fa_title": {
+                    "type": "string"
+                  },
+                  "alert_disable_passwordless": {
+                    "type": "string"
+                  },
+                  "alert_disable_passwordless_title": {
+                    "type": "string"
+                  },
+                  "chagne_mobile_device_title": {
+                    "type": "string"
+                  },
+                  "change_mobile_device_desc": {
+                    "type": "string"
+                  },
+                  "change_mobile_device_title": {
+                    "type": "string"
+                  },
+                  "device_name": {
+                    "type": "string"
+                  },
+                  "edit_device_name": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_by_admin": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_remove_last_signin": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_settings_activated_time": {
+                    "type": "string"
+                  },
+                  "passwordless_settings_general_desc": {
+                    "type": "string"
+                  },
+                  "remove_a_2fa_signin": {
+                    "type": "string"
+                  },
+                  "remove_a_passwordless_signin": {
+                    "type": "string"
+                  },
+                  "remove_last_2fa_signin": {
+                    "type": "string"
+                  },
+                  "remove_last_2fa_signin_and_otp_disabled": {
+                    "type": "string"
+                  },
+                  "remove_last_passwordless_signin": {
+                    "type": "string"
+                  },
+                  "reset_current_mobile_device": {
+                    "type": "string"
+                  },
+                  "trusted_device_desc": {
+                    "type": "string"
+                  },
+                  "unavailable_sa_desc_admin": {
+                    "type": "string"
+                  },
+                  "unavailable_sa_desc_user": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_settings_activated_time",
+                  "2fa_settings_general_desc",
+                  "alert_disable_2fa",
+                  "alert_disable_2fa_title",
+                  "alert_disable_passwordless",
+                  "alert_disable_passwordless_title",
+                  "chagne_mobile_device_title",
+                  "change_mobile_device_desc",
+                  "change_mobile_device_title",
+                  "device_name",
+                  "edit_device_name",
+                  "enforce_2fa_by_admin",
+                  "enforce_2fa_remove_last_signin",
+                  "passwordless_desc",
+                  "passwordless_settings_activated_time",
+                  "passwordless_settings_general_desc",
+                  "remove_a_2fa_signin",
+                  "remove_a_passwordless_signin",
+                  "remove_last_2fa_signin",
+                  "remove_last_2fa_signin_and_otp_disabled",
+                  "remove_last_passwordless_signin",
+                  "reset_current_mobile_device",
+                  "trusted_device_desc",
+                  "unavailable_sa_desc_admin",
+                  "unavailable_sa_desc_user"
+                ]
+              },
+              "otp": {
+                "type": "object",
+                "properties": {
+                  "2fa_summary_desc": {
+                    "type": "string"
+                  },
+                  "2fa_summary_note": {
+                    "type": "string"
+                  },
+                  "backup_email_admin_tip": {
+                    "type": "string"
+                  },
+                  "backup_email_desc": {
+                    "type": "string"
+                  },
+                  "backup_email_note_desc": {
+                    "type": "string"
+                  },
+                  "backup_email_user_tip": {
+                    "type": "string"
+                  },
+                  "download_qrcode_note": {
+                    "type": "string"
+                  },
+                  "email_service_provider": {
+                    "type": "string"
+                  },
+                  "management_empty_text": {
+                    "type": "string"
+                  },
+                  "no_service_provider_or_backup_email": {
+                    "type": "string"
+                  },
+                  "note_desc": {
+                    "type": "string"
+                  },
+                  "otp_backup_mail_settings_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_backup_method_welcome_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_backup_method_welcome_note": {
+                    "type": "string"
+                  },
+                  "otp_wizard_welcome_desc": {
+                    "type": "string"
+                  },
+                  "otp_wizard_welcome_note": {
+                    "type": "string"
+                  },
+                  "reomte_admin_email_update_info": {
+                    "type": "string"
+                  },
+                  "reomte_user_email_update_info": {
+                    "type": "string"
+                  },
+                  "skip_backup_email_warning_msg": {
+                    "type": "string"
+                  },
+                  "skip_warning_msg": {
+                    "type": "string"
+                  },
+                  "wizard_mail_step_no_sender_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_summary_desc",
+                  "2fa_summary_note",
+                  "backup_email_admin_tip",
+                  "backup_email_desc",
+                  "backup_email_note_desc",
+                  "backup_email_user_tip",
+                  "download_qrcode_note",
+                  "email_service_provider",
+                  "management_empty_text",
+                  "no_service_provider_or_backup_email",
+                  "note_desc",
+                  "otp_backup_mail_settings_desc",
+                  "otp_wizard_backup_method_welcome_desc",
+                  "otp_wizard_backup_method_welcome_note",
+                  "otp_wizard_welcome_desc",
+                  "otp_wizard_welcome_note",
+                  "reomte_admin_email_update_info",
+                  "reomte_user_email_update_info",
+                  "skip_backup_email_warning_msg",
+                  "skip_warning_msg",
+                  "wizard_mail_step_no_sender_desc"
+                ]
+              },
+              "personal_setting": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "first_signin_step": {
+                    "type": "string"
+                  },
+                  "first_signin_step_desc": {
+                    "type": "string"
+                  },
+                  "no_sa_signin_method_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_signin_desc": {
+                    "type": "string"
+                  },
+                  "second_signin_step": {
+                    "type": "string"
+                  },
+                  "signin_method_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "first_signin_step",
+                  "first_signin_step_desc",
+                  "no_sa_signin_method_desc",
+                  "passwordless_signin_desc",
+                  "second_signin_step",
+                  "signin_method_desc"
+                ]
+              },
+              "wizard": {
+                "type": "object",
+                "properties": {
+                  "2fa_desc": {
+                    "type": "string"
+                  },
+                  "2fa_has_been_turned_on": {
+                    "type": "string"
+                  },
+                  "2fa_title": {
+                    "type": "string"
+                  },
+                  "add_alternative_signin_method": {
+                    "type": "string"
+                  },
+                  "add_new_signin_methods": {
+                    "type": "string"
+                  },
+                  "confirm_rollback": {
+                    "type": "string"
+                  },
+                  "confirm_rollback_title": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_headline": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_welcome_desc1": {
+                    "type": "string"
+                  },
+                  "enforce_2fa_welcome_desc2": {
+                    "type": "string"
+                  },
+                  "hardware_security_key_desc": {
+                    "type": "string"
+                  },
+                  "leave_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_desc": {
+                    "type": "string"
+                  },
+                  "passwordless_title": {
+                    "type": "string"
+                  },
+                  "set_backup_2fa_content": {
+                    "type": "string"
+                  },
+                  "set_backup_2fa_desc": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "2fa_desc",
+                  "2fa_has_been_turned_on",
+                  "2fa_title",
+                  "add_alternative_signin_method",
+                  "add_new_signin_methods",
+                  "confirm_rollback",
+                  "confirm_rollback_title",
+                  "enforce_2fa_headline",
+                  "enforce_2fa_welcome_desc1",
+                  "enforce_2fa_welcome_desc2",
+                  "hardware_security_key_desc",
+                  "leave_desc",
+                  "passwordless_desc",
+                  "passwordless_title",
+                  "set_backup_2fa_content",
+                  "set_backup_2fa_desc"
+                ]
+              }
+            },
+            "required": [
+              "app",
+              "authenticator",
+              "common",
+              "error",
+              "fido",
+              "inherit",
+              "management",
+              "otp",
+              "personal_setting",
+              "wizard"
+            ]
+          }
+        }
+      },
+      "version": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "cssPath",
+      "jsPath",
+      "texts",
+      "version"
+    ]
+  }
+}

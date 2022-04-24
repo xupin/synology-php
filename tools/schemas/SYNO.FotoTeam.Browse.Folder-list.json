@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owner_user_id": {
+            "type": "integer"
+          },
+          "parent": {
+            "type": "integer"
+          },
+          "passphrase": {
+            "type": "string"
+          },
+          "shared": {
+            "type": "boolean"
+          },
+          "sort_by": {
+            "type": "string"
+          },
+          "sort_direction": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "owner_user_id",
+          "parent",
+          "passphrase",
+          "shared",
+          "sort_by",
+          "sort_direction"
+        ]
+      }
+    }
+  },
+  "required": [
+    "list"
+  ]
+}

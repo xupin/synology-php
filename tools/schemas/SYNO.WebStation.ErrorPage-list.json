@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "desc": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "desc": {
+                  "type": "string"
+                },
+                "file": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "modified_time": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "desc",
+                "file",
+                "id",
+                "modified_time",
+                "type"
+              ]
+            }
+          }
+        },
+        "required": [
+          "desc",
+          "id",
+          "pages"
+        ]
+      }
+    }
+  },
+  "required": [
+    "profiles"
+  ]
+}

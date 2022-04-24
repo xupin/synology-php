@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "allow_root_folder_public": {
+      "type": "boolean"
+    },
+    "enable_person": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "team_space_disabled_by_share_folder_disabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "allow_root_folder_public",
+    "enable_person",
+    "enabled",
+    "team_space_disabled_by_share_folder_disabled"
+  ]
+}

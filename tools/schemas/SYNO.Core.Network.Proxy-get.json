@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable": {
+      "type": "boolean"
+    },
+    "enable_auth": {
+      "type": "boolean"
+    },
+    "enable_bypass": {
+      "type": "boolean"
+    },
+    "enable_different_host": {
+      "type": "boolean"
+    },
+    "http_host": {
+      "type": "string"
+    },
+    "http_port": {
+      "type": "string"
+    },
+    "https_host": {
+      "type": "string"
+    },
+    "https_port": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enable",
+    "enable_auth",
+    "enable_bypass",
+    "enable_different_host",
+    "http_host",
+    "http_port",
+    "https_host",
+    "https_port",
+    "password",
+    "username"
+  ]
+}

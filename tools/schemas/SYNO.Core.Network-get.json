@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "arp_ignore": {
+      "type": "boolean"
+    },
+    "dns_manual": {
+      "type": "boolean"
+    },
+    "dns_primary": {
+      "type": "string"
+    },
+    "dns_secondary": {
+      "type": "string"
+    },
+    "enable_ip_conflict_detect": {
+      "type": "boolean"
+    },
+    "enable_windomain": {
+      "type": "boolean"
+    },
+    "gateway": {
+      "type": "string"
+    },
+    "gateway_info": {
+      "type": "object",
+      "properties": {
+        "ifname": {
+          "type": "string"
+        },
+        "ip": {
+          "type": "string"
+        },
+        "mask": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "use_dhcp": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ifname",
+        "ip",
+        "mask",
+        "status",
+        "type",
+        "use_dhcp"
+      ]
+    },
+    "ipv4_first": {
+      "type": "boolean"
+    },
+    "multi_gateway": {
+      "type": "boolean"
+    },
+    "server_name": {
+      "type": "string"
+    },
+    "v6gateway": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "arp_ignore",
+    "dns_manual",
+    "dns_primary",
+    "dns_secondary",
+    "enable_ip_conflict_detect",
+    "enable_windomain",
+    "gateway",
+    "gateway_info",
+    "ipv4_first",
+    "multi_gateway",
+    "server_name",
+    "v6gateway"
+  ]
+}

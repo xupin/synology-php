@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "devs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "guest_enabled": {
+        "type": "boolean"
+      },
+      "ifname": {
+        "type": "string"
+      },
+      "ip": {
+        "type": "string"
+      },
+      "is_default_gateway": {
+        "type": "integer"
+      },
+      "mask": {
+        "type": "string"
+      },
+      "mtu_config": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "real_ifname": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "use_dhcp": {
+        "type": "boolean"
+      },
+      "username": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "devs",
+      "guest_enabled",
+      "ifname",
+      "ip",
+      "is_default_gateway",
+      "mask",
+      "mtu_config",
+      "password",
+      "real_ifname",
+      "status",
+      "type",
+      "use_dhcp",
+      "username"
+    ]
+  }
+}

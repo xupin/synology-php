@@ -1,0 +1,12 @@
+{
+    "codepage": "enu",
+    "model": "DS220+",
+    "ram": 2048,
+    "serial": "*************",
+    "temperature": 45,
+    "temperature_warn": false,
+    "time": "Sun Apr 24 09:12:38 2022",
+    "uptime": 3876001,
+    "version": "42218",
+    "version_string": "DSM 7.0.1-42218 Update 3"
+}

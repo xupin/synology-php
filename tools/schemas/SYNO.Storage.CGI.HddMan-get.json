@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "BadSctrThrEn": {
+      "type": "boolean"
+    },
+    "RemainLifeThrEn": {
+      "type": "boolean"
+    },
+    "RemainLifeThrVal": {
+      "type": "integer"
+    },
+    "SBMonthLeftThrEn": {
+      "type": "boolean"
+    },
+    "SBMonthLeftThrVal": {
+      "type": "integer"
+    },
+    "WddaEn": {
+      "type": "integer"
+    },
+    "chkMailSetting": {
+      "type": "integer"
+    },
+    "db_last_update_time": {
+      "type": "integer"
+    },
+    "healthReportEn": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "BadSctrThrEn",
+    "RemainLifeThrEn",
+    "RemainLifeThrVal",
+    "SBMonthLeftThrEn",
+    "SBMonthLeftThrVal",
+    "WddaEn",
+    "chkMailSetting",
+    "db_last_update_time",
+    "healthReportEn"
+  ]
+}

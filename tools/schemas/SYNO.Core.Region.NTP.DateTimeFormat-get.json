@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "date_format": {
+      "type": "string"
+    },
+    "time_format": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "date_format",
+    "time_format"
+  ]
+}

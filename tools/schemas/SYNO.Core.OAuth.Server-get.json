@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean"
+      },
+      "endpoint": {
+        "type": "string"
+      },
+      "expect": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "scope": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "scope",
+              "username"
+            ]
+          }
+        },
+        "required": [
+          "data"
+        ]
+      },
+      "header": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "params": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "enabled",
+      "endpoint",
+      "expect",
+      "header",
+      "id",
+      "params"
+    ]
+  }
+}

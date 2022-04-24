@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_firewall": {
+      "type": "boolean"
+    },
+    "profile_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "enable_firewall",
+    "profile_name"
+  ]
+}

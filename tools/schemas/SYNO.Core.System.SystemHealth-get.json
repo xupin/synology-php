@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "hostname": {
+      "type": "string"
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "ip": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "ip",
+          "type"
+        ]
+      }
+    },
+    "rule": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "object",
+          "properties": {
+            "description_format": {
+              "type": "string"
+            },
+            "description_params": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "description_use_formatted": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "description_format",
+            "description_params",
+            "description_use_formatted"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "description",
+        "id",
+        "priority",
+        "type"
+      ]
+    },
+    "uptime": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "hostname",
+    "interfaces",
+    "rule",
+    "uptime"
+  ]
+}

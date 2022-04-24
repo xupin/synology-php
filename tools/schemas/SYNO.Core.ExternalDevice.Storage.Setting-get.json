@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "delalloc": {
+      "type": "boolean"
+    },
+    "forbid_usb": {
+      "type": "boolean"
+    },
+    "needReboot": {
+      "type": "boolean"
+    },
+    "setting": {
+      "type": "boolean"
+    },
+    "support_exfat_mkfs": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "delalloc",
+    "forbid_usb",
+    "needReboot",
+    "setting",
+    "support_exfat_mkfs"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string"
+          },
+          "grant_by_default": {
+            "type": "boolean"
+          },
+          "grant_type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isInternal": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "service_type": {
+            "type": "string"
+          },
+          "supportIP": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "app_id",
+          "grant_by_default",
+          "grant_type",
+          "isInternal",
+          "name",
+          "service_type",
+          "supportIP"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "applications",
+    "offset",
+    "total"
+  ]
+}

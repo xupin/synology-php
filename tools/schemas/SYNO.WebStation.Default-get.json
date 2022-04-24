@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "backend": {
+      "type": "integer"
+    },
+    "php": {
+      "type": "string"
+    },
+    "userdir": {
+      "type": "boolean"
+    },
+    "userdir_backend": {
+      "type": "integer"
+    },
+    "userdir_php": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "backend",
+    "php",
+    "userdir",
+    "userdir_backend",
+    "userdir_php"
+  ]
+}

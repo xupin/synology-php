@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "conn_per_download": {
+      "type": "integer"
+    },
+    "enable_auth": {
+      "type": "boolean"
+    },
+    "enable_encryption": {
+      "type": "boolean"
+    },
+    "enable_parchive": {
+      "type": "boolean"
+    },
+    "enable_remove_parfiles": {
+      "type": "boolean"
+    },
+    "max_download_rate": {
+      "type": "integer"
+    },
+    "port": {
+      "type": "integer"
+    },
+    "server": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "conn_per_download",
+    "enable_auth",
+    "enable_encryption",
+    "enable_parchive",
+    "enable_remove_parfiles",
+    "max_download_rate",
+    "port",
+    "server",
+    "username"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "internal_lan_num": {
+      "type": "integer"
+    },
+    "rc_power_config": {
+      "type": "boolean"
+    },
+    "wol": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enable": {
+            "type": "boolean"
+          },
+          "idx": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "enable",
+          "idx"
+        ]
+      }
+    },
+    "wol1": {
+      "type": "boolean"
+    },
+    "wol2": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "internal_lan_num",
+    "rc_power_config",
+    "wol",
+    "wol1",
+    "wol2"
+  ]
+}

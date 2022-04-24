@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "admingrpsetmtime": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "PackageTask": {
+          "type": "object",
+          "properties": {
+            "tasks": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "tasks"
+          ]
+        }
+      },
+      "required": [
+        "PackageTask"
+      ]
+    },
+    "success": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "admingrpsetmtime",
+    "data",
+    "success"
+  ]
+}

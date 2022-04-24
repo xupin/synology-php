@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "api_id": {
+      "type": "string"
+    },
+    "enable_sms": {
+      "type": "boolean"
+    },
+    "msg_interval": {
+      "type": "integer"
+    },
+    "phone_info": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "num": {
+            "type": "string"
+          },
+          "prefix": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "num",
+          "prefix"
+        ]
+      }
+    },
+    "provider_name": {
+      "type": "string"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "api_id",
+    "enable_sms",
+    "msg_interval",
+    "phone_info",
+    "provider_name",
+    "sender",
+    "user"
+  ]
+}

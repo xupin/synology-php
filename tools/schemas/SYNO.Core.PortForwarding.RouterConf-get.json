@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "limit_upnp_portmap_number": {
+      "type": "boolean"
+    },
+    "router_brand": {
+      "type": "string"
+    },
+    "router_max_rule": {
+      "type": "string"
+    },
+    "router_model": {
+      "type": "string"
+    },
+    "router_port": {
+      "type": "string"
+    },
+    "router_protocol": {
+      "type": "string"
+    },
+    "router_version": {
+      "type": "string"
+    },
+    "support_change_port": {
+      "type": "boolean"
+    },
+    "support_natpmp": {
+      "type": "string"
+    },
+    "support_upnp": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "limit_upnp_portmap_number",
+    "router_brand",
+    "router_max_rule",
+    "router_model",
+    "router_port",
+    "router_protocol",
+    "router_version",
+    "support_change_port",
+    "support_natpmp",
+    "support_upnp"
+  ]
+}

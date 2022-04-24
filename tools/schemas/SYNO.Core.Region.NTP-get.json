@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string"
+    },
+    "date_format": {
+      "type": "string"
+    },
+    "enable_ntp": {
+      "type": "string"
+    },
+    "hour": {
+      "type": "integer"
+    },
+    "minute": {
+      "type": "integer"
+    },
+    "now": {
+      "type": "string"
+    },
+    "second": {
+      "type": "integer"
+    },
+    "server": {
+      "type": "string"
+    },
+    "time_format": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "timezone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "date_format",
+    "enable_ntp",
+    "hour",
+    "minute",
+    "now",
+    "second",
+    "server",
+    "time_format",
+    "timestamp",
+    "timezone"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "offset": {
+      "type": "integer"
+    },
+    "repo_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "bucket": {
+            "type": "string"
+          },
+          "container": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "repo_id": {
+            "type": "integer"
+          },
+          "secret": {
+            "type": "string"
+          },
+          "target_type": {
+            "type": "string"
+          },
+          "transfer_type": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "pwd": {
+            "type": "string"
+          },
+          "remote_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "bucket",
+          "container",
+          "name",
+          "repo_id",
+          "target_type",
+          "transfer_type"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "offset",
+    "repo_list",
+    "total"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "error": {
+        "code": 120,
+        "errors": {
+            "name": "transfer_type",
+            "reason": "required"
+        }
+    },
+    "success": false
+}

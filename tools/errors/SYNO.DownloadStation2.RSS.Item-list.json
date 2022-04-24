@@ -1,0 +1,10 @@
+{
+    "error": {
+        "code": 120,
+        "errors": {
+            "name": "feed_id",
+            "reason": "required"
+        }
+    },
+    "success": false
+}

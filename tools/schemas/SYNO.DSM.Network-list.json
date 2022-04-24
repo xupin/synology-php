@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "dns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gateway": {
+      "type": "string"
+    },
+    "hostname": {
+      "type": "string"
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "ip": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "netmask": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "address",
+                "netmask"
+              ]
+            }
+          },
+          "ipv6": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "prefix_length": {
+                  "type": "integer"
+                },
+                "scope": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "address",
+                "prefix_length",
+                "scope"
+              ]
+            }
+          },
+          "mac": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "ip",
+          "mac",
+          "type"
+        ]
+      }
+    },
+    "workgroup": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "dns",
+    "gateway",
+    "hostname",
+    "interfaces",
+    "workgroup"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string"
+    },
+    "errno": {
+      "type": "integer"
+    },
+    "host": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "command",
+    "errno",
+    "host",
+    "version"
+  ]
+}

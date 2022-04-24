@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "can_be_kicked": {
+            "type": "boolean"
+          },
+          "descr": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer"
+          },
+          "protocol": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "user_can_be_disabled": {
+            "type": "boolean"
+          },
+          "who": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "can_be_kicked",
+          "descr",
+          "from",
+          "pid",
+          "protocol",
+          "time",
+          "type",
+          "user_can_be_disabled",
+          "who"
+        ]
+      }
+    },
+    "systime": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "items",
+    "systime",
+    "total"
+  ]
+}

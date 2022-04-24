@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "section": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer"
+          },
+          "list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "day": {
+                  "type": "integer"
+                },
+                "item_count": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "day",
+                "item_count",
+                "month",
+                "year"
+              ]
+            }
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "limit",
+          "list",
+          "offset"
+        ]
+      }
+    }
+  },
+  "required": [
+    "section"
+  ]
+}

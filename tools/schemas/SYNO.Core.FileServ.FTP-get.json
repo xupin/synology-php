@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "custom_port": {
+      "type": "string"
+    },
+    "custom_port_range": {
+      "type": "boolean"
+    },
+    "enable_ascii": {
+      "type": "boolean"
+    },
+    "enable_fips": {
+      "type": "boolean"
+    },
+    "enable_flow_ctrl": {
+      "type": "boolean"
+    },
+    "enable_ftp": {
+      "type": "boolean"
+    },
+    "enable_ftps": {
+      "type": "boolean"
+    },
+    "enable_fxp": {
+      "type": "boolean"
+    },
+    "ext_ip": {
+      "type": "string"
+    },
+    "max_conn_per_ip": {
+      "type": "integer"
+    },
+    "maxdownloadrate": {
+      "type": "integer"
+    },
+    "maxuploadrate": {
+      "type": "integer"
+    },
+    "modify_time_std": {
+      "type": "string"
+    },
+    "portnum": {
+      "type": "integer"
+    },
+    "timeout": {
+      "type": "integer"
+    },
+    "use_ext_ip": {
+      "type": "boolean"
+    },
+    "utf8_mode": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "custom_port",
+    "custom_port_range",
+    "enable_ascii",
+    "enable_fips",
+    "enable_flow_ctrl",
+    "enable_ftp",
+    "enable_ftps",
+    "enable_fxp",
+    "ext_ip",
+    "max_conn_per_ip",
+    "maxdownloadrate",
+    "maxuploadrate",
+    "modify_time_std",
+    "portnum",
+    "timeout",
+    "use_ext_ip",
+    "utf8_mode"
+  ]
+}

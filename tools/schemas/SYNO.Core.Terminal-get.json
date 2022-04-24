@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "enable_ssh": {
+      "type": "boolean"
+    },
+    "enable_telnet": {
+      "type": "boolean"
+    },
+    "forbid_console": {
+      "type": "boolean"
+    },
+    "ssh_cipher": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hardware_support": {
+            "type": "boolean"
+          },
+          "in_use": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "security_level": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "hardware_support",
+          "in_use",
+          "name",
+          "security_level"
+        ]
+      }
+    },
+    "ssh_kex": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hardware_support": {
+            "type": "boolean"
+          },
+          "in_use": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "security_level": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "hardware_support",
+          "in_use",
+          "name",
+          "security_level"
+        ]
+      }
+    },
+    "ssh_mac": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hardware_support": {
+            "type": "boolean"
+          },
+          "in_use": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "security_level": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "hardware_support",
+          "in_use",
+          "name",
+          "security_level"
+        ]
+      }
+    },
+    "ssh_port": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "enable_ssh",
+    "enable_telnet",
+    "forbid_console",
+    "ssh_cipher",
+    "ssh_kex",
+    "ssh_mac",
+    "ssh_port"
+  ]
+}

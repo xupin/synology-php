@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "afp": {
+      "type": "boolean"
+    },
+    "cifs": {
+      "type": "boolean"
+    },
+    "filestation": {
+      "type": "boolean"
+    },
+    "ftp": {
+      "type": "boolean"
+    },
+    "tftp": {
+      "type": "boolean"
+    },
+    "webdav": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "afp",
+    "cifs",
+    "filestation",
+    "ftp",
+    "tftp",
+    "webdav"
+  ]
+}

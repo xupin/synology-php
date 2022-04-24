@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "autoHideFoldingWidget": {
+      "type": "boolean"
+    },
+    "codeFoldingMode": {
+      "type": "string"
+    },
+    "defaultCodepage": {
+      "type": "string"
+    },
+    "enableBehaviours": {
+      "type": "boolean"
+    },
+    "enableCodeFolding": {
+      "type": "boolean"
+    },
+    "enableKeyMap": {
+      "type": "boolean"
+    },
+    "fontSize": {
+      "type": "integer"
+    },
+    "highlightCurrentLine": {
+      "type": "boolean"
+    },
+    "highlightSelectedWord": {
+      "type": "boolean"
+    },
+    "insertSpacesInsteadOfTabs": {
+      "type": "boolean"
+    },
+    "showIndentGuides": {
+      "type": "boolean"
+    },
+    "showInvisibles": {
+      "type": "boolean"
+    },
+    "showLineNumber": {
+      "type": "boolean"
+    },
+    "tabWidth": {
+      "type": "integer"
+    },
+    "textWrappingColumnNumber": {
+      "type": "integer"
+    },
+    "textWrappingMode": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "autoHideFoldingWidget",
+    "codeFoldingMode",
+    "defaultCodepage",
+    "enableBehaviours",
+    "enableCodeFolding",
+    "enableKeyMap",
+    "fontSize",
+    "highlightCurrentLine",
+    "highlightSelectedWord",
+    "insertSpacesInsteadOfTabs",
+    "showIndentGuides",
+    "showInvisibles",
+    "showLineNumber",
+    "tabWidth",
+    "textWrappingColumnNumber",
+    "textWrappingMode",
+    "theme"
+  ]
+}

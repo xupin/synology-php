@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "download_volume": {
+      "type": "string"
+    },
+    "enable_emule": {
+      "type": "boolean"
+    },
+    "enable_unzip_service": {
+      "type": "boolean"
+    },
+    "volume_count": {
+      "type": "integer"
+    },
+    "volume_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "desc": {
+            "type": "string"
+          },
+          "display": {
+            "type": "string"
+          },
+          "mount_point": {
+            "type": "string"
+          },
+          "size_free": {
+            "type": "string"
+          },
+          "size_total": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "vol_desc": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "desc",
+          "display",
+          "mount_point",
+          "size_free",
+          "size_total",
+          "value",
+          "vol_desc"
+        ]
+      }
+    }
+  },
+  "required": [
+    "download_volume",
+    "enable_emule",
+    "enable_unzip_service",
+    "volume_count",
+    "volume_list"
+  ]
+}

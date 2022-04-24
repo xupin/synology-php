@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "OAuth": {
+      "type": "boolean"
+    },
+    "account": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "OAuth",
+    "account"
+  ]
+}

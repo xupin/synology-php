@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "reports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "duplicate_compare": {
+            "type": "boolean"
+          },
+          "duplicate_dupfind": {
+            "type": "boolean"
+          },
+          "duplicate_filename": {
+            "type": "boolean"
+          },
+          "duplicate_mtime": {
+            "type": "boolean"
+          },
+          "duplicate_number": {
+            "type": "string"
+          },
+          "enable_rotation": {
+            "type": "boolean"
+          },
+          "enable_schedule": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "is_analyzer_ready": {
+            "type": "boolean"
+          },
+          "is_confirm_duplicate_running": {
+            "type": "boolean"
+          },
+          "link": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "array"
+          },
+          "owners": {
+            "type": "array"
+          },
+          "profile_name": {
+            "type": "string"
+          },
+          "report_type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "scheduler_id": {
+            "type": "null"
+          },
+          "shares": {
+            "type": "array"
+          },
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "duplicate_compare",
+          "duplicate_dupfind",
+          "duplicate_filename",
+          "duplicate_mtime",
+          "duplicate_number",
+          "enable_rotation",
+          "enable_schedule",
+          "id",
+          "is_analyzer_ready",
+          "is_confirm_duplicate_running",
+          "link",
+          "mail",
+          "owners",
+          "profile_name",
+          "report_type",
+          "scheduler_id",
+          "shares",
+          "status",
+          "version"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "reports",
+    "total"
+  ]
+}

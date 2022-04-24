@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "auto_poweroff_enable": {
+      "type": "boolean"
+    },
+    "enable_log": {
+      "type": "boolean"
+    },
+    "eunit_deep_sleep": {
+      "type": "integer"
+    },
+    "eunit_dsleep_blacklist": {
+      "type": "string"
+    },
+    "hibernation_blacklist": {
+      "type": "string"
+    },
+    "ignore_netbios_broadcast": {
+      "type": "boolean"
+    },
+    "internal_hd_idletime": {
+      "type": "integer"
+    },
+    "sata_deep_sleep": {
+      "type": "integer"
+    },
+    "sata_dsleep_blacklist": {
+      "type": "string"
+    },
+    "support_esata": {
+      "type": "string"
+    },
+    "support_eunit_deep_sleep": {
+      "type": "boolean"
+    },
+    "support_eunit_switch_mode": {
+      "type": "boolean"
+    },
+    "usb_idletime": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "auto_poweroff_enable",
+    "enable_log",
+    "eunit_deep_sleep",
+    "eunit_dsleep_blacklist",
+    "hibernation_blacklist",
+    "ignore_netbios_broadcast",
+    "internal_hd_idletime",
+    "sata_deep_sleep",
+    "sata_dsleep_blacklist",
+    "support_esata",
+    "support_eunit_deep_sleep",
+    "support_eunit_switch_mode",
+    "usb_idletime"
+  ]
+}

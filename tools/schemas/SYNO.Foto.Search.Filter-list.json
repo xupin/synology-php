@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "aperture": {
+      "type": "array"
+    },
+    "camera": {
+      "type": "array"
+    },
+    "exposure_time_group": {
+      "type": "array"
+    },
+    "flash": {
+      "type": "array"
+    },
+    "focal_length_group": {
+      "type": "array"
+    },
+    "folder_filter": {
+      "type": "array"
+    },
+    "general_tag": {
+      "type": "array"
+    },
+    "geocoding": {
+      "type": "array"
+    },
+    "iso": {
+      "type": "array"
+    },
+    "item_type": {
+      "type": "array"
+    },
+    "lens": {
+      "type": "array"
+    },
+    "person": {
+      "type": "array"
+    },
+    "rating": {
+      "type": "array"
+    },
+    "time": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "aperture",
+    "camera",
+    "exposure_time_group",
+    "flash",
+    "focal_length_group",
+    "folder_filter",
+    "general_tag",
+    "geocoding",
+    "iso",
+    "item_type",
+    "lens",
+    "person",
+    "rating",
+    "time"
+  ]
+}
