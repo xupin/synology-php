@@ -118,22 +118,28 @@
   },
   "SYNO.VideoStation2.Folder": {
     "list": {
-      "limit": 10
+      "limit": 10,
+      "library_id": 0,
+      "type": "movie"
     }
   },
   "SYNO.VideoStation2.HomeVideo": {
     "list": {
-      "limit": 10
+      "limit": 10,
+      "library_id": 0
     }
   },
   "SYNO.VideoStation2.Metadata": {
     "list": {
-      "limit": 10
+      "limit": 10,
+      "library_id": 0,
+      "type": "movie"
     }
   },
   "SYNO.VideoStation2.Movie": {
     "list": {
-      "limit": 10
+      "limit": 10,
+      "library_id": 0
     }
   },
   "SYNO.VideoStation2.ParentalControl": {
@@ -153,12 +159,14 @@
   },
   "SYNO.VideoStation2.TVShow": {
     "list": {
-      "limit": 10
+      "limit": 10,
+      "library_id": 0
     }
   },
   "SYNO.VideoStation2.TVShowEpisode": {
     "list": {
-      "limit": 10
+      "limit": 10,
+      "library_id": 0
     }
   }
 }

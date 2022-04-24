@@ -2,7 +2,7 @@
     "error": {
         "code": 120,
         "errors": {
-            "name": "library_id",
+            "name": "category",
             "reason": "required"
         }
     },
