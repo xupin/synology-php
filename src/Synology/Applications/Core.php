@@ -40,52 +40,43 @@ class Core extends Authenticate
      */
     public function getObjects($type, $limit = 25, $offset = 0)
     {
-        $path = '';
+        $path = 'entry.cgi';
         $method = 'list';
         $version = static::API_VERSION;
         switch ($type) {
             case 'User':
-                $path = 'entry.cgi';
                 break;
             case 'Share':
-                $path = 'entry.cgi';
                 break;
             case 'Group':
-                $path = 'entry.cgi';
                 break;
             case 'AppPortal':
-                $path = 'entry.cgi';
                 break;
             case 'Service':
-                $path = 'entry.cgi';
                 $method = 'get';
                 $version = 3;
                 break;
             case 'Package':
-                $path = 'entry.cgi';
                 break;
             case 'Network':
-                $path = 'entry.cgi';
                 $method = 'get';
                 break;
             //case 'Volume':
             //    $path = 'dsm/volume.cgi';
             //    break;
             case 'Security.AutoBlock':
-                $path = 'entry.cgi';
                 $method = 'get';
                 break;
             //case 'LogViewer':
             //    $path = 'dsm/logviewer.cgi';
             //    break;
             case 'CurrentConnection':
-                $path = 'entry.cgi';
                 break;
             //case 'iSCSI':
             //    $path = 'dsm/iscsi.cgi';
             //    break;
             default:
-                new Exception('Unknown "' . $type . '" object');
+                throw new Exception('Unknown "' . $type . '" object');
         }
 
         return $this->_request($type, $path, $method, ['limit' => $limit, 'offset' => $offset], $version);
