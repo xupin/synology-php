@@ -1,4 +1,16 @@
 {
+  "SYNO.Docker.Container": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
+  "SYNO.Docker.Image": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
   "SYNO.Foto.Browse.Album": {
     "list": {
       "offset": 0,
