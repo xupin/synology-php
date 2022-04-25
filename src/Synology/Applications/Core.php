@@ -6,7 +6,7 @@ use Synology\Api\Authenticate;
 use Synology\Exception;
 
 /**
- * Class DSM
+ * Class Core
  *
  * @package Synology\Applications
  */
