@@ -3,6 +3,7 @@ Synology PHP
 
 This is an update of ``https://github.com/zzarbi/synology`` with new code standards and namespaces.
 
+You will find some additional [Tools](./tools/) here as well, including a [Synology Web API Explorer](https://github.mikespub.net/synology/tools/index.html) using a basic [REST API](./tools/rest.php) interface and generated swagger files.
 
 This is a PHP Library that consume Synology APIs
 
