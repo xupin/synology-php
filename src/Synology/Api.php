@@ -36,7 +36,7 @@ class Api extends AbstractApi
      */
     public function getAvailableApi()
     {
-        return $this->_request('Info', 'entry.cgi', 'query', ['query' => 'all']);
+        return $this->_request('Info', static::API_PATH, 'query', ['query' => 'all']);
     }
 
     /**
@@ -63,7 +63,7 @@ class Api extends AbstractApi
             'session' => $this->_sessionName,
             'format'  => 'sid',
         ];
-        $data = $this->_request('Auth', 'entry.cgi', 'login', $options, 7);
+        $data = $this->_request('Auth', static::API_PATH, 'login', $options, 7);
 
         // save session name id
         $this->_sid = $data->sid;
@@ -79,7 +79,7 @@ class Api extends AbstractApi
     public function disconnect()
     {
         $this->log($this->_sessionName, 'Disconnect Session');
-        $this->_request('Auth', 'entry.cgi', 'logout', ['_sid' => $this->_sid, 'session' => $this->_sessionName]);
+        $this->_request('Auth', static::API_PATH, 'logout', ['_sid' => $this->_sid, 'session' => $this->_sessionName]);
         $this->_sid = null;
 
         return $this;

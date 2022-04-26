@@ -12,6 +12,7 @@ abstract class AbstractApi
     public const PROTOCOL_HTTP = 'http';
     public const PROTOCOL_HTTPS = 'https';
     public const API_NAMESPACE = 'SYNO';
+    public const API_PATH = 'entry.cgi';
     public const CONNECT_TIMEOUT = 30000; //30s
 
     private $_protocol = self::PROTOCOL_HTTP;

@@ -53,7 +53,7 @@ class CloudSync extends Authenticate
     public function listConnections($limit = 25, $offset = 0)
     {
         $type = '';
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'list_conn';
         $params = [
             'limit' => $limit,
@@ -76,7 +76,7 @@ class CloudSync extends Authenticate
     public function listSessions($connectionId, $limit = 25, $offset = 0)
     {
         $type = '';
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'list_sess';
         $params = [
             'connection_id' => $connectionId,
@@ -98,7 +98,7 @@ class CloudSync extends Authenticate
     public function getSyncConfig($sessionId)
     {
         $type = '';
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'get_selective_sync_config';
         $params = [
             'session_id' => $sessionId,
@@ -119,7 +119,7 @@ class CloudSync extends Authenticate
     public function getFolderList($sessionId, $folderId)
     {
         $type = '';
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'get_selective_folder_list';
         $params = [
             'session_id' => $sessionId,

@@ -37,6 +37,6 @@ class DSM extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', 'entry.cgi', 'getinfo');
+        return $this->_request('Info', static::API_PATH, 'getinfo');
     }
 }

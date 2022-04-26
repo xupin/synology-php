@@ -40,7 +40,7 @@ class Core extends Authenticate
      */
     public function getObjects($type, $limit = 25, $offset = 0)
     {
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'list';
         $version = static::API_VERSION;
         switch ($type) {

@@ -49,7 +49,7 @@ class Backup extends Authenticate
     public function listTasks($limit = 25, $offset = 0)
     {
         $type = 'Task';
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'list';
         $params = [
             'limit' => $limit,
@@ -70,7 +70,7 @@ class Backup extends Authenticate
     public function getTask($taskId)
     {
         $type = 'Task';
-        $path = 'entry.cgi';
+        $path = static::API_PATH;
         $method = 'get';
         $params = [
             'task_id' => $taskId,

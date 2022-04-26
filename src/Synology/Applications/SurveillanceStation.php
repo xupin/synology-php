@@ -15,8 +15,6 @@ class SurveillanceStation extends Authenticate
     public const API_SERVICE_NAME = 'SurveillanceStation';
     public const API_VERSION = 1;
 
-    private static $path = 'entry.cgi';
-
     /**
      * Info API setup
      *
@@ -37,7 +35,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', static::$path, 'GetInfo');
+        return $this->_request('Info', static::API_PATH, 'GetInfo');
     }
 
     /**
@@ -46,7 +44,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getCameraList()
     {
-        return $this->_request('Camera', static::$path, 'List');
+        return $this->_request('Camera', static::API_PATH, 'List');
     }
 
     /**
@@ -59,6 +57,6 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'cameraId' => $cameraId,
         ];
-        return $this->_request('Camera', static::$path, 'GetSnapshot', $parameters);
+        return $this->_request('Camera', static::API_PATH, 'GetSnapshot', $parameters);
     }
 }

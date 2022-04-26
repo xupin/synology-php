@@ -199,13 +199,18 @@ function generate_swagger($apilist, $debug=false)
     $map_file = 'rest_mapping.php';
     $map_output = '<?php
 
+const API_PATH = \'entry.cgi\';
 $api2url = [];
 ';
     //$paths['query.cgi'] = 'SYNO.API.Info';
     //$paths['auth.cgi'] = 'SYNO.API.Auth';
     //$paths['encryption.cgi'] = 'SYNO.API.Encryption';
     foreach ($api2url as $api => $path) {
-        $map_output .= "\$api2url['$api'] = '$path';\n";
+        if ($path == 'entry.cgi') {
+            $map_output .= "\$api2url['$api'] = API_PATH;\n";
+        } else {
+            $map_output .= "\$api2url['$api'] = '$path';\n";
+        }
     }
     file_put_contents($map_file, $map_output);
     echo 'Generated '.$map_file."\n";
