@@ -5,8 +5,8 @@
     "serial": "*************",
     "temperature": 45,
     "temperature_warn": false,
-    "time": "Sun Apr 24 09:12:38 2022",
-    "uptime": 3876001,
-    "version": "42218",
-    "version_string": "DSM 7.0.1-42218 Update 3"
+    "time": "Sat Mar 18 15:41:07 2023",
+    "uptime": 2606839,
+    "version": "42962",
+    "version_string": "DSM 7.1.1-42962 Update 4"
 }

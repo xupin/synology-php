@@ -9,6 +9,7 @@
     "error": 2703,
     "expand_nested_groups": false,
     "is_syno_server": false,
+    "ldap_schema": "",
     "nested_group_level": 0,
     "profile": "standard",
     "server_address": "",

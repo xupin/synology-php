@@ -71,6 +71,12 @@
       "limit": 10
     }
   },
+  "SYNO.Foto.PhotoRequest": {
+    "list": {
+      "offset": 0,
+      "limit": 10
+    }
+  },
   "SYNO.FotoTeam.Browse.Folder": {
     "list": {
       "offset": 0,
