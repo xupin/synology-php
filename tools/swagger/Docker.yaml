@@ -1070,3 +1070,54 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Docker.Migrate/v1/import_status:
+    get:
+      tags:
+        - Docker.Migrate
+      summary: Return import_status for SYNO.Docker.Migrate
+      operationId: Migrate_import_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Migrate/v1/status:
+    get:
+      tags:
+        - Docker.Migrate
+      summary: Return status for SYNO.Docker.Migrate
+      operationId: Migrate_status
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Docker.Migrate/v1/import:
+    get:
+      tags:
+        - Docker.Migrate
+      summary: Return import for SYNO.Docker.Migrate
+      operationId: Migrate_import
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

@@ -322,3 +322,37 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.PersonMailAccount.Mail.Oauth/v1/outlook:
+    get:
+      tags:
+        - PersonMailAccount.Mail
+      summary: Return outlook for SYNO.PersonMailAccount.Mail.Oauth
+      operationId: Mail_Oauth_outlook
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.PersonMailAccount.Mail.Oauth/v1/gmail:
+    get:
+      tags:
+        - PersonMailAccount.Mail
+      summary: Return gmail for SYNO.PersonMailAccount.Mail.Oauth
+      operationId: Mail_Oauth_gmail
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []

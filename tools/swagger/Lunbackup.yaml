@@ -152,12 +152,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.CompleteCollection/v1/get:
+  /SYNO.Lunbackup/v1/rtor_name_get:
     get:
       tags:
-        - ActiveInsight.CompleteCollection
-      summary: Return get for SYNO.ActiveInsight.CompleteCollection
-      operationId: CompleteCollection_get
+        - Lunbackup.
+      summary: Return rtor_name_get for SYNO.Lunbackup
+      operationId: _rtor_name_get
       responses:
         '200':
           description: Normal Response
@@ -169,12 +169,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.CompleteCollection/v1/set:
+  /SYNO.Lunbackup/v1/space_check:
     get:
       tags:
-        - ActiveInsight.CompleteCollection
-      summary: Return set for SYNO.ActiveInsight.CompleteCollection
-      operationId: CompleteCollection_set
+        - Lunbackup.
+      summary: Return space_check for SYNO.Lunbackup
+      operationId: _space_check
       responses:
         '200':
           description: Normal Response
@@ -186,12 +186,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.License/v1/get:
+  /SYNO.Lunbackup/v1/dir_check:
     get:
       tags:
-        - ActiveInsight.License
-      summary: Return get for SYNO.ActiveInsight.License
-      operationId: License_get
+        - Lunbackup.
+      summary: Return dir_check for SYNO.Lunbackup
+      operationId: _dir_check
       responses:
         '200':
           description: Normal Response
@@ -203,12 +203,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/get_status:
+  /SYNO.Lunbackup/v1/task_owner_check:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return get_status for SYNO.ActiveInsight.Package
-      operationId: Package_get_status
+        - Lunbackup.
+      summary: Return task_owner_check for SYNO.Lunbackup
+      operationId: _task_owner_check
       responses:
         '200':
           description: Normal Response
@@ -220,12 +220,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/start_mib:
+  /SYNO.Lunbackup/v1/task_folder_enum:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return start_mib for SYNO.ActiveInsight.Package
-      operationId: Package_start_mib
+        - Lunbackup.
+      summary: Return task_folder_enum for SYNO.Lunbackup
+      operationId: _task_folder_enum
       responses:
         '200':
           description: Normal Response
@@ -237,12 +237,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/stop_mib:
+  /SYNO.Lunbackup/v1/file_config_get:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return stop_mib for SYNO.ActiveInsight.Package
-      operationId: Package_stop_mib
+        - Lunbackup.
+      summary: Return file_config_get for SYNO.Lunbackup
+      operationId: _file_config_get
       responses:
         '200':
           description: Normal Response
@@ -254,12 +254,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/change_mode:
+  /SYNO.Lunbackup/v1/file_config_set:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return change_mode for SYNO.ActiveInsight.Package
-      operationId: Package_change_mode
+        - Lunbackup.
+      summary: Return file_config_set for SYNO.Lunbackup
+      operationId: _file_config_set
       responses:
         '200':
           description: Normal Response
@@ -271,12 +271,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Setting/v1/get:
+  /SYNO.Lunbackup/v1/cksum_do:
     get:
       tags:
-        - ActiveInsight.Setting
-      summary: Return get for SYNO.ActiveInsight.Setting
-      operationId: Setting_get
+        - Lunbackup.
+      summary: Return cksum_do for SYNO.Lunbackup
+      operationId: _cksum_do
       responses:
         '200':
           description: Normal Response
@@ -288,12 +288,29 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Setting/v1/set:
+  /SYNO.Lunbackup/v1/cksum_gen:
     get:
       tags:
-        - ActiveInsight.Setting
-      summary: Return set for SYNO.ActiveInsight.Setting
-      operationId: Setting_set
+        - Lunbackup.
+      summary: Return cksum_gen for SYNO.Lunbackup
+      operationId: _cksum_gen
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Lunbackup/v1/cksum_status_get:
+    get:
+      tags:
+        - Lunbackup.
+      summary: Return cksum_status_get for SYNO.Lunbackup
+      operationId: _cksum_status_get
       responses:
         '200':
           description: Normal Response

@@ -1478,7 +1478,7 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.VideoStation2.Info/v2/get:
+  /SYNO.VideoStation2.Info/v4/get:
     get:
       tags:
         - VideoStation2.Info

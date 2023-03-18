@@ -1886,6 +1886,91 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Foto.PhotoRequest/v1/create:
+    get:
+      tags:
+        - Foto.PhotoRequest
+      summary: Return create for SYNO.Foto.PhotoRequest
+      operationId: PhotoRequest_create
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.PhotoRequest/v1/delete:
+    get:
+      tags:
+        - Foto.PhotoRequest
+      summary: Return delete for SYNO.Foto.PhotoRequest
+      operationId: PhotoRequest_delete
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.PhotoRequest/v1/get:
+    get:
+      tags:
+        - Foto.PhotoRequest
+      summary: Return get for SYNO.Foto.PhotoRequest
+      operationId: PhotoRequest_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.PhotoRequest/v1/list:
+    get:
+      tags:
+        - Foto.PhotoRequest
+      summary: Return list for SYNO.Foto.PhotoRequest
+      operationId: PhotoRequest_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.PhotoRequest/v1/update:
+    get:
+      tags:
+        - Foto.PhotoRequest
+      summary: Return update for SYNO.Foto.PhotoRequest
+      operationId: PhotoRequest_update
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Foto.PublicSharing/v1/get:
     get:
       tags:
@@ -2379,6 +2464,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Foto.Sharing.Passphrase/v1/get_photo_request_info:
+    get:
+      tags:
+        - Foto.Sharing
+      summary: Return get_photo_request_info for SYNO.Foto.Sharing.Passphrase
+      operationId: Sharing_Passphrase_get_photo_request_info
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Foto.Sharing.Passphrase/v1/set_shared:
     get:
       tags:
@@ -2504,6 +2606,23 @@ paths:
         - Foto.Upload
       summary: Return upload_to_folder for SYNO.Foto.Upload.Item
       operationId: Upload_Item_upload_to_folder
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Foto.Upload.PhotoRequestItem/v1/upload:
+    get:
+      tags:
+        - Foto.Upload
+      summary: Return upload for SYNO.Foto.Upload.PhotoRequestItem
+      operationId: Upload_PhotoRequestItem_upload
       responses:
         '200':
           description: Normal Response

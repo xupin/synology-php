@@ -186,6 +186,23 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.Personal.Application.Info/v1/get_autotest_log:
+    get:
+      tags:
+        - Personal.Application
+      summary: Return get_autotest_log for SYNO.Personal.Application.Info
+      operationId: Application_Info_get_autotest_log
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.Personal.MailAccount/v1/set:
     get:
       tags:
@@ -362,6 +379,23 @@ paths:
         - Personal.Notification
       summary: Return get for SYNO.Personal.Notification.Conf
       operationId: Notification_Conf_get
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.Personal.Notification.Conf/v2/set:
+    get:
+      tags:
+        - Personal.Notification
+      summary: Return set for SYNO.Personal.Notification.Conf
+      operationId: Notification_Conf_set
       responses:
         '200':
           description: Normal Response

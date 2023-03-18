@@ -152,12 +152,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Info/v4/getinfo:
+  /SYNO.AudioStation.Album/v3/list:
     get:
       tags:
-        - AudioStation.Info
-      summary: Return getinfo for SYNO.AudioStation.Info
-      operationId: Info_getinfo
+        - AudioStation.Album
+      summary: Return list for SYNO.AudioStation.Album
+      operationId: Album_list
       responses:
         '200':
           description: Normal Response
@@ -169,12 +169,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Album/v3/list:
+  /SYNO.AudioStation.Artist/v4/list:
     get:
       tags:
-        - AudioStation.Album
-      summary: Return list for SYNO.AudioStation.Album
-      operationId: Album_list
+        - AudioStation.Artist
+      summary: Return list for SYNO.AudioStation.Artist
+      operationId: Artist_list
       responses:
         '200':
           description: Normal Response
@@ -203,12 +203,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Genre/v3/list:
+  /SYNO.AudioStation.Cover/v3/getsongcover:
     get:
       tags:
-        - AudioStation.Genre
-      summary: Return list for SYNO.AudioStation.Genre
-      operationId: Genre_list
+        - AudioStation.Cover
+      summary: Return getsongcover for SYNO.AudioStation.Cover
+      operationId: Cover_getsongcover
       responses:
         '200':
           description: Normal Response
@@ -220,12 +220,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Genre/v3/list_default_genre:
+  /SYNO.AudioStation.Cover/v3/getfoldercover:
     get:
       tags:
-        - AudioStation.Genre
-      summary: Return list_default_genre for SYNO.AudioStation.Genre
-      operationId: Genre_list_default_genre
+        - AudioStation.Cover
+      summary: Return getfoldercover for SYNO.AudioStation.Cover
+      operationId: Cover_getfoldercover
       responses:
         '200':
           description: Normal Response
@@ -237,12 +237,29 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Artist/v4/list:
+  /SYNO.AudioStation.Cover/v3/getcover:
     get:
       tags:
-        - AudioStation.Artist
-      summary: Return list for SYNO.AudioStation.Artist
-      operationId: Artist_list
+        - AudioStation.Cover
+      summary: Return getcover for SYNO.AudioStation.Cover
+      operationId: Cover_getcover
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Download/v1/download:
+    get:
+      tags:
+        - AudioStation.Download
+      summary: Return download for SYNO.AudioStation.Download
+      operationId: Download_download
       responses:
         '200':
           description: Normal Response
@@ -288,12 +305,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Song/v3/list:
+  /SYNO.AudioStation.Genre/v3/list:
     get:
       tags:
-        - AudioStation.Song
-      summary: Return list for SYNO.AudioStation.Song
-      operationId: Song_list
+        - AudioStation.Genre
+      summary: Return list for SYNO.AudioStation.Genre
+      operationId: Genre_list
       responses:
         '200':
           description: Normal Response
@@ -305,12 +322,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Song/v3/search:
+  /SYNO.AudioStation.Genre/v3/list_default_genre:
     get:
       tags:
-        - AudioStation.Song
-      summary: Return search for SYNO.AudioStation.Song
-      operationId: Song_search
+        - AudioStation.Genre
+      summary: Return list_default_genre for SYNO.AudioStation.Genre
+      operationId: Genre_list_default_genre
       responses:
         '200':
           description: Normal Response
@@ -322,12 +339,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Song/v3/getinfo:
+  /SYNO.AudioStation.Info/v6/getinfo:
     get:
       tags:
-        - AudioStation.Song
-      summary: Return getinfo for SYNO.AudioStation.Song
-      operationId: Song_getinfo
+        - AudioStation.Info
+      summary: Return getinfo for SYNO.AudioStation.Info
+      operationId: Info_getinfo
       responses:
         '200':
           description: Normal Response
@@ -339,12 +356,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Song/v3/setrating:
+  /SYNO.AudioStation.Lyrics/v2/getlyrics:
     get:
       tags:
-        - AudioStation.Song
-      summary: Return setrating for SYNO.AudioStation.Song
-      operationId: Song_setrating
+        - AudioStation.Lyrics
+      summary: Return getlyrics for SYNO.AudioStation.Lyrics
+      operationId: Lyrics_getlyrics
       responses:
         '200':
           description: Normal Response
@@ -356,12 +373,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Song/v3/setsharing:
+  /SYNO.AudioStation.Lyrics/v2/setlyrics:
     get:
       tags:
-        - AudioStation.Song
-      summary: Return setsharing for SYNO.AudioStation.Song
-      operationId: Song_setsharing
+        - AudioStation.Lyrics
+      summary: Return setlyrics for SYNO.AudioStation.Lyrics
+      operationId: Lyrics_setlyrics
       responses:
         '200':
           description: Normal Response
@@ -373,12 +390,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Song/v3/getsharing:
+  /SYNO.AudioStation.LyricsSearch/v2/searchlyrics:
     get:
       tags:
-        - AudioStation.Song
-      summary: Return getsharing for SYNO.AudioStation.Song
-      operationId: Song_getsharing
+        - AudioStation.LyricsSearch
+      summary: Return searchlyrics for SYNO.AudioStation.LyricsSearch
+      operationId: LyricsSearch_searchlyrics
       responses:
         '200':
           description: Normal Response
@@ -390,97 +407,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Stream/v2/stream:
+  /SYNO.AudioStation.MediaServer/v1/list:
     get:
       tags:
-        - AudioStation.Stream
-      summary: Return stream for SYNO.AudioStation.Stream
-      operationId: Stream_stream
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Stream/v2/transcode:
-    get:
-      tags:
-        - AudioStation.Stream
-      summary: Return transcode for SYNO.AudioStation.Stream
-      operationId: Stream_transcode
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Radio/v2/list:
-    get:
-      tags:
-        - AudioStation.Radio
-      summary: Return list for SYNO.AudioStation.Radio
-      operationId: Radio_list
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Radio/v2/add:
-    get:
-      tags:
-        - AudioStation.Radio
-      summary: Return add for SYNO.AudioStation.Radio
-      operationId: Radio_add
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Radio/v2/search:
-    get:
-      tags:
-        - AudioStation.Radio
-      summary: Return search for SYNO.AudioStation.Radio
-      operationId: Radio_search
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Radio/v2/updateradios:
-    get:
-      tags:
-        - AudioStation.Radio
-      summary: Return updateradios for SYNO.AudioStation.Radio
-      operationId: Radio_updateradios
+        - AudioStation.MediaServer
+      summary: Return list for SYNO.AudioStation.MediaServer
+      operationId: MediaServer_list
       responses:
         '200':
           description: Normal Response
@@ -713,6 +645,142 @@ paths:
             type: object
       security:
         - query_sid: []
+  /SYNO.AudioStation.Proxy/v2/getstreamid:
+    get:
+      tags:
+        - AudioStation.Proxy
+      summary: Return getstreamid for SYNO.AudioStation.Proxy
+      operationId: Proxy_getstreamid
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Proxy/v2/stream:
+    get:
+      tags:
+        - AudioStation.Proxy
+      summary: Return stream for SYNO.AudioStation.Proxy
+      operationId: Proxy_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Proxy/v2/getsonginfo:
+    get:
+      tags:
+        - AudioStation.Proxy
+      summary: Return getsonginfo for SYNO.AudioStation.Proxy
+      operationId: Proxy_getsonginfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Proxy/v2/deletesonginfo:
+    get:
+      tags:
+        - AudioStation.Proxy
+      summary: Return deletesonginfo for SYNO.AudioStation.Proxy
+      operationId: Proxy_deletesonginfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Radio/v2/list:
+    get:
+      tags:
+        - AudioStation.Radio
+      summary: Return list for SYNO.AudioStation.Radio
+      operationId: Radio_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Radio/v2/add:
+    get:
+      tags:
+        - AudioStation.Radio
+      summary: Return add for SYNO.AudioStation.Radio
+      operationId: Radio_add
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Radio/v2/search:
+    get:
+      tags:
+        - AudioStation.Radio
+      summary: Return search for SYNO.AudioStation.Radio
+      operationId: Radio_search
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Radio/v2/updateradios:
+    get:
+      tags:
+        - AudioStation.Radio
+      summary: Return updateradios for SYNO.AudioStation.Radio
+      operationId: Radio_updateradios
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
   /SYNO.AudioStation.RemotePlayer/v3/list:
     get:
       tags:
@@ -866,12 +934,165 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.RemotePlayerStatus/v1/getstatus:
+  /SYNO.AudioStation.RemotePlayerStatus/v2/getstatus:
     get:
       tags:
         - AudioStation.RemotePlayerStatus
       summary: Return getstatus for SYNO.AudioStation.RemotePlayerStatus
       operationId: RemotePlayerStatus_getstatus
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Search/v1/list:
+    get:
+      tags:
+        - AudioStation.Search
+      summary: Return list for SYNO.AudioStation.Search
+      operationId: Search_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Song/v3/list:
+    get:
+      tags:
+        - AudioStation.Song
+      summary: Return list for SYNO.AudioStation.Song
+      operationId: Song_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Song/v3/search:
+    get:
+      tags:
+        - AudioStation.Song
+      summary: Return search for SYNO.AudioStation.Song
+      operationId: Song_search
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Song/v3/getinfo:
+    get:
+      tags:
+        - AudioStation.Song
+      summary: Return getinfo for SYNO.AudioStation.Song
+      operationId: Song_getinfo
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Song/v3/setrating:
+    get:
+      tags:
+        - AudioStation.Song
+      summary: Return setrating for SYNO.AudioStation.Song
+      operationId: Song_setrating
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Song/v3/setsharing:
+    get:
+      tags:
+        - AudioStation.Song
+      summary: Return setsharing for SYNO.AudioStation.Song
+      operationId: Song_setsharing
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Song/v3/getsharing:
+    get:
+      tags:
+        - AudioStation.Song
+      summary: Return getsharing for SYNO.AudioStation.Song
+      operationId: Song_getsharing
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Stream/v2/stream:
+    get:
+      tags:
+        - AudioStation.Stream
+      summary: Return stream for SYNO.AudioStation.Stream
+      operationId: Stream_stream
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.Stream/v2/transcode:
+    get:
+      tags:
+        - AudioStation.Stream
+      summary: Return transcode for SYNO.AudioStation.Stream
+      operationId: Stream_transcode
       responses:
         '200':
           description: Normal Response
@@ -917,12 +1138,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Proxy/v1/getstreamid:
+  /SYNO.AudioStation.Browse.Playlist/v1/add_track:
     get:
       tags:
-        - AudioStation.Proxy
-      summary: Return getstreamid for SYNO.AudioStation.Proxy
-      operationId: Proxy_getstreamid
+        - AudioStation.Browse
+      summary: Return add_track for SYNO.AudioStation.Browse.Playlist
+      operationId: Browse_Playlist_add_track
       responses:
         '200':
           description: Normal Response
@@ -934,12 +1155,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Proxy/v1/stream:
+  /SYNO.AudioStation.Pin/v1/list:
     get:
       tags:
-        - AudioStation.Proxy
-      summary: Return stream for SYNO.AudioStation.Proxy
-      operationId: Proxy_stream
+        - AudioStation.Pin
+      summary: Return list for SYNO.AudioStation.Pin
+      operationId: Pin_list
       responses:
         '200':
           description: Normal Response
@@ -951,12 +1172,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Proxy/v1/getsonginfo:
+  /SYNO.AudioStation.Pin/v1/pin:
     get:
       tags:
-        - AudioStation.Proxy
-      summary: Return getsonginfo for SYNO.AudioStation.Proxy
-      operationId: Proxy_getsonginfo
+        - AudioStation.Pin
+      summary: Return pin for SYNO.AudioStation.Pin
+      operationId: Pin_pin
       responses:
         '200':
           description: Normal Response
@@ -968,165 +1189,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Proxy/v1/deletesonginfo:
+  /SYNO.AudioStation.Pin/v1/rename:
     get:
       tags:
-        - AudioStation.Proxy
-      summary: Return deletesonginfo for SYNO.AudioStation.Proxy
-      operationId: Proxy_deletesonginfo
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Lyrics/v2/getlyrics:
-    get:
-      tags:
-        - AudioStation.Lyrics
-      summary: Return getlyrics for SYNO.AudioStation.Lyrics
-      operationId: Lyrics_getlyrics
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Lyrics/v2/setlyrics:
-    get:
-      tags:
-        - AudioStation.Lyrics
-      summary: Return setlyrics for SYNO.AudioStation.Lyrics
-      operationId: Lyrics_setlyrics
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.LyricsSearch/v2/searchlyrics:
-    get:
-      tags:
-        - AudioStation.LyricsSearch
-      summary: Return searchlyrics for SYNO.AudioStation.LyricsSearch
-      operationId: LyricsSearch_searchlyrics
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.MediaServer/v1/list:
-    get:
-      tags:
-        - AudioStation.MediaServer
-      summary: Return list for SYNO.AudioStation.MediaServer
-      operationId: MediaServer_list
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Cover/v3/getsongcover:
-    get:
-      tags:
-        - AudioStation.Cover
-      summary: Return getsongcover for SYNO.AudioStation.Cover
-      operationId: Cover_getsongcover
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Cover/v3/getfoldercover:
-    get:
-      tags:
-        - AudioStation.Cover
-      summary: Return getfoldercover for SYNO.AudioStation.Cover
-      operationId: Cover_getfoldercover
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Cover/v3/getcover:
-    get:
-      tags:
-        - AudioStation.Cover
-      summary: Return getcover for SYNO.AudioStation.Cover
-      operationId: Cover_getcover
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Download/v1/download:
-    get:
-      tags:
-        - AudioStation.Download
-      summary: Return download for SYNO.AudioStation.Download
-      operationId: Download_download
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Search/v1/list:
-    get:
-      tags:
-        - AudioStation.Search
-      summary: Return list for SYNO.AudioStation.Search
-      operationId: Search_list
+        - AudioStation.Pin
+      summary: Return rename for SYNO.AudioStation.Pin
+      operationId: Pin_rename
       responses:
         '200':
           description: Normal Response
@@ -1172,57 +1240,6 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.AudioStation.Pin/v1/rename:
-    get:
-      tags:
-        - AudioStation.Pin
-      summary: Return rename for SYNO.AudioStation.Pin
-      operationId: Pin_rename
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Pin/v1/pin:
-    get:
-      tags:
-        - AudioStation.Pin
-      summary: Return pin for SYNO.AudioStation.Pin
-      operationId: Pin_pin
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Pin/v1/list:
-    get:
-      tags:
-        - AudioStation.Pin
-      summary: Return list for SYNO.AudioStation.Pin
-      operationId: Pin_list
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
   /SYNO.AudioStation.Tag/v1/getinfo:
     get:
       tags:
@@ -1246,6 +1263,108 @@ paths:
         - AudioStation.Tag
       summary: Return list for SYNO.AudioStation.Tag
       operationId: Tag_list
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.VoiceAssistant.Browse/v1/count_search:
+    get:
+      tags:
+        - AudioStation.VoiceAssistant
+      summary: Return count_search for SYNO.AudioStation.VoiceAssistant.Browse
+      operationId: VoiceAssistant_Browse_count_search
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.VoiceAssistant.Browse/v1/get_cover:
+    get:
+      tags:
+        - AudioStation.VoiceAssistant
+      summary: Return get_cover for SYNO.AudioStation.VoiceAssistant.Browse
+      operationId: VoiceAssistant_Browse_get_cover
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.VoiceAssistant.Browse/v1/get_playlist:
+    get:
+      tags:
+        - AudioStation.VoiceAssistant
+      summary: Return get_playlist for SYNO.AudioStation.VoiceAssistant.Browse
+      operationId: VoiceAssistant_Browse_get_playlist
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.VoiceAssistant.Browse/v1/search:
+    get:
+      tags:
+        - AudioStation.VoiceAssistant
+      summary: Return search for SYNO.AudioStation.VoiceAssistant.Browse
+      operationId: VoiceAssistant_Browse_search
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.VoiceAssistant.Browse/v1/search_playlist:
+    get:
+      tags:
+        - AudioStation.VoiceAssistant
+      summary: Return search_playlist for SYNO.AudioStation.VoiceAssistant.Browse
+      operationId: VoiceAssistant_Browse_search_playlist
+      responses:
+        '200':
+          description: Normal Response
+          schema:
+            $ref: '#/definitions/NormalResponse'
+        default:
+          description: Abnormal Response
+          schema:
+            type: object
+      security:
+        - query_sid: []
+  /SYNO.AudioStation.VoiceAssistant.Challenge/v1/get:
+    get:
+      tags:
+        - AudioStation.VoiceAssistant
+      summary: Return get for SYNO.AudioStation.VoiceAssistant.Challenge
+      operationId: VoiceAssistant_Challenge_get
       responses:
         '200':
           description: Normal Response
@@ -1297,125 +1416,6 @@ paths:
         - AudioStation.VoiceAssistant
       summary: Return transcode for SYNO.AudioStation.VoiceAssistant.Stream
       operationId: VoiceAssistant_Stream_transcode
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.VoiceAssistant.Browse/v1/count_search:
-    get:
-      tags:
-        - AudioStation.VoiceAssistant
-      summary: Return count_search for SYNO.AudioStation.VoiceAssistant.Browse
-      operationId: VoiceAssistant_Browse_count_search
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.VoiceAssistant.Browse/v1/search:
-    get:
-      tags:
-        - AudioStation.VoiceAssistant
-      summary: Return search for SYNO.AudioStation.VoiceAssistant.Browse
-      operationId: VoiceAssistant_Browse_search
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.VoiceAssistant.Browse/v1/search_playlist:
-    get:
-      tags:
-        - AudioStation.VoiceAssistant
-      summary: Return search_playlist for SYNO.AudioStation.VoiceAssistant.Browse
-      operationId: VoiceAssistant_Browse_search_playlist
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.VoiceAssistant.Browse/v1/get_playlist:
-    get:
-      tags:
-        - AudioStation.VoiceAssistant
-      summary: Return get_playlist for SYNO.AudioStation.VoiceAssistant.Browse
-      operationId: VoiceAssistant_Browse_get_playlist
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.VoiceAssistant.Browse/v1/get_cover:
-    get:
-      tags:
-        - AudioStation.VoiceAssistant
-      summary: Return get_cover for SYNO.AudioStation.VoiceAssistant.Browse
-      operationId: VoiceAssistant_Browse_get_cover
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.VoiceAssistant.Challenge/v1/get:
-    get:
-      tags:
-        - AudioStation.VoiceAssistant
-      summary: Return get for SYNO.AudioStation.VoiceAssistant.Challenge
-      operationId: VoiceAssistant_Challenge_get
-      responses:
-        '200':
-          description: Normal Response
-          schema:
-            $ref: '#/definitions/NormalResponse'
-        default:
-          description: Abnormal Response
-          schema:
-            type: object
-      security:
-        - query_sid: []
-  /SYNO.AudioStation.Browse.Playlist/v1/add_track:
-    get:
-      tags:
-        - AudioStation.Browse
-      summary: Return add_track for SYNO.AudioStation.Browse.Playlist
-      operationId: Browse_Playlist_add_track
       responses:
         '200':
           description: Normal Response

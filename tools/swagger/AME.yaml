@@ -152,12 +152,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.CompleteCollection/v1/get:
+  /SYNO.AME.Config/v1/get:
     get:
       tags:
-        - ActiveInsight.CompleteCollection
-      summary: Return get for SYNO.ActiveInsight.CompleteCollection
-      operationId: CompleteCollection_get
+        - AME.Config
+      summary: Return get for SYNO.AME.Config
+      operationId: Config_get
       responses:
         '200':
           description: Normal Response
@@ -169,12 +169,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.CompleteCollection/v1/set:
+  /SYNO.AME.Config/v1/set:
     get:
       tags:
-        - ActiveInsight.CompleteCollection
-      summary: Return set for SYNO.ActiveInsight.CompleteCollection
-      operationId: CompleteCollection_set
+        - AME.Config
+      summary: Return set for SYNO.AME.Config
+      operationId: Config_set
       responses:
         '200':
           description: Normal Response
@@ -186,12 +186,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.License/v1/get:
+  /SYNO.AME.License/v1/check:
     get:
       tags:
-        - ActiveInsight.License
-      summary: Return get for SYNO.ActiveInsight.License
-      operationId: License_get
+        - AME.License
+      summary: Return check for SYNO.AME.License
+      operationId: License_check
       responses:
         '200':
           description: Normal Response
@@ -203,12 +203,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/get_status:
+  /SYNO.AME.License/v1/activate_free_license:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return get_status for SYNO.ActiveInsight.Package
-      operationId: Package_get_status
+        - AME.License
+      summary: Return activate_free_license for SYNO.AME.License
+      operationId: License_activate_free_license
       responses:
         '200':
           description: Normal Response
@@ -220,12 +220,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/start_mib:
+  /SYNO.AME.Pack/v1/check_activation:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return start_mib for SYNO.ActiveInsight.Package
-      operationId: Package_start_mib
+        - AME.Pack
+      summary: Return check_activation for SYNO.AME.Pack
+      operationId: Pack_check_activation
       responses:
         '200':
           description: Normal Response
@@ -237,12 +237,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/stop_mib:
+  /SYNO.AME.Pack/v1/get_info:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return stop_mib for SYNO.ActiveInsight.Package
-      operationId: Package_stop_mib
+        - AME.Pack
+      summary: Return get_info for SYNO.AME.Pack
+      operationId: Pack_get_info
       responses:
         '200':
           description: Normal Response
@@ -254,12 +254,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Package/v2/change_mode:
+  /SYNO.AME.Pack/v1/get_plugin_app_id:
     get:
       tags:
-        - ActiveInsight.Package
-      summary: Return change_mode for SYNO.ActiveInsight.Package
-      operationId: Package_change_mode
+        - AME.Pack
+      summary: Return get_plugin_app_id for SYNO.AME.Pack
+      operationId: Pack_get_plugin_app_id
       responses:
         '200':
           description: Normal Response
@@ -271,12 +271,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Setting/v1/get:
+  /SYNO.AME.Pack/v1/manual_update:
     get:
       tags:
-        - ActiveInsight.Setting
-      summary: Return get for SYNO.ActiveInsight.Setting
-      operationId: Setting_get
+        - AME.Pack
+      summary: Return manual_update for SYNO.AME.Pack
+      operationId: Pack_manual_update
       responses:
         '200':
           description: Normal Response
@@ -288,12 +288,12 @@ paths:
             type: object
       security:
         - query_sid: []
-  /SYNO.ActiveInsight.Setting/v1/set:
+  /SYNO.AME.Payment/v1/get_myds_info:
     get:
       tags:
-        - ActiveInsight.Setting
-      summary: Return set for SYNO.ActiveInsight.Setting
-      operationId: Setting_set
+        - AME.Payment
+      summary: Return get_myds_info for SYNO.AME.Payment
+      operationId: Payment_get_myds_info
       responses:
         '200':
           description: Normal Response
