@@ -1,7 +1,7 @@
 {
     "SYNO.SurveillanceStation.ActionRule": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/ActionRule/src/SYNO.SurveillanceStation.ActionRule.so",
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "List",
@@ -20,21 +20,40 @@
             "2": [
                 "List",
                 "Save"
+            ],
+            "3": [
+                "Save",
+                "List",
+                "Enable",
+                "Disable",
+                "ListHistory",
+                "DeleteHistory",
+                "SendSsdCmd",
+                "SendActruledCmd",
+                "DownloadHistory",
+                "LoadAdvanced",
+                "SaveAdvanced",
+                "SendData2Player",
+                "SendData2VS",
+                "GetDeviceDIStatus",
+                "ListViewerTriggerRule",
+                "TriggerViewerRule"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.AddOns": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/AddOns/src/SYNO.SurveillanceStation.AddOns.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "List",
                 "Update",
                 "Enable",
                 "Disable",
+                "BatchEnable",
                 "Restart",
                 "GetInfo",
                 "LoadFile",
@@ -49,10 +68,14 @@
                 "DownloadStart",
                 "DownloadProgress",
                 "DownloadCancel"
+            ],
+            "2": [
+                "GetUpdateInfo",
+                "GetPkgInfo"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Alert": {
@@ -71,11 +94,12 @@
                 "EventFlushHeader",
                 "EventCount",
                 "RecServerEventCount",
-                "MarkAsViewed"
+                "MarkAsViewed",
+                "AllDeviceAlert"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Alert.Setting": {
@@ -90,7 +114,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Analytics.Setting": {
@@ -102,12 +126,69 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.AppCenter": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/AppCenter/src/SYNO.SurveillanceStation.AppCenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "GetInfo",
+                "Operation"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Archiving.Pull": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Archiving/src/SYNO.SurveillanceStation.Archiving.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "SendTask",
+                "SaveTask",
+                "BatchEditTask",
+                "GetBatchEditProgress",
+                "BatchEditProgressDone",
+                "DeleteTask",
+                "ListTask",
+                "EnableTask",
+                "DisableTask",
+                "LoginSourceDS",
+                "SaveTieringConfig",
+                "LoadTieringConfig",
+                "ListUsingTask",
+                "CheckSrcRecording",
+                "LocalRecRangeValid",
+                "CheckConnectFile",
+                "GetRecordSize",
+                "VerifyRecordEncrypt"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Archiving.Push": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Archiving/src/SYNO.SurveillanceStation.Archiving.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "SyncFiles",
+                "CreateDirs",
+                "MoveDir"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.AudioOut": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/AudioOut/src/SYNO.SurveillanceStation.AudioOut.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "SendData",
@@ -120,10 +201,19 @@
                 "EnumSetting",
                 "SaveSetting",
                 "CheckOccupied"
+            ],
+            "2": [
+                "LiveStart",
+                "Stop",
+                "FileStart",
+                "SetupChannel",
+                "CheckOccupied",
+                "SendFileData",
+                "StopSendFileData"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.AudioPattern": {
@@ -142,7 +232,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.AxisAcsCtrler": {
@@ -151,6 +241,10 @@
         "methods": {
             "1": [
                 "BlockCardHolder",
+                "SyncAllCtrlerCardHolder",
+                "ImportCardHolder",
+                "GetActProgress",
+                "ActProgressDone",
                 "CountByCategory",
                 "CountByCategoryCardHolder",
                 "CountByCategoryLog",
@@ -160,7 +254,7 @@
                 "Enum",
                 "EnumCardHolder",
                 "EnumLogConfig",
-                "GetDoorNames",
+                "GetDoorData",
                 "GetUpdateInfo",
                 "ListDoor",
                 "ListLog",
@@ -169,18 +263,27 @@
                 "Monitor",
                 "Save",
                 "SaveCardHolder",
+                "BatEditCardHolder",
+                "AddCardHolder",
+                "DelCardHolder",
                 "SavePrivilege",
                 "SaveLogConfig",
                 "TestConnect",
+                "GetStandAloneMode",
                 "RetrieveLastCard",
                 "ClearLog",
                 "DownloadLog",
                 "AckAlarm",
-                "GetCardholderPhoto"
+                "GetCardholderPhoto",
+                "EnumAccessRule",
+                "AddAccessRule",
+                "SaveAccessRule",
+                "DelAccessRule",
+                "UploadCardHolder"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.AxisAcsCtrler.Search": {
@@ -193,18 +296,70 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.SurveillanceStation.CMS": {
-        "lib": "/var/packages/SurveillanceStation/target/webapi/CMS/src/SYNO.SurveillanceStation.CMS.so",
+    "SYNO.SurveillanceStation.C2": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/C2/src/SYNO.SurveillanceStation.C2.so",
         "maxVersion": 1,
         "methods": {
             "1": [
                 "GetInfo",
+                "GetLoginInfo",
+                "GetAccessToken",
+                "PollingLoginResult",
+                "Logout",
+                "GetSubscriptions",
+                "GetPlanInfos",
+                "GetCameraList",
+                "GetEUC2CameraList",
+                "GetUSC2CameraList",
+                "BindCamera",
+                "UnbindCamera",
+                "ChangePlan",
+                "UpdateCam",
+                "SelectSite",
+                "GetFileSize",
+                "GetNeedUploadEvtNumByCam",
+                "TriggerUpdate",
+                "GetUploadInfo"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.C2.Encryption": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/C2/src/SYNO.SurveillanceStation.C2.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "PreRegister",
+                "Register",
+                "PreRecover",
+                "Recover",
+                "PreVerify",
+                "Verify",
+                "PreDiscard",
+                "Discard",
+                "ForceDiscard",
+                "CheckDiscarded",
+                "PreChange",
+                "Change",
+                "CheckRemoteEncRegistered"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.CMS": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/CMS/src/SYNO.SurveillanceStation.CMS.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "GetInfo",
                 "ApplyOption",
-                "DoSyncData",
-                "ResyncEvent",
                 "LockSelf",
                 "GetMDSnapshot",
                 "ModifySharePriv",
@@ -216,11 +371,59 @@
                 "RedirectUpload",
                 "GetCMSStatus",
                 "VolumeRemove",
-                "NTPSync"
+                "NTPSync",
+                "PushHostInfo",
+                "OnlineUpgrade",
+                "UploadUpgradeFile",
+                "UpgradeByFile",
+                "GetUpgradeStatus",
+                "SetUpgradeStatus",
+                "GetSnapshotFile"
+            ],
+            "2": [
+                "GetMDSnapshot"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.CMS.DsSearch": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/CMS/src/SYNO.SurveillanceStation.CMS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Start",
+                "GetInfo"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.CMS.Failover": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/CMS/src/SYNO.SurveillanceStation.CMS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "LoadSetting",
+                "SaveSetting",
+                "ApplyServSetting",
+                "ResetServSetting",
+                "ManualFailover",
+                "ManualRestore",
+                "Hibernate",
+                "StopRecovering",
+                "ReplaceServer",
+                "UpdateCentralInfo",
+                "CancelFailover",
+                "NotifyPushServSetting",
+                "RedirectTestConnect",
+                "GetRestoreParam"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.CMS.GetDsStatus": {
@@ -237,11 +440,33 @@
                 "TestHostDs",
                 "EnableCMS",
                 "GetFreeSpace",
-                "MultipartStatusConn"
+                "MultipartStatusConn",
+                "RecEncryptVerify"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.CMS.SlavedsList": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/CMS/src/SYNO.SurveillanceStation.CMS.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Load",
+                "Auth",
+                "Delete",
+                "Enable",
+                "Disable",
+                "Lock",
+                "Unlock",
+                "LockAll",
+                "UnlockAll",
+                "CheckCMS"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.CMS.SlavedsWizard": {
@@ -249,16 +474,24 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "Save"
+                "Save",
+                "Test",
+                "Enable",
+                "Load",
+                "BatchSave",
+                "BatchVerify",
+                "GetRelayInfo",
+                "GetRelaySystemInfo",
+                "RecEncryptVerify"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Camera": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
-        "maxVersion": 8,
+        "maxVersion": 9,
         "methods": {
             "1": [
                 "List",
@@ -266,7 +499,8 @@
                 "ListGroup",
                 "Listgroup",
                 "GetInfo",
-                "GetCapability"
+                "GetCapability",
+                "StartLive"
             ],
             "2": [
                 "List",
@@ -274,7 +508,8 @@
                 "ListGroup",
                 "Listgroup",
                 "GetInfo",
-                "GetCapability"
+                "GetCapability",
+                "StartLive"
             ],
             "3": [
                 "List",
@@ -284,7 +519,8 @@
                 "ListGroup",
                 "Listgroup",
                 "GetInfo",
-                "GetCapability"
+                "GetCapability",
+                "StartLive"
             ],
             "4": [
                 "List",
@@ -295,7 +531,8 @@
                 "Listgroup",
                 "GetCapability",
                 "GetCapabilityByCamId",
-                "GetInfo"
+                "GetInfo",
+                "StartLive"
             ],
             "5": [
                 "List",
@@ -306,7 +543,8 @@
                 "Listgroup",
                 "GetCapability",
                 "GetCapabilityByCamId",
-                "GetInfo"
+                "GetInfo",
+                "StartLive"
             ],
             "6": [
                 "List",
@@ -317,7 +555,8 @@
                 "Listgroup",
                 "GetCapability",
                 "GetCapabilityByCamId",
-                "GetInfo"
+                "GetInfo",
+                "StartLive"
             ],
             "7": [
                 "List",
@@ -328,6 +567,7 @@
                 "GetCapability",
                 "GetCapabilityByCamId",
                 "GetInfo",
+                "StartLive",
                 "CountByCategory",
                 "GetOccupiedSize",
                 "Delete",
@@ -353,11 +593,13 @@
                 "GetCapability",
                 "GetCapabilityByCamId",
                 "GetInfo",
+                "StartLive",
                 "CountByCategory",
                 "GetOccupiedSize",
                 "Delete",
                 "Migrate",
                 "MigrationGetData",
+                "MigrationGetStatus",
                 "MigrationSrc",
                 "MigrationDst",
                 "MigrationCamRelTable",
@@ -366,11 +608,42 @@
                 "SaveOptimizeParam",
                 "SaveLiveviewParam",
                 "RecountEventSize",
-                "CheckCamValid"
+                "CheckCamValid",
+                "ForceRestartCam",
+                "ForceSyncTime",
+                "DetectValue",
+                "SetParameter",
+                "SetPtzParameter",
+                "EnumFilterData"
+            ],
+            "9": [
+                "Save",
+                "List",
+                "Enable",
+                "Disable",
+                "Delete",
+                "GetSnapshot",
+                "GetLiveViewPath"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Camera.BatAddByText": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "UploadXlsx",
+                "StartBatchAdd",
+                "GetBatchAddProgress",
+                "CancelBatchAdd",
+                "ExportXlsx"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Camera.Event": {
@@ -382,15 +655,41 @@
                 "DIStsPolling",
                 "DIParamSave",
                 "MotionEnum",
+                "MDParamLoad",
                 "MDParamSave",
+                "AppParamSave",
+                "AppLiveViewParamSave",
                 "AudioEnum",
                 "ADParamSave",
                 "TamperingEnum",
-                "TDParamSave"
+                "TDParamSave",
+                "PirEnum",
+                "PDParamSave",
+                "RoiListPoll",
+                "RoiListSave",
+                "RoiAdd",
+                "RoiDel",
+                "GetApplicationInfo",
+                "AppEnum",
+                "AppSyncData"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Camera.Export": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "CheckName",
+                "GetCamRelatedData"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Camera.Group": {
@@ -404,7 +703,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Camera.Import": {
@@ -419,25 +718,77 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.SurveillanceStation.Camera.Status": {
+    "SYNO.SurveillanceStation.Camera.Intercom": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
         "maxVersion": 1,
         "methods": {
             "1": [
+                "EnumLog",
+                "CountByCategory",
+                "ClearLog",
+                "DownloadLog",
+                "GetArchSetting",
+                "SetArchSetting",
+                "DoorControl",
+                "GetDoorSts"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Camera.Search": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Start",
+                "GetInfo",
+                "IPRange",
+                "GetIPRangeInfo"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Camera.Status": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 3,
+        "methods": {
+            "1": [
                 "OneTime",
+                "Cycle"
+            ],
+            "2": [
+                "Cycle"
+            ],
+            "3": [
                 "Cycle"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Camera.VolEval": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "CamVolEval"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Camera.Wizard": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Camera/src/SYNO.SurveillanceStation.Camera.so",
-        "maxVersion": 1,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "CamSaveAll",
@@ -449,17 +800,58 @@
                 "CheckSDCardSize",
                 "FormatSDCard",
                 "QuickCreate",
-                "ApplyDupCam",
+                "GetBatSaveProgress",
                 "BatAddProgressDone",
                 "EnumVendorModel",
                 "CamBatEditCamList",
                 "CamBatEditCheckCamConf",
-                "CamBatEditSaveAll",
+                "CamBatEditCopyApply",
+                "CamBatAddSaveEasy",
+                "CamBatSave"
+            ],
+            "2": [
+                "CamSaveAll",
+                "CamBatAddSaveAll",
+                "CamBatAddCheck",
                 "CamBatEditCopyApply"
+            ],
+            "3": [
+                "CamBatAddCheck"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.CameraCap": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/CameraCap/src/SYNO.SurveillanceStation.CameraCap.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "CameraModelEnum",
+                "CamCap",
+                "CamCapList",
+                "CameraTest",
+                "GetSnapshot",
+                "CamCapRemote",
+                "CamCapUserDefineReso",
+                "CamBatAddVerify",
+                "CamBatAddVerifyStart",
+                "CamBatAddVerifyGetInfo",
+                "EnumExistedCamCap",
+                "RenewCap",
+                "ChangeCap",
+                "BatLoadCapStart",
+                "BatLoadCapGetInfo"
+            ],
+            "2": [
+                "CameraTest",
+                "GetSnapshot",
+                "RenewCap"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.DigitalOutput": {
@@ -470,26 +862,126 @@
                 "Enum",
                 "PollState",
                 "Save",
-                "SaveMulti"
+                "SaveMulti",
+                "CtrlWiper",
+                "CtrlLED"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.SurveillanceStation.Emap": {
-        "lib": "/var/packages/SurveillanceStation/target/webapi/Emap/src/SYNO.SurveillanceStation.Emap.so",
+    "SYNO.SurveillanceStation.DualAuth": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/DualAuth/src/SYNO.SurveillanceStation.DualAuth.so",
         "maxVersion": 1,
         "methods": {
             "1": [
                 "List",
+                "Save",
+                "Enable",
+                "Disable",
+                "Delete",
+                "SetProfile",
+                "CheckProfile"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Emap": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Emap/src/SYNO.SurveillanceStation.Emap.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "List",
                 "Load",
+                "Delete",
+                "CheckEmapValid"
+            ],
+            "2": [
+                "List",
+                "Load",
+                "Save",
+                "Delete",
+                "CheckEmapValid",
+                "UpdateEmapAdjList",
+                "GetCommonSetting",
+                "SetCommonSetting"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Emap.FavorView": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Emap/src/SYNO.SurveillanceStation.Emap.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
                 "Save",
                 "Delete"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Emap.GeoMap": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Emap/src/SYNO.SurveillanceStation.Emap.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "Load",
+                "GetSetting",
+                "SetSetting"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Emap.Group": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Emap/src/SYNO.SurveillanceStation.Emap.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Enum",
+                "Delete",
+                "Save",
+                "ChangeGroup",
+                "RemoveItem"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Emap.Image": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Emap/src/SYNO.SurveillanceStation.Emap.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Upload",
+                "Load",
+                "Download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Encryption": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Encryption/src/SYNO.SurveillanceStation.Encryption.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "KeyExchange"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Event": {
@@ -536,6 +1028,8 @@
                 "CountByCategory",
                 "Lock",
                 "UnLock",
+                "LockFilter",
+                "UnLockFilter",
                 "Trunc",
                 "Keepalive",
                 "Download",
@@ -548,7 +1042,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Event.Export": {
@@ -563,11 +1057,12 @@
                 "GetEvtExpInfo",
                 "CamEvtRotCtrl",
                 "DumpEvtExpDB",
-                "CheckName"
+                "CheckName",
+                "Delete"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Event.Mount": {
@@ -575,11 +1070,39 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "Load"
+                "Load",
+                "Delete",
+                "Enable",
+                "Disable"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Event.Mount.Wizard": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Event/src/SYNO.SurveillanceStation.Event.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "BackupEnum"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ExternalDevice.IFTTT": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ExternalDevice/src/SYNO.SurveillanceStation.ExternalDevice.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "TestSendReq"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.ExternalDevice.Storage.USB": {
@@ -592,7 +1115,19 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ExternalDevice.Webhook": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ExternalDevice/src/SYNO.SurveillanceStation.ExternalDevice.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "TestSendReq"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.ExternalEvent": {
@@ -604,27 +1139,204 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.ExternalRecording": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/ExternalRecording/src/SYNO.SurveillanceStation.ExternalRecording.so",
-        "maxVersion": 2,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "Record"
             ],
             "2": [
                 "Record"
+            ],
+            "3": [
+                "Record"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Face": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Face/src/SYNO.SurveillanceStation.Face.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "EnableTask",
+                "DisableTask",
+                "SaveTask",
+                "DeleteTask",
+                "ListTask",
+                "ListPlayableTask",
+                "ListTaskEventCount",
+                "CreateRegisteredFace",
+                "DeleteRegisteredFace",
+                "EditRegisteredFace",
+                "ListRegisteredFace",
+                "ListRegisteredFaceWithUuid",
+                "CountRegisteredFace",
+                "SearchRegisteredFace",
+                "CreateFaceGroup",
+                "DeleteFaceGroup",
+                "EditFaceGroup",
+                "ListFaceGroup",
+                "CountFaceGroup",
+                "DetectImageFace",
+                "DownloadImportFaceXlsx",
+                "QuickCreateRegisteredFace",
+                "ConvertImportXlsxToJson",
+                "LoadDeepLearningModel",
+                "UpdateIdPatcher"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Face.Archive": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Face/src/SYNO.SurveillanceStation.Face.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetSettings",
+                "SaveSettings",
+                "MigratingStatus"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Face.CMS": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Face/src/SYNO.SurveillanceStation.Face.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "CheckIsProxyDva",
+                "DumpMapping"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Face.Result": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Face/src/SYNO.SurveillanceStation.Face.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Delete",
+                "EventFlushHeader",
+                "Lock",
+                "Unlock",
+                "GetAnalyticsResult",
+                "GetEventInfo",
+                "Correct",
+                "MarkAsStranger",
+                "DownloadReport"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Face.Simulator": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Face/src/SYNO.SurveillanceStation.Face.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Acquire",
+                "Add",
+                "Remove",
+                "KeepAlive"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Fisheye": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Fisheye/src/SYNO.SurveillanceStation.Fisheye.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Load",
+                "Save",
+                "Delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.GlobalSearch": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/GlobalSearch/src/SYNO.SurveillanceStation.GlobalSearch.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Search"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Help": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Help/src/SYNO.SurveillanceStation.Help.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetTreeList",
+                "GetSearchResult"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.HomeMode": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/HomeMode/src/SYNO.SurveillanceStation.HomeMode.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetInfo",
+                "Switch",
+                "SwitchSetting",
+                "SaveSysSetting",
+                "SaveGeofence",
+                "SaveAdvanced",
+                "SaveProfileGeneral",
+                "SaveSchedule",
+                "SaveNotifyFilter",
+                "SaveOneTimeSwitch"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.HomeMode.Mobile": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/HomeMode/src/SYNO.SurveillanceStation.HomeMode.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Bind",
+                "Unbind",
+                "EnterHome"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.IOModule": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/IOModule/src/SYNO.SurveillanceStation.IOModule.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "Enum",
@@ -640,11 +1352,21 @@
                 "PollingDI",
                 "PollingDO",
                 "GetDevNumOfDs",
-                "CountByCategory"
+                "CountByCategory",
+                "GetCamPairing",
+                "EnumLog",
+                "LogCountByCategory",
+                "ClearLog",
+                "DownloadLog",
+                "SetArchiveSetting",
+                "GetArchiveSetting"
+            ],
+            "2": [
+                "EnumPort"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.IOModule.Search": {
@@ -657,42 +1379,308 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IPSpeaker": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IPSpeaker/src/SYNO.SurveillanceStation.IPSpeaker.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "Enable",
+                "Disable",
+                "Delete",
+                "SetGrouped",
+                "Enum",
+                "CountByCategory",
+                "EnumVendorModel",
+                "GetCap",
+                "TestConn"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IPSpeaker.Broadcast": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IPSpeaker/src/SYNO.SurveillanceStation.IPSpeaker.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Enum",
+                "Delete",
+                "Save",
+                "UpdateStatus"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IPSpeaker.Group": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IPSpeaker/src/SYNO.SurveillanceStation.IPSpeaker.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Enum",
+                "Delete",
+                "Save"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IPSpeaker.Search": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IPSpeaker/src/SYNO.SurveillanceStation.IPSpeaker.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Start",
+                "InfoGet"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "EnableTask",
+                "DisableTask",
+                "SaveTask",
+                "DeleteTask",
+                "ListTask",
+                "SetTmpFpsUpperBound",
+                "ResetPplCntCounter"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.Archive": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetSettings",
+                "SaveSettings",
+                "MigratingStatus"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.License": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.LicensePlate": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Create",
+                "Edit",
+                "Delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.LicensePlate.Result": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Create",
+                "Edit",
+                "Delete",
+                "GetReport",
+                "DownloadReport"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.Recording": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "CountByCategory",
+                "Delete",
+                "EventFlushHeader",
+                "Lock",
+                "Unlock",
+                "LockFilter",
+                "UnLockFilter",
+                "GetAnalyticsResult",
+                "DownloadReport"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.Report": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "GetReport",
+                "GetCount",
+                "Download",
+                "UploadReportImgData",
+                "GetNoRecordDate"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.Simulator": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Acquire",
+                "Add",
+                "Remove",
+                "KeepAlive"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.IVA.TaskGroup": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/IVA/src/SYNO.SurveillanceStation.IVA.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "Create",
+                "GetByTaskId",
+                "Edit",
+                "Delete",
+                "Enable",
+                "Disable",
+                "GetPeopleCount",
+                "ResetPeopleCount"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Info": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Info/src/SYNO.SurveillanceStation.Info.so",
-        "maxVersion": 5,
+        "maxVersion": 8,
         "methods": {
             "1": [
                 "GetInfo",
-                "getInfo"
+                "getInfo",
+                "GetUid",
+                "GetLoginInfo",
+                "SetLoginInfo",
+                "KillSession",
+                "KillDualAuthExpireSession",
+                "DownloadClient",
+                "DownloadUtility",
+                "ClientEdit",
+                "SetRestrictConnection",
+                "LoadRestrictConnection",
+                "SessionLogout",
+                "GetGPUTaskLimit"
             ],
             "2": [
                 "GetInfo",
-                "getInfo"
+                "getInfo",
+                "GetUid"
             ],
             "3": [
                 "GetInfo",
-                "getInfo"
+                "getInfo",
+                "GetUid"
             ],
             "4": [
                 "GetInfo",
-                "getInfo"
+                "getInfo",
+                "GetUid"
             ],
             "5": [
+                "GetInfo",
+                "GetUid"
+            ],
+            "6": [
+                "GetInfo",
+                "GetUid"
+            ],
+            "7": [
+                "GetInfo"
+            ],
+            "8": [
                 "GetInfo"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Info.InstallVs": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Info/src/SYNO.SurveillanceStation.Info.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "Start",
+                "Cancel",
+                "Finish",
+                "GetProgress",
+                "Upload"
+            ],
+            "2": [
+                "Start",
+                "Finish",
+                "GetProgress",
+                "Upload"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.JoystickSetting": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/JoystickSetting/src/SYNO.SurveillanceStation.JoystickSetting.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
+                "Save",
+                "Get",
+                "Export",
+                "Import",
+                "ArchiveEnum"
+            ],
+            "2": [
                 "Save",
                 "Get",
                 "Export",
@@ -701,39 +1689,77 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Layout": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Layout/src/SYNO.SurveillanceStation.Layout.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "List",
                 "CamLoad",
                 "LayoutSave",
                 "LayoutDelete",
+                "IOModuleLoad",
+                "LayoutGroupList",
+                "LayoutGroupSave",
+                "LayoutGroupDelete",
+                "LayoutChangeGroup"
+            ],
+            "2": [
+                "List",
+                "CamLoad",
+                "LayoutSave",
+                "CheckLayoutValid",
+                "FisheyeRegionLoad",
+                "CamEnumAll",
+                "ItemEnum",
+                "LayoutLoad",
+                "LayoutLoadDefault",
+                "LayoutDelete",
                 "IOModuleLoad"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Layout.Item": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Layout/src/SYNO.SurveillanceStation.Layout.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "Load"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.License": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/License/src/SYNO.SurveillanceStation.License.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "Load",
                 "CheckQuota",
+                "BatCheckQuota",
                 "AddKey",
                 "VerifyKey",
-                "DeleteKey"
+                "DeleteKey",
+                "VerifyPassword",
+                "TestActivation",
+                "Migrate",
+                "Update"
+            ],
+            "2": [
+                "VerifyKey"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.LocalDisplay": {
@@ -741,19 +1767,22 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "GetUserInfo",
-                "SetUserInfo",
+                "GetUid",
                 "GetAutoLogin",
-                "Auth"
+                "SetAutoLogin",
+                "CheckLogin",
+                "GetResoList",
+                "SetReso",
+                "SetDvaFpsLimit"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Log": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Log/src/SYNO.SurveillanceStation.Log.so",
-        "maxVersion": 1,
+        "maxVersion": 3,
         "methods": {
             "1": [
                 "List",
@@ -761,16 +1790,91 @@
                 "Clear",
                 "AddSlaveDSLog",
                 "AddLogFromPlugin",
-                "Download"
+                "Download",
+                "GetSetting",
+                "SetSetting",
+                "BatSetSetting",
+                "BatSetDone",
+                "GetBatProgress",
+                "VsLog",
+                "GetArchiveSetting",
+                "SetArchiveSetting",
+                "GetSendLogSetting",
+                "SetSendLogSetting",
+                "SendTestLog",
+                "UploadCrt",
+                "CheckLogValid",
+                "ListEvent",
+                "ClearEvent",
+                "DownloadEvent",
+                "EventCountByCategory",
+                "CheckDownLoadLogAlive",
+                "CheckDownLoadEventlogAlive"
+            ],
+            "2": [
+                "List",
+                "CountByCategory",
+                "Clear",
+                "AddSlaveDSLog",
+                "AddLogFromPlugin",
+                "Download",
+                "GetSetting",
+                "SetSetting",
+                "BatSetSetting",
+                "BatSetDone",
+                "GetBatProgress",
+                "VsLog",
+                "GetArchiveSetting",
+                "SetArchiveSetting",
+                "GetSendLogSetting",
+                "SetSendLogSetting",
+                "SendTestLog",
+                "UploadCrt",
+                "CheckLogValid",
+                "GetLogDetail"
+            ],
+            "3": [
+                "List",
+                "CountByCategory",
+                "Clear",
+                "AddSlaveDSLog",
+                "AddLogFromPlugin",
+                "Download",
+                "GetSetting",
+                "SetSetting",
+                "BatSetSetting",
+                "BatSetDone",
+                "GetBatProgress",
+                "VsLog",
+                "GetArchiveSetting",
+                "SetArchiveSetting",
+                "GetSendLogSetting",
+                "SetSendLogSetting",
+                "SendTestLog",
+                "UploadCrt",
+                "CheckLogValid",
+                "GetLogDetail"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.MobileCam": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/MobileCam/src/SYNO.SurveillanceStation.MobileCam.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "UploadEdge"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Notification/src/SYNO.SurveillanceStation.Notification.so",
-        "maxVersion": 3,
+        "maxVersion": 8,
         "methods": {
             "1": [
                 "GetRegisterToken",
@@ -784,12 +1888,42 @@
             ],
             "3": [
                 "GetRegisterToken",
-                "SetSyncDSM",
-                "GetSyncDSM"
+                "GetCustomizedMessage",
+                "SetCustomizedMessage",
+                "SetAdvSetting",
+                "GetAdvSetting"
+            ],
+            "4": [
+                "GetRegisterToken",
+                "GetCustomizedMessage",
+                "SetCustomizedMessage",
+                "SetAdvSetting",
+                "GetAdvSetting"
+            ],
+            "5": [
+                "GetRegisterToken",
+                "GetCustomizedMessage",
+                "SetCustomizedMessage",
+                "SetAdvSetting",
+                "GetAdvSetting",
+                "SetMute"
+            ],
+            "6": [
+                "GetCustomizedMessage",
+                "SetCustomizedMessage",
+                "SetAdvSetting",
+                "GetAdvSetting"
+            ],
+            "7": [
+                "SetAdvSetting",
+                "GetAdvSetting"
+            ],
+            "8": [
+                "GetNotiServiceStatus"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification.Email": {
@@ -803,20 +1937,43 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification.Filter": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Notification/src/SYNO.SurveillanceStation.Notification.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "Get",
                 "Set"
+            ],
+            "2": [
+                "Get"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Notification.MobileSetting": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Notification/src/SYNO.SurveillanceStation.Notification.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "SetTargetId",
+                "UnpairTargetId",
+                "GetSchedule",
+                "SetSchedule",
+                "GetSetting",
+                "SetSetting"
+            ],
+            "2": [
+                "GetSetting"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification.PushService": {
@@ -833,7 +1990,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification.SMS": {
@@ -848,7 +2005,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification.SMS.ServiceProvider": {
@@ -863,35 +2020,63 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Notification.Schedule": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/Notification/src/SYNO.SurveillanceStation.Notification.so",
-        "maxVersion": 1,
+        "maxVersion": 2,
         "methods": {
             "1": [
                 "GetSystemDependentSchedule",
                 "GetCameraSchedule",
                 "GetCameraDISchedule",
+                "GetCameraNotifyScheduleByIdx",
                 "GetAccessControlDoorSchedule",
                 "GetAccessControlControllerSchedule",
                 "GetIOModuleSchedule",
                 "GetIOModuleDISchedule",
+                "GetTransDevSchedule",
+                "GetIPSpeakerSchedule",
+                "GetActionRuleSchedule",
                 "SetSystemDependentSchedule",
                 "SetCameraSchedule",
                 "SetIOModuleSchedule",
+                "SetIPSpeakerSchedule",
+                "SetActionRuleSchedule",
                 "SetAccessControlSchedule",
+                "SetTransDevSchedule",
+                "SetBatchSchedule"
+            ],
+            "2": [
+                "GetSystemDependentSchedule",
+                "GetCameraSchedule",
+                "GetCameraDISchedule",
+                "GetCameraNotifyScheduleByIdx",
+                "GetAccessControlDoorSchedule",
+                "GetAccessControlControllerSchedule",
+                "GetIOModuleSchedule",
+                "GetIOModuleDISchedule",
+                "GetTransDevSchedule",
+                "GetIPSpeakerSchedule",
+                "GetActionRuleSchedule",
+                "SetSystemDependentSchedule",
+                "SetCameraSchedule",
+                "SetIOModuleSchedule",
+                "SetIPSpeakerSchedule",
+                "SetActionRuleSchedule",
+                "SetAccessControlSchedule",
+                "SetTransDevSchedule",
                 "SetBatchSchedule"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.PTZ": {
         "lib": "/var/packages/SurveillanceStation/target/webapi/PTZ/src/SYNO.SurveillanceStation.PTZ.so",
-        "maxVersion": 4,
+        "maxVersion": 6,
         "methods": {
             "1": [
                 "Move",
@@ -931,10 +2116,60 @@
                 "GoPreset",
                 "ListPatrol",
                 "RunPatrol"
+            ],
+            "5": [
+                "Move",
+                "Zoom",
+                "Focus",
+                "Iris",
+                "AutoFocus",
+                "AbsPtz",
+                "ListPreset",
+                "GoPreset",
+                "ListPatrol",
+                "RunPatrol",
+                "Home",
+                "AutoPan",
+                "ObjTracking",
+                "SpeedDry"
+            ],
+            "6": [
+                "Move",
+                "Zoom",
+                "Focus",
+                "Iris",
+                "AutoFocus",
+                "AbsPtz",
+                "ListPreset",
+                "GoPreset",
+                "ListPatrol",
+                "RunPatrol",
+                "Home",
+                "AutoPan",
+                "ObjTracking",
+                "SpeedDry"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.PTZ.Patrol": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/PTZ/src/SYNO.SurveillanceStation.PTZ.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Enum",
+                "EnumPartial",
+                "Load",
+                "Save",
+                "Delete",
+                "Execute",
+                "Stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.PTZ.Preset": {
@@ -942,16 +2177,18 @@
         "maxVersion": 1,
         "methods": {
             "1": [
+                "Enum",
                 "GetInfo",
                 "SetPreset",
                 "DelPreset",
+                "Execute",
                 "SetHome",
                 "GetDelProgress",
                 "DelProgressDone"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.PersonalSettings.Image": {
@@ -961,11 +2198,273 @@
             "1": [
                 "List",
                 "Get",
+                "Upload",
+                "GetWallpaper",
+                "Load",
+                "Save",
+                "Reset",
+                "ClearAll",
+                "UploadWatermark",
+                "GetWatermark"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.PersonalSettings.Layout": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/PersonalSettings/src/SYNO.SurveillanceStation.PersonalSettings.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "SaveSetting",
+                "LoadSetting"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.PersonalSettings.Photo": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/PersonalSettings/src/SYNO.SurveillanceStation.PersonalSettings.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Load",
+                "LoadBase64",
                 "Upload"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Player": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Player/src/SYNO.SurveillanceStation.Player.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "EnumEvent",
+                "SearchAvailDate",
+                "LoadCamera"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Player.LiveviewSrc": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Player/src/SYNO.SurveillanceStation.Player.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Play"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Preload": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Preload/src/SYNO.SurveillanceStation.Preload.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "CamModelCapPreload",
+                "Preload",
+                "GblStorePreload",
+                "InitData",
+                "CamExtraSettingsLoad",
+                "GetSession"
+            ],
+            "2": [
+                "GetSession"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 6,
+        "methods": {
+            "1": [
+                "Query"
+            ],
+            "2": [
+                "Query"
+            ],
+            "3": [
+                "Query",
+                "DeleteMulti",
+                "DeleteFilter",
+                "DeleteAll"
+            ],
+            "4": [
+                "Query",
+                "DeleteMulti",
+                "DeleteFilter",
+                "DeleteAll",
+                "List",
+                "CountByCategory",
+                "Lock",
+                "UnLock",
+                "Trunc",
+                "Keepalive",
+                "Download",
+                "SaveMigrateEvent",
+                "DelMigratedEvent",
+                "CheckEventValid",
+                "LoadAdvanced",
+                "ApplyAdvanced",
+                "UpdateIndex"
+            ],
+            "5": [
+                "Query",
+                "DeleteMulti",
+                "DeleteFilter",
+                "DeleteAll",
+                "List",
+                "CountByCategory",
+                "Lock",
+                "UnLock",
+                "LockFilter",
+                "UnLockFilter",
+                "Trunc",
+                "Keepalive",
+                "Download",
+                "SaveMigrateEvent",
+                "DelMigratedEvent",
+                "CheckEventValid",
+                "LoadAdvanced",
+                "ApplyAdvanced",
+                "UpdateIndex",
+                "EventFlushHeader",
+                "PlayerGetProgress",
+                "EventSourceEnum",
+                "EventEnumCam",
+                "PlayerSetRate",
+                "GetEventTime",
+                "SaveMetaData",
+                "GetCamId",
+                "GetLabelSetting",
+                "SetLabelSetting",
+                "SaveTag",
+                "GetThumbnail",
+                "DeleteLabel"
+            ],
+            "6": [
+                "List",
+                "Delete",
+                "Lock",
+                "UnLock",
+                "Download",
+                "Stream",
+                "BrowserStream",
+                "RangeExport",
+                "GetRangeExportProgress",
+                "OnRangeExportDone"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording.Bookmark": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "SaveBookmark",
+                "ListBookmark",
+                "DeleteBookmark",
+                "CountByCategory",
+                "Lock",
+                "Unlock"
+            ],
+            "2": [
+                "ListBookmark"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording.Export": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "Load",
+                "CamEnum",
+                "CheckAvailableExport",
+                "GetEvtExpInfo",
+                "CamEvtRotCtrl",
+                "DumpEvtExpDB",
+                "CheckName",
+                "Delete"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording.Mount": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Load",
+                "Delete",
+                "Enable",
+                "Disable"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording.Mount.Wizard": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Save",
+                "BackupEnum"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording.Reindex": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Start",
+                "Stop"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Recording.ShareRecording": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Recording/src/SYNO.SurveillanceStation.Recording.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "EnableShare",
+                "Download",
+                "Play",
+                "PlayHtmlEmbedded"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.RecordingPicker": {
@@ -975,11 +2474,25 @@
             "1": [
                 "EnumInterval",
                 "RecordPartialInfo",
-                "SearchAvaiDate"
+                "SearchAvaiDate",
+                "SearchLatestDate"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.ReportCenter": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/ReportCenter/src/SYNO.SurveillanceStation.ReportCenter.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "CameraReport",
+                "CameraStorage"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Share": {
@@ -993,11 +2506,18 @@
                 "DelRecShare",
                 "EditRecShare",
                 "ListUsingCam",
-                "CheckStorageMigrating"
+                "CheckStorageMigrating",
+                "ListMountedFolder",
+                "CreateRemoteRecShare",
+                "ReconnetRemoteMount",
+                "DecryptByFile",
+                "ListShareUsage",
+                "CheckSharePriv",
+                "SetSharePriv"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.SnapShot": {
@@ -1022,11 +2542,13 @@
                 "UnlockFiltered",
                 "Delete",
                 "DeleteFiltered",
-                "TakeSnapshot"
+                "TakeSnapshot",
+                "MigratingStatus",
+                "GetPushServSnapshot"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Sort": {
@@ -1038,7 +2560,7 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.Stream": {
@@ -1051,7 +2573,56 @@
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Stream.VideoStreaming": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Stream/src/SYNO.SurveillanceStation.Stream.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Stream",
+                "Open",
+                "Close",
+                "Query"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.System": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/System/src/SYNO.SurveillanceStation.System.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Reboot",
+                "Shutdown",
+                "Network",
+                "Info",
+                "TimeGet",
+                "TimeSet",
+                "SyncNtp",
+                "GetFirmwareInfo",
+                "CheckUpgradeEnv",
+                "Upgrade",
+                "GetUpgradeProgress",
+                "AutoUpdateEnable",
+                "AutoUpdateDisable",
+                "SystemLanguage",
+                "GetTlsProfile",
+                "BeepPause",
+                "GetBeepStatus",
+                "SetWatermarkData",
+                "SetRecordEncryptKey",
+                "DisableRecordEncryptKey",
+                "ForceChangeRecordEncryptKey",
+                "VerifyRecordEncryptKey",
+                "ExportRecordEncryptKey"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.TaskQueue": {
@@ -1062,11 +2633,181 @@
                 "List",
                 "Clear",
                 "GetSetting",
-                "SetSetting"
+                "SetSetting",
+                "LongPolling"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.TimeLapse": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/TimeLapse/src/SYNO.SurveillanceStation.TimeLapse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "SaveTask",
+                "ListTask",
+                "DeleteTask",
+                "EnableTask",
+                "DisableTask",
+                "TestRecordingExist"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.TimeLapse.Recording": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/TimeLapse/src/SYNO.SurveillanceStation.TimeLapse.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "List",
+                "CountByCategory",
+                "Lock",
+                "Unlock",
+                "Delete",
+                "LockFilter",
+                "UnlockFilter",
+                "DeleteFilter",
+                "DeleteAll",
+                "EventFlushHeader"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Transactions.Device": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Transactions/src/SYNO.SurveillanceStation.Transactions.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "Enum",
+                "CountByCategory",
+                "Save",
+                "Delete",
+                "Enable",
+                "Disable",
+                "GetEventConf",
+                "SetEventConf",
+                "ConnectAnonymousDevice",
+                "DisconnectAnonymousDevice",
+                "PauseAnonymousDevice",
+                "ResumeAnonymousDevice",
+                "GetAnonymousDeviceData",
+                "ClearAnonymousDeviceData",
+                "GetEncodingList"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.Transactions.Transaction": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Transactions/src/SYNO.SurveillanceStation.Transactions.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "Enum",
+                "CountByCategory",
+                "Lock",
+                "Unlock",
+                "Delete",
+                "Begin",
+                "Complete",
+                "Cancel",
+                "AppendData",
+                "SetAdvancedConf",
+                "GetAdvancedConf",
+                "SetArchiveConf",
+                "GetArchiveConf",
+                "EventFlushHeader",
+                "DownloadLog"
+            ],
+            "2": [
+                "Enum",
+                "CountByCategory",
+                "Lock",
+                "Unlock",
+                "Delete",
+                "Begin",
+                "Complete",
+                "Cancel",
+                "AppendData",
+                "Insert",
+                "Test",
+                "SetArchiveConf",
+                "GetArchiveConf",
+                "MigratingStatus",
+                "EventFlushHeader",
+                "DownloadLog",
+                "Download"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.SurveillanceStation.UserPrivilege": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/UserPrivilege/src/SYNO.SurveillanceStation.UserPrivilege.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "Enum",
+                "LoadProfile",
+                "LoadOptions",
+                "Detail",
+                "CheckUsername",
+                "CheckPwdrules",
+                "CheckUserExist",
+                "SaveOptions",
+                "Cancel",
+                "DeleteProfile",
+                "EditUser",
+                "EditPrivilege",
+                "Enable",
+                "Disable",
+                "DeleteUser",
+                "CreateUser",
+                "SaveViewMode",
+                "CheckHomeEnable",
+                "Download",
+                "SetRemindQuickConnectTunnel",
+                "UpdateDomain"
+            ],
+            "2": [
+                "Enum",
+                "LoadProfile",
+                "LoadOptions",
+                "Detail",
+                "CheckUsername",
+                "CheckPwdrules",
+                "CheckUserExist",
+                "SaveOptions",
+                "Cancel",
+                "DeleteProfile",
+                "EditUser",
+                "EditPrivilege",
+                "Enable",
+                "Disable",
+                "DeleteUser",
+                "CreateUser",
+                "SaveViewMode",
+                "CheckHomeEnable",
+                "Download",
+                "SetRemindQuickConnectTunnel",
+                "UpdateDomain",
+                "DeleteGroup",
+                "SaveGroup",
+                "CheckGroupExist",
+                "SetAdvSettings",
+                "GetAdvSettings"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
     "SYNO.SurveillanceStation.VideoStreaming": {
@@ -1075,126 +2816,40 @@
         "methods": {
             "1": [
                 "Stream",
-                "Open",
-                "Close",
                 "Query"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.SurveillanceStation.VisualStation": {
-        "lib": "/var/packages/SurveillanceStation/target/webapi/VisualStation/src/SYNO.SurveillanceStation.VisualStation.so",
+    "SYNO.SurveillanceStation.Webhook": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/Webhook/src/SYNO.SurveillanceStation.Webhook.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "Enum",
-                "Add",
-                "Delete",
-                "Edit",
-                "Enable",
-                "Disable",
-                "Lock",
-                "Unlock",
-                "FetchConfig",
-                "vsCmsSync",
-                "ReqNetConfig"
+                "GenerateToken",
+                "CheckTokenExist",
+                "Incoming"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.SurveillanceStation.VisualStation.Layout": {
-        "lib": "/var/packages/SurveillanceStation/target/webapi/VisualStation/src/SYNO.SurveillanceStation.VisualStation.so",
+    "SYNO.SurveillanceStation.YoutubeLive": {
+        "lib": "/var/packages/SurveillanceStation/target/webapi/YoutubeLive/src/SYNO.SurveillanceStation.YoutubeLive.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "Enum",
+                "Load",
                 "Save",
-                "Delete"
+                "CloseLive",
+                "GetConnectStatus"
             ]
         },
         "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
+        "path": "entry.cgi",
         "requestFormat": "JSON"
-    },
-    "SYNO.SurveillanceStation.VisualStation.Search": {
-        "lib": "/var/packages/SurveillanceStation/target/webapi/VisualStation/src/SYNO.SurveillanceStation.VisualStation.so",
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "Start",
-                "Stop",
-                "InfoGet",
-                "SearchIP"
-            ]
-        },
-        "minVersion": 1,
-        "path": "_______________________________________________________entry.cgi",
-        "requestFormat": "JSON"
-    },
-    "SYNO.SurveillanceStation.Device": {
-        "path": "SurveillanceStation/device.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "ListVS",
-                "ListCMS",
-                "GetServiceSetting"
-            ],
-            "2": [
-                "ListVS",
-                "ListCMS",
-                "GetServiceSetting"
-            ]
-        }
-    },
-    "SYNO.SurveillanceStation.Streaming": {
-        "path": "SurveillanceStation/streaming.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "LiveStream",
-                "EventStream"
-            ],
-            "2": [
-                "LiveStream",
-                "EventStream"
-            ]
-        }
-    },
-    "SYNO.SurveillanceStation.AudioStream": {
-        "path": "SurveillanceStation/audioStreaming.cgi",
-        "minVersion": 1,
-        "maxVersion": 2,
-        "methods": {
-            "1": [
-                "Stream",
-                "Query"
-            ],
-            "2": [
-                "Stream",
-                "Open",
-                "Close",
-                "Query"
-            ]
-        }
-    },
-    "SYNO.SurveillanceStation.VideoStream": {
-        "path": "SurveillanceStation/videoStreaming.cgi",
-        "minVersion": 1,
-        "maxVersion": 1,
-        "methods": {
-            "1": [
-                "Stream",
-                "Open",
-                "Close",
-                "Query"
-            ]
-        }
     }
 }

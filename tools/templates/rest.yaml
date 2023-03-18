@@ -1,7 +1,7 @@
   /%api%/v%version%/%method%:
     get:
       tags:
-        - %tag%
+        - %tag%.%tag2%
       summary: Return %method% for %api%
       operationId: %api2%_%method%
       responses:

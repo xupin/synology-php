@@ -73,6 +73,35 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.WebStation.Python": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_version",
+                "search",
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.WebStation.Python.Profile": {
+        "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "delete",
+                "update",
+                "add",
+                "list"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.WebStation.Shortcut": {
         "lib": "/var/packages/WebStation/target/webapi/SYNO.WebStation.so",
         "maxVersion": 1,

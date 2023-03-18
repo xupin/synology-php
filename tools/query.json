@@ -5,6 +5,12 @@
             "minVersion": 1,
             "path": "entry.cgi"
         },
+        "SYNO.API.Auth.Key": {
+            "maxVersion": 7,
+            "minVersion": 7,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.API.Encryption": {
             "maxVersion": 1,
             "minVersion": 1,
@@ -21,6 +27,12 @@
             "maxVersion": 1,
             "minVersion": 1,
             "path": "otp.cgi"
+        },
+        "SYNO.ActiveInsight.Package": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
         },
         "SYNO.AudioPlayer": {
             "maxVersion": 2,
@@ -95,12 +107,6 @@
             "requestFormat": "JSON"
         },
         "SYNO.Backup.Restore": {
-            "maxVersion": 2,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Backup.Server": {
             "maxVersion": 2,
             "minVersion": 1,
             "path": "entry.cgi",
@@ -240,12 +246,6 @@
         },
         "SYNO.Backup.Version.History": {
             "maxVersion": 2,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.CloudSync": {
-            "maxVersion": 1,
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
@@ -538,6 +538,12 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Core.Directory.LDAP.User": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.Core.Directory.SSO": {
             "maxVersion": 1,
             "minVersion": 1,
@@ -557,6 +563,12 @@
             "requestFormat": "JSON"
         },
         "SYNO.Core.Directory.WebSphere.SSO": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.DisableAdmin": {
             "maxVersion": 1,
             "minVersion": 1,
             "path": "entry.cgi",
@@ -874,6 +886,12 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Core.Hardware.OOBManagement": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.Core.Hardware.PowerRecovery": {
             "maxVersion": 1,
             "minVersion": 1,
@@ -989,6 +1007,18 @@
             "requestFormat": "JSON"
         },
         "SYNO.Core.MyDSCenter.Account": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.MyDSCenter.Login": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.MyDSCenter.Logout": {
             "maxVersion": 1,
             "minVersion": 1,
             "path": "entry.cgi",
@@ -1313,7 +1343,7 @@
             "requestFormat": "JSON"
         },
         "SYNO.Core.Notification.Advance.FilterSettings": {
-            "maxVersion": 1,
+            "maxVersion": 2,
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
@@ -1355,7 +1385,7 @@
             "requestFormat": "JSON"
         },
         "SYNO.Core.Notification.Mail.Conf": {
-            "maxVersion": 1,
+            "maxVersion": 2,
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
@@ -1446,12 +1476,6 @@
         },
         "SYNO.Core.Package": {
             "maxVersion": 2,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.Package.Account": {
-            "maxVersion": 1,
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
@@ -1798,6 +1822,12 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Core.ResetAdmin": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.Core.SNMP": {
             "maxVersion": 1,
             "minVersion": 1,
@@ -2068,6 +2098,12 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Core.Storage.Disk.FWUpgrade": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.Core.Storage.Pool": {
             "maxVersion": 1,
             "minVersion": 1,
@@ -2303,7 +2339,7 @@
             "requestFormat": "JSON"
         },
         "SYNO.Core.Upgrade.Server": {
-            "maxVersion": 3,
+            "maxVersion": 4,
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
@@ -2634,6 +2670,12 @@
         "SYNO.DownloadStation2.Task.BT.Tracker": {
             "maxVersion": 2,
             "minVersion": 2,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.DownloadStation2.Task.Complete": {
+            "maxVersion": 1,
+            "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
@@ -3141,6 +3183,18 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
+        "SYNO.Remote.Credential.Challenge": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Remote.Credential.Verifier": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
         "SYNO.ResourceMonitor.EventRule": {
             "maxVersion": 1,
             "minVersion": 1,
@@ -3429,78 +3483,6 @@
             "path": "entry.cgi",
             "requestFormat": "JSON"
         },
-        "SYNO.API.Auth.Key": {
-            "maxVersion": 7,
-            "minVersion": 7,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.ActiveInsight.Package": {
-            "maxVersion": 2,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.Directory.LDAP.User": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.DisableAdmin": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.Hardware.OOBManagement": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.MyDSCenter.Login": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.MyDSCenter.Logout": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.ResetAdmin": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Core.Storage.Disk.FWUpgrade": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.DownloadStation2.Task.Complete": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Remote.Credential.Challenge": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
-        "SYNO.Remote.Credential.Verifier": {
-            "maxVersion": 1,
-            "minVersion": 1,
-            "path": "entry.cgi",
-            "requestFormat": "JSON"
-        },
         "SYNO.API.Auth.Key.Code": {
             "maxVersion": 7,
             "minVersion": 7,
@@ -3586,6 +3568,12 @@
             "requestFormat": "JSON"
         },
         "SYNO.C2FS.Utils": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.CloudSync": {
             "maxVersion": 1,
             "minVersion": 1,
             "path": "entry.cgi",
@@ -4869,7 +4857,7 @@
             "requestFormat": "JSON"
         },
         "SYNO.VideoStation2.Info": {
-            "maxVersion": 2,
+            "maxVersion": 4,
             "minVersion": 1,
             "path": "entry.cgi",
             "requestFormat": "JSON"
@@ -5025,6 +5013,1066 @@
             "requestFormat": "JSON"
         },
         "SYNO.WebStation.WebService.Service": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AME.Config": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AME.License": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AME.Pack": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AME.Payment": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.ActiveInsight.CompleteCollection": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.ActiveInsight.License": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.ActiveInsight.Setting": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.Album": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/album.cgi"
+        },
+        "SYNO.AudioStation.Artist": {
+            "maxVersion": 4,
+            "minVersion": 1,
+            "path": "AudioStation/artist.cgi"
+        },
+        "SYNO.AudioStation.Browse.Playlist": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.Composer": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/composer.cgi"
+        },
+        "SYNO.AudioStation.Cover": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/cover.cgi"
+        },
+        "SYNO.AudioStation.Download": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "AudioStation/download.cgi"
+        },
+        "SYNO.AudioStation.Folder": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/folder.cgi"
+        },
+        "SYNO.AudioStation.Genre": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/genre.cgi"
+        },
+        "SYNO.AudioStation.Info": {
+            "maxVersion": 6,
+            "minVersion": 1,
+            "path": "AudioStation/info.cgi"
+        },
+        "SYNO.AudioStation.Lyrics": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/lyrics.cgi"
+        },
+        "SYNO.AudioStation.LyricsSearch": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/lyrics_search.cgi"
+        },
+        "SYNO.AudioStation.MediaServer": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "AudioStation/media_server.cgi"
+        },
+        "SYNO.AudioStation.Pin": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.Playlist": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/playlist.cgi"
+        },
+        "SYNO.AudioStation.Proxy": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/proxy.cgi"
+        },
+        "SYNO.AudioStation.Radio": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/radio.cgi"
+        },
+        "SYNO.AudioStation.RemotePlayer": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/remote_player.cgi"
+        },
+        "SYNO.AudioStation.RemotePlayerStatus": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/remote_player_status.cgi"
+        },
+        "SYNO.AudioStation.Search": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "AudioStation/search.cgi"
+        },
+        "SYNO.AudioStation.Song": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "AudioStation/song.cgi"
+        },
+        "SYNO.AudioStation.Stream": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "AudioStation/stream.cgi"
+        },
+        "SYNO.AudioStation.Tag": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.VoiceAssistant.Browse": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.VoiceAssistant.Challenge": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.VoiceAssistant.Info": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.VoiceAssistant.Stream": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.AudioStation.WebPlayer": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "AudioStation/web_player.cgi"
+        },
+        "SYNO.Core.BackgroundTask": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.DDNS.Ethernet": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Directory.OIDC.SSO": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.EW.Info": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.FileServ.SMB.ConfBackup": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.FileServ.SMB.MSDFS": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Notification.Mail.Oauth": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Notification.Sysnotify": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Package.Legal.PreRelease": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Upgrade.JuniorModeData": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.Upgrade.RemoteAction": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Core.User.UsernamePolicy": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Docker.Migrate": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.PhotoRequest": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Foto.Upload.PhotoRequestItem": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Lunbackup": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.PersonMailAccount.Mail.Oauth": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SecurityAdvisor.LoginActivity.User": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Storage.CGI.Scrubbing": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.Storage.CGI.Volume.OfflineOp": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ActionRule": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.AddOns": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Alert": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Alert.Setting": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Analytics.Setting": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.AppCenter": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Archiving.Pull": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Archiving.Push": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.AudioOut": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.AudioPattern": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.AxisAcsCtrler": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.AxisAcsCtrler.Search": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.C2": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.C2.Encryption": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CMS": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CMS.DsSearch": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CMS.Failover": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CMS.GetDsStatus": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CMS.SlavedsList": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CMS.SlavedsWizard": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera": {
+            "maxVersion": 9,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.BatAddByText": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Event": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Export": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Group": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Import": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Intercom": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Search": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Status": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.VolEval": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Camera.Wizard": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.CameraCap": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.DigitalOutput": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.DualAuth": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Emap": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Emap.FavorView": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Emap.GeoMap": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Emap.Group": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Emap.Image": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Encryption": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Event": {
+            "maxVersion": 5,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Event.Export": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Event.Mount": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Event.Mount.Wizard": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ExternalDevice.IFTTT": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ExternalDevice.Storage.USB": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ExternalDevice.Webhook": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ExternalEvent": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ExternalRecording": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Face": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Face.Archive": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Face.CMS": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Face.Result": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Face.Simulator": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Fisheye": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.GlobalSearch": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Help": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.HomeMode": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.HomeMode.Mobile": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IOModule": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IOModule.Search": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IPSpeaker": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IPSpeaker.Broadcast": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IPSpeaker.Group": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IPSpeaker.Search": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.Archive": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.License": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.LicensePlate": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.LicensePlate.Result": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.Recording": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.Report": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.Simulator": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.IVA.TaskGroup": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Info": {
+            "maxVersion": 8,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Info.InstallVs": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.JoystickSetting": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Layout": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Layout.Item": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.License": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.LocalDisplay": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Log": {
+            "maxVersion": 3,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.MobileCam": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification": {
+            "maxVersion": 8,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.Email": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.Filter": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.MobileSetting": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.PushService": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.SMS": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.SMS.ServiceProvider": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Notification.Schedule": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.PTZ": {
+            "maxVersion": 6,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.PTZ.Patrol": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.PTZ.Preset": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.PersonalSettings.Image": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.PersonalSettings.Layout": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.PersonalSettings.Photo": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Player": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Player.LiveviewSrc": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Preload": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording": {
+            "maxVersion": 6,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording.Bookmark": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording.Export": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording.Mount": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording.Mount.Wizard": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording.Reindex": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Recording.ShareRecording": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.RecordingPicker": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.ReportCenter": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Share": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.SnapShot": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Sort": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Stream": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Stream.VideoStreaming": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.System": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.TaskQueue": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.TimeLapse": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.TimeLapse.Recording": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Transactions.Device": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Transactions.Transaction": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.UserPrivilege": {
+            "maxVersion": 2,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.VideoStreaming": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.Webhook": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.SurveillanceStation.YoutubeLive": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.WebStation.Python": {
+            "maxVersion": 1,
+            "minVersion": 1,
+            "path": "entry.cgi",
+            "requestFormat": "JSON"
+        },
+        "SYNO.WebStation.Python.Profile": {
             "maxVersion": 1,
             "minVersion": 1,
             "path": "entry.cgi",

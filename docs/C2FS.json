@@ -63,6 +63,7 @@
         "maxVersion": 1,
         "methods": {
             "1": [
+                "list_accessible",
                 "set_permission",
                 "stop_daemons",
                 "start_daemons",
@@ -118,8 +119,11 @@
         "maxVersion": 1,
         "methods": {
             "1": [
+                "file_dup",
                 "load_global_config",
                 "get_ds_info",
+                "get_share_quota_status",
+                "get_share_space_usage",
                 "check_ntp_enable"
             ]
         },

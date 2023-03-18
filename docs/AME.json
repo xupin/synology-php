@@ -1,54 +1,51 @@
 {
-    "SYNO.PersonMailAccount": {
-        "lib": "lib/webapi_emailaccount.so",
+    "SYNO.AME.Config": {
+        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.Config.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "set",
-                "delete",
                 "get",
-                "update",
-                "test"
+                "set"
             ]
         },
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.PersonMailAccount.Contacts": {
-        "lib": "lib/webapi_emailaccount.so",
+    "SYNO.AME.License": {
+        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.License.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "list"
+                "check",
+                "activate_free_license"
             ]
         },
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.PersonMailAccount.Mail": {
-        "lib": "lib/webapi_emailaccount.so",
+    "SYNO.AME.Pack": {
+        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.Pack.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "send",
-                "status",
-                "stop",
-                "clean"
+                "check_activation",
+                "get_info",
+                "get_plugin_app_id",
+                "manual_update"
             ]
         },
         "minVersion": 1,
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
-    "SYNO.PersonMailAccount.Mail.Oauth": {
-        "lib": "lib/webapi_emailaccount.so",
+    "SYNO.AME.Payment": {
+        "lib": "/var/packages/CodecPack/target/usr/webapi/SYNO.AME.Payment.so",
         "maxVersion": 1,
         "methods": {
             "1": [
-                "outlook",
-                "gmail"
+                "get_myds_info"
             ]
         },
         "minVersion": 1,

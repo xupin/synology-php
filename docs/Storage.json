@@ -12,7 +12,7 @@
                 "set_schedule_plan",
                 "get_schedule_plan",
                 "check_quota",
-                "clear_quota",
+                "rescan_quota_v2",
                 "stop"
             ]
         },
@@ -115,13 +115,17 @@
             "1": [
                 "check_system_raid",
                 "configure",
+                "shared_cache_config_get",
+                "shared_cache_config_set",
                 "check_can_create",
                 "is_redundancy_degraded",
+                "estimate_raid_size",
                 "estimate_mem_size",
                 "check_volume_abnormal_cant_create_cache",
                 "remove",
                 "remove_cancel",
                 "repair",
+                "add_drive",
                 "create_feasibility_hard_check",
                 "enable",
                 "check_can_lock_space",
@@ -155,11 +159,12 @@
         "maxVersion": 1,
         "methods": {
             "1": [
+                "pre_delete_check",
                 "cancel_data_scrubbing",
                 "pause_data_scrubbing",
-                "cancel_create",
                 "create",
                 "data_scrubbing",
+                "data_scrubbing_plain",
                 "delete",
                 "deactivate",
                 "edit_desc",
@@ -179,6 +184,18 @@
                 "remove_missing_pool",
                 "update_raid_sb_cache",
                 "remove_raid_sb_cache"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Scrubbing": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get_state"
             ]
         },
         "minVersion": 1,
@@ -278,7 +295,9 @@
                 "get_space_reclaim_status",
                 "get_space_reclaim_schedule",
                 "set_space_reclaim_schedule",
-                "delay_space_reclaim"
+                "delay_space_reclaim",
+                "delete_space_reclaim_background_task",
+                "get_mib_collector_result"
             ]
         },
         "minVersion": 1,
@@ -302,7 +321,7 @@
         "maxVersion": 1,
         "methods": {
             "1": [
-                "cancel_create",
+                "pre_delete_check",
                 "cancel_data_scrubbing",
                 "pause_data_scrubbing",
                 "cancel_defrag",
@@ -320,6 +339,7 @@
                 "expand_unallocated",
                 "expand_unfinished_shr",
                 "convert_shr_to_pool",
+                "convert_shr_without_drive",
                 "fs_scrubbing",
                 "migrate",
                 "next_trim_time_get",
@@ -333,7 +353,8 @@
                 "enable_space_usage",
                 "disable_space_usage",
                 "set_setting",
-                "failover_keep_rw"
+                "failover_keep_rw",
+                "get_dump_volumes"
             ]
         },
         "minVersion": 1,
@@ -347,6 +368,20 @@
             "1": [
                 "quick_create_precheck",
                 "quick_create"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Storage.CGI.Volume.OfflineOp": {
+        "lib": "lib/libStorage.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "pre_estimate",
+                "execute",
+                "stop"
             ]
         },
         "minVersion": 1,

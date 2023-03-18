@@ -115,6 +115,20 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Docker.Migrate": {
+        "lib": "/var/packages/Docker/target/webapi/migrate/SYNO.Docker.Migrate.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "import_status",
+                "status",
+                "import"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Docker.Network": {
         "lib": "/var/packages/Docker/target/webapi/network/SYNO.Docker.Network.so",
         "minVersion": 1,

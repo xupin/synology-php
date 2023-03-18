@@ -159,7 +159,9 @@
                 "restore_cancel",
                 "load_task",
                 "load_restore_progress",
-                "load_dest_status"
+                "load_dest_status",
+                "do_cksum",
+                "get_cksum_status"
             ]
         },
         "minVersion": 1,
@@ -450,6 +452,7 @@
                 "list",
                 "get_candidate_dir",
                 "get",
+                "get_ai_info",
                 "private_key_download_by_password",
                 "create_cache",
                 "error_detect",

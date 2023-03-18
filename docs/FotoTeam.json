@@ -370,6 +370,7 @@
             "1": [
                 "get",
                 "get_permission",
+                "get_photo_request_info",
                 "set_shared",
                 "update"
             ]

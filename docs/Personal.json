@@ -5,7 +5,8 @@
         "methods": {
             "1": [
                 "get",
-                "setorder"
+                "setorder",
+                "get_autotest_log"
             ]
         },
         "minVersion": 1,
@@ -60,10 +61,12 @@
         "maxVersion": 2,
         "methods": {
             "1": [
-                "get"
+                "get",
+                "set"
             ],
             "2": [
-                "get"
+                "get",
+                "set"
             ]
         },
         "minVersion": 1,

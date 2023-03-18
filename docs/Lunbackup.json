@@ -1,0 +1,23 @@
+{
+    "SYNO.Lunbackup": {
+        "lib": "/var/packages/ScsiTarget/target/lib/liblunbkp.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "rtor_name_get",
+                "space_check",
+                "dir_check",
+                "task_owner_check",
+                "task_folder_enum",
+                "file_config_get",
+                "file_config_set",
+                "cksum_do",
+                "cksum_gen",
+                "cksum_status_get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    }
+}

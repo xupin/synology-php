@@ -62,6 +62,18 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.SecurityAdvisor.LoginActivity.User": {
+        "lib": "lib/SYNO.SecurityAdvisor.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.SecurityAdvisor.Report": {
         "lib": "lib/SYNO.SecurityAdvisor.so",
         "maxVersion": 1,

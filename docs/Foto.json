@@ -437,6 +437,22 @@
         "path": "entry.cgi",
         "requestFormat": "JSON"
     },
+    "SYNO.Foto.PhotoRequest": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.PhotoRequest.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "create",
+                "delete",
+                "get",
+                "list",
+                "update"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.Foto.PublicSharing": {
         "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.PublicSharing.so",
         "maxVersion": 1,
@@ -618,6 +634,7 @@
             "1": [
                 "get",
                 "get_permission",
+                "get_photo_request_info",
                 "set_shared",
                 "update"
             ]
@@ -662,6 +679,18 @@
                 "backup_to_path",
                 "upload",
                 "upload_to_folder"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.Foto.Upload.PhotoRequestItem": {
+        "lib": "/var/packages/SynologyPhotos/target/usr/webapi/SYNO.Foto.Upload.so",
+        "maxVersion": 1,
+        "methods": {
+            "1": [
+                "upload"
             ]
         },
         "minVersion": 1,

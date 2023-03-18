@@ -324,12 +324,18 @@
     },
     "SYNO.VideoStation2.Info": {
         "lib": "/var/packages/VideoStation/target/webapi5/SYNO.VideoStation.so",
-        "maxVersion": 2,
+        "maxVersion": 4,
         "methods": {
             "1": [
                 "get"
             ],
             "2": [
+                "get"
+            ],
+            "3": [
+                "get"
+            ],
+            "4": [
                 "get"
             ]
         },

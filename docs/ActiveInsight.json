@@ -1,4 +1,29 @@
 {
+    "SYNO.ActiveInsight.CompleteCollection": {
+        "lib": "ActiveInsight/SYNO.ActiveInsight.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.ActiveInsight.License": {
+        "lib": "ActiveInsight/SYNO.ActiveInsight.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
     "SYNO.ActiveInsight.Package": {
         "lib": "ActiveInsight/SYNO.ActiveInsight.so",
         "maxVersion": 2,
@@ -14,6 +39,19 @@
                 "start_mib",
                 "stop_mib",
                 "change_mode"
+            ]
+        },
+        "minVersion": 1,
+        "path": "entry.cgi",
+        "requestFormat": "JSON"
+    },
+    "SYNO.ActiveInsight.Setting": {
+        "lib": "ActiveInsight/SYNO.ActiveInsight.so",
+        "maxVersion": 2,
+        "methods": {
+            "1": [
+                "get",
+                "set"
             ]
         },
         "minVersion": 1,
