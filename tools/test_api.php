@@ -12,6 +12,9 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 use Synology\Applications\ClientFactory;
 use Synology\Applications\GenericClient;
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // use Symfony\Component\Console\Application;
 //
 // $application = new Application();
@@ -21,10 +24,10 @@ use Synology\Applications\GenericClient;
 // $application->run();
 //
 
-$api_host = getenv('API_HOST') ?: '192.168.10.5';
-$api_port = getenv('API_PORT') ?: 5001;
-$api_user = getenv('API_USER') ?: 'admin';
-$api_pass = getenv('API_PASS') ?: '*****';
+$api_host = $_ENV['API_HOST'] ?: '192.168.10.5';
+$api_port = $_ENV['API_PORT'] ?: 5001;
+$api_user = $_ENV['API_USER'] ?: 'admin';
+$api_pass = $_ENV['API_PASS'] ?: '*****';
 $api_http = ($api_port === 5001) ? 'https' : 'http';
 
 $tools_dir = dirname(__DIR__) . '/tools';

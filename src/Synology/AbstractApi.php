@@ -123,7 +123,7 @@ abstract class AbstractApi
         $ch = curl_init();
 
         if ($httpMethod !== 'post') {
-            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, null, $this->_separator, $this->enc_type);
+            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, "", $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
 
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -135,7 +135,7 @@ abstract class AbstractApi
             //set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, null, $this->_separator, $this->enc_type));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, "", $this->_separator, $this->enc_type));
         }
 
         // set URL and other appropriate options
