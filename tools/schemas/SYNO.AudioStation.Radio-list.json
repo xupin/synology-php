@@ -2,42 +2,46 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "portal": {
+    "offset": {
+      "type": "integer"
+    },
+    "radios": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "display_name": {
+          "desc": {
             "type": "string"
-          },
-          "enable_redirect": {
-            "type": "boolean"
           },
           "id": {
             "type": "string"
           },
-          "acl": {
-            "type": "null"
-          },
-          "alias": {
+          "title": {
             "type": "string"
           },
-          "fqdn": {
-            "type": "null"
+          "type": {
+            "type": "string"
           },
-          "hsts": {
-            "type": "boolean"
+          "url": {
+            "type": "string"
           }
         },
         "required": [
-          "display_name",
-          "enable_redirect",
-          "id"
+          "desc",
+          "id",
+          "title",
+          "type",
+          "url"
         ]
       }
+    },
+    "total": {
+      "type": "integer"
     }
   },
   "required": [
-    "portal"
+    "offset",
+    "radios",
+    "total"
   ]
 }

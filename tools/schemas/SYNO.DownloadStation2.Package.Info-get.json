@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "build_number": {
+      "type": "integer"
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "major": {
+      "type": "integer"
+    },
+    "minor": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "build_number",
+    "is_manager",
+    "major",
+    "minor"
+  ]
+}

@@ -69,61 +69,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "wallpaper": {
-          "type": "object",
-          "properties": {
-            "classical_desktop": {
-              "type": "string"
-            },
-            "customize_color": {
-              "type": "boolean"
-            },
-            "customize_wallpaper": {
-              "type": "boolean"
-            },
-            "index": {
-              "type": "integer"
-            },
-            "menu_style": {
-              "type": "string"
-            },
-            "newImage": {
-              "type": "boolean"
-            },
-            "version": {
-              "type": "string"
-            },
-            "wallpaper": {
-              "type": "integer"
-            },
-            "wallpaper_ext": {
-              "type": "string"
-            },
-            "wallpaper_path": {
-              "type": "string"
-            },
-            "wallpaper_position": {
-              "type": "string"
-            },
-            "wallpaper_type": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "classical_desktop",
-            "customize_color",
-            "customize_wallpaper",
-            "index",
-            "menu_style",
-            "newImage",
-            "version",
-            "wallpaper",
-            "wallpaper_ext",
-            "wallpaper_path",
-            "wallpaper_position",
-            "wallpaper_type"
-          ]
         }
       },
       "required": [
@@ -136,8 +81,7 @@
         "enableTaskbarThumbnail",
         "new_app_list",
         "rememberWindowState",
-        "valid_appview_order",
-        "wallpaper"
+        "valid_appview_order"
       ]
     },
     "PackageTask": {
@@ -149,6 +93,45 @@
       },
       "required": [
         "tasks"
+      ]
+    },
+    "SYNO.AME.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "left",
+            "maximized",
+            "top",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
       ]
     },
     "SYNO.Finder.Application": {
@@ -200,12 +183,20 @@
             },
             "pageY": {
               "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
             }
           },
           "required": [
             "fromRestore",
             "pageX",
-            "pageY"
+            "pageY",
+            "x",
+            "y"
           ]
         }
       },
@@ -283,6 +274,45 @@
         "restoreSizePos"
       ]
     },
+    "SYNO.SDS.ActiveInsight.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "left": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "left",
+            "maximized",
+            "top",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
     "SYNO.SDS.AdminCenter.Application": {
       "type": "object",
       "properties": {
@@ -301,12 +331,6 @@
             "maximized": {
               "type": "boolean"
             },
-            "pageX": {
-              "type": "integer"
-            },
-            "pageY": {
-              "type": "integer"
-            },
             "width": {
               "type": "integer"
             },
@@ -321,8 +345,6 @@
             "fromRestore",
             "height",
             "maximized",
-            "pageX",
-            "pageY",
             "width",
             "x",
             "y"
@@ -331,6 +353,33 @@
       },
       "required": [
         "activeScreen",
+        "restoreSizePos"
+      ]
+    },
+    "SYNO.SDS.App.DiskMessageApp.Instance": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
         "restoreSizePos"
       ]
     },
@@ -451,17 +500,29 @@
             "fromRestore": {
               "type": "boolean"
             },
-            "pageX": {
+            "height": {
               "type": "integer"
             },
-            "pageY": {
+            "left": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "top": {
+              "type": "integer"
+            },
+            "width": {
               "type": "integer"
             }
           },
           "required": [
             "fromRestore",
-            "pageX",
-            "pageY"
+            "height",
+            "left",
+            "maximized",
+            "top",
+            "width"
           ]
         },
         "search_count": {
@@ -511,12 +572,16 @@
             "nano"
           ]
         },
+        "not_done_udc": {
+          "type": "boolean"
+        },
         "show_quick_tour_tray": {
           "type": "boolean"
         }
       },
       "required": [
         "last_promote_patch",
+        "not_done_udc",
         "show_quick_tour_tray"
       ]
     },
@@ -1136,6 +1201,41 @@
         "restoreSizePos"
       ]
     },
+    "SYNO.SDS.DSMNotify.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "pageX",
+            "pageY",
+            "width"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
     "SYNO.SDS.DSMNotify.Tray": {
       "type": "object",
       "properties": {
@@ -1366,22 +1466,26 @@
             "height": {
               "type": "integer"
             },
-            "pageX": {
-              "type": "integer"
-            },
-            "pageY": {
-              "type": "integer"
+            "maximized": {
+              "type": "boolean"
             },
             "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
               "type": "integer"
             }
           },
           "required": [
             "fromRestore",
             "height",
-            "pageX",
-            "pageY",
-            "width"
+            "maximized",
+            "width",
+            "x",
+            "y"
           ]
         },
         "showFileInfo": {
@@ -1686,9 +1790,6 @@
     "SYNO.SDS.PkgManApp.Instance": {
       "type": "object",
       "properties": {
-        "agreed_beta": {
-          "type": "boolean"
-        },
         "agreed_term_version": {
           "type": "string"
         },
@@ -1710,22 +1811,26 @@
             "height": {
               "type": "integer"
             },
-            "pageX": {
-              "type": "integer"
-            },
-            "pageY": {
-              "type": "integer"
+            "maximized": {
+              "type": "boolean"
             },
             "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
               "type": "integer"
             }
           },
           "required": [
             "fromRestore",
             "height",
-            "pageX",
-            "pageY",
-            "width"
+            "maximized",
+            "width",
+            "x",
+            "y"
           ]
         },
         "termofservice": {
@@ -1742,7 +1847,6 @@
         }
       },
       "required": [
-        "agreed_beta",
         "agreed_term_version",
         "agreed_top_hash_key",
         "agreed_tos_hash",
@@ -2158,6 +2262,45 @@
         "tvshowsortstate"
       ]
     },
+    "SYNO.SDS.Virtualization.Application": {
+      "type": "object",
+      "properties": {
+        "restoreSizePos": {
+          "type": "object",
+          "properties": {
+            "fromRestore": {
+              "type": "boolean"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "maximized": {
+              "type": "boolean"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "x": {
+              "type": "integer"
+            },
+            "y": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "fromRestore",
+            "height",
+            "maximized",
+            "width",
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "restoreSizePos"
+      ]
+    },
     "SYNO.SDS.WebStation.Application": {
       "type": "object",
       "properties": {
@@ -2349,22 +2492,22 @@
             "height": {
               "type": "integer"
             },
+            "pageX": {
+              "type": "integer"
+            },
+            "pageY": {
+              "type": "integer"
+            },
             "width": {
-              "type": "integer"
-            },
-            "x": {
-              "type": "integer"
-            },
-            "y": {
               "type": "integer"
             }
           },
           "required": [
             "fromRestore",
             "height",
-            "width",
-            "x",
-            "y"
+            "pageX",
+            "pageY",
+            "width"
           ]
         }
       },
@@ -2405,11 +2548,14 @@
     "BackgroundTask",
     "Desktop",
     "PackageTask",
+    "SYNO.AME.Instance",
     "SYNO.Finder.Application",
     "SYNO.Finder.Spotlight.Application",
     "SYNO.SDS.ACEEditor.Application",
     "SYNO.SDS.ActiveInsight.Application",
+    "SYNO.SDS.ActiveInsight.Instance",
     "SYNO.SDS.AdminCenter.Application",
+    "SYNO.SDS.App.DiskMessageApp.Instance",
     "SYNO.SDS.App.FileStation3.Instance",
     "SYNO.SDS.App.PersonalSettings.Instance",
     "SYNO.SDS.App.PromotionApp",
@@ -2424,6 +2570,7 @@
     "SYNO.SDS.CSTN.Instance",
     "SYNO.SDS.DHCP.Instance",
     "SYNO.SDS.DSCloudSync.Instance",
+    "SYNO.SDS.DSMNotify.Application",
     "SYNO.SDS.DSMNotify.Tray",
     "SYNO.SDS.Docker.Application",
     "SYNO.SDS.Docker.ContainerDetail.Instance",
@@ -2447,6 +2594,7 @@
     "SYNO.SDS.UDC.Instance",
     "SYNO.SDS.USBCopy.Application",
     "SYNO.SDS.VideoStation.AppInstance",
+    "SYNO.SDS.Virtualization.Application",
     "SYNO.SDS.WebStation.Application",
     "SYNO.SDS._ThirdParty.App.ipkgui",
     "SYNO.SDS._Widget.Instance",

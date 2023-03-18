@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "albumTotal": {
+      "type": "integer"
+    },
+    "albums": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "album_artist": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "display_artist": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "album_artist",
+          "artist",
+          "display_artist",
+          "name",
+          "year"
+        ]
+      }
+    },
+    "artistTotal": {
+      "type": "integer"
+    },
+    "artists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    "songTotal": {
+      "type": "integer"
+    },
+    "songs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "title",
+          "type"
+        ]
+      }
+    }
+  },
+  "required": [
+    "albumTotal",
+    "albums",
+    "artistTotal",
+    "artists",
+    "songTotal",
+    "songs"
+  ]
+}

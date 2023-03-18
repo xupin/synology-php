@@ -23,6 +23,9 @@
         "type": "integer"
       }
     },
+    "available_python_backend": {
+      "type": "null"
+    },
     "available_server_backend": {
       "type": "array",
       "items": {
@@ -109,11 +112,15 @@
               "php_settings": {
                 "type": "object",
                 "properties": {
+                  "assert.exception": {
+                    "type": "string"
+                  },
                   "mysqli.default_socket": {
                     "type": "string"
                   }
                 },
                 "required": [
+                  "assert.exception",
                   "mysqli.default_socket"
                 ]
               },
@@ -163,6 +170,25 @@
         "version"
       ]
     },
+    "python_profiles": {
+      "type": "object",
+      "properties": {
+        "profiles": {
+          "type": "array"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "version": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "profiles",
+        "total",
+        "version"
+      ]
+    },
     "userdir": {
       "type": "boolean"
     },
@@ -176,11 +202,13 @@
   "required": [
     "VirtualHost",
     "available_php_backend",
+    "available_python_backend",
     "available_server_backend",
     "backend",
     "home_share_status",
     "php",
     "php_profiles",
+    "python_profiles",
     "userdir",
     "userdir_backend",
     "userdir_php"

@@ -22,6 +22,12 @@
           "id": {
             "type": "string"
           },
+          "interface_v4": {
+            "type": "string"
+          },
+          "interface_v6": {
+            "type": "string"
+          },
           "ip": {
             "type": "string"
           },
@@ -49,6 +55,8 @@
           "heartbeat",
           "hostname",
           "id",
+          "interface_v4",
+          "interface_v6",
           "ip",
           "ipv6",
           "lastupdated",

@@ -4,24 +4,23 @@
   "items": {
     "type": "object",
     "properties": {
-      "id": {
+      "ifname": {
         "type": "string"
       },
-      "is_beta": {
-        "type": "boolean"
-      },
-      "name": {
+      "ip": {
         "type": "string"
       },
-      "version": {
-        "type": "string"
+      "ipv6": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     },
     "required": [
-      "id",
-      "is_beta",
-      "name",
-      "version"
+      "ifname",
+      "ip",
+      "ipv6"
     ]
   }
 }

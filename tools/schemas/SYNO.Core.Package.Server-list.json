@@ -85,7 +85,30 @@
             "type": "boolean"
           },
           "breakpkgs": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "DirectoryServerForWindowsDomain": {
+                    "type": "object",
+                    "properties": {
+                      "<": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<"
+                    ]
+                  }
+                },
+                "required": [
+                  "DirectoryServerForWindowsDomain"
+                ]
+              }
+            ]
           },
           "category": {
             "type": "array",
@@ -104,21 +127,15 @@
               {
                 "type": "object",
                 "properties": {
-                  "Plex Media Server": {
-                    "type": "string"
-                  },
-                  "SiteRecovery": {
+                  "ActiveDirectoryServer": {
                     "type": "string"
                   }
-                }
+                },
+                "required": [
+                  "ActiveDirectoryServer"
+                ]
               }
             ]
-          },
-          "ctl_stop": {
-            "type": "string"
-          },
-          "ctl_uninstall": {
-            "type": "string"
           },
           "deppkgs": {
             "anyOf": [
@@ -128,13 +145,18 @@
               {
                 "type": "object",
                 "properties": {
-                  "PHP7.3": {
-                    "type": "string"
+                  "DNSServer": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
                   },
-                  "WebStation": {
-                    "type": "string"
-                  },
-                  "CodecPack": {
+                  "SMBService": {
                     "type": "object",
                     "properties": {
                       ">=": {
@@ -145,7 +167,11 @@
                       ">="
                     ]
                   }
-                }
+                },
+                "required": [
+                  "DNSServer",
+                  "SMBService"
+                ]
               }
             ]
           },
@@ -163,9 +189,6 @@
           },
           "ignore_rolling": {
             "type": "boolean"
-          },
-          "install_type": {
-            "type": "string"
           },
           "is_security_version": {
             "type": "boolean"
@@ -185,7 +208,7 @@
           "price": {
             "type": "null"
           },
-          "qinst": {
+          "qstart": {
             "type": "boolean"
           },
           "qupgrade": {
@@ -205,12 +228,12 @@
               {
                 "type": "object",
                 "properties": {
-                  "Plex Media Server": {
+                  "ActiveDirectoryServer": {
                     "type": "string"
                   }
                 },
                 "required": [
-                  "Plex Media Server"
+                  "ActiveDirectoryServer"
                 ]
               }
             ]
@@ -223,15 +246,21 @@
               {
                 "type": "object",
                 "properties": {
-                  "Plex Media Server": {
+                  "ActiveDirectoryServer": {
                     "type": "string"
                   }
                 },
                 "required": [
-                  "Plex Media Server"
+                  "ActiveDirectoryServer"
                 ]
               }
             ]
+          },
+          "silent_install": {
+            "type": "boolean"
+          },
+          "silent_uninstall": {
+            "type": "boolean"
           },
           "silent_upgrade": {
             "type": "boolean"
@@ -247,6 +276,9 @@
           },
           "source": {
             "type": "string"
+          },
+          "start": {
+            "type": "boolean"
           },
           "thumbnail": {
             "type": "array",
@@ -266,41 +298,17 @@
           "version": {
             "type": "string"
           },
-          "qstart": {
+          "ctl_stop": {
+            "type": "string"
+          },
+          "ctl_uninstall": {
+            "type": "string"
+          },
+          "install_type": {
+            "type": "string"
+          },
+          "qinst": {
             "type": "boolean"
-          },
-          "start": {
-            "type": "boolean"
-          },
-          "silent_install": {
-            "type": "boolean"
-          },
-          "silent_uninstall": {
-            "type": "boolean"
-          },
-          "depsers": {
-            "type": "string"
-          },
-          "distributor": {
-            "type": "string"
-          },
-          "distributor_url": {
-            "type": "string"
-          },
-          "maintainer_url": {
-            "type": "string"
-          },
-          "provides": {
-            "type": "string"
-          },
-          "support_url": {
-            "type": "string"
-          },
-          "thirdparty": {
-            "type": "boolean"
-          },
-          "auto_upgrade_from": {
-            "type": "string"
           }
         },
         "required": [
@@ -321,9 +329,13 @@
           "md5",
           "package",
           "price",
+          "qupgrade",
           "recent_download_count",
           "replaceforcepkgs",
           "replacepkgs",
+          "silent_install",
+          "silent_uninstall",
+          "silent_upgrade",
           "size",
           "snapshot",
           "source",
@@ -465,6 +477,17 @@
                     ]
                   },
                   "MailStation": {
+                    "type": "object",
+                    "properties": {
+                      "<=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "<="
+                    ]
+                  },
+                  "MailPlus-Server": {
                     "type": "object",
                     "properties": {
                       "<=": {
@@ -645,6 +668,9 @@
                   "DocumentViewer": {
                     "type": "string"
                   },
+                  "Plex Media Server": {
+                    "type": "string"
+                  },
                   "SnapshotReplication": {
                     "type": "object",
                     "properties": {
@@ -738,6 +764,17 @@
                       }
                     ]
                   },
+                  "MailPlus-Server": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
                   "Docker": {
                     "anyOf": [
                       {
@@ -756,23 +793,8 @@
                       }
                     ]
                   },
-                  "Node.js_v12": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          ">=": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          ">="
-                        ]
-                      }
-                    ]
+                  "Node.js_v18": {
+                    "type": "string"
                   },
                   "PHP7.3": {
                     "anyOf": [
@@ -810,6 +832,9 @@
                       }
                     ]
                   },
+                  "Node.js_v12": {
+                    "type": "string"
+                  },
                   "DNSServer": {
                     "type": "object",
                     "properties": {
@@ -824,7 +849,7 @@
                   "Python2": {
                     "type": "string"
                   },
-                  "Apache2.2": {
+                  "Apache2.4": {
                     "type": "object",
                     "properties": {
                       ">=": {
@@ -836,46 +861,31 @@
                     ]
                   },
                   "MariaDB10": {
-                    "anyOf": [
-                      {
+                    "type": "string"
+                  },
+                  "PHP7.4": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
                         "type": "string"
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          ">=": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          ">="
-                        ]
                       }
+                    },
+                    "required": [
+                      ">="
+                    ]
+                  },
+                  "Apache2.2": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
                     ]
                   },
                   "Contacts": {
-                    "type": "object",
-                    "properties": {
-                      ">=": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      ">="
-                    ]
-                  },
-                  "MailPlus-Server": {
-                    "type": "object",
-                    "properties": {
-                      ">=": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      ">="
-                    ]
-                  },
-                  "Node.js_v14": {
                     "type": "object",
                     "properties": {
                       ">=": {
@@ -900,22 +910,23 @@
                   "MailServer": {
                     "type": "string"
                   },
-                  "PHP7.4": {
-                    "type": "object",
-                    "properties": {
-                      ">=": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      ">="
-                    ]
-                  },
-                  "CodecPack": {
-                    "type": "string"
-                  },
                   "ReplicationService": {
-                    "type": "string"
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          ">=": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          ">="
+                        ]
+                      }
+                    ]
                   },
                   "ScsiTarget": {
                     "anyOf": [
@@ -933,6 +944,20 @@
                           ">="
                         ]
                       }
+                    ]
+                  },
+                  "Node.js_v16": {
+                    "type": "string"
+                  },
+                  "PHP8.0": {
+                    "type": "object",
+                    "properties": {
+                      ">=": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      ">="
                     ]
                   },
                   "SynologyDrive": {
@@ -1032,6 +1057,9 @@
                   "GoodSync Server": {
                     "type": "string"
                   },
+                  "Plex Media Server": {
+                    "type": "string"
+                  },
                   "CloudStation": {
                     "type": "string"
                   },
@@ -1063,6 +1091,9 @@
                     "type": "string"
                   },
                   "GoodSync Server": {
+                    "type": "string"
+                  },
+                  "Plex Media Server": {
                     "type": "string"
                   },
                   "CloudStation": {
@@ -1129,9 +1160,6 @@
           "ctl_stop": {
             "type": "string"
           },
-          "ctl_uninstall": {
-            "type": "string"
-          },
           "install_type": {
             "type": "string"
           },
@@ -1148,6 +1176,9 @@
             "type": "string"
           },
           "depsers": {
+            "type": "string"
+          },
+          "ctl_uninstall": {
             "type": "string"
           },
           "support_conf_folder": {

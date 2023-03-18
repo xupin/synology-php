@@ -2,15 +2,11 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "items": {
+    "players": {
       "type": "array"
-    },
-    "total": {
-      "type": "integer"
     }
   },
   "required": [
-    "items",
-    "total"
+    "players"
   ]
 }

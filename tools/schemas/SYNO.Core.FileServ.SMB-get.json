@@ -59,10 +59,16 @@
     "enable_smb2_leases": {
       "type": "boolean"
     },
+    "enable_strict_sync": {
+      "type": "boolean"
+    },
     "enable_symlink": {
       "type": "boolean"
     },
     "enable_syno_catia": {
+      "type": "boolean"
+    },
+    "enable_synotify": {
       "type": "boolean"
     },
     "enable_vetofile": {
@@ -116,8 +122,10 @@
     "enable_samba",
     "enable_server_signing",
     "enable_smb2_leases",
+    "enable_strict_sync",
     "enable_symlink",
     "enable_syno_catia",
+    "enable_synotify",
     "enable_vetofile",
     "enable_widelink",
     "offline_files_support",

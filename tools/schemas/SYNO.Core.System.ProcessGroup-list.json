@@ -8,16 +8,10 @@
         "type": "object",
         "properties": {
           "byte_read_per_sec": {
-            "type": [
-              "integer",
-              "string"
-            ]
+            "type": "integer"
           },
           "byte_write_per_sec": {
-            "type": [
-              "integer",
-              "string"
-            ]
+            "type": "integer"
           },
           "cpu_time": {
             "type": [
@@ -68,16 +62,10 @@
               "type": "object",
               "properties": {
                 "byte_read_per_sec": {
-                  "type": [
-                    "integer",
-                    "string"
-                  ]
+                  "type": "integer"
                 },
                 "byte_write_per_sec": {
-                  "type": [
-                    "integer",
-                    "string"
-                  ]
+                  "type": "integer"
                 },
                 "cpu_time": {
                   "type": [

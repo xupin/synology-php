@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "have_applied_eunit": {
+      "type": "boolean"
+    },
+    "info": {
+      "type": "object",
+      "properties": {
+        "advertisement": {
+          "type": "boolean"
+        },
+        "drma_region": {
+          "type": "string"
+        },
+        "expired_at": {
+          "type": "string"
+        },
+        "promotion_expired_at": {
+          "type": "null"
+        },
+        "sn": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "advertisement",
+        "drma_region",
+        "expired_at",
+        "promotion_expired_at",
+        "sn",
+        "status"
+      ]
+    },
+    "mail": {
+      "type": "string"
+    },
+    "show_welcome_page": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "have_applied_eunit",
+    "info",
+    "mail",
+    "show_welcome_page"
+  ]
+}

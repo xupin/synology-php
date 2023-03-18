@@ -61,6 +61,21 @@
         "success"
       ]
     },
+    "prerelease": {
+      "type": "object",
+      "properties": {
+        "agreed": {
+          "type": "boolean"
+        },
+        "success": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "agreed",
+        "success"
+      ]
+    },
     "term": {
       "type": "object",
       "properties": {
@@ -83,6 +98,7 @@
   },
   "required": [
     "config",
+    "prerelease",
     "term"
   ]
 }

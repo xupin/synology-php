@@ -2,15 +2,15 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "items": {
-      "type": "array"
-    },
-    "total": {
+    "max_rules": {
       "type": "integer"
+    },
+    "rules": {
+      "type": "array"
     }
   },
   "required": [
-    "items",
-    "total"
+    "max_rules",
+    "rules"
   ]
 }

@@ -50,6 +50,9 @@
           },
           "title": {
             "type": "string"
+          },
+          "metadata_locked": {
+            "type": "boolean"
           }
         },
         "required": [

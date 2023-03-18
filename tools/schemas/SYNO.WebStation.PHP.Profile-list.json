@@ -73,11 +73,15 @@
           "php_settings": {
             "type": "object",
             "properties": {
+              "assert.exception": {
+                "type": "string"
+              },
               "mysqli.default_socket": {
                 "type": "string"
               }
             },
             "required": [
+              "assert.exception",
               "mysqli.default_socket"
             ]
           },

@@ -7,16 +7,16 @@
       "items": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer"
+          },
           "filename": {
             "type": "string"
           },
           "filesize": {
             "type": "integer"
           },
-          "folder_id": {
-            "type": "integer"
-          },
-          "id": {
+          "time": {
             "type": "integer"
           },
           "indexed_time": {
@@ -25,7 +25,7 @@
           "owner_user_id": {
             "type": "integer"
           },
-          "time": {
+          "folder_id": {
             "type": "integer"
           },
           "type": {

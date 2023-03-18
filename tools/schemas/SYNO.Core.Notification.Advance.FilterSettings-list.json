@@ -10,12 +10,6 @@
           "appid": {
             "type": "string"
           },
-          "cms": {
-            "type": "boolean"
-          },
-          "desktop": {
-            "type": "boolean"
-          },
           "format": {
             "type": "string"
           },
@@ -25,17 +19,52 @@
           "level": {
             "type": "string"
           },
-          "mail": {
-            "type": "boolean"
-          },
-          "mobile": {
-            "type": "boolean"
-          },
           "name": {
             "type": "string"
           },
-          "sms": {
-            "type": "boolean"
+          "profiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "cms": {
+                  "type": "boolean"
+                },
+                "desktop": {
+                  "type": "boolean"
+                },
+                "mail": {
+                  "type": "boolean"
+                },
+                "mobile": {
+                  "type": "boolean"
+                },
+                "profile_id": {
+                  "type": "integer"
+                },
+                "profile_name": {
+                  "type": "string"
+                },
+                "sms": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "cms",
+                "desktop",
+                "mail",
+                "mobile",
+                "profile_id",
+                "profile_name",
+                "sms"
+              ]
+            }
+          },
+          "source": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
           },
           "title": {
             "type": "string"
@@ -46,15 +75,13 @@
         },
         "required": [
           "appid",
-          "cms",
-          "desktop",
           "format",
           "group",
           "level",
-          "mail",
-          "mobile",
           "name",
-          "sms",
+          "profiles",
+          "source",
+          "tag",
           "title",
           "warnPercent"
         ]

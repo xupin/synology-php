@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "oidc_authorization_endpoint": {
+      "type": "string"
+    },
+    "oidc_client_id": {
+      "type": "string"
+    },
+    "oidc_client_secret": {
+      "type": "string"
+    },
+    "oidc_name": {
+      "type": "string"
+    },
+    "oidc_redirect_uri": {
+      "type": "string"
+    },
+    "oidc_scope": {
+      "type": "string"
+    },
+    "oidc_token_endpoint": {
+      "type": "string"
+    },
+    "oidc_user_claim": {
+      "type": "string"
+    },
+    "oidc_wellknown": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "oidc_authorization_endpoint",
+    "oidc_client_id",
+    "oidc_client_secret",
+    "oidc_name",
+    "oidc_redirect_uri",
+    "oidc_scope",
+    "oidc_token_endpoint",
+    "oidc_user_claim",
+    "oidc_wellknown"
+  ]
+}

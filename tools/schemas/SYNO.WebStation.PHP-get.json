@@ -196,9 +196,6 @@
               "sys_temp_dir": {
                 "type": "string"
               },
-              "track_errors": {
-                "type": "string"
-              },
               "unserialize_callback_func": {
                 "type": "null"
               },
@@ -289,7 +286,6 @@
               "short_open_tag",
               "smtp_port",
               "sys_temp_dir",
-              "track_errors",
               "unserialize_callback_func",
               "unserialize_max_depth",
               "upload_max_filesize",
@@ -362,9 +358,6 @@
                 "type": "null"
               },
               "assert.exception": {
-                "type": "string"
-              },
-              "assert.quiet_eval": {
                 "type": "string"
               },
               "assert.warning": {
@@ -448,10 +441,19 @@
               "iconv.output_encoding": {
                 "type": "string"
               },
+              "imagick.allow_zero_dimension_images": {
+                "type": "string"
+              },
               "imagick.locale_fix": {
                 "type": "string"
               },
               "imagick.progress_monitor": {
+                "type": "string"
+              },
+              "imagick.set_single_thread": {
+                "type": "string"
+              },
+              "imagick.shutdown_sleep_count": {
                 "type": "string"
               },
               "imagick.skip_version_check": {
@@ -488,9 +490,6 @@
                 "type": "null"
               },
               "mbstring.encoding_translation": {
-                "type": "string"
-              },
-              "mbstring.func_overload": {
                 "type": "string"
               },
               "mbstring.http_input": {
@@ -628,6 +627,60 @@
               "opcache.interned_strings_buffer": {
                 "type": "string"
               },
+              "opcache.jit": {
+                "type": "string"
+              },
+              "opcache.jit_bisect_limit": {
+                "type": "string"
+              },
+              "opcache.jit_blacklist_root_trace": {
+                "type": "string"
+              },
+              "opcache.jit_blacklist_side_trace": {
+                "type": "string"
+              },
+              "opcache.jit_buffer_size": {
+                "type": "string"
+              },
+              "opcache.jit_debug": {
+                "type": "string"
+              },
+              "opcache.jit_hot_func": {
+                "type": "string"
+              },
+              "opcache.jit_hot_loop": {
+                "type": "string"
+              },
+              "opcache.jit_hot_return": {
+                "type": "string"
+              },
+              "opcache.jit_hot_side_exit": {
+                "type": "string"
+              },
+              "opcache.jit_max_exit_counters": {
+                "type": "string"
+              },
+              "opcache.jit_max_loop_unrolls": {
+                "type": "string"
+              },
+              "opcache.jit_max_polymorphic_calls": {
+                "type": "string"
+              },
+              "opcache.jit_max_recursive_calls": {
+                "type": "string"
+              },
+              "opcache.jit_max_recursive_returns": {
+                "type": "string"
+              },
+              "opcache.jit_max_root_traces": {
+                "type": "string"
+              },
+              "opcache.jit_max_side_traces": {
+                "type": "string"
+              },
+              "opcache.jit_prof_threshold": {
+                "type": "string"
+              },
               "opcache.lockfile_path": {
                 "type": "string"
               },
@@ -662,6 +715,9 @@
                 "type": "string"
               },
               "opcache.protect_memory": {
+                "type": "string"
+              },
+              "opcache.record_warnings": {
                 "type": "string"
               },
               "opcache.restrict_api": {
@@ -877,6 +933,18 @@
               "xdebug.cli_color": {
                 "type": "string"
               },
+              "xdebug.client_discovery_header": {
+                "type": "string"
+              },
+              "xdebug.client_host": {
+                "type": "string"
+              },
+              "xdebug.client_port": {
+                "type": "string"
+              },
+              "xdebug.cloud_id": {
+                "type": "string"
+              },
               "xdebug.collect_assignments": {
                 "type": "string"
               },
@@ -892,10 +960,16 @@
               "xdebug.collect_vars": {
                 "type": "string"
               },
+              "xdebug.connect_timeout_ms": {
+                "type": "string"
+              },
               "xdebug.coverage_enable": {
                 "type": "string"
               },
               "xdebug.default_enable": {
+                "type": "string"
+              },
+              "xdebug.discover_client_host": {
                 "type": "string"
               },
               "xdebug.dump.COOKIE": {
@@ -958,10 +1032,22 @@
               "xdebug.idekey": {
                 "type": "string"
               },
+              "xdebug.log": {
+                "type": "string"
+              },
+              "xdebug.log_level": {
+                "type": "string"
+              },
               "xdebug.max_nesting_level": {
                 "type": "string"
               },
               "xdebug.max_stack_frames": {
+                "type": "string"
+              },
+              "xdebug.mode": {
+                "type": "string"
+              },
+              "xdebug.output_dir": {
                 "type": "string"
               },
               "xdebug.overload_var_dump": {
@@ -985,16 +1071,10 @@
               "xdebug.profiler_output_name": {
                 "type": "string"
               },
-              "xdebug.remote_addr_header": {
-                "type": "string"
-              },
               "xdebug.remote_autostart": {
                 "type": "string"
               },
               "xdebug.remote_connect_back": {
-                "type": "string"
-              },
-              "xdebug.remote_cookie_expire_time": {
                 "type": "string"
               },
               "xdebug.remote_enable": {
@@ -1033,6 +1113,12 @@
               "xdebug.show_mem_delta": {
                 "type": "string"
               },
+              "xdebug.start_upon_error": {
+                "type": "string"
+              },
+              "xdebug.start_with_request": {
+                "type": "string"
+              },
               "xdebug.trace_enable_trigger": {
                 "type": "string"
               },
@@ -1049,6 +1135,12 @@
                 "type": "string"
               },
               "xdebug.trace_output_name": {
+                "type": "string"
+              },
+              "xdebug.trigger_value": {
+                "type": "string"
+              },
+              "xdebug.use_compression": {
                 "type": "string"
               },
               "xdebug.var_display_max_children": {
@@ -1070,6 +1162,9 @@
                 "type": "string"
               },
               "zend.exception_ignore_args": {
+                "type": "string"
+              },
+              "zend.exception_string_param_max_len": {
                 "type": "string"
               },
               "zend.multibyte": {
@@ -1112,7 +1207,6 @@
               "assert.bail",
               "assert.callback",
               "assert.exception",
-              "assert.quiet_eval",
               "assert.warning",
               "bcmath.scale",
               "cli.pager",
@@ -1140,8 +1234,11 @@
               "iconv.input_encoding",
               "iconv.internal_encoding",
               "iconv.output_encoding",
+              "imagick.allow_zero_dimension_images",
               "imagick.locale_fix",
               "imagick.progress_monitor",
+              "imagick.set_single_thread",
+              "imagick.shutdown_sleep_count",
               "imagick.skip_version_check",
               "imap.enable_insecure_rsh",
               "intl.default_locale",
@@ -1154,7 +1251,6 @@
               "mailparse.def_charset",
               "mbstring.detect_order",
               "mbstring.encoding_translation",
-              "mbstring.func_overload",
               "mbstring.http_input",
               "mbstring.http_output",
               "mbstring.http_output_conv_mimetypes",
@@ -1200,6 +1296,24 @@
               "opcache.force_restart_timeout",
               "opcache.huge_code_pages",
               "opcache.interned_strings_buffer",
+              "opcache.jit",
+              "opcache.jit_bisect_limit",
+              "opcache.jit_blacklist_root_trace",
+              "opcache.jit_blacklist_side_trace",
+              "opcache.jit_buffer_size",
+              "opcache.jit_debug",
+              "opcache.jit_hot_func",
+              "opcache.jit_hot_loop",
+              "opcache.jit_hot_return",
+              "opcache.jit_hot_side_exit",
+              "opcache.jit_max_exit_counters",
+              "opcache.jit_max_loop_unrolls",
+              "opcache.jit_max_polymorphic_calls",
+              "opcache.jit_max_recursive_calls",
+              "opcache.jit_max_recursive_returns",
+              "opcache.jit_max_root_traces",
+              "opcache.jit_max_side_traces",
+              "opcache.jit_prof_threshold",
               "opcache.lockfile_path",
               "opcache.log_verbosity_level",
               "opcache.max_accelerated_files",
@@ -1212,6 +1326,7 @@
               "opcache.preload",
               "opcache.preload_user",
               "opcache.protect_memory",
+              "opcache.record_warnings",
               "opcache.restrict_api",
               "opcache.revalidate_freq",
               "opcache.revalidate_path",
@@ -1283,13 +1398,19 @@
               "user_ini.filename",
               "xdebug.auto_trace",
               "xdebug.cli_color",
+              "xdebug.client_discovery_header",
+              "xdebug.client_host",
+              "xdebug.client_port",
+              "xdebug.cloud_id",
               "xdebug.collect_assignments",
               "xdebug.collect_includes",
               "xdebug.collect_params",
               "xdebug.collect_return",
               "xdebug.collect_vars",
+              "xdebug.connect_timeout_ms",
               "xdebug.coverage_enable",
               "xdebug.default_enable",
+              "xdebug.discover_client_host",
               "xdebug.dump.COOKIE",
               "xdebug.dump.ENV",
               "xdebug.dump.FILES",
@@ -1310,8 +1431,12 @@
               "xdebug.gc_stats_output_name",
               "xdebug.halt_level",
               "xdebug.idekey",
+              "xdebug.log",
+              "xdebug.log_level",
               "xdebug.max_nesting_level",
               "xdebug.max_stack_frames",
+              "xdebug.mode",
+              "xdebug.output_dir",
               "xdebug.overload_var_dump",
               "xdebug.profiler_append",
               "xdebug.profiler_enable",
@@ -1319,10 +1444,8 @@
               "xdebug.profiler_enable_trigger_value",
               "xdebug.profiler_output_dir",
               "xdebug.profiler_output_name",
-              "xdebug.remote_addr_header",
               "xdebug.remote_autostart",
               "xdebug.remote_connect_back",
-              "xdebug.remote_cookie_expire_time",
               "xdebug.remote_enable",
               "xdebug.remote_host",
               "xdebug.remote_log",
@@ -1335,12 +1458,16 @@
               "xdebug.show_exception_trace",
               "xdebug.show_local_vars",
               "xdebug.show_mem_delta",
+              "xdebug.start_upon_error",
+              "xdebug.start_with_request",
               "xdebug.trace_enable_trigger",
               "xdebug.trace_enable_trigger_value",
               "xdebug.trace_format",
               "xdebug.trace_options",
               "xdebug.trace_output_dir",
               "xdebug.trace_output_name",
+              "xdebug.trigger_value",
+              "xdebug.use_compression",
               "xdebug.var_display_max_children",
               "xdebug.var_display_max_data",
               "xdebug.var_display_max_depth",
@@ -1348,6 +1475,7 @@
               "zend.detect_unicode",
               "zend.enable_gc",
               "zend.exception_ignore_args",
+              "zend.exception_string_param_max_len",
               "zend.multibyte",
               "zend.script_encoding",
               "zend.signal_check",

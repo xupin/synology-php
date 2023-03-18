@@ -1,0 +1,787 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "task_conf_time": {
+      "type": "object",
+      "properties": {
+        "nsec": {
+          "type": "integer"
+        },
+        "sec": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "nsec",
+        "sec"
+      ]
+    },
+    "task_data_time": {
+      "type": "object",
+      "properties": {
+        "nsec": {
+          "type": "integer"
+        },
+        "sec": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "nsec",
+        "sec"
+      ]
+    },
+    "task_groups": {
+      "type": "object",
+      "properties": {
+        "SynoFinder": {
+          "type": "object",
+          "properties": {
+            "belong_tray": {
+              "type": "string"
+            },
+            "custom_tray_tooltip": {
+              "type": "string"
+            },
+            "enable_tray_tooltip": {
+              "type": "boolean"
+            },
+            "functions": {
+              "type": "object",
+              "properties": {
+                "file_index": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                }
+              },
+              "required": [
+                "file_index"
+              ]
+            },
+            "i18n": {
+              "type": "string"
+            },
+            "icon_class": {
+              "type": "string"
+            },
+            "icon_path": {
+              "type": "string"
+            },
+            "is_tray": {
+              "type": "boolean"
+            },
+            "read_only_config": {
+              "type": "boolean"
+            },
+            "tray_groups": {
+              "type": "array"
+            },
+            "tray_icon_class": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "belong_tray",
+            "custom_tray_tooltip",
+            "enable_tray_tooltip",
+            "functions",
+            "i18n",
+            "icon_class",
+            "icon_path",
+            "is_tray",
+            "read_only_config",
+            "tray_groups",
+            "tray_icon_class"
+          ]
+        },
+        "hybrid_share": {
+          "type": "object",
+          "properties": {
+            "belong_tray": {
+              "type": "string"
+            },
+            "custom_tray_tooltip": {
+              "type": "string"
+            },
+            "enable_tray_tooltip": {
+              "type": "boolean"
+            },
+            "functions": {
+              "type": "object",
+              "properties": {
+                "pin_download_task": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                },
+                "transform_to_hybrid_share": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                }
+              },
+              "required": [
+                "pin_download_task",
+                "transform_to_hybrid_share"
+              ]
+            },
+            "i18n": {
+              "type": "string"
+            },
+            "icon_class": {
+              "type": "string"
+            },
+            "icon_path": {
+              "type": "string"
+            },
+            "is_tray": {
+              "type": "boolean"
+            },
+            "read_only_config": {
+              "type": "boolean"
+            },
+            "tray_groups": {
+              "type": "array"
+            },
+            "tray_icon_class": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "belong_tray",
+            "custom_tray_tooltip",
+            "enable_tray_tooltip",
+            "functions",
+            "i18n",
+            "icon_class",
+            "icon_path",
+            "is_tray",
+            "read_only_config",
+            "tray_groups",
+            "tray_icon_class"
+          ]
+        },
+        "shared_folder": {
+          "type": "object",
+          "properties": {
+            "belong_tray": {
+              "type": "string"
+            },
+            "custom_tray_tooltip": {
+              "type": "string"
+            },
+            "enable_tray_tooltip": {
+              "type": "boolean"
+            },
+            "functions": {
+              "type": "object",
+              "properties": {
+                "empty_all_recycle_bin": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "enable_tray_tooltip": {
+                      "type": "boolean"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "enable_tray_tooltip",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                },
+                "empty_recycle_bin": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "enable_tray_tooltip": {
+                      "type": "boolean"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "enable_tray_tooltip",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                },
+                "permission_report": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "enable_tray_tooltip": {
+                      "type": "boolean"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "enable_tray_tooltip",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                },
+                "share_move": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "enable_tray_tooltip": {
+                      "type": "boolean"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "enable_tray_tooltip",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                }
+              },
+              "required": [
+                "empty_all_recycle_bin",
+                "empty_recycle_bin",
+                "permission_report",
+                "share_move"
+              ]
+            },
+            "i18n": {
+              "type": "string"
+            },
+            "icon_class": {
+              "type": "string"
+            },
+            "icon_path": {
+              "type": "string"
+            },
+            "is_tray": {
+              "type": "boolean"
+            },
+            "read_only_config": {
+              "type": "boolean"
+            },
+            "tray_groups": {
+              "type": "array"
+            },
+            "tray_icon_class": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "belong_tray",
+            "custom_tray_tooltip",
+            "enable_tray_tooltip",
+            "functions",
+            "i18n",
+            "icon_class",
+            "icon_path",
+            "is_tray",
+            "read_only_config",
+            "tray_groups",
+            "tray_icon_class"
+          ]
+        },
+        "storage_manager": {
+          "type": "object",
+          "properties": {
+            "belong_tray": {
+              "type": "string"
+            },
+            "custom_tray_tooltip": {
+              "type": "string"
+            },
+            "enable_tray_tooltip": {
+              "type": "boolean"
+            },
+            "functions": {
+              "type": "object",
+              "properties": {
+                "cache_advisor": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                },
+                "data_scrubbing": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                },
+                "space_reclaim": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                }
+              },
+              "required": [
+                "cache_advisor",
+                "data_scrubbing",
+                "space_reclaim"
+              ]
+            },
+            "i18n": {
+              "type": "string"
+            },
+            "icon_class": {
+              "type": "string"
+            },
+            "icon_path": {
+              "type": "string"
+            },
+            "is_tray": {
+              "type": "boolean"
+            },
+            "read_only_config": {
+              "type": "boolean"
+            },
+            "tray_groups": {
+              "type": "array"
+            },
+            "tray_icon_class": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "belong_tray",
+            "custom_tray_tooltip",
+            "enable_tray_tooltip",
+            "functions",
+            "i18n",
+            "icon_class",
+            "icon_path",
+            "is_tray",
+            "read_only_config",
+            "tray_groups",
+            "tray_icon_class"
+          ]
+        },
+        "synoindex": {
+          "type": "object",
+          "properties": {
+            "belong_tray": {
+              "type": "string"
+            },
+            "custom_tray_tooltip": {
+              "type": "string"
+            },
+            "enable_tray_tooltip": {
+              "type": "boolean"
+            },
+            "functions": {
+              "type": "object",
+              "properties": {
+                "photo_video_conversion": {
+                  "type": "object",
+                  "properties": {
+                    "action_privileges": {
+                      "type": "array"
+                    },
+                    "allow_users": {
+                      "type": "array"
+                    },
+                    "application_privileges": {
+                      "type": "array"
+                    },
+                    "i18n": {
+                      "type": "string"
+                    },
+                    "read_only_config": {
+                      "type": "boolean"
+                    },
+                    "system_slice": {
+                      "type": "string"
+                    },
+                    "tasks": {
+                      "type": "object"
+                    },
+                    "ui_component": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "action_privileges",
+                    "allow_users",
+                    "application_privileges",
+                    "i18n",
+                    "read_only_config",
+                    "system_slice",
+                    "tasks",
+                    "ui_component"
+                  ]
+                }
+              },
+              "required": [
+                "photo_video_conversion"
+              ]
+            },
+            "i18n": {
+              "type": "string"
+            },
+            "icon_class": {
+              "type": "string"
+            },
+            "icon_path": {
+              "type": "string"
+            },
+            "is_tray": {
+              "type": "boolean"
+            },
+            "read_only_config": {
+              "type": "boolean"
+            },
+            "tray_groups": {
+              "type": "array"
+            },
+            "tray_icon_class": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "belong_tray",
+            "custom_tray_tooltip",
+            "enable_tray_tooltip",
+            "functions",
+            "i18n",
+            "icon_class",
+            "icon_path",
+            "is_tray",
+            "read_only_config",
+            "tray_groups",
+            "tray_icon_class"
+          ]
+        }
+      },
+      "required": [
+        "SynoFinder",
+        "hybrid_share",
+        "shared_folder",
+        "storage_manager",
+        "synoindex"
+      ]
+    }
+  },
+  "required": [
+    "task_conf_time",
+    "task_data_time",
+    "task_groups"
+  ]
+}

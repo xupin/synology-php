@@ -1,0 +1,175 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "ame_status": {
+      "type": "object",
+      "properties": {
+        "ame_major_version": {
+          "type": "integer"
+        },
+        "has_aac": {
+          "type": "boolean"
+        },
+        "has_license": {
+          "type": "boolean"
+        },
+        "is_aac_activated": {
+          "type": "boolean"
+        },
+        "is_ame_broken": {
+          "type": "boolean"
+        },
+        "is_ame_install": {
+          "type": "boolean"
+        },
+        "need_aac_transcoding": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ame_major_version",
+        "has_aac",
+        "has_license",
+        "is_aac_activated",
+        "is_ame_broken",
+        "is_ame_install",
+        "need_aac_transcoding"
+      ]
+    },
+    "browse_personal_library": {
+      "type": "string"
+    },
+    "dsd_decode_capability": {
+      "type": "boolean"
+    },
+    "enable_equalizer": {
+      "type": "boolean"
+    },
+    "enable_personal_library": {
+      "type": "boolean"
+    },
+    "enable_user_home": {
+      "type": "boolean"
+    },
+    "has_music_share": {
+      "type": "boolean"
+    },
+    "is_manager": {
+      "type": "boolean"
+    },
+    "playing_queue_max": {
+      "type": "integer"
+    },
+    "privilege": {
+      "type": "object",
+      "properties": {
+        "playlist_edit": {
+          "type": "boolean"
+        },
+        "remote_player": {
+          "type": "boolean"
+        },
+        "sharing": {
+          "type": "boolean"
+        },
+        "tag_edit": {
+          "type": "boolean"
+        },
+        "upnp_browse": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "playlist_edit",
+        "remote_player",
+        "sharing",
+        "tag_edit",
+        "upnp_browse"
+      ]
+    },
+    "remote_controller": {
+      "type": "boolean"
+    },
+    "same_subnet": {
+      "type": "boolean"
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "audio_show_virtual_library": {
+          "type": "boolean"
+        },
+        "disable_upnp": {
+          "type": "boolean"
+        },
+        "enable_download": {
+          "type": "boolean"
+        },
+        "prefer_using_html5": {
+          "type": "boolean"
+        },
+        "transcode_to_mp3": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "audio_show_virtual_library",
+        "disable_upnp",
+        "enable_download",
+        "prefer_using_html5",
+        "transcode_to_mp3"
+      ]
+    },
+    "sid": {
+      "type": "string"
+    },
+    "support_bluetooth": {
+      "type": "boolean"
+    },
+    "support_usb": {
+      "type": "boolean"
+    },
+    "support_virtual_library": {
+      "type": "boolean"
+    },
+    "transcode_capability": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version": {
+      "type": "integer"
+    },
+    "version_string": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "ame_status",
+    "browse_personal_library",
+    "dsd_decode_capability",
+    "enable_equalizer",
+    "enable_personal_library",
+    "enable_user_home",
+    "has_music_share",
+    "is_manager",
+    "playing_queue_max",
+    "privilege",
+    "remote_controller",
+    "same_subnet",
+    "serial_number",
+    "settings",
+    "sid",
+    "support_bluetooth",
+    "support_usb",
+    "support_virtual_library",
+    "transcode_capability",
+    "version",
+    "version_string"
+  ]
+}

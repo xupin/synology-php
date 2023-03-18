@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "albums": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "album_artist": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "display_artist": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "album_artist",
+          "artist",
+          "display_artist",
+          "name",
+          "year"
+        ]
+      }
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "albums",
+    "offset",
+    "total"
+  ]
+}

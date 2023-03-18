@@ -2,6 +2,24 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
+    "hint": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "show": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "show"
+        ]
+      }
+    },
     "info": {
       "type": "object",
       "properties": {
@@ -93,6 +111,7 @@
     }
   },
   "required": [
+    "hint",
     "info",
     "prompt",
     "tip",

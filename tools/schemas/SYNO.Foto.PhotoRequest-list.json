@@ -2,15 +2,11 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "items": {
+    "list": {
       "type": "array"
-    },
-    "total": {
-      "type": "integer"
     }
   },
   "required": [
-    "items",
-    "total"
+    "list"
   ]
 }

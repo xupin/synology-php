@@ -5,12 +5,16 @@
     "items": {
       "type": "array"
     },
+    "offset": {
+      "type": "integer"
+    },
     "total": {
       "type": "integer"
     }
   },
   "required": [
     "items",
+    "offset",
     "total"
   ]
 }
