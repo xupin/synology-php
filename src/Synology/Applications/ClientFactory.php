@@ -30,15 +30,16 @@ class ClientFactory
      * @param string $address
      * @param int    $port
      * @param string $protocol
+     * @param int    $version
      */
-    public static function getClient($serviceName, $address, $port = null, $protocol = null)
+    public static function getClient($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {
         if (!empty($serviceName) && in_array($serviceName, self::API_SERVICE_CLIENTS)) {
             $className = "\\Synology\\Applications\\" . $serviceName;
-            return new $className($address, $port, $protocol);
+            return new $className($address, $port, $protocol, $version);
         }
         //throw new Exception('Unknown "' . $serviceName . '" serviceName');
-        return static::getGeneric($serviceName, $address, $port, $protocol);
+        return static::getGeneric($serviceName, $address, $port, $protocol, $version);
     }
 
     /**
@@ -48,10 +49,11 @@ class ClientFactory
      * @param string $address
      * @param int    $port
      * @param string $protocol
+     * @param int    $version
      */
-    public static function getGeneric($serviceName, $address, $port = null, $protocol = null)
+    public static function getGeneric($serviceName, $address, $port = null, $protocol = null, $version = 1)
     {
         $className = "\\Synology\\Applications\\GenericClient";
-        return new $className($serviceName, $address, $port, $protocol);
+        return new $className($serviceName, $address, $port, $protocol, $version);
     }
 }

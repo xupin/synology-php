@@ -13,6 +13,7 @@ $synology->connect('admin', '****');
 print_r($synology->getAvailableApi());
 
 // using client factory
+/** @var \Synology\Applications\Core $synology */
 $synology = ClientFactory::getClient('Core', '192.168.10.5', 5001, 'https');
 $synology->connect('admin', '****');
 print_r($synology->getObjects('User'));

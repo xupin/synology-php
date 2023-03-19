@@ -176,7 +176,7 @@ abstract class AbstractApi
      * @param string $json
      *
      * @throws Exception
-     * @return \stdClass|array|bool
+     * @return \stdClass|array|bool|string
      */
     private function _parseRequest($json)
     {

@@ -10,8 +10,8 @@ namespace Synology;
 class Exception extends \Exception
 {
     /**
-     * @param null $message
-     * @param null $code
+     * @param mixed $message
+     * @param mixed $code
      */
     public function __construct($message = null, $code = null)
     {
