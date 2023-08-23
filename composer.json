@@ -21,7 +21,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=8.0"
     },
     "require-dev": {
         "justinrainbow/json-schema": "5.x-dev",
