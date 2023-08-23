@@ -62,6 +62,7 @@ This is a PHP Library that consume Synology APIs
     * getList
     * search
     * download
+    * createFolder
     
 * SYNO.VideoStation:
     * connect
@@ -69,6 +70,7 @@ This is a PHP Library that consume Synology APIs
     * getInfo
     * getObjects
     * searchObject
+    * listObjects
     
 * SYNO.SurveillanceStation:
     * connect

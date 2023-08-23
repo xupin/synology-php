@@ -126,11 +126,59 @@ class VideoStation extends Authenticate
         }
 
         return $this->_request($type, $path, 'search', [
-            'title'          => $name,
-            'limit'          => $limit,
-            'offset'         => $offset,
-            'sort_by'        => $sortBy,
+            'title' => $name,
+            'limit' => $limit,
+            'offset' => $offset,
+            'sort_by' => $sortBy,
             'sort_direction' => $sortDirection,
-        ]);
+        ], 4);
+    }
+
+    /**
+     * List all objects of one kind
+     *
+     * @param string $type
+     * @param int $limit
+     * @param int $offset
+     * @param string $sortby
+     * @param string $sortdirection
+     * @param string $additional json array as sting
+     * @throws Exception
+     * @return \stdClass
+     */
+    public function listObjects($type, $limit = 25, $offset = 0, $sortby = 'added', $sortdirection = 'desc', $additional = '["poster_mtime","summary","watched_ratio","collection"]')
+    {
+        $path = '';
+        $type = ucfirst($type);
+        switch ($type) {
+            case 'Movie':
+                $path = 'VideoStation/movie.cgi';
+                break;
+            case 'TVShow':
+                $path = 'VideoStation/tvshow.cgi';
+                break;
+            case 'TVShowEpisode':
+                $path = 'VideoStation/tvshow_episode.cgi';
+                break;
+            case 'HomeVideo':
+                $path = 'VideoStation/homevideo.cgi';
+                break;
+            case 'TVRecording':
+                $path = 'VideoStation/tvrecord.cgi';
+                break;
+            case 'Collection':
+                $path = 'VideoStation/collection.cgi';
+                break;
+            default:
+                throw new Exception('Unknow "' . $type . '" object');
+        }
+
+        return $this->_request($type, $path, 'list', [
+            'limit' => $limit,
+            'offset' => $offset,
+            'sort_by' => $sortby,
+            'sort_direction' => $sortdirection,
+            'additional' => $additional,
+        ], 4);
     }
 }

@@ -13,7 +13,8 @@ abstract class AbstractApi
     public const PROTOCOL_HTTPS = 'https';
     public const API_NAMESPACE = 'SYNO';
     public const API_PATH = 'entry.cgi';
-    public const CONNECT_TIMEOUT = 30000; //30s
+    public const CONNECT_TIMEOUT = 2000; //2s
+    public const REQUEST_TIMEOUT = 30000; //30s
 
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
@@ -139,14 +140,13 @@ abstract class AbstractApi
             $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, '', $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
 
-
             curl_setopt($ch, CURLOPT_URL, $url);
         } else {
             $url = $this->_getBaseUrl() . $path;
             $this->log($url, 'Requested Url');
             $this->log($params, 'Post Variable');
 
-            //set the url, number of POST vars, POST data
+            // set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
             curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, '', $this->_separator, $this->enc_type));
@@ -156,6 +156,7 @@ abstract class AbstractApi
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
+        curl_setopt($ch, CURLOPT_TIMEOUT_MS, self::REQUEST_TIMEOUT);
 
         // Verify SSL or not
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL ? 2 : 0);
@@ -176,7 +177,7 @@ abstract class AbstractApi
             }
         } else {
             curl_close($ch);
-            if ($info['total_time'] >= (self::CONNECT_TIMEOUT / 1000)) {
+            if ($info['total_time'] >= (self::REQUEST_TIMEOUT / 1000)) {
                 throw new Exception('Connection Timeout');
             } else {
                 $this->log($result, 'Result');
@@ -199,9 +200,8 @@ abstract class AbstractApi
             if ($data->success == 1) {
                 if (isset($data->data)) {
                     return $data->data;
-                } else {
-                    return true;
                 }
+                return true;
             } else {
                 $code = $data->error->code;
 
@@ -213,10 +213,8 @@ abstract class AbstractApi
                     throw new Exception('Unknown error', $code);
                 }
             }
-        } else {
-            // return raw data
-            return $json;
         }
+        return $json;
     }
 
     /**
@@ -243,12 +241,12 @@ abstract class AbstractApi
             if ($key != null) {
                 echo $key . ': ';
             }
+
             if (is_object($value) || is_array($value)) {
-                echo PHP_EOL . print_r($value, true);
-            } else {
-                echo $value;
+                $value = PHP_EOL . print_r($value, true);
             }
-            echo PHP_EOL;
+
+            echo $value . PHP_EOL;
         }
     }
 
