@@ -18,7 +18,7 @@ class Authenticate extends AbstractApi
 
     /**
      * Constructor
-     * 
+     *
      * @param string $serviceName
      * @param string $namespace
      * @param string $address
@@ -120,6 +120,8 @@ class Authenticate extends AbstractApi
     {
         parent::activateDebug();
         $this->_authApi->activateDebug();
+
+        return $this;
     }
 
     /**
@@ -130,7 +132,8 @@ class Authenticate extends AbstractApi
      *
      * @return $this
      */
-    public function keepConnection($keepConnection = true) {
+    public function keepConnection($keepConnection = true)
+    {
         $this->_authApi->keepConnection($keepConnection);
 
         return $this;

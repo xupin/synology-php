@@ -12,9 +12,9 @@ use Synology\Exception;
  */
 class DSM extends Authenticate
 {
-    const API_SERVICE_NAME = 'DSM';
-    const API_VERSION = 2;
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'DSM';
+    public const API_VERSION = 2;
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup

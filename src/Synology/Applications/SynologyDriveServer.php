@@ -12,8 +12,8 @@ use Synology\Exception;
  */
 class SynologyDriveServer extends Authenticate
 {
-    const API_SERVICE_NAME = 'SynologyDrive';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'SynologyDrive';
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -40,7 +40,7 @@ class SynologyDriveServer extends Authenticate
      */
     public function getConnection($sort_by='login_time', $sort_direction='DESC', $offset=0, $limit=50)
     {
-        return $this->_request('Connection','entry.cgi','list',[
+        return $this->_request('Connection', static::API_PATH, 'list', [
             'sort_by' => $sort_by,
             'sort_direction' => $sort_direction,
             'offset' => $offset,
@@ -59,7 +59,7 @@ class SynologyDriveServer extends Authenticate
      */
     public function getShare($sort_by='share_name', $sort_direction='ASC', $offset=0, $limit=50)
     {
-        return $this->_request('Share','entry.cgi','list',[
+        return $this->_request('Share', static::API_PATH, 'list', [
             'sort_by' => $sort_by,
             'sort_direction' => $sort_direction,
             'action' => 'list',
@@ -82,7 +82,7 @@ class SynologyDriveServer extends Authenticate
      */
     public function getLog($offset=0, $limit=100, $keyword='', $datefrom='', $dateto='', $logtype='[]', $ipaddress='')
     {
-        return $this->_request('Log','entry.cgi','list',[
+        return $this->_request('Log', static::API_PATH, 'list', [
             'target' => 'user',
             'share_type' => 'all',
             'offset' => $offset,

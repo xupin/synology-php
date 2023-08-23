@@ -9,11 +9,11 @@ namespace Synology;
  */
 abstract class AbstractApi
 {
-    const PROTOCOL_HTTP = 'http';
-    const PROTOCOL_HTTPS = 'https';
-    const API_NAMESPACE = 'SYNO';
-    const API_PATH = 'entry.cgi';
-    const CONNECT_TIMEOUT = 30000; //30s
+    public const PROTOCOL_HTTP = 'http';
+    public const PROTOCOL_HTTPS = 'https';
+    public const API_NAMESPACE = 'SYNO';
+    public const API_PATH = 'entry.cgi';
+    public const CONNECT_TIMEOUT = 30000; //30s
 
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
@@ -139,7 +139,7 @@ abstract class AbstractApi
             $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, '', $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
 
-            
+
             curl_setopt($ch, CURLOPT_URL, $url);
         } else {
             $url = $this->_getBaseUrl() . $path;
@@ -207,11 +207,9 @@ abstract class AbstractApi
 
                 if (isset($this->_errorCodes[$path][$api][$code])) {
                     throw new Exception($this->_errorCodes[$path][$api][$code], $code);
-                }
-                elseif (isset($this->_errorCodes['?']['?'][$code])) {
+                } elseif (isset($this->_errorCodes['?']['?'][$code])) {
                     throw new Exception($this->_errorCodes['?']['?'][$code], $code);
-                }
-                else {
+                } else {
                     throw new Exception('Unknown error', $code);
                 }
             }

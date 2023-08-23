@@ -12,11 +12,9 @@ use Synology\Exception;
 
 class SurveillanceStation extends Authenticate
 {
-
-    const API_SERVICE_NAME = 'SurveillanceStation';
-    const API_NAMESPACE = 'SYNO';
-
-    private static $path = 'entry.cgi';
+    public const API_SERVICE_NAME = 'SurveillanceStation';
+    public const API_NAMESPACE = 'SYNO';
+    public const API_PATH = 'entry.cgi';
 
     /**
      * Info API setup
@@ -38,7 +36,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', static::$path, 'GetInfo');
+        return $this->_request('Info', static::API_PATH, 'GetInfo');
     }
 
     /**
@@ -47,7 +45,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getCameraList()
     {
-        return $this->_request('Camera', static::$path, 'List');
+        return $this->_request('Camera', static::API_PATH, 'List');
     }
 
     /**
@@ -60,7 +58,7 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'cameraId' => $cameraId,
         ];
-        return $this->_request('Camera', static::$path, 'GetSnapshot', $parameters);
+        return $this->_request('Camera', static::API_PATH, 'GetSnapshot', $parameters);
     }
 
     /**
@@ -74,12 +72,12 @@ class SurveillanceStation extends Authenticate
      * @return array|bool|\stdClass
      *   The home mode related setting and information.
      */
-    public function getHomeModeInfo($need_mobiles = FALSE)
+    public function getHomeModeInfo($need_mobiles = false)
     {
         $parameters = [
             'need_mobiles' => $need_mobiles,
         ];
-        return $this->_request('HomeMode', static::$path, 'GetInfo', $parameters, 1);
+        return $this->_request('HomeMode', static::API_PATH, 'GetInfo', $parameters, 1);
     }
 
     /**
@@ -97,7 +95,7 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'on' => $on,
         ];
-        return $this->_request('HomeMode', static::$path, 'Switch', $parameters, 1);
+        return $this->_request('HomeMode', static::API_PATH, 'Switch', $parameters, 1);
     }
 
 }

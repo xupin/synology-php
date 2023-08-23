@@ -12,9 +12,9 @@ use Synology\Exception;
  */
 class AudioStation extends Authenticate
 {
-    const API_SERVICE_NAME = 'AudioStation';
-    const API_VERSION = 2;
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'AudioStation';
+    public const API_VERSION = 2;
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup

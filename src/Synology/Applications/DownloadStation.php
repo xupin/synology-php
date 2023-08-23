@@ -12,9 +12,9 @@ use Synology\Exception;
  */
 class DownloadStation extends Authenticate
 {
-    const API_SERVICE_NAME = 'DownloadStation';
-    const API_VERSION = 1;
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'DownloadStation';
+    public const API_VERSION = 1;
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup
@@ -331,7 +331,7 @@ class DownloadStation extends Authenticate
     {
         $params = [
             'keyword' => $keyword,
-            'module'  => $module
+            'module'  => $module,
         ];
 
         return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'start', $params);
@@ -359,7 +359,7 @@ class DownloadStation extends Authenticate
             'sort_by'         => $sortBy,
             'sort_direction'  => $sortDirection,
             'filter_category' => $filterCategory,
-            'filter_title'    => $filterTitle
+            'filter_title'    => $filterTitle,
         ];
 
         return $this->_request('BTSearch', 'DownloadStation/btsearch.cgi', 'list', $params);

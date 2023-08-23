@@ -61,20 +61,20 @@ class Core extends Authenticate
             case 'Network':
                 $method = 'get';
                 break;
-            //case 'Volume':
-            //    $path = 'dsm/volume.cgi';
-            //    break;
+                //case 'Volume':
+                //    $path = 'dsm/volume.cgi';
+                //    break;
             case 'Security.AutoBlock':
                 $method = 'get';
                 break;
-            //case 'LogViewer':
-            //    $path = 'dsm/logviewer.cgi';
-            //    break;
+                //case 'LogViewer':
+                //    $path = 'dsm/logviewer.cgi';
+                //    break;
             case 'CurrentConnection':
                 break;
-            //case 'iSCSI':
-            //    $path = 'dsm/iscsi.cgi';
-            //    break;
+                //case 'iSCSI':
+                //    $path = 'dsm/iscsi.cgi';
+                //    break;
             default:
                 throw new Exception('Unknown "' . $type . '" object');
         }

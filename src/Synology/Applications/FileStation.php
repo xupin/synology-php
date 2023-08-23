@@ -13,9 +13,9 @@ use Synology\Exception;
  */
 class FileStation extends Authenticate
 {
-    const API_SERVICE_NAME = 'FileStation';
-    const API_VERSION = 1;
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'FileStation';
+    public const API_VERSION = 1;
+    public const API_NAMESPACE = 'SYNO';
 
     /**
      * Info API setup

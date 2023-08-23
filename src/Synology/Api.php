@@ -9,8 +9,8 @@ namespace Synology;
  */
 class Api extends AbstractApi
 {
-    const API_SERVICE_NAME = 'API';
-    const API_NAMESPACE = 'SYNO';
+    public const API_SERVICE_NAME = 'API';
+    public const API_NAMESPACE = 'SYNO';
 
     private $_sid = null;
     private $_sessionName = 'default';
@@ -69,7 +69,7 @@ class Api extends AbstractApi
             'account' => $username,
             'passwd'  => $password,
             'session' => $this->_sessionName,
-            'format'  => 'sid'
+            'format'  => 'sid',
         ];
 
         if ($this->_version > 2 && $code !== null) {
@@ -161,7 +161,8 @@ class Api extends AbstractApi
      *
      * @return $this
      */
-    public function keepConnection($keepConnection = true) {
+    public function keepConnection($keepConnection = true)
+    {
         $this->_keepConnection = $keepConnection;
 
         return $this;
