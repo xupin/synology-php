@@ -9,16 +9,16 @@ namespace Synology;
  */
 abstract class AbstractApi
 {
-    public const PROTOCOL_HTTP = 'http';
-    public const PROTOCOL_HTTPS = 'https';
-    public const API_NAMESPACE = 'SYNO';
-    public const API_PATH = 'entry.cgi';
-    public const CONNECT_TIMEOUT = 30000; //30s
+    const PROTOCOL_HTTP = 'http';
+    const PROTOCOL_HTTPS = 'https';
+    const API_NAMESPACE = 'SYNO';
+    const API_PATH = 'entry.cgi';
+    const CONNECT_TIMEOUT = 30000; //30s
 
     private $_protocol = self::PROTOCOL_HTTP;
     private $_port = 80;
     private $_address = '';
-    private $_version = 1;
+    protected $_version = 1;
     private $_serviceName = null;
     private $_namespace = null;
     private $_debug = false;
@@ -26,15 +26,31 @@ abstract class AbstractApi
     private $_separator = '&';
     private $enc_type = PHP_QUERY_RFC3986;
     private $_errorCodes = [
-        100 => 'Unknown error',
-        101 => 'No parameter of API, method or version',
-        102 => 'The requested API does not exist',
-        103 => 'The requested method does not exist',
-        104 => 'The requested version does not support the functionality',
-        105 => 'The logged in session does not have permission',
-        106 => 'Session timeout',
-        107 => 'Session interrupted by duplicate login',
-        119 => 'Invalid session (starts with number)',
+        '?' => [
+            '?' => [
+                100 => 'Unknown error',
+                101 => 'No parameter of API, method or version',
+                102 => 'The requested API does not exist',
+                103 => 'The requested method does not exist',
+                104 => 'The requested version does not support the functionality',
+                105 => 'The logged in session does not have permission',
+                106 => 'Session timeout',
+                107 => 'Session interrupted by duplicate login',
+            ],
+        ],
+        'auth.cgi' => [
+            'Auth' => [
+                101 => 'The account parameter is not specified',
+                400 => 'Invalid password',
+                403 => 'One time password not specified',
+            ],
+        ],
+        'entry.cgi' => [
+            'HomeMode' => [
+                400 => 'Operation Failed',
+                401 => 'Parameter invalid',
+            ],
+        ],
     ];
 
     /**
@@ -86,9 +102,6 @@ abstract class AbstractApi
      */
     private function _getApiName($api)
     {
-        if (empty($api)) {
-            return $this->_namespace . '.' . $this->_serviceName;
-        }
         return $this->_namespace . '.' . $this->_serviceName . '.' . $api;
     }
 
@@ -123,9 +136,10 @@ abstract class AbstractApi
         $ch = curl_init();
 
         if ($httpMethod !== 'post') {
-            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, "", $this->_separator, $this->enc_type);
+            $url = $this->_getBaseUrl() . $path . '?' . http_build_query($params, '', $this->_separator, $this->enc_type);
             $this->log($url, 'Requested Url');
 
+            
             curl_setopt($ch, CURLOPT_URL, $url);
         } else {
             $url = $this->_getBaseUrl() . $path;
@@ -135,16 +149,16 @@ abstract class AbstractApi
             //set the url, number of POST vars, POST data
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_POST, count($params));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, "", $this->_separator, $this->enc_type));
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params, '', $this->_separator, $this->enc_type));
         }
 
         // set URL and other appropriate options
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, static::CONNECT_TIMEOUT);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, self::CONNECT_TIMEOUT);
 
         // Verify SSL or not
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->_verifySSL ? 2 : 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->_verifySSL);
 
         // grab URL and pass it to the browser
@@ -153,32 +167,33 @@ abstract class AbstractApi
 
         $this->log($info['http_code'], 'Response code');
         if (200 == $info['http_code']) {
+            // close cURL resource, and free up system resources
+            curl_close($ch);
             if (preg_match('#(plain|text|json)#', $info['content_type'])) {
-                return $this->_parseRequest($result);
+                return $this->_parseRequest($api, $path, $result);
             } else {
                 return $result;
             }
         } else {
             curl_close($ch);
-            if ($info['total_time'] >= (static::CONNECT_TIMEOUT / 1000)) {
-                throw new Exception('Connection Timeout', intval($info['http_code']));
+            if ($info['total_time'] >= (self::CONNECT_TIMEOUT / 1000)) {
+                throw new Exception('Connection Timeout');
             } else {
                 $this->log($result, 'Result');
-                throw new Exception('Connection Error', intval($info['http_code']));
+                throw new Exception('Connection Error');
             }
         }
-
-        // close cURL resource, and free up system resources
-        curl_close($ch);
     }
 
     /**
+     * @param string $api
+     * @param string $path
      * @param string $json
      *
      * @throws Exception
-     * @return \stdClass|array|bool|string
+     * @return \stdClass|array|string|bool
      */
-    private function _parseRequest($json)
+    private function _parseRequest($api, $path, $json)
     {
         if (($data = json_decode(trim($json))) !== null) {
             if ($data->success == 1) {
@@ -188,10 +203,17 @@ abstract class AbstractApi
                     return true;
                 }
             } else {
-                if (array_key_exists($data->error->code, $this->_errorCodes)) {
-                    throw new Exception($this->_errorCodes[$data->error->code], intval($data->error->code));
+                $code = $data->error->code;
+
+                if (isset($this->_errorCodes[$path][$api][$code])) {
+                    throw new Exception($this->_errorCodes[$path][$api][$code], $code);
                 }
-                return $data;
+                elseif (isset($this->_errorCodes['?']['?'][$code])) {
+                    throw new Exception($this->_errorCodes['?']['?'][$code], $code);
+                }
+                else {
+                    throw new Exception('Unknown error', $code);
+                }
             }
         } else {
             // return raw data
@@ -239,4 +261,5 @@ abstract class AbstractApi
     {
         $this->enc_type = $enc_type;
     }
+
 }

@@ -12,8 +12,11 @@ use Synology\Exception;
 
 class SurveillanceStation extends Authenticate
 {
-    public const API_SERVICE_NAME = 'SurveillanceStation';
-    public const API_VERSION = 1;
+
+    const API_SERVICE_NAME = 'SurveillanceStation';
+    const API_NAMESPACE = 'SYNO';
+
+    private static $path = 'entry.cgi';
 
     /**
      * Info API setup
@@ -24,9 +27,9 @@ class SurveillanceStation extends Authenticate
      * @param int    $version
      * @param bool   $verifySSL
      */
-    public function __construct($address, $port = null, $protocol = null, $version = self::API_VERSION, $verifySSL = false)
+    public function __construct($address, $port = null, $protocol = null, $version = 1, $verifySSL = false)
     {
-        parent::__construct(static::API_SERVICE_NAME, static::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
+        parent::__construct(self::API_SERVICE_NAME, self::API_NAMESPACE, $address, $port, $protocol, $version, $verifySSL);
     }
 
     /**
@@ -35,7 +38,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getInfo()
     {
-        return $this->_request('Info', static::API_PATH, 'GetInfo');
+        return $this->_request('Info', static::$path, 'GetInfo');
     }
 
     /**
@@ -44,7 +47,7 @@ class SurveillanceStation extends Authenticate
      */
     public function getCameraList()
     {
-        return $this->_request('Camera', static::API_PATH, 'List');
+        return $this->_request('Camera', static::$path, 'List');
     }
 
     /**
@@ -57,6 +60,44 @@ class SurveillanceStation extends Authenticate
         $parameters = [
             'cameraId' => $cameraId,
         ];
-        return $this->_request('Camera', static::API_PATH, 'GetSnapshot', $parameters);
+        return $this->_request('Camera', static::$path, 'GetSnapshot', $parameters);
     }
+
+    /**
+     * Get home mode related setting and information, including current binding
+     * mobile devices if required.
+     *
+     * @param boolean $need_mobiles
+     *   (optional) Home mode info will conclude which mobile devices is binding
+     *   to the server, default to false.
+     *
+     * @return array|bool|\stdClass
+     *   The home mode related setting and information.
+     */
+    public function getHomeModeInfo($need_mobiles = FALSE)
+    {
+        $parameters = [
+            'need_mobiles' => $need_mobiles,
+        ];
+        return $this->_request('HomeMode', static::$path, 'GetInfo', $parameters, 1);
+    }
+
+    /**
+     * Switch home mode on/off.
+     *
+     * @param boolean $on
+     *   True to turn on home mode, while false to turn it off.
+     *
+     * @return array|bool|\stdClass
+     *   This method has no specific response data. It returns an empty success
+     *   response if it completes without error.
+     */
+    public function switchHomeMode($on)
+    {
+        $parameters = [
+            'on' => $on,
+        ];
+        return $this->_request('HomeMode', static::$path, 'Switch', $parameters, 1);
+    }
+
 }

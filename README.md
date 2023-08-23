@@ -12,6 +12,19 @@ This is a PHP Library that consume Synology APIs
     * disconnect
     * getAvailableApi
 
+* SYNO.SynologyDriveServer :
+    * connect
+    * disconnect
+    * getConnection
+    * getShare
+    * getLog
+
+* SYNO.CloudStationServer :
+    * connect
+    * disconnect
+    * getConnection
+    * getLog
+
 * SYNO.DownloadStation :
     * connect
     * disconnect
@@ -57,6 +70,14 @@ This is a PHP Library that consume Synology APIs
     * getObjects
     * searchObject
     
+* SYNO.SurveillanceStation:
+    * connect
+    * disconnect
+    * getInfo
+    * getCameraList
+    * getHomeModeInfo
+    * switchHomeMode
+
 Usage for Synology Api:
 ```php
 $synology = new Synology\Api('192.168.10.5', 5000, 'http', 1);
