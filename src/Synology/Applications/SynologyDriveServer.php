@@ -38,7 +38,7 @@ class SynologyDriveServer extends Authenticate
      * @param integer $limit
      * @return object
      */
-    public function getConnection($sort_by='login_time', $sort_direction='DESC', $offset=0, $limit=50)
+    public function getConnection($sort_by = 'login_time', $sort_direction = 'DESC', $offset = 0, $limit = 50)
     {
         return $this->_request('Connection', static::API_PATH, 'list', [
             'sort_by' => $sort_by,
@@ -57,7 +57,7 @@ class SynologyDriveServer extends Authenticate
      * @param integer $limit
      * @return object
      */
-    public function getShare($sort_by='share_name', $sort_direction='ASC', $offset=0, $limit=50)
+    public function getShare($sort_by = 'share_name', $sort_direction = 'ASC', $offset = 0, $limit = 50)
     {
         return $this->_request('Share', static::API_PATH, 'list', [
             'sort_by' => $sort_by,
@@ -80,7 +80,7 @@ class SynologyDriveServer extends Authenticate
      * @param string $ipaddress
      * @return object
      */
-    public function getLog($offset=0, $limit=100, $keyword='', $datefrom='', $dateto='', $logtype='[]', $ipaddress='')
+    public function getLog($offset = 0, $limit = 100, $keyword = '', $datefrom = '', $dateto = '', $logtype = '[]', $ipaddress = '')
     {
         return $this->_request('Log', static::API_PATH, 'list', [
             'target' => 'user',

@@ -40,7 +40,7 @@ exit;
 
 function load_template($name)
 {
-    $file = 'templates'.DIRECTORY_SEPARATOR.$name.'.yaml';
+    $file = 'templates' . DIRECTORY_SEPARATOR . $name . '.yaml';
     return file_get_contents($file);
 }
 
@@ -49,7 +49,7 @@ function replace_params($template, $params)
     $search = [];
     $replace = [];
     foreach ($params as $key => $val) {
-        array_push($search, '%'.$key.'%');
+        array_push($search, '%' . $key . '%');
         array_push($replace, $val);
     }
     return str_replace($search, $replace, $template);
@@ -67,7 +67,7 @@ function get_ip_address()
     return 'diskstation';
 }
 
-function generate_swagger($apilist, $debug=false)
+function generate_swagger($apilist, $debug = false)
 {
     // if running on the Synology, this should be enough to start
     //$host = get_ip_address();
@@ -104,7 +104,7 @@ function generate_swagger($apilist, $debug=false)
     $api2url = [];
     $paths = [];
     foreach ($apilist as $root => $json) {
-        echo $root."\n";
+        echo $root . "\n";
         $params = [];
         $params['host'] = $host;
         $params['port'] = $port;
@@ -115,11 +115,11 @@ function generate_swagger($apilist, $debug=false)
         foreach ($json as $api => $values) {
             $params = [];
             $params['api'] = $api;
-            echo "\t".$api."\n";
+            echo "\t" . $api . "\n";
             $params['tag'] = explode('.', $api)[1];
             $params['tag2'] = explode('.', $api)[2];
             foreach ($values as $idx => $val) {
-                echo "\t\t".$idx.":".$val."\n";
+                echo "\t\t" . $idx . ":" . $val . "\n";
             }
             //continue;
             $path = $values['path'];
@@ -149,7 +149,7 @@ function generate_swagger($apilist, $debug=false)
                 $params['version'] = $values['minVersion'];
                 //exit;
             }
-            echo "\t\t(".count($methods).") ".implode(',', $methods)."\n";
+            echo "\t\t(" . count($methods) . ") " . implode(',', $methods) . "\n";
             $params['hash'] = '';
             if (in_array('list', $methods)) {
                 $params['default'] = 'list';
@@ -175,21 +175,21 @@ function generate_swagger($apilist, $debug=false)
         }
         $tag = explode('.', $root)[1];
         //$rest_file = 'swagger_'.$tag.'.yaml';
-        $rest_file = $tag.'.yaml';
+        $rest_file = $tag . '.yaml';
         file_put_contents($rest_file, $rest_output);
-        echo 'Generated '.$rest_file."\n";
+        echo 'Generated ' . $rest_file . "\n";
     }
     //exit;
 
     //$path_file = 'swagger_path.yaml';
     $path_file = 'path.yaml';
     file_put_contents($path_file, $path_output);
-    echo 'Generated '.$path_file."\n";
+    echo 'Generated ' . $path_file . "\n";
 
     //$query_file = 'swagger_query.yaml';
     $query_file = 'query.yaml';
     file_put_contents($query_file, $query_output);
-    echo 'Generated '.$query_file."\n";
+    echo 'Generated ' . $query_file . "\n";
 
     //$rest_file = 'swagger_rest.yaml';
     //$rest_file = 'rest.yaml';
@@ -213,7 +213,7 @@ $api2url = [];
         }
     }
     file_put_contents($map_file, $map_output);
-    echo 'Generated '.$map_file."\n";
+    echo 'Generated ' . $map_file . "\n";
 }
 
 function clean_values($values)
@@ -302,14 +302,14 @@ function combine_json_files()
             exit;
         }
         foreach ($json['data'] as $key => $values) {
-            echo $key.' '.$values['maxVersion'].' '.$values['path']."\n";
+            echo $key . ' ' . $values['maxVersion'] . ' ' . $values['path'] . "\n";
             $auth[$key] = $values;
         }
     }
     //exit;
 
     // Load API json files from ../docs directory
-    $dir = '..'.DIRECTORY_SEPARATOR.'docs';
+    $dir = '..' . DIRECTORY_SEPARATOR . 'docs';
     $files = scandir($dir);
     $apilist = [];
     foreach ($files as $file) {
@@ -317,11 +317,11 @@ function combine_json_files()
         //if ($file == 'API.json' || $file == 'query.api') {
         //    continue;
         //}
-        $filepath = $dir.DIRECTORY_SEPARATOR.$file;
+        $filepath = $dir . DIRECTORY_SEPARATOR . $file;
         if (!is_file($filepath)) {
             continue;
         }
-        echo $file."\n";
+        echo $file . "\n";
         $contents = file_get_contents($filepath);
         $json = json_decode($contents, true);
         if (empty($json)) {
@@ -342,12 +342,12 @@ function combine_json_files()
                     }
                 } else {
                     if ($values['path'] && $values['path'] != $auth[$api]['path']) {
-                        echo "Invalid path ".$values['path']." for api $api in $file\n";
+                        echo "Invalid path " . $values['path'] . " for api $api in $file\n";
                         //continue;
                         exit;
                     }
                     if ($values['maxVersion'] && $values['maxVersion'] != $auth[$api]['maxVersion']) {
-                        echo "Invalid maxVersion ".$values['maxVersion']." for api $api in $file\n";
+                        echo "Invalid maxVersion " . $values['maxVersion'] . " for api $api in $file\n";
                         exit;
                     }
                 }
@@ -371,14 +371,14 @@ function combine_json_files()
     $json_output = json_encode($apilist, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     $json_file = 'combined.json';
     file_put_contents($json_file, $json_output);
-    echo 'Generated '.$json_file."\n";
+    echo 'Generated ' . $json_file . "\n";
     foreach ($apilist as $root => $json) {
         ksort($json);
         $json_output = json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         $tag = explode('.', $root)[1];
-        $json_file = $tag.'.json';
+        $json_file = $tag . '.json';
         file_put_contents($json_file, $json_output);
-        echo 'Generated '.$json_file."\n";
+        echo 'Generated ' . $json_file . "\n";
     }
     //var_dump($apilist);
 }
@@ -399,8 +399,8 @@ function refresh_api_files($basedir)
     //$checkme = ['Auth.api', 'Query.api', 'NoteStation.lib'];
     $checkme = ['query.api'];
     foreach ($checkme as $file) {
-        if (is_file($basedir.$file)) {
-            unlink($basedir.$file);
+        if (is_file($basedir . $file)) {
+            unlink($basedir . $file);
         }
     }
     // Find *.api files in the webapi itself
@@ -409,5 +409,5 @@ function refresh_api_files($basedir)
     $found = `find $path -name '*.lib' -exec cp -p {} $basedir \;`;
     $files = scandir($basedir);
     $count = count($files) - 2;
-    echo "Found ".$count." API files...\n";
+    echo "Found " . $count . " API files...\n";
 }

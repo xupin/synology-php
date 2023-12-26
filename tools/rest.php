@@ -31,13 +31,13 @@ if (empty($_SERVER['PATH_INFO'])) {
     $sid = apcu_fetch('rest_sid');
     $more = '';
     if ($sid) {
-        $more = '?_sid='.$sid;
-        $content .= '<li>Session ID: '.$sid.' <a href="/rest.php/SYNO.API.Auth/v7/logout">Logout</a></li>';
+        $more = '?_sid=' . $sid;
+        $content .= '<li>Session ID: ' . $sid . ' <a href="/rest.php/SYNO.API.Auth/v7/logout">Logout</a></li>';
     } else {
         $content .= '<li><form action="/rest.php/SYNO.API.Auth/v7/login" method="GET">Account: <input type="text" name="account" value=""> Password: <input type="password" name="passwd" value=""> Session: <input type="text" name="session" value="DownloadStation"> <input type="hidden" name="format" value="sid"><input type="submit" value="Login"></form></li>';
     }
     foreach ($apilist as $root => $json) {
-        $content .= '<li>'.$root.'<ul>';
+        $content .= '<li>' . $root . '<ul>';
         ksort($json);
         foreach ($json as $api => $values) {
             $version = $values['maxVersion'];
@@ -46,12 +46,12 @@ if (empty($_SERVER['PATH_INFO'])) {
                 $version = $values['minVersion'];
                 $methods = $values['methods'][$version];
             }
-            $content .= '<li>'.$api.': ';
+            $content .= '<li>' . $api . ': ';
             foreach ($methods as $method) {
                 if (!empty($values['path'])) {
-                    $content .= '<a href="/rest.php/'.$api.'/v'.$version.'/'.$method.$more.'">'.$method.'</a> ';
+                    $content .= '<a href="/rest.php/' . $api . '/v' . $version . '/' . $method . $more . '">' . $method . '</a> ';
                 } else {
-                    $content .= $method.' ';
+                    $content .= $method . ' ';
                 }
             }
             $content .= '</li>';
@@ -71,7 +71,7 @@ $method = $pieces[3];
 //include 'api/example/rest_mapping.php';
 include 'rest_mapping.php';
 if (!$api2url[$api]) {
-    $path = $api." is unknown";
+    $path = $api . " is unknown";
 }
 $path = $api2url[$api];
 
@@ -81,12 +81,12 @@ if (!empty($query) && strpos($query, 'api_key=') !== false) {
     $query = str_replace('api_key=', '_sid=', $query);
 }
 if (strpos($path, 'photo/webapi/') === 0) {
-    $url = 'http://diskstation/'.$path.'?api='.$api.'&version='.$version.'&method='.$method;
+    $url = 'http://diskstation/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
 } else {
-    $url = 'http://diskstation:5000/webapi/'.$path.'?api='.$api.'&version='.$version.'&method='.$method;
+    $url = 'http://diskstation:5000/webapi/' . $path . '?api=' . $api . '&version=' . $version . '&method=' . $method;
 }
 if ($query) {
-    $url .= '&'.$query;
+    $url .= '&' . $query;
 }
 $content = [];
 $content['success'] = true;
