@@ -54,7 +54,7 @@ foreach ($api_list as $root => $json) {
     ksort($json);
     foreach ($json as $api_name => $values) {
         $version = $values['maxVersion'];
-        $methods = $values['methods'][$version];
+        $methods = $values['methods'][$version] ?? [];
         if (!$methods) {
             $version = $values['minVersion'];
             $methods = $values['methods'][$version];
